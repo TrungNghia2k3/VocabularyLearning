@@ -103,6 +103,69 @@ body {
     opacity: 0.9;
 }
 
+/* Pronunciation Button Styles */
+.pronunciation-btn {
+    border: 2px solid rgba(255, 255, 255, 0.5) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    border-radius: 50% !important;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.pronunciation-btn:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border-color: rgba(255, 255, 255, 0.8) !important;
+    transform: scale(1.1);
+}
+
+.pronunciation-btn:active {
+    animation: pulse 0.3s ease;
+}
+
+.pronunciation-btn.speaking {
+    background: rgba(255, 255, 255, 0.3) !important;
+    animation: speaking 1s infinite;
+}
+
+@keyframes speaking {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Phonetic Text */
+#phoneticText {
+    font-family: 'Courier New', monospace;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Pronunciation Button for Browse Mode */
+.pronunciation-btn-list {
+    border-radius: 50% !important;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.pronunciation-btn-list:hover {
+    transform: scale(1.1);
+}
+
+.pronunciation-btn-list:active {
+    animation: pulse 0.3s ease;
+}
+
 /* Button Styles */
 .btn {
     border-radius: 25px;

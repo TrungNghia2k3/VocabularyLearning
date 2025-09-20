@@ -11,12 +11,18 @@ class VocabularyApp {
         this.currentQuizData = [];
         this.isFlashcardFlipped = false;
         
+        // Speech Synthesis setup
+        this.speechSynth = window.speechSynthesis;
+        this.currentVoice = null;
+        this.isInitialized = false;
+        
         this.init();
     }
 
     async init() {
         try {
             await this.loadVocabulary();
+            this.initializeSpeech();
             this.setupEventListeners();
             this.updateStatistics();
             this.loadProgress();
@@ -24,6 +30,126 @@ class VocabularyApp {
             console.error('Lỗi khởi tạo ứng dụng:', error);
             this.showError('Không thể tải dữ liệu từ vựng. Vui lòng kiểm tra file vocabulary.json');
         }
+    }
+
+    initializeSpeech() {
+        // Check if speech synthesis is supported
+        if (!this.speechSynth) {
+            console.warn('Speech synthesis not supported');
+            return;
+        }
+
+        // Wait for voices to be loaded
+        const loadVoices = () => {
+            const voices = this.speechSynth.getVoices();
+            // Find English voice (preferably US or UK)
+            this.currentVoice = voices.find(voice => 
+                voice.lang.startsWith('en-') && 
+                (voice.name.includes('Google') || voice.name.includes('Microsoft'))
+            ) || voices.find(voice => voice.lang.startsWith('en-')) || voices[0];
+            
+            this.isInitialized = true;
+            console.log('Speech initialized with voice:', this.currentVoice?.name);
+        };
+
+        if (this.speechSynth.getVoices().length > 0) {
+            loadVoices();
+        } else {
+            this.speechSynth.addEventListener('voiceschanged', loadVoices);
+        }
+    }
+
+    // Speech Methods
+    pronounceWord(word = null) {
+        if (!this.isInitialized || !this.speechSynth) {
+            this.showWarning('Tính năng phát âm không khả dụng');
+            return;
+        }
+
+        const textToSpeak = word || this.vocabulary[this.currentIndex]?.word;
+        if (!textToSpeak) return;
+
+        // Stop any current speech
+        this.speechSynth.cancel();
+
+        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+        utterance.voice = this.currentVoice;
+        utterance.rate = 0.8;
+        utterance.pitch = 1;
+        utterance.volume = 0.9;
+
+        // Visual feedback
+        const pronounceBtn = document.getElementById('pronounceBtn');
+        if (pronounceBtn) {
+            pronounceBtn.classList.add('speaking');
+            utterance.onend = () => {
+                pronounceBtn.classList.remove('speaking');
+            };
+        }
+
+        this.speechSynth.speak(utterance);
+    }
+
+    pronounceExample() {
+        if (!this.isInitialized || !this.speechSynth) {
+            this.showWarning('Tính năng phát âm không khả dụng');
+            return;
+        }
+
+        const example = this.vocabulary[this.currentIndex]?.example;
+        if (!example) return;
+
+        this.speechSynth.cancel();
+
+        const utterance = new SpeechSynthesisUtterance(example);
+        utterance.voice = this.currentVoice;
+        utterance.rate = 0.7;
+        utterance.pitch = 1;
+        utterance.volume = 0.9;
+
+        this.speechSynth.speak(utterance);
+    }
+
+    pronounceQuizWord() {
+        if (!this.currentQuizData || this.quizCurrentQuestion >= this.currentQuizData.length) return;
+        
+        const currentWord = this.currentQuizData[this.quizCurrentQuestion].word.word;
+        this.pronounceWord(currentWord);
+    }
+
+    pronouncePracticeWord() {
+        const word = this.vocabulary[this.currentIndex]?.word;
+        this.pronounceWord(word);
+    }
+
+    // Get phonetic transcription (simplified version)
+    getPhonetic(word) {
+        // This is a simplified phonetic representation
+        // In a real app, you might use a phonetic API or dictionary
+        const phoneticMap = {
+            'hello': '/həˈloʊ/',
+            'computer': '/kəmˈpjuːtər/',
+            'beautiful': '/ˈbjuːtɪfəl/',
+            'learn': '/lɜːrn/',
+            'important': '/ɪmˈpɔːrtənt/',
+            'understand': '/ˌʌndərˈstænd/',
+            'development': '/dɪˈveləpmənt/',
+            'environment': '/ɪnˈvaɪrənmənt/',
+            'experience': '/ɪkˈspɪriəns/',
+            'knowledge': '/ˈnɑːlɪdʒ/',
+            'opportunity': '/ˌɑːpərˈtuːnəti/',
+            'responsibility': '/rɪˌspɑːnsəˈbɪləti/',
+            'achievement': '/əˈtʃiːvmənt/',
+            'challenge': '/ˈtʃælɪndʒ/',
+            'creative': '/kriˈeɪtɪv/',
+            'communicate': '/kəˈmjuːnɪkeɪt/',
+            'successful': '/səkˈsesfəl/',
+            'technology': '/tekˈnɑːlədʒi/',
+            'relationship': '/rɪˈleɪʃənʃɪp/',
+            'participate': '/pɑːrˈtɪsɪpeɪt/'
+        };
+        
+        return phoneticMap[word.toLowerCase()] || `/${word}/`;
     }
 
     async loadVocabulary() {
@@ -78,6 +204,7 @@ class VocabularyApp {
         document.getElementById('submitAnswer').addEventListener('click', () => this.submitQuizAnswer());
         document.getElementById('nextQuestion').addEventListener('click', () => this.nextQuizQuestion());
         document.getElementById('retakeQuiz').addEventListener('click', () => this.startQuiz());
+        document.getElementById('quizPronounceBtn').addEventListener('click', () => this.pronounceQuizWord());
 
         // Search functionality
         document.getElementById('searchBtn').addEventListener('click', () => this.searchVocabulary());
@@ -88,6 +215,7 @@ class VocabularyApp {
         // Practice mode
         document.getElementById('checkSpelling').addEventListener('click', () => this.checkSpelling());
         document.getElementById('nextPractice').addEventListener('click', () => this.nextPractice());
+        document.getElementById('practicePronounceBtn').addEventListener('click', () => this.pronouncePracticeWord());
         document.getElementById('practiceInput').addEventListener('keyup', (e) => {
             if (e.key === 'Enter') this.checkSpelling();
         });
@@ -151,6 +279,7 @@ class VocabularyApp {
         // Update content
         document.getElementById('wordText').textContent = word.word;
         document.getElementById('wordType').textContent = word.type || '';
+        document.getElementById('phoneticText').textContent = this.getPhonetic(word.word);
         document.getElementById('meaningText').textContent = word.meaning;
         document.getElementById('exampleText').textContent = word.example || '';
         
@@ -240,6 +369,10 @@ class VocabularyApp {
 
         const questionData = this.currentQuizData[this.quizCurrentQuestion];
         document.getElementById('quizQuestion').textContent = questionData.question;
+        
+        // Show pronunciation button
+        const pronounceBtn = document.getElementById('quizPronounceBtn');
+        pronounceBtn.style.display = 'inline-block';
         
         const optionsContainer = document.getElementById('quizOptions');
         optionsContainer.innerHTML = '';
@@ -363,10 +496,17 @@ class VocabularyApp {
                 <div class="card vocab-card h-100">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-start mb-2">
-                            <h6 class="vocab-word">${word.word}</h6>
+                            <div class="d-flex align-items-center">
+                                <h6 class="vocab-word me-2">${word.word}</h6>
+                                <button class="btn btn-outline-secondary btn-sm pronunciation-btn-list" 
+                                        onclick="app.pronounceWord('${word.word}')" title="Phát âm">
+                                    <i class="fas fa-volume-up"></i>
+                                </button>
+                            </div>
                             <span class="vocab-type">${word.type || 'N/A'}</span>
                         </div>
                         <p class="vocab-meaning">${word.meaning}</p>
+                        <p class="text-muted small">${this.getPhonetic(word.word)}</p>
                         ${word.example ? `<p class="vocab-example">"${word.example}"</p>` : ''}
                         <div class="mt-2">
                             <button class="btn btn-sm ${isLearned ? 'btn-success' : 'btn-outline-primary'}" 
