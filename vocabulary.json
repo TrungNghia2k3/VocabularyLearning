@@ -1,123 +1,114 @@
 {
     "words": [
         {
-            "word": "autophagy",
-            "meaning": "sự tự thực bào",
-            "type": "noun",
-            "example": "Autophagy is a process that helps maintain cellular homeostasis.",
-            "level": "advanced"
-        },
-        {
             "word": "advancement",
             "meaning": "sự tiến bộ",
             "type": "noun",
             "example": "Technological advancement has changed the way we live.",
-            "level": "advanced"
-        },
-        {
-            "word": "autophagosomes",
-            "meaning": "các túi tự thực bào",
-            "type": "noun",
-            "example": "Autophagosomes are double-membraned structures that encapsulate cellular components for degradation.",
-            "level": "advanced"
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ədˈvɑːnsmənt/",
+                "en-US": "/ədˈvæns.mənt/"
+            }
         },
         {
             "word": "activate",
             "meaning": "kích hoạt",
             "type": "verb",
-            "example": "You need to activate the software before using it.",
-            "level": "advanced"
+            "example": "You need to activate your account before you can log in.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈæk.tə.veɪt/",
+                "en-US": "/ˈæk.tɪ.veɪt/"
+            }
         },
         {
-            "word": "accumulate",
-            "meaning": "tích lũy",
-            "type": "verb",
-            "example": "Over the years, he managed to accumulate a vast collection of books.",
-            "level": "advanced"
-        },
-        {
-            "word": "auto-decomposition",
-            "meaning": "sự tự phân hủy",
+            "word": "decomposition",
+            "meaning": "sự phân hủy",
             "type": "noun",
-            "example": "Auto-decomposition is a natural process that occurs in organic matter.",
-            "level": "advanced"
+            "example": "The decomposition of organic matter is essential for nutrient cycling in ecosystems.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˌdiː.kɑːm.pəˈzɪʃ.ən/",
+                "en-US": "/ˌdiː.kɒm.pəˈzɪʃ.ən/"
+            }
         },
         {
             "word": "acidifying",
-            "meaning": "axit hóa",
+            "meaning": "sự axit hóa",
             "type": "noun",
-            "example": "The acidifying of oceans is a significant environmental concern.",
-            "level": "advanced"
+            "example": "The acidifying of oceans is a major environmental issue.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/əˈsɪd.ə.faɪ/",
+                "en-US": "/əˈsɪd.ɪ.faɪ/"
+            }
         },
         {
             "word": "accountability",
-            "meaning": "trách nhiệm",
+            "meaning": "sự trách nhiệm",
             "type": "noun",
             "example": "There is a growing demand for accountability in government.",
-            "level": "advanced"
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/əˌkaʊn.t̬əˈbɪl.ə.t̬i/",
+                "en-US": "/əˌkaʊn.təˈbɪl.ə.ti/"
+            }
         },
         {
             "word": "administer",
             "meaning": "quản trị",
             "type": "verb",
-            "example": "She was appointed to administer the new policy.",
-            "level": "advanced"
+            "example": "The nurse will administer the medication to the patient.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ədˈmɪn.ɪ.stər/",
+                "en-US": "/ədˈmɪn.ə.stɚ/"
+            }
         },
         {
             "word": "altruistic",
             "meaning": "vị tha",
             "type": "adjective",
-            "example": "His altruistic nature led him to volunteer at the shelter.",
-            "level": "advanced"
+            "example": "Her altruistic behavior was evident when she donated her time to help others.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˌæl.truˈɪs.tɪk/",
+                "en-US": "/ˌæl.truˈɪs.tɪk/"
+            }
         },
         {
             "word": "alignment",
             "meaning": "sự liên kết",
             "type": "noun",
-            "example": "The alignment of the planets was a spectacular sight.",
-            "level": "advanced"
-        },
-        {
-            "word": "accelerating",
-            "meaning": "tăng tốc",
-            "type": "adjective",
-            "example": "The accelerating pace of technological change is remarkable.",
-            "level": "advanced"
-        },
-        {
-            "word": "arithmetic",
-            "meaning": "toán học",
-            "type": "adjective",
-            "example": "Arithmetic operations are fundamental in mathematics.",
-            "level": "advanced"
+            "example": "The alignment of the project goals with the company's mission is crucial.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/əˈlaɪn.mənt/",
+                "en-US": "/əˈlaɪn.mənt/"
+            }
         },
         {
             "word": "accumulate",
             "meaning": "tích lũy",
             "type": "verb",
-            "example": "Over the years, he managed to accumulate a vast collection of books.",
-            "level": "advanced"
-        },
-        {
-            "word": "algebra",
-            "meaning": "đại số học",
-            "type": "noun",
-            "example": "Algebra is a branch of mathematics dealing with symbols and the rules for manipulating those symbols.",
-            "level": "advanced"
-        },
-        {
-            "word": "automation",
-            "meaning": "sự tự động hóa",
-            "type": "noun",
-            "example": "Automation has revolutionized manufacturing processes.",
-            "level": "advanced"
+            "example": "Over the years, she managed to accumulate a vast amount of knowledge.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/əˈkjuː.mjə.leɪt/",
+                "en-US": "/əˈkjuː.mjə.leɪt/"
+            }
         },
         {
             "word": "aspirational",
             "meaning": "nguyện vọng",
             "type": "adjective",
             "example": "Her aspirational goals motivated her to work harder.",
-            "level": "advanced"
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˌæspəˈreɪʃənl/",
+                "en-US": "/ˌæspəˈreɪʃənl/"
+            }
         }
     ]
 }

@@ -18,11 +18,6 @@
   - "dance" → `/dɑːns/` (dài)
   - "car" → `/kɑː/` (không có âm r cuối)
 
-### 🇦🇺 **Tiếng Anh Úc (Australian English)**
-- **Mã ngôn ngữ**: `en-AU`  
-- **Đặc điểm**: Giọng độc đáo, thân thiện
-- **Ví dụ khác biệt**: Âm thanh đặc trưng của Úc
-
 ## 🔧 Cách sử dụng
 
 ### 1. **Chọn giọng trong navbar**

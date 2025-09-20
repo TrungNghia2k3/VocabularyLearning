@@ -53,7 +53,7 @@ VocabularyLearning/
 3. Mở `index.html` bằng trình duyệt web
 
 ### 2. Thêm từ vựng
-Chỉnh sửa file `vocabulary.json` theo cấu trúc:
+Chỉnh sửa file `vocabulary.json` theo cấu trúc mới:
 
 ```json
 {
@@ -63,10 +63,19 @@ Chỉnh sửa file `vocabulary.json` theo cấu trúc:
       "meaning": "nghĩa tiếng việt",
       "type": "loại từ (noun, verb, adjective, etc.)",
       "example": "ví dụ sử dụng từ",
-      "level": "mức độ (basic, intermediate, advanced)"
+      "level": "mức độ (basic, intermediate, advanced)",
+      "phonetic": {
+        "en-US": "/phiên_âm_mỹ/",
+        "en-GB": "/phiên_âm_anh/"
+      }
     }
   ]
 }
+```
+
+**Lưu ý**: Trường `phonetic` là tùy chọn. Nếu không có, ứng dụng vẫn hoạt động bình thường.
+
+**Tra cứu phiên âm**: Sử dụng [Cambridge Dictionary](https://dictionary.cambridge.org/) hoặc xem file `PHONETIC_GUIDE.md` để biết chi tiết.
 ```
 
 ### 3. Chạy ứng dụng

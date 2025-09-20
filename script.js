@@ -15,7 +15,7 @@ class VocabularyApp {
         this.speechSynth = window.speechSynthesis;
         this.currentVoice = null;
         this.availableVoices = {};
-        this.selectedAccent = 'en-US'; // Default to American English
+        this.selectedAccent = 'en-GB'; // Default to British English
         this.isInitialized = false;
         
         this.init();
@@ -49,7 +49,6 @@ class VocabularyApp {
             this.availableVoices = {
                 'en-US': [], // American
                 'en-GB': [], // British 
-                'en-AU': []  // Australian
             };
 
             voices.forEach(voice => {
@@ -57,8 +56,6 @@ class VocabularyApp {
                     this.availableVoices['en-US'].push(voice);
                 } else if (voice.lang.startsWith('en-GB')) {
                     this.availableVoices['en-GB'].push(voice);
-                } else if (voice.lang.startsWith('en-AU')) {
-                    this.availableVoices['en-AU'].push(voice);
                 }
             });
 
@@ -130,8 +127,7 @@ class VocabularyApp {
         // Show feedback
         const accentNames = {
             'en-US': 'Tiếng Anh Mỹ 🇺🇸',
-            'en-GB': 'Tiếng Anh Anh 🇬🇧', 
-            'en-AU': 'Tiếng Anh Úc 🇦🇺'
+            'en-GB': 'Tiếng Anh Anh 🇬🇧'
         };
         
         this.showInfo(`Đã chuyển sang ${accentNames[accent]}`);
@@ -200,89 +196,18 @@ class VocabularyApp {
         this.pronounceWord(word);
     }
 
-    // Get phonetic transcription (simplified version)
+    // Get phonetic transcription from vocabulary data
     getPhonetic(word) {
-        // Different pronunciations for different accents
-        const phoneticMaps = {
-            'en-US': { // American English
-                'hello': '/həˈloʊ/',
-                'computer': '/kəmˈpjuːtər/',
-                'beautiful': '/ˈbjuːtɪfəl/',
-                'learn': '/lɜːrn/',
-                'important': '/ɪmˈpɔːrtənt/',
-                'understand': '/ˌʌndərˈstænd/',
-                'development': '/dɪˈveləpmənt/',
-                'environment': '/ɪnˈvaɪrənmənt/',
-                'experience': '/ɪkˈspɪriəns/',
-                'knowledge': '/ˈnɑːlɪdʒ/',
-                'opportunity': '/ˌɑːpərˈtuːnəti/',
-                'responsibility': '/rɪˌspɑːnsəˈbɪləti/',
-                'achievement': '/əˈtʃiːvmənt/',
-                'challenge': '/ˈtʃælɪndʒ/',
-                'creative': '/kriˈeɪtɪv/',
-                'communicate': '/kəˈmjuːnɪkeɪt/',
-                'successful': '/səkˈsesfəl/',
-                'technology': '/tekˈnɑːlədʒi/',
-                'relationship': '/rɪˈleɪʃənʃɪp/',
-                'participate': '/pɑːrˈtɪsɪpeɪt/',
-                'dance': '/dæns/',
-                'bath': '/bæθ/',
-                'car': '/kɑːr/'
-            },
-            'en-GB': { // British English
-                'hello': '/həˈləʊ/',
-                'computer': '/kəmˈpjuːtə/',
-                'beautiful': '/ˈbjuːtɪfəl/',
-                'learn': '/lɜːn/',
-                'important': '/ɪmˈpɔːtənt/',
-                'understand': '/ˌʌndəˈstænd/',
-                'development': '/dɪˈveləpmənt/',
-                'environment': '/ɪnˈvaɪrənmənt/',
-                'experience': '/ɪkˈspɪəriəns/',
-                'knowledge': '/ˈnɒlɪdʒ/',
-                'opportunity': '/ˌɒpəˈtʃuːnəti/',
-                'responsibility': '/rɪˌspɒnsəˈbɪləti/',
-                'achievement': '/əˈtʃiːvmənt/',
-                'challenge': '/ˈtʃælɪndʒ/',
-                'creative': '/kriˈeɪtɪv/',
-                'communicate': '/kəˈmjuːnɪkeɪt/',
-                'successful': '/səkˈsesfəl/',
-                'technology': '/tekˈnɒlədʒi/',
-                'relationship': '/rɪˈleɪʃənʃɪp/',
-                'participate': '/pɑːˈtɪsɪpeɪt/',
-                'dance': '/dɑːns/',
-                'bath': '/bɑːθ/',
-                'car': '/kɑː/'
-            },
-            'en-AU': { // Australian English
-                'hello': '/həˈləʉ/',
-                'computer': '/kəmˈpjʉːtə/',
-                'beautiful': '/ˈbjʉːtəfəl/',
-                'learn': '/lɜːn/',
-                'important': '/ɪmˈpoːtənt/',
-                'understand': '/ˌʌndəˈstænd/',
-                'development': '/dəˈveləpmənt/',
-                'environment': '/ɪnˈvaɪrənmənt/',
-                'experience': '/ɪkˈspɪəriəns/',
-                'knowledge': '/ˈnɒlədʒ/',
-                'opportunity': '/ˌɒpəˈtʃʉːnəti/',
-                'responsibility': '/rəˌspɒnsəˈbɪləti/',
-                'achievement': '/əˈtʃiːvmənt/',
-                'challenge': '/ˈtʃælɪndʒ/',
-                'creative': '/kriˈæɪtɪv/',
-                'communicate': '/kəˈmjʉːnəkæɪt/',
-                'successful': '/səkˈsesfəl/',
-                'technology': '/tekˈnɒlədʒi/',
-                'relationship': '/rəˈlæɪʃənʃɪp/',
-                'participate': '/pɑːˈtɪsəpæɪt/',
-                'dance': '/dæns/',
-                'bath': '/bɑːθ/',
-                'car': '/kɑː/'
-            }
-        };
+        // Find the word in vocabulary
+        const vocabularyWord = this.vocabulary.find(w => w.word.toLowerCase() === word.toLowerCase());
         
-        const currentMap = phoneticMaps[this.selectedAccent] || phoneticMaps['en-US'];
-        return currentMap[word.toLowerCase()] || `/${word}/`;
+        if (vocabularyWord && vocabularyWord.phonetic) {
+            // Return phonetic for selected accent
+            return vocabularyWord.phonetic[this.selectedAccent] || vocabularyWord.phonetic['en-US'] || `/${word}/`;
+        }
+        
+        // Fallback for words not in vocabulary
+        return `/${word}/`;
     }
 
     async loadVocabulary() {
@@ -626,16 +551,29 @@ class VocabularyApp {
             return;
         }
 
-        wordsToShow.forEach(word => {
+        // Tìm từ trùng lặp
+        const duplicateWords = this.findDuplicateWords(wordsToShow);
+        
+        // Hiển thị thông báo nếu có từ trùng lặp
+        this.showDuplicateAlert(duplicateWords);
+
+        // Sắp xếp từ vựng theo thứ tự alphabet (A-Z)
+        const sortedWords = [...wordsToShow].sort((a, b) => 
+            a.word.toLowerCase().localeCompare(b.word.toLowerCase())
+        );
+
+        sortedWords.forEach(word => {
             const isLearned = this.learnedWords.has(word.word);
+            const isDuplicate = duplicateWords.has(word.word.toLowerCase());
             const cardDiv = document.createElement('div');
             cardDiv.className = 'col-md-6 col-lg-4 vocab-item';
             cardDiv.innerHTML = `
-                <div class="card vocab-card h-100">
+                <div class="card vocab-card h-100 ${isDuplicate ? 'border-warning' : ''}">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-start mb-2">
                             <div class="d-flex align-items-center">
                                 <h6 class="vocab-word me-2">${word.word}</h6>
+                                ${isDuplicate ? '<i class="fas fa-exclamation-triangle text-warning me-2" title="Từ trùng lặp - cần kiểm tra!"></i>' : ''}
                                 <button class="btn btn-outline-secondary btn-sm pronunciation-btn-list" 
                                         onclick="app.pronounceWord('${word.word}')" title="Phát âm">
                                     <i class="fas fa-volume-up"></i>
@@ -658,6 +596,42 @@ class VocabularyApp {
             `;
             container.appendChild(cardDiv);
         });
+    }
+
+    // Tìm từ trùng lặp trong danh sách từ vựng
+    findDuplicateWords(wordList) {
+        const wordCount = new Map();
+        const duplicates = new Set();
+
+        // Đếm số lần xuất hiện của mỗi từ (không phân biệt hoa thường)
+        wordList.forEach(word => {
+            const normalizedWord = word.word.toLowerCase().trim();
+            const count = wordCount.get(normalizedWord) || 0;
+            wordCount.set(normalizedWord, count + 1);
+        });
+
+        // Tìm những từ xuất hiện nhiều hơn 1 lần
+        wordCount.forEach((count, word) => {
+            if (count > 1) {
+                duplicates.add(word);
+            }
+        });
+
+        return duplicates;
+    }
+
+    // Hiển thị cảnh báo về từ trùng lặp
+    showDuplicateAlert(duplicateWords) {
+        const alertElement = document.getElementById('duplicateAlert');
+        const messageElement = document.getElementById('duplicateMessage');
+        
+        if (duplicateWords.size > 0) {
+            const duplicateList = Array.from(duplicateWords).join(', ');
+            messageElement.textContent = `Tìm thấy ${duplicateWords.size} từ trùng lặp: ${duplicateList}`;
+            alertElement.style.display = 'block';
+        } else {
+            alertElement.style.display = 'none';
+        }
     }
 
     searchVocabulary() {
@@ -774,7 +748,7 @@ class VocabularyApp {
         
         // Load accent preference
         const savedAccent = localStorage.getItem('preferredAccent');
-        if (savedAccent && ['en-US', 'en-GB', 'en-AU'].includes(savedAccent)) {
+        if (savedAccent && ['en-US', 'en-GB'].includes(savedAccent)) {
             this.selectedAccent = savedAccent;
             document.getElementById('accentSelect').value = savedAccent;
             // Update voice will be called after speech initialization
