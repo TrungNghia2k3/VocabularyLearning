@@ -1,0 +1,123 @@
+{
+    "words": [
+        {
+            "word": "autophagy",
+            "meaning": "sự tự thực bào",
+            "type": "noun",
+            "example": "Autophagy is a process that helps maintain cellular homeostasis.",
+            "level": "advanced"
+        },
+        {
+            "word": "advancement",
+            "meaning": "sự tiến bộ",
+            "type": "noun",
+            "example": "Technological advancement has changed the way we live.",
+            "level": "advanced"
+        },
+        {
+            "word": "autophagosomes",
+            "meaning": "các túi tự thực bào",
+            "type": "noun",
+            "example": "Autophagosomes are double-membraned structures that encapsulate cellular components for degradation.",
+            "level": "advanced"
+        },
+        {
+            "word": "activate",
+            "meaning": "kích hoạt",
+            "type": "verb",
+            "example": "You need to activate the software before using it.",
+            "level": "advanced"
+        },
+        {
+            "word": "accumulate",
+            "meaning": "tích lũy",
+            "type": "verb",
+            "example": "Over the years, he managed to accumulate a vast collection of books.",
+            "level": "advanced"
+        },
+        {
+            "word": "auto-decomposition",
+            "meaning": "sự tự phân hủy",
+            "type": "noun",
+            "example": "Auto-decomposition is a natural process that occurs in organic matter.",
+            "level": "advanced"
+        },
+        {
+            "word": "acidifying",
+            "meaning": "axit hóa",
+            "type": "noun",
+            "example": "The acidifying of oceans is a significant environmental concern.",
+            "level": "advanced"
+        },
+        {
+            "word": "accountability",
+            "meaning": "trách nhiệm",
+            "type": "noun",
+            "example": "There is a growing demand for accountability in government.",
+            "level": "advanced"
+        },
+        {
+            "word": "administer",
+            "meaning": "quản trị",
+            "type": "verb",
+            "example": "She was appointed to administer the new policy.",
+            "level": "advanced"
+        },
+        {
+            "word": "altruistic",
+            "meaning": "vị tha",
+            "type": "adjective",
+            "example": "His altruistic nature led him to volunteer at the shelter.",
+            "level": "advanced"
+        },
+        {
+            "word": "alignment",
+            "meaning": "sự liên kết",
+            "type": "noun",
+            "example": "The alignment of the planets was a spectacular sight.",
+            "level": "advanced"
+        },
+        {
+            "word": "accelerating",
+            "meaning": "tăng tốc",
+            "type": "adjective",
+            "example": "The accelerating pace of technological change is remarkable.",
+            "level": "advanced"
+        },
+        {
+            "word": "arithmetic",
+            "meaning": "toán học",
+            "type": "adjective",
+            "example": "Arithmetic operations are fundamental in mathematics.",
+            "level": "advanced"
+        },
+        {
+            "word": "accumulate",
+            "meaning": "tích lũy",
+            "type": "verb",
+            "example": "Over the years, he managed to accumulate a vast collection of books.",
+            "level": "advanced"
+        },
+        {
+            "word": "algebra",
+            "meaning": "đại số học",
+            "type": "noun",
+            "example": "Algebra is a branch of mathematics dealing with symbols and the rules for manipulating those symbols.",
+            "level": "advanced"
+        },
+        {
+            "word": "automation",
+            "meaning": "sự tự động hóa",
+            "type": "noun",
+            "example": "Automation has revolutionized manufacturing processes.",
+            "level": "advanced"
+        },
+        {
+            "word": "aspirational",
+            "meaning": "nguyện vọng",
+            "type": "adjective",
+            "example": "Her aspirational goals motivated her to work harder.",
+            "level": "advanced"
+        }
+    ]
+}
