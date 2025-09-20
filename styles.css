@@ -12,6 +12,27 @@ body {
     font-size: 1.5rem;
 }
 
+/* Accent Selector */
+#accentSelect {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: #333;
+    font-size: 0.9rem;
+    min-width: 160px;
+}
+
+#accentSelect:focus {
+    background-color: white;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+}
+
+.navbar label {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
 /* Card Styles */
 .card {
     border: none;
@@ -342,6 +363,25 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Navbar adjustments for mobile */
+    .navbar .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    #accentSelect {
+        min-width: 140px;
+        font-size: 0.8rem;
+    }
+    
+    .navbar label {
+        font-size: 0.8rem;
+    }
+    
     .flashcard-container {
         min-height: 250px;
     }
@@ -365,6 +405,11 @@ body {
     
     .card-body {
         padding: 1rem;
+    }
+    
+    .pronunciation-btn-list {
+        font-size: 0.7rem;
+        padding: 2px 6px;
     }
 }
 

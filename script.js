@@ -14,6 +14,8 @@ class VocabularyApp {
         // Speech Synthesis setup
         this.speechSynth = window.speechSynthesis;
         this.currentVoice = null;
+        this.availableVoices = {};
+        this.selectedAccent = 'en-US'; // Default to American English
         this.isInitialized = false;
         
         this.init();
@@ -42,14 +44,30 @@ class VocabularyApp {
         // Wait for voices to be loaded
         const loadVoices = () => {
             const voices = this.speechSynth.getVoices();
-            // Find English voice (preferably US or UK)
-            this.currentVoice = voices.find(voice => 
-                voice.lang.startsWith('en-') && 
-                (voice.name.includes('Google') || voice.name.includes('Microsoft'))
-            ) || voices.find(voice => voice.lang.startsWith('en-')) || voices[0];
             
+            // Organize voices by accent
+            this.availableVoices = {
+                'en-US': [], // American
+                'en-GB': [], // British 
+                'en-AU': []  // Australian
+            };
+
+            voices.forEach(voice => {
+                if (voice.lang.startsWith('en-US')) {
+                    this.availableVoices['en-US'].push(voice);
+                } else if (voice.lang.startsWith('en-GB')) {
+                    this.availableVoices['en-GB'].push(voice);
+                } else if (voice.lang.startsWith('en-AU')) {
+                    this.availableVoices['en-AU'].push(voice);
+                }
+            });
+
+            // Set default voice
+            this.updateVoiceFromAccent();
             this.isInitialized = true;
-            console.log('Speech initialized with voice:', this.currentVoice?.name);
+            
+            console.log('Speech initialized with available voices:', this.availableVoices);
+            console.log('Current voice:', this.currentVoice?.name);
         };
 
         if (this.speechSynth.getVoices().length > 0) {
@@ -57,6 +75,66 @@ class VocabularyApp {
         } else {
             this.speechSynth.addEventListener('voiceschanged', loadVoices);
         }
+    }
+
+    updateVoiceFromAccent() {
+        const accentVoices = this.availableVoices[this.selectedAccent] || [];
+        
+        // Priority order for voice selection
+        const voicePriorities = ['Google', 'Microsoft', 'Apple', 'eSpeak'];
+        
+        this.currentVoice = null;
+        
+        // Try to find voice by priority
+        for (const priority of voicePriorities) {
+            this.currentVoice = accentVoices.find(voice => 
+                voice.name.includes(priority)
+            );
+            if (this.currentVoice) break;
+        }
+        
+        // Fallback to first available voice for the accent
+        if (!this.currentVoice && accentVoices.length > 0) {
+            this.currentVoice = accentVoices[0];
+        }
+        
+        // Ultimate fallback to any English voice
+        if (!this.currentVoice) {
+            const allVoices = this.speechSynth.getVoices();
+            this.currentVoice = allVoices.find(voice => voice.lang.startsWith('en-')) || allVoices[0];
+        }
+        
+        console.log(`Updated voice for ${this.selectedAccent}:`, this.currentVoice?.name);
+    }
+
+    changeAccent(accent) {
+        this.selectedAccent = accent;
+        this.updateVoiceFromAccent();
+        
+        // Save preference
+        localStorage.setItem('preferredAccent', accent);
+        
+        // Update phonetic display if in flashcard mode
+        if (this.currentMode === 'flashcard') {
+            const phoneticElement = document.getElementById('phoneticText');
+            if (phoneticElement && this.vocabulary[this.currentIndex]) {
+                phoneticElement.textContent = this.getPhonetic(this.vocabulary[this.currentIndex].word);
+            }
+        }
+        
+        // Update phonetic display in browse mode
+        if (this.currentMode === 'browse') {
+            this.displayVocabularyList();
+        }
+        
+        // Show feedback
+        const accentNames = {
+            'en-US': 'Tiếng Anh Mỹ 🇺🇸',
+            'en-GB': 'Tiếng Anh Anh 🇬🇧', 
+            'en-AU': 'Tiếng Anh Úc 🇦🇺'
+        };
+        
+        this.showInfo(`Đã chuyển sang ${accentNames[accent]}`);
     }
 
     // Speech Methods
@@ -124,32 +202,87 @@ class VocabularyApp {
 
     // Get phonetic transcription (simplified version)
     getPhonetic(word) {
-        // This is a simplified phonetic representation
-        // In a real app, you might use a phonetic API or dictionary
-        const phoneticMap = {
-            'hello': '/həˈloʊ/',
-            'computer': '/kəmˈpjuːtər/',
-            'beautiful': '/ˈbjuːtɪfəl/',
-            'learn': '/lɜːrn/',
-            'important': '/ɪmˈpɔːrtənt/',
-            'understand': '/ˌʌndərˈstænd/',
-            'development': '/dɪˈveləpmənt/',
-            'environment': '/ɪnˈvaɪrənmənt/',
-            'experience': '/ɪkˈspɪriəns/',
-            'knowledge': '/ˈnɑːlɪdʒ/',
-            'opportunity': '/ˌɑːpərˈtuːnəti/',
-            'responsibility': '/rɪˌspɑːnsəˈbɪləti/',
-            'achievement': '/əˈtʃiːvmənt/',
-            'challenge': '/ˈtʃælɪndʒ/',
-            'creative': '/kriˈeɪtɪv/',
-            'communicate': '/kəˈmjuːnɪkeɪt/',
-            'successful': '/səkˈsesfəl/',
-            'technology': '/tekˈnɑːlədʒi/',
-            'relationship': '/rɪˈleɪʃənʃɪp/',
-            'participate': '/pɑːrˈtɪsɪpeɪt/'
+        // Different pronunciations for different accents
+        const phoneticMaps = {
+            'en-US': { // American English
+                'hello': '/həˈloʊ/',
+                'computer': '/kəmˈpjuːtər/',
+                'beautiful': '/ˈbjuːtɪfəl/',
+                'learn': '/lɜːrn/',
+                'important': '/ɪmˈpɔːrtənt/',
+                'understand': '/ˌʌndərˈstænd/',
+                'development': '/dɪˈveləpmənt/',
+                'environment': '/ɪnˈvaɪrənmənt/',
+                'experience': '/ɪkˈspɪriəns/',
+                'knowledge': '/ˈnɑːlɪdʒ/',
+                'opportunity': '/ˌɑːpərˈtuːnəti/',
+                'responsibility': '/rɪˌspɑːnsəˈbɪləti/',
+                'achievement': '/əˈtʃiːvmənt/',
+                'challenge': '/ˈtʃælɪndʒ/',
+                'creative': '/kriˈeɪtɪv/',
+                'communicate': '/kəˈmjuːnɪkeɪt/',
+                'successful': '/səkˈsesfəl/',
+                'technology': '/tekˈnɑːlədʒi/',
+                'relationship': '/rɪˈleɪʃənʃɪp/',
+                'participate': '/pɑːrˈtɪsɪpeɪt/',
+                'dance': '/dæns/',
+                'bath': '/bæθ/',
+                'car': '/kɑːr/'
+            },
+            'en-GB': { // British English
+                'hello': '/həˈləʊ/',
+                'computer': '/kəmˈpjuːtə/',
+                'beautiful': '/ˈbjuːtɪfəl/',
+                'learn': '/lɜːn/',
+                'important': '/ɪmˈpɔːtənt/',
+                'understand': '/ˌʌndəˈstænd/',
+                'development': '/dɪˈveləpmənt/',
+                'environment': '/ɪnˈvaɪrənmənt/',
+                'experience': '/ɪkˈspɪəriəns/',
+                'knowledge': '/ˈnɒlɪdʒ/',
+                'opportunity': '/ˌɒpəˈtʃuːnəti/',
+                'responsibility': '/rɪˌspɒnsəˈbɪləti/',
+                'achievement': '/əˈtʃiːvmənt/',
+                'challenge': '/ˈtʃælɪndʒ/',
+                'creative': '/kriˈeɪtɪv/',
+                'communicate': '/kəˈmjuːnɪkeɪt/',
+                'successful': '/səkˈsesfəl/',
+                'technology': '/tekˈnɒlədʒi/',
+                'relationship': '/rɪˈleɪʃənʃɪp/',
+                'participate': '/pɑːˈtɪsɪpeɪt/',
+                'dance': '/dɑːns/',
+                'bath': '/bɑːθ/',
+                'car': '/kɑː/'
+            },
+            'en-AU': { // Australian English
+                'hello': '/həˈləʉ/',
+                'computer': '/kəmˈpjʉːtə/',
+                'beautiful': '/ˈbjʉːtəfəl/',
+                'learn': '/lɜːn/',
+                'important': '/ɪmˈpoːtənt/',
+                'understand': '/ˌʌndəˈstænd/',
+                'development': '/dəˈveləpmənt/',
+                'environment': '/ɪnˈvaɪrənmənt/',
+                'experience': '/ɪkˈspɪəriəns/',
+                'knowledge': '/ˈnɒlədʒ/',
+                'opportunity': '/ˌɒpəˈtʃʉːnəti/',
+                'responsibility': '/rəˌspɒnsəˈbɪləti/',
+                'achievement': '/əˈtʃiːvmənt/',
+                'challenge': '/ˈtʃælɪndʒ/',
+                'creative': '/kriˈæɪtɪv/',
+                'communicate': '/kəˈmjʉːnəkæɪt/',
+                'successful': '/səkˈsesfəl/',
+                'technology': '/tekˈnɒlədʒi/',
+                'relationship': '/rəˈlæɪʃənʃɪp/',
+                'participate': '/pɑːˈtɪsəpæɪt/',
+                'dance': '/dæns/',
+                'bath': '/bɑːθ/',
+                'car': '/kɑː/'
+            }
         };
         
-        return phoneticMap[word.toLowerCase()] || `/${word}/`;
+        const currentMap = phoneticMaps[this.selectedAccent] || phoneticMaps['en-US'];
+        return currentMap[word.toLowerCase()] || `/${word}/`;
     }
 
     async loadVocabulary() {
@@ -218,6 +351,11 @@ class VocabularyApp {
         document.getElementById('practicePronounceBtn').addEventListener('click', () => this.pronouncePracticeWord());
         document.getElementById('practiceInput').addEventListener('keyup', (e) => {
             if (e.key === 'Enter') this.checkSpelling();
+        });
+
+        // Accent selector
+        document.getElementById('accentSelect').addEventListener('change', (e) => {
+            this.changeAccent(e.target.value);
         });
     }
 
@@ -632,6 +770,14 @@ class VocabularyApp {
         const saved = localStorage.getItem('learnedWords');
         if (saved) {
             this.learnedWords = new Set(JSON.parse(saved));
+        }
+        
+        // Load accent preference
+        const savedAccent = localStorage.getItem('preferredAccent');
+        if (savedAccent && ['en-US', 'en-GB', 'en-AU'].includes(savedAccent)) {
+            this.selectedAccent = savedAccent;
+            document.getElementById('accentSelect').value = savedAccent;
+            // Update voice will be called after speech initialization
         }
     }
 
