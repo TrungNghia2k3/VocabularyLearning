@@ -344,10 +344,19 @@ class VocabularyApp {
 
         const word = this.vocabulary[this.currentIndex];
         const flashcard = document.getElementById('flashcard');
+        const frontDiv = document.querySelector('.flashcard-front');
+        const backDiv = document.querySelector('.flashcard-back');
         
-        // Reset flip state
+        // Reset flip state completely
         this.isFlashcardFlipped = false;
         flashcard.classList.remove('flipped');
+        
+        // Ensure front is visible and back is hidden
+        frontDiv.classList.remove('d-none');
+        backDiv.classList.add('d-none');
+        
+        // Reset flashcard height
+        flashcard.style.minHeight = '250px';
         
         // Update content
         document.getElementById('wordText').textContent = word.word;
@@ -965,20 +974,41 @@ class VocabularyApp {
 
 // Global function for flipCard (called from HTML)
 function flipCard() {
+    if (!app) return; // Safety check
+    
     const flashcard = document.getElementById('flashcard');
     const frontDiv = document.querySelector('.flashcard-front');
     const backDiv = document.querySelector('.flashcard-back');
     
+    // Safety checks
+    if (!flashcard || !frontDiv || !backDiv) {
+        console.error('Flashcard elements not found');
+        return;
+    }
+    
     if (app.isFlashcardFlipped) {
+        // Flip back to front
         flashcard.classList.remove('flipped');
         frontDiv.classList.remove('d-none');
         backDiv.classList.add('d-none');
         app.isFlashcardFlipped = false;
+        
+        // Reset height
+        flashcard.style.minHeight = '250px';
     } else {
+        // Flip to back
         flashcard.classList.add('flipped');
         frontDiv.classList.add('d-none');
         backDiv.classList.remove('d-none');
         app.isFlashcardFlipped = true;
+        
+        // Adjust height for extended content
+        setTimeout(() => {
+            const backHeight = backDiv.scrollHeight;
+            if (backHeight > 250) {
+                flashcard.style.minHeight = `${backHeight + 40}px`;
+            }
+        }, 300); // Wait for flip animation to complete
     }
 }
 
@@ -986,7 +1016,6 @@ function flipCard() {
 let app;
 document.addEventListener('DOMContentLoaded', () => {
     app = new VocabularyApp();
+    // Export for use in HTML onclick handlers
+    window.app = app;
 });
-
-// Export for use in HTML onclick handlers
-window.app = app;

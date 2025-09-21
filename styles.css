@@ -71,17 +71,19 @@ body {
 .flashcard-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-height: 300px;
     perspective: 1000px;
+    padding: 20px 0;
 }
 
 .flashcard {
     width: 100%;
     max-width: 400px;
-    height: 250px;
+    min-height: 250px;
+    height: auto;
     cursor: pointer;
-    transition: transform 0.6s;
+    transition: transform 0.6s ease-in-out, min-height 0.3s ease;
     transform-style: preserve-3d;
     position: relative;
 }
@@ -94,21 +96,25 @@ body {
 .flashcard-back {
     position: absolute;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     backface-visibility: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
     border-radius: 15px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .flashcard-back {
     transform: rotateY(180deg);
     background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    overflow-y: auto;
+    max-height: 80vh;
 }
 
 .flashcard-front h3,
@@ -122,6 +128,54 @@ body {
 .flashcard-back p {
     font-size: 1rem;
     opacity: 0.9;
+    margin-bottom: 10px;
+}
+
+/* Flashcard Extended Info Styles */
+#flashcardExtendedInfo {
+    width: 100%;
+    margin-top: 15px;
+    text-align: left;
+}
+
+#flashcardExtendedInfo .synonyms-section,
+#flashcardExtendedInfo .antonyms-section,
+#flashcardExtendedInfo .word-family-section {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+#flashcardExtendedInfo .synonyms-section {
+    border-left-color: #28a745;
+}
+
+#flashcardExtendedInfo .antonyms-section {
+    border-left-color: #dc3545;
+}
+
+#flashcardExtendedInfo .word-family-section {
+    border-left-color: #007bff;
+}
+
+#flashcardExtendedInfo .badge {
+    font-size: 0.7rem;
+    padding: 3px 6px;
+    margin: 2px;
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+#flashcardExtendedInfo small {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+#flashcardExtendedInfo .word-type-group {
+    margin-bottom: 5px;
 }
 
 /* Pronunciation Button Styles */
@@ -384,15 +438,26 @@ body {
     
     .flashcard-container {
         min-height: 250px;
+        padding: 10px 0;
     }
     
     .flashcard {
-        height: 200px;
+        min-height: 200px;
+        max-width: 350px;
     }
     
     .flashcard-front h3,
     .flashcard-back h3 {
         font-size: 1.5rem;
+    }
+    
+    #flashcardExtendedInfo .badge {
+        font-size: 0.65rem;
+        padding: 2px 4px;
+    }
+    
+    #flashcardExtendedInfo {
+        margin-top: 10px;
     }
     
     .btn-group {
