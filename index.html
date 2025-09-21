@@ -163,6 +163,12 @@
                                 <div class="card-body flashcard-back d-none">
                                     <h3 id="meaningText">Nghĩa của từ</h3>
                                     <p class="text-muted" id="exampleText"></p>
+                                    
+                                    <!-- Synonyms, Antonyms, Word Family section -->
+                                    <div id="flashcardExtendedInfo" class="mt-3">
+                                        <!-- Content will be populated by JavaScript -->
+                                    </div>
+                                    
                                     <button class="btn btn-outline-light btn-sm mt-2" 
                                             onclick="event.stopPropagation(); app.pronounceExample()">
                                         <i class="fas fa-volume-up me-1"></i> Phát âm ví dụ
@@ -245,11 +251,9 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" id="searchInput" placeholder="Tìm kiếm từ vựng...">
-                                    <button class="btn btn-outline-secondary" type="button" id="searchBtn">
-                                        <i class="fas fa-search"></i>
-                                    </button>
+                                <div class="search-container">
+                                    <input type="text" class="form-control" id="searchInput" placeholder="Gõ để tìm kiếm từ vựng, từ đồng nghĩa, trái nghĩa...">
+                                    <i class="fas fa-search search-icon"></i>
                                 </div>
                             </div>
                         </div>

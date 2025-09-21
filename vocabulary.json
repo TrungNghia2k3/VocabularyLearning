@@ -9,6 +9,34 @@
             "phonetic": {
                 "en-GB": "/ədˈvɑːnsmənt/",
                 "en-US": "/ədˈvæns.mənt/"
+            },
+            "synonyms": [
+                "progress",
+                "development",
+                "improvement",
+                "evolution"
+            ],
+            "antonyms": [
+                "regression",
+                "decline",
+                "setback",
+                "deterioration"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "advance",
+                    "advancement"
+                ],
+                "verb": [
+                    "advance"
+                ],
+                "adjective": [
+                    "advanced",
+                    "advancing"
+                ],
+                "adverb": [
+                    "advancedly"
+                ]
             }
         },
         {
@@ -20,6 +48,36 @@
             "phonetic": {
                 "en-GB": "/ˈæk.tə.veɪt/",
                 "en-US": "/ˈæk.tɪ.veɪt/"
+            },
+            "synonyms": [
+                "enable",
+                "start",
+                "initiate",
+                "trigger"
+            ],
+            "antonyms": [
+                "deactivate",
+                "disable",
+                "stop",
+                "shut down"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "activation",
+                    "activator",
+                    "activity"
+                ],
+                "verb": [
+                    "activate",
+                    "act"
+                ],
+                "adjective": [
+                    "active",
+                    "activated"
+                ],
+                "adverb": [
+                    "actively"
+                ]
             }
         },
         {
@@ -31,6 +89,31 @@
             "phonetic": {
                 "en-GB": "/ˌdiː.kɑːm.pəˈzɪʃ.ən/",
                 "en-US": "/ˌdiː.kɒm.pəˈzɪʃ.ən/"
+            },
+            "synonyms": [
+                "decay",
+                "breakdown",
+                "deterioration",
+                "disintegration"
+            ],
+            "antonyms": [
+                "composition",
+                "assembly",
+                "construction",
+                "formation"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "decomposition",
+                    "decomposer"
+                ],
+                "verb": [
+                    "decompose"
+                ],
+                "adjective": [
+                    "decomposed",
+                    "decomposing"
+                ]
             }
         },
         {
@@ -42,6 +125,32 @@
             "phonetic": {
                 "en-GB": "/əˈsɪd.ə.faɪ/",
                 "en-US": "/əˈsɪd.ɪ.faɪ/"
+            },
+            "synonyms": [
+                "acidification",
+                "corrosion",
+                "erosion"
+            ],
+            "antonyms": [
+                "neutralization",
+                "alkalization"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "acid",
+                    "acidification",
+                    "acidifier"
+                ],
+                "verb": [
+                    "acidify"
+                ],
+                "adjective": [
+                    "acidic",
+                    "acidified"
+                ],
+                "adverb": [
+                    "acidically"
+                ]
             }
         },
         {
@@ -53,6 +162,29 @@
             "phonetic": {
                 "en-GB": "/əˌkaʊn.t̬əˈbɪl.ə.t̬i/",
                 "en-US": "/əˌkaʊn.təˈbɪl.ə.ti/"
+            },
+            "synonyms": [
+                "responsibility",
+                "liability",
+                "answerability"
+            ],
+            "antonyms": [
+                "irresponsibility",
+                "unaccountability"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "account",
+                    "accountability",
+                    "accountant"
+                ],
+                "verb": [
+                    "account"
+                ],
+                "adjective": [
+                    "accountable",
+                    "unaccountable"
+                ]
             }
         },
         {
@@ -64,6 +196,34 @@
             "phonetic": {
                 "en-GB": "/ədˈmɪn.ɪ.stər/",
                 "en-US": "/ədˈmɪn.ə.stɚ/"
+            },
+            "synonyms": [
+                "manage",
+                "oversee",
+                "supervise",
+                "direct"
+            ],
+            "antonyms": [
+                "mismanage",
+                "neglect"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "administration",
+                    "administrator",
+                    "admin"
+                ],
+                "verb": [
+                    "administer",
+                    "manage"
+                ],
+                "adjective": [
+                    "administrative",
+                    "administrational"
+                ],
+                "adverb": [
+                    "administratively"
+                ]
             }
         },
         {
@@ -75,6 +235,29 @@
             "phonetic": {
                 "en-GB": "/ˌæl.truˈɪs.tɪk/",
                 "en-US": "/ˌæl.truˈɪs.tɪk/"
+            },
+            "synonyms": [
+                "selfless",
+                "unselfish",
+                "charitable",
+                "philanthropic"
+            ],
+            "antonyms": [
+                "selfish",
+                "egoistic",
+                "self-centered"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "altruism",
+                    "altruist"
+                ],
+                "adjective": [
+                    "altruistic"
+                ],
+                "adverb": [
+                    "altruistically"
+                ]
             }
         },
         {
@@ -86,6 +269,28 @@
             "phonetic": {
                 "en-GB": "/əˈlaɪn.mənt/",
                 "en-US": "/əˈlaɪn.mənt/"
+            },
+            "synonyms": [
+                "arrangement",
+                "positioning",
+                "coordination"
+            ],
+            "antonyms": [
+                "misalignment",
+                "disarray"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "alignment",
+                    "aligner"
+                ],
+                "verb": [
+                    "align"
+                ],
+                "adjective": [
+                    "aligned",
+                    "unaligned"
+                ]
             }
         },
         {
@@ -97,6 +302,34 @@
             "phonetic": {
                 "en-GB": "/əˈkjuː.mjə.leɪt/",
                 "en-US": "/əˈkjuː.mjə.leɪt/"
+            },
+            "synonyms": [
+                "collect",
+                "gather",
+                "amass",
+                "hoard"
+            ],
+            "antonyms": [
+                "disperse",
+                "scatter",
+                "dissipate"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "accumulation",
+                    "accumulator"
+                ],
+                "verb": [
+                    "accumulate",
+                    "collect"
+                ],
+                "adjective": [
+                    "accumulative",
+                    "accumulated"
+                ],
+                "adverb": [
+                    "accumulatively"
+                ]
             }
         },
         {
@@ -108,6 +341,368 @@
             "phonetic": {
                 "en-GB": "/ˌæspəˈreɪʃənl/",
                 "en-US": "/ˌæspəˈreɪʃənl/"
+            },
+            "synonyms": [
+                "ambitious",
+                "hopeful",
+                "motivated"
+            ],
+            "antonyms": [
+                "unambitious",
+                "apathetic"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "aspiration",
+                    "aspirer"
+                ],
+                "adjective": [
+                    "aspirational",
+                    "aspiring"
+                ],
+                "verb": [
+                    "aspire"
+                ],
+                "adverb": [
+                    "aspirationally"
+                ]
+            }
+        },
+        {
+            "word": "intellectual",
+            "meaning": "trí tuệ",
+            "type": "adjective",
+            "example": "Her intellectual curiosity drove her to explore new ideas.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˌɪn.təˈlek.tʃu.əl/",
+                "en-US": "/ˌɪn.təˈlek.tʃu.əl/"
+            },
+            "synonyms": [
+                "cerebral",
+                "brainy",
+                "knowledgeable"
+            ],
+            "antonyms": [
+                "unintelligent",
+                "ignorant"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "intellect",
+                    "intellectual"
+                ],
+                "adjective": [
+                    "intellectual",
+                    "intellectualized"
+                ],
+                "adverb": [
+                    "intellectually"
+                ]
+            }
+        },
+        {
+            "word": "familiarity",
+            "meaning": "sự quen thuộc",
+            "type": "noun",
+            "example": "Her familiarity with the subject made her a valuable team member.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/fəˌmɪl.jəˈrɪ.ti/",
+                "en-US": "/fəˌmɪl.jəˈrɪ.ti/"
+            },
+            "synonyms": [
+                "knowledge",
+                "awareness",
+                "understanding"
+            ],
+            "antonyms": [
+                "ignorance",
+                "unfamiliarity"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "familiarity",
+                    "familiar"
+                ],
+                "adjective": [
+                    "familiar",
+                    "unfamiliar"
+                ],
+                "adverb": [
+                    "familiarly"
+                ]
+            }
+        },
+        {
+            "word": "practical",
+            "meaning": "thực tiễn",
+            "type": "adjective",
+            "example": "Her practical approach to problem-solving was highly effective.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈpræk.tɪ.kəl/",
+                "en-US": "/ˈpræk.tɪ.kəl/"
+            },
+            "synonyms": [
+                "realistic",
+                "sensible",
+                "feasible"
+            ],
+            "antonyms": [
+                "impractical",
+                "unrealistic",
+                "theoretical"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "practice",
+                    "practicality",
+                    "practitioner"
+                ],
+                "verb": [
+                    "practice"
+                ],
+                "adjective": [
+                    "practical",
+                    "practiced"
+                ],
+                "adverb": [
+                    "practically"
+                ]
+            }
+        },
+        {
+            "word": "crucial",
+            "meaning": "cốt yếu",
+            "type": "adjective",
+            "example": "Effective communication is crucial for team success.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈkruː.ʃəl/",
+                "en-US": "/ˈkruː.ʃəl/"
+            },
+            "synonyms": [
+                "essential",
+                "vital",
+                "critical",
+                "pivotal"
+            ],
+            "antonyms": [
+                "insignificant",
+                "unimportant",
+                "minor"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "crux",
+                    "cruciality"
+                ],
+                "adjective": [
+                    "crucial",
+                    "crucified"
+                ],
+                "adverb": [
+                    "crucially"
+                ]
+            }
+        },
+        {
+            "word": "articulated",
+            "meaning": "có khớp nối",
+            "type": "adjective",
+            "example": "Her articulated thoughts on the subject were impressive.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈɑː.tɪ.kjʊ.leɪ.tɪd/",
+                "en-US": "/ˈɑː.tɪ.kjʊ.leɪ.tɪd/"
+            },
+            "synonyms": [
+                "expressed",
+                "voiced",
+                "communicated"
+            ],
+            "antonyms": [
+                "inarticulate",
+                "unexpressed"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "articulation",
+                    "articulator"
+                ],
+                "verb": [
+                    "articulate"
+                ],
+                "adjective": [
+                    "articulated",
+                    "inarticulate"
+                ],
+                "adverb": [
+                    "articulately"
+                ]
+            }
+        },
+        {
+            "word": "recession",
+            "meaning": "suy thoái",
+            "type": "noun",
+            "example": "The recession led to widespread job losses.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/rɪˈsɛʃən/",
+                "en-US": "/rɪˈsɛʃən/"
+            },
+            "synonyms": [
+                "downturn",
+                "decline",
+                "slump"
+            ],
+            "antonyms": [
+                "expansion",
+                "growth",
+                "boom"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "recession",
+                    "recess"
+                ],
+                "verb": [
+                    "recede"
+                ],
+                "adjective": [
+                    "recessional"
+                ]
+            }
+        },
+        {
+            "word": "doubtful",
+            "meaning": "nghi ngờ",
+            "type": "adjective",
+            "example": "She was doubtful about the success of the project.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈdaʊt.fəl/",
+                "en-US": "/ˈdaʊt.fəl/"
+            },
+            "synonyms": [
+                "uncertain",
+                "skeptical",
+                "dubious"
+            ],
+            "antonyms": [
+                "certain",
+                "confident",
+                "sure"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "doubt",
+                    "doubtfulness"
+                ],
+                "verb": [
+                    "doubt"
+                ],
+                "adjective": [
+                    "doubtful",
+                    "doubted"
+                ],
+                "adverb": [
+                    "doubtfully"
+                ]
+            }
+        },
+        {
+            "word": "succinct",
+            "meaning": "ngắn gọn",
+            "type": "adjective",
+            "example": "Her succinct summary of the report was appreciated.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/səkˈsɪŋkt/",
+                "en-US": "/səkˈsɪŋkt/"
+            },
+            "synonyms": [
+                "concise",
+                "brief",
+                "to the point"
+            ],
+            "antonyms": [
+                "verbose",
+                "wordy",
+                "long-winded"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "succinctness"
+                ],
+                "adjective": [
+                    "succinct"
+                ],
+                "adverb": [
+                    "succinctly"
+                ]
+            }
+        },
+        {
+            "word": "agenda",
+            "meaning": "chương trình nghị sự",
+            "type": "noun",
+            "example": "The meeting's agenda was distributed in advance.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/əˈdʒɛn.də/",
+                "en-US": "/əˈdʒɛn.də/"
+            },
+            "synonyms": [
+                "schedule",
+                "program",
+                "plan"
+            ],
+            "antonyms": [
+                "disorganization",
+                "chaos"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "agenda",
+                    "agendum"
+                ],
+                "adjective": [
+                    "agendized"
+                ]
+            }
+        },
+        {
+            "word": "underpinned",
+            "meaning": "cơ sở, nền tảng",
+            "type": "verb",
+            "example": "The theory was underpinned by extensive research.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˌʌn.dəˈpɪn/",
+                "en-US": "/ˌʌn.dəˈpɪn/"
+            },
+            "synonyms": [
+                "support",
+                "bolster",
+                "reinforce"
+            ],
+            "antonyms": [
+                "undermine",
+                "weaken"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "underpinning"
+                ],
+                "verb": [
+                    "underpin"
+                ],
+                "adjective": [
+                    "underpinned"
+                ]
             }
         }
     ]

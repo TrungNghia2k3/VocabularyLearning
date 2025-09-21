@@ -517,6 +517,113 @@ footer {
     color: #856404;
 }
 
+/* Real-time Search Styles */
+.search-container {
+    position: relative;
+}
+
+.search-container .form-control {
+    padding-right: 40px;
+    border-radius: 25px;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.search-container .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    transform: translateY(-1px);
+}
+
+.search-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+    pointer-events: none;
+    transition: color 0.3s ease;
+}
+
+.search-container .form-control:focus + .search-icon {
+    color: #007bff;
+}
+
+/* Synonyms, Antonyms, and Word Family Styles */
+.synonyms-section, .antonyms-section, .word-family-section {
+    border-left: 3px solid transparent;
+    padding-left: 8px;
+    margin-top: 8px;
+}
+
+.synonyms-section {
+    border-left-color: #28a745;
+    background-color: #f8fff9;
+}
+
+.antonyms-section {
+    border-left-color: #dc3545;
+    background-color: #fff8f8;
+}
+
+.word-family-section {
+    border-left-color: #007bff;
+    background-color: #f8fbff;
+}
+
+/* Custom badge colors */
+.bg-success-soft {
+    background-color: #d4edda !important;
+    border: 1px solid #c3e6cb;
+}
+
+.bg-danger-soft {
+    background-color: #f8d7da !important;
+    border: 1px solid #f5c6cb;
+}
+
+.bg-primary-soft {
+    background-color: #d1ecf1 !important;
+    border: 1px solid #bee5eb;
+}
+
+.synonyms-tags .badge, .antonyms-tags .badge, .word-family-content .badge {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.synonyms-tags .badge:hover {
+    background-color: #28a745 !important;
+    color: white !important;
+    transform: scale(1.05);
+}
+
+.antonyms-tags .badge:hover {
+    background-color: #dc3545 !important;
+    color: white !important;
+    transform: scale(1.05);
+}
+
+.word-family-content .badge:hover {
+    background-color: #007bff !important;
+    color: white !important;
+    transform: scale(1.05);
+}
+
+.word-type-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.word-type-group small {
+    min-width: 70px;
+    font-weight: 500;
+}
+
 /* Utility Classes */
 .text-shadow {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);

@@ -18,6 +18,9 @@ class VocabularyApp {
         this.selectedAccent = 'en-GB'; // Default to British English
         this.isInitialized = false;
         
+        // Search debounce timer
+        this.searchDebounceTimer = null;
+        
         this.init();
     }
 
@@ -264,10 +267,17 @@ class VocabularyApp {
         document.getElementById('retakeQuiz').addEventListener('click', () => this.startQuiz());
         document.getElementById('quizPronounceBtn').addEventListener('click', () => this.pronounceQuizWord());
 
-        // Search functionality
-        document.getElementById('searchBtn').addEventListener('click', () => this.searchVocabulary());
-        document.getElementById('searchInput').addEventListener('keyup', (e) => {
-            if (e.key === 'Enter') this.searchVocabulary();
+        // Search functionality - Real-time search with debounce
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            this.debouncedSearch(e.target.value);
+        });
+
+        // Clear search when escape is pressed
+        document.getElementById('searchInput').addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                e.target.value = '';
+                this.debouncedSearch('');
+            }
         });
 
         // Practice mode
@@ -345,6 +355,13 @@ class VocabularyApp {
         document.getElementById('phoneticText').textContent = this.getPhonetic(word.word);
         document.getElementById('meaningText').textContent = word.meaning;
         document.getElementById('exampleText').textContent = word.example || '';
+        
+        // Update extended info on flashcard back
+        const extendedInfoContainer = document.getElementById('flashcardExtendedInfo');
+        extendedInfoContainer.innerHTML = `
+            ${this.renderSynonymsAntonyms(word)}
+            ${this.renderWordFamily(word)}
+        `;
         
         // Update progress
         document.getElementById('flashcardProgress').textContent = 
@@ -584,6 +601,10 @@ class VocabularyApp {
                         <p class="vocab-meaning">${word.meaning}</p>
                         <p class="text-muted small">${this.getPhonetic(word.word)}</p>
                         ${word.example ? `<p class="vocab-example">"${word.example}"</p>` : ''}
+                        
+                        ${this.renderSynonymsAntonyms(word)}
+                        ${this.renderWordFamily(word)}
+                        
                         <div class="mt-2">
                             <button class="btn btn-sm ${isLearned ? 'btn-success' : 'btn-outline-primary'}" 
                                     onclick="app.toggleWordStatus('${word.word}')">
@@ -596,6 +617,92 @@ class VocabularyApp {
             `;
             container.appendChild(cardDiv);
         });
+    }
+
+    // Render synonyms và antonyms
+    renderSynonymsAntonyms(word) {
+        let html = '';
+        
+        if (word.synonyms && word.synonyms.length > 0) {
+            html += `
+                <div class="synonyms-section mt-2">
+                    <small class="text-success fw-bold">
+                        <i class="fas fa-plus-circle me-1"></i>Từ đồng nghĩa:
+                    </small>
+                    <div class="synonyms-tags">
+                        ${word.synonyms.map(synonym => 
+                            `<span class="badge bg-success-soft text-success me-1 mb-1">${synonym}</span>`
+                        ).join('')}
+                    </div>
+                </div>
+            `;
+        }
+        
+        if (word.antonyms && word.antonyms.length > 0) {
+            html += `
+                <div class="antonyms-section mt-2">
+                    <small class="text-danger fw-bold">
+                        <i class="fas fa-minus-circle me-1"></i>Từ trái nghĩa:
+                    </small>
+                    <div class="antonyms-tags">
+                        ${word.antonyms.map(antonym => 
+                            `<span class="badge bg-danger-soft text-danger me-1 mb-1">${antonym}</span>`
+                        ).join('')}
+                    </div>
+                </div>
+            `;
+        }
+        
+        return html;
+    }
+
+    // Render word family
+    renderWordFamily(word) {
+        if (!word.wordFamily || Object.keys(word.wordFamily).length === 0) {
+            return '';
+        }
+        
+        let html = `
+            <div class="word-family-section mt-2">
+                <small class="text-primary fw-bold">
+                    <i class="fas fa-sitemap me-1"></i>Nhóm từ gia đình:
+                </small>
+                <div class="word-family-content mt-1">
+        `;
+        
+        Object.entries(word.wordFamily).forEach(([type, words]) => {
+            if (words && words.length > 0) {
+                html += `
+                    <div class="word-type-group mb-1">
+                        <small class="text-muted">${this.getVietnameseWordType(type)}:</small>
+                        ${words.map(w => 
+                            `<span class="badge bg-primary-soft text-primary me-1">${w}</span>`
+                        ).join('')}
+                    </div>
+                `;
+            }
+        });
+        
+        html += `
+                </div>
+            </div>
+        `;
+        
+        return html;
+    }
+
+    // Chuyển đổi loại từ sang tiếng Việt
+    getVietnameseWordType(type) {
+        const typeMap = {
+            'noun': 'Danh từ',
+            'verb': 'Động từ',
+            'adjective': 'Tính từ',
+            'adverb': 'Trạng từ',
+            'preposition': 'Giới từ',
+            'conjunction': 'Liên từ',
+            'interjection': 'Thán từ'
+        };
+        return typeMap[type] || type;
     }
 
     // Tìm từ trùng lặp trong danh sách từ vựng
@@ -634,20 +741,67 @@ class VocabularyApp {
         }
     }
 
-    searchVocabulary() {
-        const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
-        if (!searchTerm) {
+    // Debounced search function
+    debouncedSearch(searchTerm) {
+        // Clear existing timer
+        if (this.searchDebounceTimer) {
+            clearTimeout(this.searchDebounceTimer);
+        }
+
+        // Set new timer
+        this.searchDebounceTimer = setTimeout(() => {
+            this.performSearch(searchTerm);
+        }, 300); // 300ms debounce delay
+    }
+
+    // Perform actual search
+    performSearch(searchTerm) {
+        const trimmedTerm = searchTerm.toLowerCase().trim();
+        
+        if (!trimmedTerm) {
             this.displayVocabularyList();
             return;
         }
 
-        const filteredWords = this.vocabulary.filter(word => 
-            word.word.toLowerCase().includes(searchTerm) ||
-            word.meaning.toLowerCase().includes(searchTerm) ||
-            (word.example && word.example.toLowerCase().includes(searchTerm))
-        );
+        const filteredWords = this.vocabulary.filter(word => {
+            // Tìm kiếm trong từ gốc, nghĩa, và ví dụ
+            if (word.word.toLowerCase().includes(trimmedTerm) ||
+                word.meaning.toLowerCase().includes(trimmedTerm) ||
+                (word.example && word.example.toLowerCase().includes(trimmedTerm))) {
+                return true;
+            }
+            
+            // Tìm kiếm trong synonyms
+            if (word.synonyms && word.synonyms.some(synonym => 
+                synonym.toLowerCase().includes(trimmedTerm))) {
+                return true;
+            }
+            
+            // Tìm kiếm trong antonyms
+            if (word.antonyms && word.antonyms.some(antonym => 
+                antonym.toLowerCase().includes(trimmedTerm))) {
+                return true;
+            }
+            
+            // Tìm kiếm trong word family
+            if (word.wordFamily) {
+                for (const [type, words] of Object.entries(word.wordFamily)) {
+                    if (words && words.some(w => w.toLowerCase().includes(trimmedTerm))) {
+                        return true;
+                    }
+                }
+            }
+            
+            return false;
+        });
 
         this.displayVocabularyList(filteredWords);
+    }
+
+    // Legacy search function for backward compatibility
+    searchVocabulary() {
+        const searchTerm = document.getElementById('searchInput').value;
+        this.performSearch(searchTerm);
     }
 
     toggleWordStatus(word) {
