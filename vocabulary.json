@@ -704,6 +704,342 @@
                     "underpinned"
                 ]
             }
+        },
+        {
+            "word": "aboriginal",
+            "meaning": "nguyên sơ, nguyên thủy",
+            "type": "adjective",
+            "example": "The aboriginal cultures of Australia are rich in history.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˌæbəˈrɪdʒɪnəl/",
+                "en-US": "/ˌæbəˈrɪdʒɪnəl/"
+            },
+            "synonyms": [
+                "native",
+                "indigenous",
+                "original"
+            ],
+            "antonyms": [
+                "non-native",
+                "foreign"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "aboriginal",
+                    "aborigine"
+                ],
+                "adjective": [
+                    "aboriginal"
+                ],
+                "adverb": [
+                    "aboriginally"
+                ]
+            }
+        },
+        {
+            "word": "assimilation",
+            "meaning": "sự đồng hóa",
+            "type": "noun",
+            "example": "The assimilation of new ideas is essential for growth.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/əˌsɪm.ɪˈleɪ.ʃən/",
+                "en-US": "/əˌsɪm.ɪˈleɪ.ʃən/"
+            },
+            "synonyms": [
+                "integration",
+                "absorption",
+                "incorporation"
+            ],
+            "antonyms": [
+                "segregation",
+                "separation"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "assimilation",
+                    "assimilator"
+                ],
+                "verb": [
+                    "assimilate"
+                ],
+                "adjective": [
+                    "assimilative",
+                    "assimilated"
+                ],
+                "adverb": [
+                    "assimilatively"
+                ]
+            }
+        },
+        {
+            "word": "conversely",
+            "meaning": "ngược lại",
+            "type": "adverb",
+            "example": "Conversely, the lack of evidence can weaken a claim.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˌkɒn.vɜːs.li/",
+                "en-US": "/ˌkɑːn.vɜːr.sli/"
+            },
+            "synonyms": [
+                "oppositely",
+                "inversely",
+                "contrarily"
+            ],
+            "antonyms": [
+                "similarly",
+                "likewise"
+            ],
+            "wordFamily": {
+                "adjective": [
+                    "converse"
+                ],
+                "adverb": [
+                    "conversely"
+                ],
+                "noun": [
+                    "conversation"
+                ],
+                "verb": [
+                    "converse"
+                ]
+            }
+        },
+        {
+            "word": "deliberately",
+            "meaning": "một cách có chủ ý, có toan tính",
+            "type": "adverb",
+            "example": "He deliberately ignored the warning signs.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˌdɛlɪˈbərətli/",
+                "en-US": "/ˌdɛlɪˈbərətli/"
+            },
+            "synonyms": [
+                "intentionally",
+                "purposely",
+                "consciously"
+            ],
+            "antonyms": [
+                "accidentally",
+                "unintentionally"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "deliberation",
+                    "deliberateness"
+                ],
+                "verb": [
+                    "deliberate"
+                ],
+                "adjective": [
+                    "deliberate",
+                    "deliberated"
+                ],
+                "adverb": [
+                    "deliberately"
+                ]
+            }
+        },
+        {
+            "word": "denounce",
+            "meaning": "tố cáo, vạch mặt",
+            "type": "verb",
+            "example": "The whistleblower decided to denounce the company's unethical practices.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˌdɛn.aʊns/",
+                "en-US": "/ˌdɛn.aʊns/"
+            },
+            "synonyms": [
+                "condemn",
+                "criticize",
+                "accuse"
+            ],
+            "antonyms": [
+                "praise",
+                "commend",
+                "endorse"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "denunciation",
+                    "denouncer"
+                ],
+                "verb": [
+                    "denounce"
+                ],
+                "adjective": [
+                    "denounced"
+                ]
+            }
+        },
+        {
+            "word": "depravity",
+            "meaning": "sự truỵ lạc, đồi bại",
+            "type": "noun",
+            "example": "The novel explores the theme of human depravity.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/dɪˈpræv.ɪ.ti/",
+                "en-US": "/dɪˈpræv.ɪ.ti/"
+            },
+            "synonyms": [
+                "corruption",
+                "wickedness",
+                "vice"
+            ],
+            "antonyms": [
+                "virtue",
+                "morality",
+                "goodness"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "depravity",
+                    "depraver"
+                ],
+                "adjective": [
+                    "depraved"
+                ],
+                "adverb": [
+                    "depravedly"
+                ]
+            }
+        },
+        {
+            "word": "dismiss",
+            "meaning": "gạt bỏ, không xem xét",
+            "type": "verb",
+            "example": "The manager decided to dismiss the employee due to poor performance.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/dɪsˈmɪs/",
+                "en-US": "/dɪsˈmɪs/"
+            },
+            "synonyms": [
+                "fire",
+                "terminate",
+                "let go"
+            ],
+            "antonyms": [
+                "hire",
+                "employ",
+                "retain"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "dismissal",
+                    "dismisser"
+                ],
+                "verb": [
+                    "dismiss"
+                ],
+                "adjective": [
+                    "dismissed",
+                    "dismissive"
+                ],
+                "adverb": [
+                    "dismissively"
+                ]
+            }
+        },
+        {
+            "word": "fate",
+            "meaning": "định mệnh",
+            "type": "noun",
+            "example": "She believed it was her fate to become a great artist.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/feɪt/",
+                "en-US": "/feɪt/"
+            },
+            "synonyms": [
+                "destiny",
+                "fortune",
+                "lot"
+            ],
+            "antonyms": [
+                "free will",
+                "choice"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "fate",
+                    "fatefulness"
+                ],
+                "adjective": [
+                    "fateful"
+                ],
+                "adverb": [
+                    "fatefully"
+                ]
+            }
+        },
+        {
+            "word": "federation",
+            "meaning": "liên bang, liên hiệp",
+            "type": "noun",
+            "example": "The federation of states worked together to promote economic growth.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˌfɛd.əˈreɪ.ʃən/",
+                "en-US": "/ˌfɛd.əˈreɪ.ʃən/"
+            },
+            "synonyms": [
+                "union",
+                "alliance",
+                "confederation"
+            ],
+            "antonyms": [
+                "separation",
+                "division"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "federation",
+                    "federator"
+                ],
+                "verb": [
+                    "federate"
+                ],
+                "adjective": [
+                    "federal",
+                    "federated"
+                ],
+                "adverb": [
+                    "federally"
+                ]
+            }
+        },
+        {
+            "word": "homophone",
+            "meaning": "từ đồng âm",
+            "type": "noun",
+            "example": "In English, 'bare' and 'bear' are homophones.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˌhəʊ.məˈfəʊn/",
+                "en-US": "/ˌhoʊ.məˈfoʊn/"
+            },
+            "synonyms": [
+                "homonym",
+                "same-sounding word"
+            ],
+            "antonyms": [
+                "heterophone"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "homophone",
+                    "homophony"
+                ],
+                "adjective": [
+                    "homophonic"
+                ]
+            }
         }
     ]
 }
