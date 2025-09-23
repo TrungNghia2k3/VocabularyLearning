@@ -214,8 +214,7 @@
                     "admin"
                 ],
                 "verb": [
-                    "administer",
-                    "manage"
+                    "administer"
                 ],
                 "adjective": [
                     "administrative",
@@ -320,8 +319,7 @@
                     "accumulator"
                 ],
                 "verb": [
-                    "accumulate",
-                    "collect"
+                    "accumulate"
                 ],
                 "adjective": [
                     "accumulative",
@@ -1038,6 +1036,333 @@
                 ],
                 "adjective": [
                     "homophonic"
+                ]
+            }
+        },
+        {
+            "word": "identification",
+            "meaning": "sự đồng nhất hóa",
+            "type": "noun",
+            "example": "The identification of the suspect was crucial for the investigation.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˌaɪ.dent.ɪ.fɪˈkeɪ.ʃən/",
+                "en-US": "/ˌaɪ.dent.ɪ.fɪˈkeɪ.ʃən/"
+            },
+            "synonyms": [
+                "recognition",
+                "verification",
+                "authentication"
+            ],
+            "antonyms": [
+                "misidentification",
+                "confusion"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "identification",
+                    "identifier"
+                ],
+                "verb": [
+                    "identify"
+                ],
+                "adjective": [
+                    "identifiable",
+                    "identified"
+                ],
+                "adverb": [
+                    "identifiably"
+                ]
+            }
+        },
+        {
+            "word": "indigenous",
+            "meaning": "bản địa",
+            "type": "adjective",
+            "example": "The indigenous people of the region have a rich cultural heritage.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˌɪn.dɪˈdʒɪ.nəs/",
+                "en-US": "/ˌɪn.dɪˈdʒɪ.nəs/"
+            },
+            "synonyms": [
+                "native",
+                "aboriginal",
+                "local"
+            ],
+            "antonyms": [
+                "non-native",
+                "foreign"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "indigenousness"
+                ],
+                "adjective": [
+                    "indigenous"
+                ],
+                "adverb": [
+                    "indigenously"
+                ]
+            }
+        },
+        {
+            "word": "misinterpret",
+            "meaning": "hiểu sai",
+            "type": "verb",
+            "example": "It's easy to misinterpret someone's intentions.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˌmɪs.ɪnˈtɜː.prɪt/",
+                "en-US": "/ˌmɪs.ɪnˈtɜr.prɪt/"
+            },
+            "synonyms": [
+                "misunderstand",
+                "mistake",
+                "confuse"
+            ],
+            "antonyms": [
+                "understand",
+                "comprehend"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "misinterpretation",
+                    "misinterpreter"
+                ],
+                "verb": [
+                    "misinterpret"
+                ],
+                "adjective": [
+                    "misinterpreted"
+                ]
+            }
+        },
+        {
+            "word": "no-go",
+            "meaning": "tình trạng bế tắc",
+            "type": "noun",
+            "example": "The project was declared a no-go after the budget cuts.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˌnəʊˈɡəʊ/",
+                "en-US": "/ˌnoʊˈɡoʊ/"
+            },
+            "synonyms": [
+                "dead end",
+                "stalemate",
+                "impasse"
+            ],
+            "antonyms": [
+                "go-ahead",
+                "progress"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "no-go"
+                ],
+                "adjective": [
+                    "no-go"
+                ]
+            }
+        },
+        {
+            "word": "pamper",
+            "meaning": "nuông chiều",
+            "type": "verb",
+            "example": "Parents should not pamper their children too much.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˌpæm.pər/",
+                "en-US": "/ˌpæm.pɚ/"
+            },
+            "synonyms": [
+                "spoil",
+                "indulge",
+                "coddle"
+            ],
+            "antonyms": [
+                "neglect",
+                "ignore"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "pampering"
+                ],
+                "verb": [
+                    "pamper"
+                ],
+                "adjective": [
+                    "pampered",
+                    "pampering"
+                ]
+            }
+        },
+        {
+            "word": "patriotism",
+            "meaning": "chủ nghĩa yêu nước",
+            "type": "noun",
+            "example": "Patriotism is often seen as a virtue.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˌpætriəˈtɪzəm/",
+                "en-US": "/ˌpeɪtriəˈtɪzəm/"
+            },
+            "synonyms": [
+                "nationalism",
+                "loyalty",
+                "allegiance"
+            ],
+            "antonyms": [
+                "disloyalty",
+                "treason"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "patriotism",
+                    "patriot"
+                ],
+                "adjective": [
+                    "patriotic"
+                ],
+                "adverb": [
+                    "patriotically"
+                ]
+            }
+        },
+        {
+            "word": "perception",
+            "meaning": "nhận thức",
+            "type": "noun",
+            "example": "Her perception of the situation was different from mine.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˌpəˈsɛpʃən/",
+                "en-US": "/ˌpɚˈsɛpʃən/"
+            },
+            "synonyms": [
+                "awareness",
+                "insight",
+                "understanding"
+            ],
+            "antonyms": [
+                "ignorance",
+                "misunderstanding"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "perception",
+                    "perceiver"
+                ],
+                "verb": [
+                    "perceive"
+                ],
+                "adjective": [
+                    "perceptive",
+                    "perceived"
+                ],
+                "adverb": [
+                    "perceptively"
+                ]
+            }
+        },
+        {
+            "word": "prestige",
+            "meaning": "uy tín",
+            "type": "noun",
+            "example": "The university has a lot of prestige in the academic world.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/prɛˈstiːʒ/",
+                "en-US": "/prɛˈstiːʒ/"
+            },
+            "synonyms": [
+                "status",
+                "reputation",
+                "renown"
+            ],
+            "antonyms": [
+                "disrepute",
+                "infamy"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "prestige"
+                ],
+                "adjective": [
+                    "prestigious"
+                ],
+                "adverb": [
+                    "prestigiously"
+                ]
+            }
+        },
+        {
+            "word": "prevalence",
+            "meaning": "tình trạng phổ biến",
+            "type": "noun",
+            "example": "The prevalence of smartphones has changed the way we communicate.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈprɛvələns/",
+                "en-US": "/ˈprɛvələns/"
+            },
+            "synonyms": [
+                "commonness",
+                "widespreadness",
+                "ubiquity"
+            ],
+            "antonyms": [
+                "rarity",
+                "uncommonness"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "prevalence",
+                    "prevalent"
+                ],
+                "adjective": [
+                    "prevalent"
+                ],
+                "adverb": [
+                    "prevalently"
+                ]
+            }
+        },
+        {
+            "word": "restrain",
+            "meaning": "kiềm chế",
+            "type": "verb",
+            "example": "She had to restrain her emotions during the meeting.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/rɪˈstreɪn/",
+                "en-US": "/rɪˈstreɪn/"
+            },
+            "synonyms": [
+                "control",
+                "hold back",
+                "suppress"
+            ],
+            "antonyms": [
+                "release",
+                "let go",
+                "encourage"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "restraint",
+                    "restrainer"
+                ],
+                "verb": [
+                    "restrain"
+                ],
+                "adjective": [
+                    "restrained",
+                    "unrestrained"
+                ],
+                "adverb": [
+                    "restrainingly"
                 ]
             }
         }
