@@ -1365,6 +1365,339 @@
                     "restrainingly"
                 ]
             }
+        },
+        {
+            "word": "revival",
+            "meaning": "sự hồi sinh",
+            "type": "noun",
+            "example": "The revival of traditional crafts has gained popularity in recent years.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/rɪˈvaɪvəl/",
+                "en-US": "/rɪˈvaɪvəl/"
+            },
+            "synonyms": [
+                "rebirth",
+                "restoration",
+                "revitalization"
+            ],
+            "antonyms": [
+                "decline",
+                "deterioration"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "revival",
+                    "reviver"
+                ],
+                "verb": [
+                    "revive"
+                ],
+                "adjective": [
+                    "revived",
+                    "reviving"
+                ],
+                "adverb": [
+                    "revivably"
+                ]
+            }
+        },
+        {
+            "word": "superstition",
+            "meaning": "sự mê tín dị đoan",
+            "type": "noun",
+            "example": "Many people have superstitions about black cats.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˌsuːpəˈstɪʃən/",
+                "en-US": "/ˌsuːpərˈstɪʃən/"
+            },
+            "synonyms": [
+                "myth",
+                "belief",
+                "folklore"
+            ],
+            "antonyms": [
+                "rationality",
+                "logic"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "superstition",
+                    "superstitiousness"
+                ],
+                "adjective": [
+                    "superstitious"
+                ],
+                "adverb": [
+                    "superstitiously"
+                ]
+            }
+        },
+        {
+            "word": "synthesis",
+            "meaning": "sự tổng hợp",
+            "type": "noun",
+            "example": "The synthesis of various ideas led to a breakthrough in the project.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈsɪnθəsɪs/",
+                "en-US": "/ˈsɪnθəsɪs/"
+            },
+            "synonyms": [
+                "combination",
+                "integration",
+                "fusion"
+            ],
+            "antonyms": [
+                "analysis",
+                "separation"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "synthesis",
+                    "synthesizer"
+                ],
+                "verb": [
+                    "synthesize"
+                ],
+                "adjective": [
+                    "synthetic",
+                    "synthesized"
+                ],
+                "adverb": [
+                    "synthetically"
+                ]
+            }
+        },
+        {
+            "word": "unhygienic",
+            "meaning": "không hợp vệ sinh",
+            "type": "adjective",
+            "example": "The unhygienic conditions in the kitchen led to food poisoning.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ʌnhaɪˈdʒiːnɪk/",
+                "en-US": "/ʌnhaɪˈdʒiːnɪk/"
+            },
+            "synonyms": [
+                "unsanitary",
+                "dirty",
+                "filthy"
+            ],
+            "antonyms": [
+                "hygienic",
+                "sanitary",
+                "clean"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "unhygienicness"
+                ],
+                "adjective": [
+                    "unhygienic"
+                ],
+                "adverb": [
+                    "unhygienically"
+                ]
+            }
+        },
+        {
+            "word": "abundant",
+            "meaning": "dồi dào, phong phú",
+            "type": "adjective",
+            "example": "The garden was abundant with flowers in full bloom.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/əˈbʌndənt/",
+                "en-US": "/əˈbʌndənt/"
+            },
+            "synonyms": [
+                "plentiful",
+                "ample",
+                "bountiful"
+            ],
+            "antonyms": [
+                "scarce",
+                "insufficient",
+                "sparse"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "abundance",
+                    "abundantness"
+                ],
+                "adjective": [
+                    "abundant"
+                ],
+                "adverb": [
+                    "abundantly"
+                ]
+            }
+        },
+        {
+            "word": "apparent",
+            "meaning": "rõ ràng",
+            "type": "adjective",
+            "example": "It was apparent that she was not interested in the conversation.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/əˈpærənt/",
+                "en-US": "/əˈpærənt/"
+            },
+            "synonyms": [
+                "clear",
+                "obvious",
+                "evident"
+            ],
+            "antonyms": [
+                "unclear",
+                "obscure",
+                "ambiguous"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "apparition"
+                ],
+                "adjective": [
+                    "apparent",
+                    "apparitional"
+                ],
+                "adverb": [
+                    "apparently"
+                ]
+            }
+        },
+        {
+            "word": "privileged",
+            "meaning": "được đặc quyền",
+            "type": "adjective",
+            "example": "He comes from a privileged background and has had many opportunities.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈprɪvɪlɪdʒd/",
+                "en-US": "/ˈprɪvɪlɪdʒd/"
+            },
+            "synonyms": [
+                "advantaged",
+                "special",
+                "exclusive"
+            ],
+            "antonyms": [
+                "underprivileged",
+                "disadvantaged"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "privilege",
+                    "privilegedness"
+                ],
+                "verb": [
+                    "privilege"
+                ],
+                "adjective": [
+                    "privileged",
+                    "privileging"
+                ],
+                "adverb": [
+                    "privilegedly"
+                ]
+            }
+        },
+        {
+            "word": "slum",
+            "meaning": "nhà ổ chuột",
+            "type": "noun",
+            "example": "The city has many slums where people live in poverty.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/slʌm/",
+                "en-US": "/slʌm/"
+            },
+            "synonyms": [
+                "shanty",
+                "ghetto",
+                "favela"
+            ],
+            "antonyms": [
+                "suburb",
+                "affluent area"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "slum",
+                    "slummer"
+                ],
+                "verb": [
+                    "slum"
+                ],
+                "adjective": [
+                    "slummy"
+                ]
+            }
+        },
+        {
+            "word": "stealth",
+            "meaning": "sự lén lút",
+            "type": "noun",
+            "example": "The cat moved with stealth as it approached its prey.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/stɛlθ/",
+                "en-US": "/stɛlθ/"
+            },
+            "synonyms": [
+                "cunning",
+                "slyness",
+                "furtiveness"
+            ],
+            "antonyms": [
+                "openness",
+                "honesty"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "stealth"
+                ],
+                "adjective": [
+                    "stealthy"
+                ],
+                "adverb": [
+                    "stealthily"
+                ]
+            }
+        },
+        {
+            "word": "tendency",
+            "meaning": "xu hướng",
+            "type": "noun",
+            "example": "There is a tendency for people to be more open-minded in urban areas.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈtɛndənsi/",
+                "en-US": "/ˈtɛndənsi/"
+            },
+            "synonyms": [
+                "inclination",
+                "trend",
+                "propensity"
+            ],
+            "antonyms": [
+                "disinclination",
+                "aversion"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "tendency",
+                    "tendentiousness"
+                ],
+                "adjective": [
+                    "tendentious"
+                ],
+                "adverb": [
+                    "tendentiously"
+                ]
+            }
         }
     ]
 }
