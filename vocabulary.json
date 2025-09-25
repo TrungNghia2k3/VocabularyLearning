@@ -1698,6 +1698,332 @@
                     "tendentiously"
                 ]
             }
+        },
+        {
+            "word": "pension",
+            "meaning": "lương hưu",
+            "type": "noun",
+            "example": "She receives a pension after working for the company for 30 years.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈpɛnʃən/",
+                "en-US": "/ˈpɛnʃən/"
+            },
+            "synonyms": [
+                "retirement fund",
+                "superannuation",
+                "annuity"
+            ],
+            "antonyms": [
+                "salary",
+                "wage"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "pension",
+                    "pensioner"
+                ],
+                "verb": [
+                    "pension"
+                ],
+                "adjective": [
+                    "pensionable"
+                ]
+            }
+        },
+        {
+            "word": "alleviation",
+            "meaning": "sự giảm nhẹ",
+            "type": "noun",
+            "example": "The government is working on the alleviation of poverty in urban areas.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/əˌliːviˈeɪʃən/",
+                "en-US": "/əˌliːviˈeɪʃən/"
+            },
+            "synonyms": [
+                "relief",
+                "easing",
+                "mitigation"
+            ],
+            "antonyms": [
+                "aggravation",
+                "worsening"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "alleviation",
+                    "alleviator"
+                ],
+                "verb": [
+                    "alleviate"
+                ],
+                "adjective": [
+                    "alleviative",
+                    "alleviated"
+                ],
+                "adverb": [
+                    "alleviatively"
+                ]
+            }
+        },
+        {
+            "word": "beetle",
+            "meaning": "bọ cánh cứng",
+            "type": "noun",
+            "example": "The beetle is known for its hard shell and distinctive shape.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈbiːtl/",
+                "en-US": "/ˈbiːtl/"
+            },
+            "synonyms": [
+                "insect",
+                "bug",
+                "creature"
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    "beetle"
+                ],
+                "verb": [
+                    "beetle"
+                ],
+                "adjective": [
+                    "beetle-like"
+                ]
+            }
+        },
+        {
+            "word": "catastrophe",
+            "meaning": "thảm họa",
+            "type": "noun",
+            "example": "The earthquake was a catastrophe that affected thousands of people.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈkætəstrəfi/",
+                "en-US": "/ˈkætəstrəfi/"
+            },
+            "synonyms": [
+                "disaster",
+                "calamity",
+                "cataclysm"
+            ],
+            "antonyms": [
+                "blessing",
+                "boon"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "catastrophe",
+                    "catastrophist"
+                ],
+                "adjective": [
+                    "catastrophic"
+                ],
+                "adverb": [
+                    "catastrophically"
+                ]
+            }
+        },
+        {
+            "word": "climatology",
+            "meaning": "khí hậu học",
+            "type": "noun",
+            "example": "Climatology is the study of climate and its effects on the environment.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈklaɪməˌtɒlədʒi/",
+                "en-US": "/ˈklaɪməˌtɑlədʒi/"
+            },
+            "synonyms": [
+                "meteorology",
+                "weather science"
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    "climatology",
+                    "climatologist"
+                ],
+                "adjective": [
+                    "climatological"
+                ],
+                "adverb": [
+                    "climatologically"
+                ]
+            }
+        },
+        {
+            "word": "climax",
+            "meaning": "đỉnh điểm",
+            "type": "noun",
+            "example": "The climax of the story was both surprising and satisfying.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈklaɪmæks/",
+                "en-US": "/ˈklaɪmæks/"
+            },
+            "synonyms": [
+                "culmination",
+                "peak",
+                "pinnacle"
+            ],
+            "antonyms": [
+                "beginning",
+                "base"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "climax",
+                    "climacteric"
+                ],
+                "verb": [
+                    "climax"
+                ],
+                "adjective": [
+                    "climactic"
+                ],
+                "adverb": [
+                    "climactically"
+                ]
+            }
+        },
+        {
+            "word": "clumsily",
+            "meaning": "một cách vụng về",
+            "type": "adverb",
+            "example": "He clumsily dropped the vase, and it shattered on the floor.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈklʌmzɪli/",
+                "en-US": "/ˈklʌmzɪli/"
+            },
+            "synonyms": [
+                "awkwardly",
+                "ungracefully",
+                "clumsily"
+            ],
+            "antonyms": [
+                "gracefully",
+                "elegantly"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "clumsiness"
+                ],
+                "adjective": [
+                    "clumsy"
+                ],
+                "adverb": [
+                    "clumsily"
+                ]
+            }
+        },
+        {
+            "word": "commend",
+            "meaning": "khen ngợi",
+            "type": "verb",
+            "example": "I commend you for your excellent work on this project.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/kəˈmɛnd/",
+                "en-US": "/kəˈmɛnd/"
+            },
+            "synonyms": [
+                "praise",
+                "commendation",
+                "approval"
+            ],
+            "antonyms": [
+                "criticize",
+                "denounce"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "commendation",
+                    "commender"
+                ],
+                "verb": [
+                    "commend"
+                ],
+                "adjective": [
+                    "commendable",
+                    "commended"
+                ],
+                "adverb": [
+                    "commendably"
+                ]
+            }
+        },
+        {
+            "word": "deposit",
+            "meaning": "đặt cọc",
+            "type": "noun",
+            "example": "You need to pay a deposit to secure your booking.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/dɪˈpɒzɪt/",
+                "en-US": "/ˈdɪpəzɪt/"
+            },
+            "synonyms": [
+                "down payment",
+                "security",
+                "advance"
+            ],
+            "antonyms": [
+                "withdrawal",
+                "removal"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "deposit",
+                    "depositor"
+                ],
+                "verb": [
+                    "deposit"
+                ],
+                "adjective": [
+                    "deposited"
+                ]
+            }
+        },
+        {
+            "word": "evaporation",
+            "meaning": "sự bay hơi",
+            "type": "noun",
+            "example": "The evaporation of water from the surface is a key part of the water cycle.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ɪˌvæpəˈreɪʃən/",
+                "en-US": "/ɪˌvæpəˈreɪʃən/"
+            },
+            "synonyms": [
+                "vaporization",
+                "drying",
+                "desiccation"
+            ],
+            "antonyms": [
+                "condensation",
+                "precipitation"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "evaporation",
+                    "evaporator"
+                ],
+                "verb": [
+                    "evaporate"
+                ],
+                "adjective": [
+                    "evaporative",
+                    "evaporated"
+                ],
+                "adverb": [
+                    "evaporatively"
+                ]
+            }
         }
     ]
 }
