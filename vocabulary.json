@@ -1990,6 +1990,74 @@
             }
         },
         {
+            "word": "moderately",
+            "meaning": "một cách vừa phải",
+            "type": "adverb",
+            "example": "She was moderately successful in her career.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈmɒdərətli/",
+                "en-US": "/ˈmɑːdərətli/"
+            },
+            "synonyms": [
+                "reasonably",
+                "fairly",
+                "somewhat"
+            ],
+            "antonyms": [
+                "extremely",
+                "excessively"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "moderation",
+                    "moderateness"
+                ],
+                "adjective": [
+                    "moderate"
+                ],
+                "adverb": [
+                    "moderately"
+                ]
+            }
+        },
+        {
+            "word": "enhancement",
+            "meaning": "sự nâng cao",
+            "type": "noun",
+            "example": "The enhancement of the software has improved its performance.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ɪnˈhɑːnsmənt/",
+                "en-US": "/ɪnˈhænsmənt/"
+            },
+            "synonyms": [
+                "improvement",
+                "upgrade",
+                "augmentation"
+            ],
+            "antonyms": [
+                "deterioration",
+                "decline"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "enhancement",
+                    "enhancer"
+                ],
+                "verb": [
+                    "enhance"
+                ],
+                "adjective": [
+                    "enhanced",
+                    "enhancing"
+                ],
+                "adverb": [
+                    "enhancingly"
+                ]
+            }
+        },
+        {
             "word": "evaporation",
             "meaning": "sự bay hơi",
             "type": "noun",
@@ -2022,6 +2090,270 @@
                 ],
                 "adverb": [
                     "evaporatively"
+                ]
+            }
+        },
+        {
+            "word": "exacerbate",
+            "meaning": "làm trầm trọng thêm",
+            "type": "verb",
+            "example": "The new law is expected to exacerbate the problem of homelessness.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ɪkˈsæsəbeɪt/",
+                "en-US": "/ɪkˈsæsərbeɪt/"
+            },
+            "synonyms": [
+                "worsen",
+                "aggravate",
+                "intensify"
+            ],
+            "antonyms": [
+                "alleviate",
+                "improve",
+                "mitigate"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "exacerbation",
+                    "exacerbator"
+                ],
+                "verb": [
+                    "exacerbate"
+                ],
+                "adjective": [
+                    "exacerbated",
+                    "exacerbating"
+                ],
+                "adverb": [
+                    "exacerbatingly"
+                ]
+            }
+        },
+        {
+            "word": "glacier",
+            "meaning": "sông băng",
+            "type": "noun",
+            "example": "The glacier slowly moves down the valley.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈɡleɪʃə/",
+                "en-US": "/ˈɡleɪʃər/"
+            },
+            "synonyms": [
+                "ice mass",
+                "ice field",
+                "ice sheet"
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    "glacier"
+                ],
+                "adjective": [
+                    "glacial"
+                ],
+                "adverb": [
+                    "glacially"
+                ]
+            }
+        },
+        {
+            "word": "heat-insulated",
+            "meaning": "cách nhiệt",
+            "type": "adjective",
+            "example": "The heat-insulated walls help to keep the building warm in winter.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈhiːt ˈɪnsəleɪtɪd/",
+                "en-US": "/ˈhiːt ˈɪnsəleɪtɪd/"
+            },
+            "synonyms": [
+                "thermal insulation",
+                "heat retention",
+                "energy-efficient"
+            ],
+            "antonyms": [
+                "non-insulated",
+                "heat-conductive"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "heat-released",
+                    "heat-related",
+                    "heat-treated",
+                    "insulation",
+                    "insulator"
+                ],
+                "verb": [
+                    "insulate"
+                ],
+                "adjective": [
+                    "insulated",
+                    "insulating"
+                ],
+                "adverb": [
+                    "insulatively"
+                ]
+            }
+        },
+        {
+            "word": "heat-trapping",
+            "meaning": "sự giữ nhiệt",
+            "type": "noun",
+            "example": "The heat-trapping properties of the material make it ideal for insulation.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈhiːt ˈtræpɪŋ/",
+                "en-US": "/ˈhiːt ˈtræpɪŋ/"
+            },
+            "synonyms": [
+                "heat retention",
+                "thermal insulation",
+                "energy-efficient"
+            ],
+            "antonyms": [
+                "heat loss",
+                "thermal conductivity"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "heat-trapping"
+                ],
+                "adjective": [
+                    "heat-trapping"
+                ]
+            }
+        },
+        {
+            "word": "horribly",
+            "meaning": "một cách khủng khiếp",
+            "type": "adverb",
+            "example": "The situation was horribly mismanaged.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈhɒrɪbli/",
+                "en-US": "/ˈhɔːrɪbli/"
+            },
+            "synonyms": [
+                "terribly",
+                "awfully",
+                "dreadfully"
+            ],
+            "antonyms": [
+                "wonderfully",
+                "fantastically"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "horribleness",
+                    "horror"
+                ],
+                "adjective": [
+                    "horrible",
+                    "horrific"
+                ],
+                "adverb": [
+                    "horribly"
+                ]
+            }
+        },
+        {
+            "word": "incidence",
+            "meaning": "sự tác động vào, phạm vi ảnh hưởng",
+            "type": "noun",
+            "example": "The incidence of the disease is increasing.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈɪnsɪdəns/",
+                "en-US": "/ˈɪnsɪdəns/"
+            },
+            "synonyms": [
+                "occurrence",
+                "prevalence",
+                "frequency"
+            ],
+            "antonyms": [
+                "rarity",
+                "infrequency"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "incidence",
+                    "incident"
+                ],
+                "adjective": [
+                    "incidental"
+                ],
+                "adverb": [
+                    "incidentally"
+                ]
+            }
+        },
+        {
+            "word": "infectious",
+            "meaning": "có thể lây nhiễm",
+            "type": "adjective",
+            "example": "The infectious nature of the disease makes it a serious public health concern.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ɪnˈfɛkʃəs/",
+                "en-US": "/ɪnˈfɛkʃəs/"
+            },
+            "synonyms": [
+                "contagious",
+                "communicable",
+                "transmissible"
+            ],
+            "antonyms": [
+                "non-infectious",
+                "non-contagious"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "infection",
+                    "infectiousness"
+                ],
+                "verb": [
+                    "infect"
+                ],
+                "adjective": [
+                    "infectious",
+                    "infected"
+                ],
+                "adverb": [
+                    "infectiously"
+                ]
+            }
+        },
+        {
+            "word": "inland",
+            "meaning": "nội địa",
+            "type": "adjective",
+            "example": "The inland areas are less populated than the coastal regions.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈɪnlænd/",
+                "en-US": "/ˈɪnlænd/"
+            },
+            "synonyms": [
+                "interior",
+                "central",
+                "inshore"
+            ],
+            "antonyms": [
+                "coastal",
+                "shoreline"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "inland"
+                ],
+                "adjective": [
+                    "inland"
+                ],
+                "adverb": [
+                    "inland"
                 ]
             }
         }
