@@ -2356,6 +2356,328 @@
                     "inland"
                 ]
             }
+        },
+        {
+            "word": "permafrost",
+            "meaning": "băng vĩnh cửu",
+            "type": "noun",
+            "example": "The permafrost in the Arctic regions is melting due to climate change.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈpɜːrməfrɔːst/",
+                "en-US": "/ˈpɜːrməfrɔːst/"
+            },
+            "synonyms": [
+                "frozen ground",
+                "perennial frost"
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    "permafrost"
+                ],
+                "adjective": [
+                    "permafrost"
+                ]
+            }
+        },
+        {
+            "word": "possessively",
+            "meaning": "một cách sở hữu",
+            "type": "adverb",
+            "example": "She looked at him possessively, as if he were her property.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/pəˈzɛsɪvli/",
+                "en-US": "/pəˈzɛsɪvli/"
+            },
+            "synonyms": [
+                "jealously",
+                "protectively",
+                "covetously"
+            ],
+            "antonyms": [
+                "generously",
+                "selflessly"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "possessiveness",
+                    "possession"
+                ],
+                "verb": [
+                    "possess"
+                ],
+                "adjective": [
+                    "possessive"
+                ],
+                "adverb": [
+                    "possessively"
+                ]
+            }
+        },
+        {
+            "word": "imperatively",
+            "meaning": "một cách khẩn cấp",
+            "type": "adverb",
+            "example": "The situation requires us to act imperatively.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ɪmˈpɛrətɪvli/",
+                "en-US": "/ɪmˈpɛrətɪvli/"
+            },
+            "synonyms": [
+                "urgently",
+                "critically",
+                "pressingly"
+            ],
+            "antonyms": [
+                "casually",
+                "nonchalantly"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "imperativeness",
+                    "imperative"
+                ],
+                "adjective": [
+                    "imperative"
+                ],
+                "adverb": [
+                    "imperatively"
+                ]
+            }
+        },
+        {
+            "word": "whipping",
+            "meaning": "trận đòn roi, sự đánh đập",
+            "type": "noun",
+            "example": "The whipping of the horse was a cruel punishment.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈwɪpɪŋ/",
+                "en-US": "/ˈwɪpɪŋ/"
+            },
+            "synonyms": [
+                "flogging",
+                "lashing",
+                "beating"
+            ],
+            "antonyms": [
+                "praise",
+                "reward"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "whipping",
+                    "whip"
+                ],
+                "verb": [
+                    "whip"
+                ],
+                "adjective": [
+                    "whipped",
+                    "whipping"
+                ]
+            }
+        },
+        {
+            "word": "recklessly",
+            "meaning": "một cách liều lĩnh",
+            "type": "adverb",
+            "example": "He drove recklessly, ignoring the speed limits.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈrɛk.ləs.li/",
+                "en-US": "/ˈrɛk.ləs.li/"
+            },
+            "synonyms": [
+                "carelessly",
+                "irresponsibly",
+                "heedlessly"
+            ],
+            "antonyms": [
+                "cautiously",
+                "carefully"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "recklessness"
+                ],
+                "adjective": [
+                    "reckless"
+                ],
+                "adverb": [
+                    "recklessly"
+                ]
+            }
+        },
+        {
+            "word": "sparingly",
+            "meaning": "một cách tiết kiệm",
+            "type": "adverb",
+            "example": "She used the resources sparingly to ensure sustainability.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈspɛrɪŋli/",
+                "en-US": "/ˈspɛrɪŋli/"
+            },
+            "synonyms": [
+                "economically",
+                "frugally",
+                "thriftily"
+            ],
+            "antonyms": [
+                "lavishly",
+                "extravagantly"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "spareness",
+                    "sparingness"
+                ],
+                "adjective": [
+                    "sparing"
+                ],
+                "adverb": [
+                    "sparingly"
+                ]
+            }
+        },
+        {
+            "word": "suspect",
+            "meaning": "nghi ngờ",
+            "type": "verb",
+            "example": "The police suspect him of being involved in the crime.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/səˈspɛkt/",
+                "en-US": "/səˈspɛkt/"
+            },
+            "synonyms": [
+                "doubt",
+                "question",
+                "mistrust"
+            ],
+            "antonyms": [
+                "trust",
+                "believe"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "suspect",
+                    "suspicion"
+                ],
+                "verb": [
+                    "suspect"
+                ],
+                "adjective": [
+                    "suspicious"
+                ],
+                "adverb": [
+                    "suspiciously"
+                ]
+            }
+        },
+        {
+            "word": "inspection",
+            "meaning": "sự thanh tra, xem xét kỹ",
+            "type": "noun",
+            "example": "The inspection revealed several safety violations.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ɪnˈspɛkʃən/",
+                "en-US": "/ɪnˈspɛkʃən/"
+            },
+            "synonyms": [
+                "examination",
+                "review",
+                "audit"
+            ],
+            "antonyms": [
+                "neglect",
+                "overlook"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "inspection",
+                    "inspector"
+                ],
+                "verb": [
+                    "inspect"
+                ],
+                "adjective": [
+                    "inspective",
+                    "inspected"
+                ],
+                "adverb": [
+                    "inspectively"
+                ]
+            }
+        },
+        {
+            "word": "tactlessly",
+            "meaning": "thiếu tế nhị",
+            "type": "adverb",
+            "example": "He tactlessly pointed out her mistake in front of everyone.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈtæktləsli/",
+                "en-US": "/ˈtæktləsli/"
+            },
+            "synonyms": [
+                "insensitively",
+                "bluntly",
+                "thoughtlessly"
+            ],
+            "antonyms": [
+                "tactfully",
+                "considerately"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "tactlessness",
+                    "tact"
+                ],
+                "adjective": [
+                    "tactless"
+                ],
+                "adverb": [
+                    "tactlessly"
+                ]
+            }
+        },
+        {
+            "word": "thawing",
+            "meaning": "tan ra",
+            "type": "noun",
+            "example": "The thawing of the ice revealed a hidden landscape.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈθɔːɪŋ/",
+                "en-US": "/ˈθɔːɪŋ/"
+            },
+            "synonyms": [
+                "melting",
+                "defrosting",
+                "unfreezing"
+            ],
+            "antonyms": [
+                "freezing",
+                "solidifying"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "thawing",
+                    "thaw"
+                ],
+                "verb": [
+                    "thaw"
+                ],
+                "adjective": [
+                    "thawed"
+                ]
+            }
         }
     ]
 }
