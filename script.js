@@ -21,6 +21,16 @@ class VocabularyApp {
         // Search debounce timer
         this.searchDebounceTimer = null;
         
+        // Practice mode current word index
+        this.currentPracticeIndex = 0;
+        this.recentPracticeWords = new Set(); // Track recent words to avoid repetition
+        
+        // Synonym & Antonym Quiz mode
+        this.synAntQuizScore = 0;
+        this.synAntQuizTotal = 0;
+        this.synAntQuizCurrentQuestion = 0;
+        this.currentSynAntQuizData = [];
+        
         this.init();
     }
 
@@ -195,7 +205,7 @@ class VocabularyApp {
     }
 
     pronouncePracticeWord() {
-        const word = this.vocabulary[this.currentIndex]?.word;
+        const word = this.vocabulary[this.currentPracticeIndex]?.word;
         this.pronounceWord(word);
     }
 
@@ -252,6 +262,7 @@ class VocabularyApp {
         // Mode selection buttons
         document.getElementById('flashcardMode').addEventListener('click', () => this.switchMode('flashcard'));
         document.getElementById('quizMode').addEventListener('click', () => this.switchMode('quiz'));
+        document.getElementById('synonymAntonymQuizMode').addEventListener('click', () => this.switchMode('synonymAntonymQuiz'));
         document.getElementById('browseMode').addEventListener('click', () => this.switchMode('browse'));
         document.getElementById('practiceMode').addEventListener('click', () => this.switchMode('practice'));
 
@@ -266,6 +277,12 @@ class VocabularyApp {
         document.getElementById('nextQuestion').addEventListener('click', () => this.nextQuizQuestion());
         document.getElementById('retakeQuiz').addEventListener('click', () => this.startQuiz());
         document.getElementById('quizPronounceBtn').addEventListener('click', () => this.pronounceQuizWord());
+
+        // Synonym & Antonym Quiz controls
+        document.getElementById('startSynonymAntonymQuiz').addEventListener('click', () => this.startSynonymAntonymQuiz());
+        document.getElementById('submitSynAntAnswer').addEventListener('click', () => this.submitSynAntAnswer());
+        document.getElementById('nextSynAntQuestion').addEventListener('click', () => this.nextSynAntQuestion());
+        document.getElementById('synAntQuizPronounceBtn').addEventListener('click', () => this.pronounceSynAntWord());
 
         // Search functionality - Real-time search with debounce
         document.getElementById('searchInput').addEventListener('input', (e) => {
@@ -299,6 +316,7 @@ class VocabularyApp {
         document.getElementById('welcomeScreen').classList.add('d-none');
         document.getElementById('flashcardArea').classList.add('d-none');
         document.getElementById('quizArea').classList.add('d-none');
+        document.getElementById('synonymAntonymQuizArea').classList.add('d-none');
         document.getElementById('browseArea').classList.add('d-none');
         document.getElementById('practiceArea').classList.add('d-none');
 
@@ -319,6 +337,12 @@ class VocabularyApp {
                 document.getElementById('quizMode').classList.add('active');
                 document.getElementById('quizArea').classList.remove('d-none');
                 this.startQuiz();
+                break;
+            case 'synonymAntonymQuiz':
+                document.getElementById('synonymAntonymQuizMode').classList.add('active');
+                document.getElementById('synonymAntonymQuizArea').classList.remove('d-none');
+                // Show start button, don't auto-start
+                document.getElementById('synAntQuizContent').style.display = 'none';
                 break;
             case 'browse':
                 document.getElementById('browseMode').classList.add('active');
@@ -456,6 +480,8 @@ class VocabularyApp {
             return;
         }
 
+        console.log('Showing question:', this.quizCurrentQuestion + 1); // Debug log
+        
         const questionData = this.currentQuizData[this.quizCurrentQuestion];
         document.getElementById('quizQuestion').textContent = questionData.question;
         
@@ -465,6 +491,11 @@ class VocabularyApp {
         
         const optionsContainer = document.getElementById('quizOptions');
         optionsContainer.innerHTML = '';
+        
+        // Clear any previous styling
+        document.querySelectorAll('.quiz-option').forEach(option => {
+            option.classList.remove('correct', 'incorrect');
+        });
         
         questionData.options.forEach((option, index) => {
             const optionDiv = document.createElement('div');
@@ -487,10 +518,12 @@ class VocabularyApp {
 
         // Reset buttons
         document.getElementById('submitAnswer').disabled = true;
+        document.getElementById('submitAnswer').style.display = 'inline-block';
         document.getElementById('nextQuestion').style.display = 'none';
 
         // Add event listeners to radio buttons
         document.querySelectorAll('input[name="quizAnswer"]').forEach(radio => {
+            radio.disabled = false; // Make sure radios are enabled
             radio.addEventListener('change', () => {
                 document.getElementById('submitAnswer').disabled = false;
             });
@@ -532,6 +565,7 @@ class VocabularyApp {
 
     nextQuizQuestion() {
         this.quizCurrentQuestion++;
+        console.log('Moving to question:', this.quizCurrentQuestion + 1); // Debug log
         this.showQuizQuestion();
     }
 
@@ -564,6 +598,417 @@ class VocabularyApp {
         // Show modal
         const modal = new bootstrap.Modal(document.getElementById('quizResultModal'));
         modal.show();
+    }
+
+    // Synonym & Antonym Quiz Mode
+    startSynonymAntonymQuiz() {
+        // Hide start button and show quiz content
+        document.getElementById('synAntQuizContent').style.display = 'block';
+        // Filter words that have synonyms or antonyms
+        const wordsWithSynonymsAntonyms = this.vocabulary.filter(word => 
+            (word.synonyms && word.synonyms.length > 0) || 
+            (word.antonyms && word.antonyms.length > 0)
+        );
+
+        if (wordsWithSynonymsAntonyms.length < 3) {
+            this.showError('Cần ít nhất 3 từ có synonyms hoặc antonyms để bắt đầu quiz!');
+            return;
+        }
+
+        this.synAntQuizScore = 0;
+        this.synAntQuizTotal = Math.min(10, wordsWithSynonymsAntonyms.length);
+        this.synAntQuizCurrentQuestion = 0;
+        this.currentSynAntQuizData = [];
+
+        // Generate quiz questions
+        for (let i = 0; i < this.synAntQuizTotal; i++) {
+            const questionData = this.generateSynAntQuestion(wordsWithSynonymsAntonyms);
+            if (questionData) {
+                this.currentSynAntQuizData.push(questionData);
+            }
+        }
+
+        if (this.currentSynAntQuizData.length === 0) {
+            this.showError('Không thể tạo câu hỏi! Vui lòng thêm synonyms/antonyms vào từ vựng.');
+            return;
+        }
+
+        this.showSynAntQuestion();
+    }
+
+    generateSynAntQuestion(wordsWithSynonymsAntonyms) {
+        // Random word with synonyms/antonyms
+        const randomWord = wordsWithSynonymsAntonyms[Math.floor(Math.random() * wordsWithSynonymsAntonyms.length)];
+        
+        // Question types
+        const questionTypes = [];
+        
+        if (randomWord.synonyms && randomWord.synonyms.length > 0) {
+            questionTypes.push('findSynonyms', 'synonymChoice', 'findOddOne');
+        }
+        
+        if (randomWord.antonyms && randomWord.antonyms.length > 0) {
+            questionTypes.push('findAntonyms', 'antonymChoice', 'findOddOne');
+        }
+
+        if (questionTypes.length === 0) return null;
+
+        const questionType = questionTypes[Math.floor(Math.random() * questionTypes.length)];
+        
+        return this.createSynAntQuestion(randomWord, questionType);
+    }
+
+    createSynAntQuestion(word, questionType) {
+        switch (questionType) {
+            case 'findSynonyms':
+                return this.createFindSynonymsQuestion(word);
+            case 'findAntonyms':
+                return this.createFindAntonymsQuestion(word);
+            case 'synonymChoice':
+                return this.createSynonymChoiceQuestion(word);
+            case 'antonymChoice':
+                return this.createAntonymChoiceQuestion(word);
+            case 'findOddOne':
+                return this.createFindOddOneQuestion(word);
+            default:
+                return null;
+        }
+    }
+
+    createFindSynonymsQuestion(word) {
+        const correctAnswers = word.synonyms.slice(0, 3); // Take up to 3 synonyms
+        const wrongAnswers = this.getRandomWrongAnswers(word, correctAnswers, 4 - correctAnswers.length);
+        
+        const allOptions = [...correctAnswers, ...wrongAnswers].sort(() => Math.random() - 0.5);
+        
+        return {
+            type: 'findSynonyms',
+            word: word,
+            question: `Chọn TẤT CẢ từ đồng nghĩa với "${word.word}"`,
+            options: allOptions,
+            correctAnswers: correctAnswers,
+            isMultipleChoice: true,
+            hint: 'Có thể có nhiều đáp án đúng'
+        };
+    }
+
+    createFindAntonymsQuestion(word) {
+        const correctAnswers = word.antonyms.slice(0, 3); // Take up to 3 antonyms
+        const wrongAnswers = this.getRandomWrongAnswers(word, correctAnswers, 4 - correctAnswers.length);
+        
+        const allOptions = [...correctAnswers, ...wrongAnswers].sort(() => Math.random() - 0.5);
+        
+        return {
+            type: 'findAntonyms',
+            word: word,
+            question: `Chọn TẤT CẢ từ trái nghĩa với "${word.word}"`,
+            options: allOptions,
+            correctAnswers: correctAnswers,
+            isMultipleChoice: true,
+            hint: 'Có thể có nhiều đáp án đúng'
+        };
+    }
+
+    createSynonymChoiceQuestion(word) {
+        const correctAnswer = word.synonyms[Math.floor(Math.random() * word.synonyms.length)];
+        const wrongAnswers = this.getRandomWrongAnswers(word, [correctAnswer], 3);
+        
+        const allOptions = [correctAnswer, ...wrongAnswers].sort(() => Math.random() - 0.5);
+        
+        return {
+            type: 'synonymChoice',
+            word: word,
+            question: `Từ nào đồng nghĩa với "${word.word}"?`,
+            options: allOptions,
+            correctAnswers: [correctAnswer],
+            isMultipleChoice: false
+        };
+    }
+
+    createAntonymChoiceQuestion(word) {
+        const correctAnswer = word.antonyms[Math.floor(Math.random() * word.antonyms.length)];
+        const wrongAnswers = this.getRandomWrongAnswers(word, [correctAnswer], 3);
+        
+        const allOptions = [correctAnswer, ...wrongAnswers].sort(() => Math.random() - 0.5);
+        
+        return {
+            type: 'antonymChoice',
+            word: word,
+            question: `Từ nào trái nghĩa với "${word.word}"?`,
+            options: allOptions,
+            correctAnswers: [correctAnswer],
+            isMultipleChoice: false
+        };
+    }
+
+    createFindOddOneQuestion(word) {
+        // Mix synonyms and one antonym, or antonyms and one synonym
+        let correctAnswers, wrongAnswers, question;
+        
+        if (word.synonyms && word.synonyms.length >= 2 && word.antonyms && word.antonyms.length >= 1) {
+            if (Math.random() > 0.5) {
+                // 3 synonyms + 1 antonym (find the antonym)
+                correctAnswers = [word.antonyms[0]];
+                wrongAnswers = word.synonyms.slice(0, 3);
+                question = `Từ nào KHÁC với các từ còn lại? (Gợi ý: các từ còn lại đồng nghĩa với "${word.word}")`;
+            } else {
+                // 3 antonyms + 1 synonym (find the synonym)
+                correctAnswers = [word.synonyms[0]];
+                wrongAnswers = word.antonyms.slice(0, 3);
+                question = `Từ nào KHÁC với các từ còn lại? (Gợi ý: các từ còn lại trái nghĩa với "${word.word}")`;
+            }
+        } else {
+            // Fallback to synonym choice
+            return this.createSynonymChoiceQuestion(word);
+        }
+        
+        const allOptions = [...correctAnswers, ...wrongAnswers].sort(() => Math.random() - 0.5);
+        
+        return {
+            type: 'findOddOne',
+            word: word,
+            question: question,
+            options: allOptions,
+            correctAnswers: correctAnswers,
+            isMultipleChoice: false
+        };
+    }
+
+    getRandomWrongAnswers(currentWord, correctAnswers, count) {
+        const allWords = [];
+        
+        // Collect words from other vocabulary
+        this.vocabulary.forEach(w => {
+            if (w.word !== currentWord.word) {
+                if (w.synonyms) allWords.push(...w.synonyms);
+                if (w.antonyms) allWords.push(...w.antonyms);
+                allWords.push(w.word);
+            }
+        });
+        
+        // Filter out correct answers
+        const filteredWords = allWords.filter(w => 
+            !correctAnswers.includes(w) && w !== currentWord.word
+        );
+        
+        // Remove duplicates
+        const uniqueWords = [...new Set(filteredWords)];
+        
+        // Shuffle and return requested count
+        const shuffled = uniqueWords.sort(() => Math.random() - 0.5);
+        return shuffled.slice(0, count);
+    }
+
+    showSynAntQuestion() {
+        if (this.synAntQuizCurrentQuestion >= this.currentSynAntQuizData.length) {
+            this.showSynAntQuizResult();
+            return;
+        }
+
+        const questionData = this.currentSynAntQuizData[this.synAntQuizCurrentQuestion];
+        
+        // Update progress
+        const progressPercentage = ((this.synAntQuizCurrentQuestion + 1) / this.currentSynAntQuizData.length) * 100;
+        document.getElementById('synAntQuizProgress').textContent = 
+            `Câu ${this.synAntQuizCurrentQuestion + 1} / ${this.currentSynAntQuizData.length}`;
+        document.getElementById('synAntQuizProgressBar').style.width = `${progressPercentage}%`;
+        document.getElementById('synAntQuizProgressText').textContent = `${Math.round(progressPercentage)}%`;
+        
+        document.getElementById('synAntQuizScore').textContent = 
+            `Điểm: ${this.synAntQuizScore}`;
+
+        // Update question type indicator
+        let typeText = '';
+        switch (questionData.type) {
+            case 'findSynonyms':
+                typeText = 'Tìm từ đồng nghĩa (Nhiều đáp án)';
+                break;
+            case 'findAntonyms':
+                typeText = 'Tìm từ trái nghĩa (Nhiều đáp án)';
+                break;
+            case 'synonymChoice':
+                typeText = 'Chọn từ đồng nghĩa';
+                break;
+            case 'antonymChoice':
+                typeText = 'Chọn từ trái nghĩa';
+                break;
+            case 'findOddOne':
+                typeText = 'Tìm từ khác biệt';
+                break;
+        }
+        document.getElementById('synAntQuestionType').textContent = typeText;
+
+        // Show word info
+        document.getElementById('synAntQuizWord').textContent = questionData.word.word;
+        document.getElementById('synAntQuizMeaning').textContent = questionData.word.meaning;
+        
+        // Show question
+        document.getElementById('synAntQuizQuestion').textContent = questionData.question;
+        
+        // Show hint if exists
+        const hintElement = document.getElementById('synAntQuizHint');
+        if (questionData.hint) {
+            hintElement.textContent = questionData.hint;
+            hintElement.style.display = 'block';
+        } else {
+            hintElement.style.display = 'none';
+        }
+
+        // Create options
+        const optionsContainer = document.getElementById('synAntQuizOptions');
+        optionsContainer.innerHTML = '';
+        
+        questionData.options.forEach((option, index) => {
+            const optionDiv = document.createElement('div');
+            optionDiv.className = questionData.isMultipleChoice ? 'form-check' : 'form-check';
+            
+            const input = document.createElement('input');
+            input.className = 'form-check-input';
+            input.type = questionData.isMultipleChoice ? 'checkbox' : 'radio';
+            input.name = 'synAntQuizOption';
+            input.id = `synAntOption${index}`;
+            input.value = option;
+            
+            // Add event listener to enable/disable submit button
+            input.addEventListener('change', () => {
+                const hasSelection = document.querySelectorAll('input[name="synAntQuizOption"]:checked').length > 0;
+                document.getElementById('submitSynAntAnswer').disabled = !hasSelection;
+                
+                // Update visual styling for selected options
+                this.updateSynAntOptionStyling();
+            });
+            
+            const label = document.createElement('label');
+            label.className = 'form-check-label';
+            label.htmlFor = `synAntOption${index}`;
+            label.textContent = option;
+            
+            optionDiv.appendChild(input);
+            optionDiv.appendChild(label);
+            optionsContainer.appendChild(optionDiv);
+        });
+
+        // Clear previous result and disable submit initially
+        document.getElementById('synAntQuizResult').innerHTML = '';
+        document.getElementById('nextSynAntQuestion').style.display = 'none';
+        document.getElementById('submitSynAntAnswer').disabled = true;
+    }
+
+    submitSynAntAnswer() {
+        const selectedOptions = [];
+        const checkboxes = document.querySelectorAll('input[name="synAntQuizOption"]:checked');
+        
+        checkboxes.forEach(checkbox => {
+            selectedOptions.push(checkbox.value);
+        });
+
+        if (selectedOptions.length === 0) {
+            this.showError('Vui lòng chọn ít nhất một đáp án!');
+            return;
+        }
+
+        const questionData = this.currentSynAntQuizData[this.synAntQuizCurrentQuestion];
+        const isCorrect = this.checkSynAntAnswer(selectedOptions, questionData.correctAnswers);
+        
+        if (isCorrect) {
+            this.synAntQuizScore++;
+        }
+
+        this.showSynAntAnswerResult(selectedOptions, questionData, isCorrect);
+    }
+
+    checkSynAntAnswer(selectedAnswers, correctAnswers) {
+        // For multiple choice questions
+        if (correctAnswers.length > 1) {
+            // Check if all correct answers are selected and no wrong answers
+            if (selectedAnswers.length !== correctAnswers.length) return false;
+            
+            return correctAnswers.every(answer => selectedAnswers.includes(answer)) &&
+                   selectedAnswers.every(answer => correctAnswers.includes(answer));
+        } 
+        // For single choice questions
+        else {
+            return selectedAnswers.length === 1 && selectedAnswers[0] === correctAnswers[0];
+        }
+    }
+
+    showSynAntAnswerResult(selectedAnswers, questionData, isCorrect) {
+        const resultDiv = document.getElementById('synAntQuizResult');
+        
+        let resultHTML = `
+            <div class="alert ${isCorrect ? 'alert-success' : 'alert-danger'} mt-3">
+                <strong>${isCorrect ? 'Chính xác!' : 'Sai rồi!'}</strong><br>
+                <strong>Bạn đã chọn:</strong> ${selectedAnswers.join(', ')}<br>
+                <strong>Đáp án đúng:</strong> ${questionData.correctAnswers.join(', ')}<br>
+        `;
+
+        // Add explanation
+        if (questionData.type === 'findSynonyms') {
+            resultHTML += `<strong>Giải thích:</strong> Các từ đồng nghĩa với "${questionData.word.word}" là: ${questionData.word.synonyms.join(', ')}`;
+        } else if (questionData.type === 'findAntonyms') {
+            resultHTML += `<strong>Giải thích:</strong> Các từ trái nghĩa với "${questionData.word.word}" là: ${questionData.word.antonyms.join(', ')}`;
+        } else if (questionData.type === 'synonymChoice') {
+            resultHTML += `<strong>Giải thích:</strong> "${questionData.correctAnswers[0]}" có nghĩa tương tự "${questionData.word.word}"`;
+        } else if (questionData.type === 'antonymChoice') {
+            resultHTML += `<strong>Giải thích:</strong> "${questionData.correctAnswers[0]}" có nghĩa trái ngược với "${questionData.word.word}"`;
+        }
+
+        resultHTML += '</div>';
+        resultDiv.innerHTML = resultHTML;
+
+        // Show next button
+        document.getElementById('nextSynAntQuestion').style.display = 'inline-block';
+        
+        // Update score display
+        document.getElementById('synAntQuizScore').textContent = `Điểm: ${this.synAntQuizScore}`;
+    }
+
+    nextSynAntQuestion() {
+        this.synAntQuizCurrentQuestion++;
+        this.showSynAntQuestion();
+    }
+
+    showSynAntQuizResult() {
+        const percentage = Math.round((this.synAntQuizScore / this.currentSynAntQuizData.length) * 100);
+        let message = '';
+        
+        if (percentage >= 80) {
+            message = 'Xuất sắc! Bạn đã thành thạo synonyms và antonyms!';
+        } else if (percentage >= 60) {
+            message = 'Tốt lắm! Hãy tiếp tục luyện tập!';
+        } else {
+            message = 'Cần cố gắng thêm! Hãy ôn lại synonyms và antonyms!';
+        }
+
+        // Update result modal
+        document.getElementById('quizResultTitle').textContent = 'Kết quả Synonym & Antonym Quiz';
+        document.getElementById('quizResultScore').textContent = `${this.synAntQuizScore}/${this.currentSynAntQuizData.length}`;
+        document.getElementById('quizResultPercentage').textContent = `${percentage}%`;
+        document.getElementById('quizResultMessage').textContent = message;
+
+        // Show modal
+        const modal = new bootstrap.Modal(document.getElementById('quizResultModal'));
+        modal.show();
+    }
+
+    pronounceSynAntWord() {
+        const word = document.getElementById('synAntQuizWord').textContent;
+        this.pronounceWord(word);
+    }
+
+    updateSynAntOptionStyling() {
+        // Remove all selected classes first
+        document.querySelectorAll('#synAntQuizOptions .form-check').forEach(formCheck => {
+            formCheck.classList.remove('selected');
+        });
+        
+        // Add selected class to checked options
+        document.querySelectorAll('input[name="synAntQuizOption"]:checked').forEach(checkedInput => {
+            const formCheck = checkedInput.closest('.form-check');
+            if (formCheck) {
+                formCheck.classList.add('selected');
+            }
+        });
     }
 
     // Browse Mode
@@ -826,14 +1271,47 @@ class VocabularyApp {
 
     // Practice Mode
     startPractice() {
-        this.currentIndex = 0;
+        this.currentPracticeIndex = this.getRandomWordIndex();
         this.showPracticeWord();
+    }
+    
+    // Get random word index (avoiding repetition of recent words)
+    getRandomWordIndex() {
+        if (this.vocabulary.length === 0) return 0;
+        
+        // If we only have a few words, don't worry about avoiding repetition
+        if (this.vocabulary.length <= 3) {
+            return Math.floor(Math.random() * this.vocabulary.length);
+        }
+        
+        let newIndex;
+        let attempts = 0;
+        const maxAttempts = 10;
+        
+        do {
+            newIndex = Math.floor(Math.random() * this.vocabulary.length);
+            attempts++;
+        } while (
+            this.recentPracticeWords.has(newIndex) && 
+            attempts < maxAttempts
+        );
+        
+        // Add to recent words set
+        this.recentPracticeWords.add(newIndex);
+        
+        // Keep only last 5 recent words to avoid
+        if (this.recentPracticeWords.size > Math.min(5, Math.floor(this.vocabulary.length / 2))) {
+            const oldestIndex = Array.from(this.recentPracticeWords)[0];
+            this.recentPracticeWords.delete(oldestIndex);
+        }
+        
+        return newIndex;
     }
 
     showPracticeWord() {
         if (this.vocabulary.length === 0) return;
 
-        const word = this.vocabulary[this.currentIndex];
+        const word = this.vocabulary[this.currentPracticeIndex];
         document.getElementById('practiceWord').textContent = word.meaning;
         document.getElementById('practiceMeaning').textContent = `(${word.type || 'N/A'})`;
         document.getElementById('practiceInput').value = '';
@@ -846,7 +1324,7 @@ class VocabularyApp {
 
     checkSpelling() {
         const userInput = document.getElementById('practiceInput').value.trim().toLowerCase();
-        const correctWord = this.vocabulary[this.currentIndex].word.toLowerCase();
+        const correctWord = this.vocabulary[this.currentPracticeIndex].word.toLowerCase();
         const input = document.getElementById('practiceInput');
         const resultDiv = document.getElementById('practiceResult');
 
@@ -862,16 +1340,16 @@ class VocabularyApp {
             input.classList.add('practice-correct');
             resultDiv.innerHTML = `
                 <div class="alert alert-success">
-                    <i class="fas fa-check-circle"></i> Chính xác! Bạn đã viết đúng từ "${this.vocabulary[this.currentIndex].word}".
+                    <i class="fas fa-check-circle"></i> Chính xác! Bạn đã viết đúng từ "${this.vocabulary[this.currentPracticeIndex].word}".
                 </div>
             `;
-            this.learnedWords.add(this.vocabulary[this.currentIndex].word);
+            this.learnedWords.add(this.vocabulary[this.currentPracticeIndex].word);
         } else {
             input.classList.remove('practice-correct');
             input.classList.add('practice-incorrect');
             resultDiv.innerHTML = `
                 <div class="alert alert-danger">
-                    <i class="fas fa-times-circle"></i> Sai rồi! Từ đúng là "${this.vocabulary[this.currentIndex].word}".
+                    <i class="fas fa-times-circle"></i> Sai rồi! Từ đúng là "${this.vocabulary[this.currentPracticeIndex].word}".
                 </div>
             `;
         }
@@ -882,7 +1360,7 @@ class VocabularyApp {
     }
 
     nextPractice() {
-        this.currentIndex = (this.currentIndex + 1) % this.vocabulary.length;
+        this.currentPracticeIndex = this.getRandomWordIndex();
         this.showPracticeWord();
     }
 
