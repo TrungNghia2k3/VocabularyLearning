@@ -2678,6 +2678,315 @@
                     "thawed"
                 ]
             }
+        },
+        {
+            "word": "avalanche",
+            "meaning": "lở tuyết",
+            "type": "noun",
+            "example": "The avalanche buried the village under tons of snow.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈæv.ə.lɑːnʃ/",
+                "en-US": "/ˈæv.ə.læntʃ/"
+            },
+            "synonyms": [
+                "snowslide",
+                "landslide",
+                "mass"
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    "avalanche"
+                ],
+                "verb": [
+                    "avalanche"
+                ],
+                "adjective": [
+                    "avalanching"
+                ]
+            }
+        },
+        {
+            "word": "bequeath",
+            "meaning": "di sản",
+            "type": "verb",
+            "example": "He bequeathed his fortune to his children.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/bɪˈkwiːð/",
+                "en-US": "/bɪˈkwiːθ/"
+            },
+            "synonyms": [
+                "leave",
+                "will",
+                "bestow"
+            ],
+            "antonyms": [
+                "take",
+                "keep"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "bequest",
+                    "bequeather"
+                ],
+                "verb": [
+                    "bequeath"
+                ],
+                "adjective": [
+                    "bequeathed"
+                ]
+            }
+        },
+        {
+            "word": "combustion",
+            "meaning": "sự đốt cháy",
+            "type": "noun",
+            "example": "The combustion of fossil fuels releases carbon dioxide into the atmosphere.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/kəmˈbʌs.tʃən/",
+                "en-US": "/kəmˈbʌs.tʃən/"
+            },
+            "synonyms": [
+                "burning",
+                "ignition",
+                "incineration"
+            ],
+            "antonyms": [
+                "extinction",
+                "quenching"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "combustion",
+                    "combustible"
+                ],
+                "verb": [
+                    "combust"
+                ],
+                "adjective": [
+                    "combustible"
+                ]
+            }     
+        },
+        {
+            "word": "depletion",
+            "meaning": "sự cạn kiệt",
+            "type": "noun",
+            "example": "The depletion of the ozone layer is a serious environmental issue.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/dɪˈpliː.ʃən/",
+                "en-US": "/dɪˈpliː.ʃən/"
+            },
+            "synonyms": [
+                "exhaustion",
+                "reduction",
+                "diminution"
+            ],
+            "antonyms": [
+                "replenishment",
+                "increase"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "depletion",
+                    "depleter"
+                ],
+                "verb": [
+                    "deplete"
+                ],
+                "adjective": [
+                    "depleted",
+                    "depleting"
+                ],
+                "adverb": [
+                    "depletingly"
+                ]
+            }
+        },
+        {
+            "word": "disastrous",
+            "meaning": "thảm khốc",
+            "type": "adjective",
+            "example": "The disastrous consequences of the decision were not immediately apparent.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/dɪˈzɑː.strəs/",
+                "en-US": "/dɪˈzæs.trəs/"
+            },
+            "synonyms": [
+                "catastrophic",
+                "devastating",
+                "ruinous"
+            ],
+            "antonyms": [
+                "fortunate",
+                "beneficial"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "disaster",
+                    "disastrousness"
+                ],
+                "adverb": [
+                    "disastrously"
+                ]
+            }
+        },
+        {
+            "word": "ice cap",
+            "meaning": "mũ băng",
+            "type": "noun",
+            "example": "The melting of the ice cap is a significant indicator of climate change.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈaɪs kæp/",
+                "en-US": "/ˈaɪs kæp/"
+            },
+            "synonyms": [
+                "glacier",
+                "ice sheet",
+                "polar ice"
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    "ice cap"
+                ],
+                "adjective": [
+                    "ice-capped"
+                ]
+            }
+        },
+        {
+            "word": "jeopardize",
+            "meaning": "gây nguy hiểm",
+            "type": "verb",
+            "example": "The decision could jeopardize the entire project.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈdʒɛp.ə.daɪz/",
+                "en-US": "/ˈdʒɛp.ɚ.daɪz/"
+            },
+            "synonyms": [
+                "endanger",
+                "risk",
+                "threaten"
+            ],
+            "antonyms": [
+                "protect",
+                "safeguard"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "jeopardy",
+                    "jeopardization"
+                ],
+                "verb": [
+                    "jeopardize"
+                ],
+                "adjective": [
+                    "jeopardized",
+                    "jeopardizing"
+                ],
+                "adverb": [
+                    "jeopardizingly"
+                ]
+            }
+        },
+        {
+            "word": "non-biodegradable",
+            "meaning": "không thể phân hủy",
+            "type": "noun",
+            "example": "The non-biodegradable waste posed a significant environmental threat.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈnɒnˌbaɪəʊdɪˈɡreɪdəbl/",
+                "en-US": "/ˈnɑːnˌbaɪoʊdɪˈɡreɪdəbl/"
+            },
+            "synonyms": [
+                "non-decomposable",
+                "non-biofriendly"
+            ],
+            "antonyms": [
+                "biodegradable",
+                "decomposable"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "non-biodegradability"
+                ],
+                "adjective": [
+                    "non-biodegradable"
+                ]
+            }
+        },
+        {
+            "word": "perpetuate",
+            "meaning": "làm cho bất diệt, mãi duy trì",
+            "type": "verb",
+            "example": "The organization's goal is to perpetuate the legacy of its founder.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/pəˈpɛtʃueɪt/",
+                "en-US": "/pərˈpɛtʃuˌeɪt/"
+            },
+            "synonyms": [
+                "preserve",
+                "maintain",
+                "sustain"
+            ],
+            "antonyms": [
+                "abolish",
+                "end"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "perpetuation",
+                    "perpetuator"
+                ],
+                "verb": [
+                    "perpetuate"
+                ],
+                "adjective": [
+                    "perpetual",
+                    "perpetuated"
+                ],
+                "adverb": [
+                    "perpetually"
+                ]
+            }
+        },
+        {
+            "word": "prairie",
+            "meaning": "thảo nguyên",
+            "type": "noun",
+            "example": "The prairie was home to many species of wildlife.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈprɛəri/",
+                "en-US": "/ˈprɛri/"
+            },
+            "synonyms": [
+                "grassland",
+                "meadow",
+                "steppe"
+            ],
+            "antonyms": [
+                "forest",
+                "jungle"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "prairie"
+                ],
+                "adjective": [
+                    "prairie"
+                ]
+            }
         }
     ]
 }
