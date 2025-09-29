@@ -409,12 +409,31 @@ class VocabularyApp {
         document.getElementById('meaningText').textContent = word.meaning;
         document.getElementById('exampleText').textContent = word.example || '';
         
-        // Update extended info on flashcard back
+        // Update extended info on flashcard back with new structure
         const extendedInfoContainer = document.getElementById('flashcardExtendedInfo');
-        extendedInfoContainer.innerHTML = `
+        let extendedHTML = '';
+        
+        // Show multiple definitions if available
+        if (word.definitions && word.definitions.length > 0) {
+            extendedHTML += '<div class="mb-3"><h6>Định nghĩa chi tiết:</h6>';
+            word.definitions.forEach((def, index) => {
+                extendedHTML += `
+                    <div class="mb-2 p-2 border-start border-primary border-3 bg-light">
+                        <small class="text-muted">[${def.partOfSpeech}]</small>
+                        <p class="mb-1 text-muted"><strong>${def.definition}</strong></p>
+                        <p class="mb-0 text-muted fst-italic">"${def.example}"</p>
+                    </div>
+                `;
+            });
+            extendedHTML += '</div>';
+        }
+        
+        extendedHTML += `
             ${this.renderSynonymsAntonyms(word)}
             ${this.renderWordFamily(word)}
         `;
+        
+        extendedInfoContainer.innerHTML = extendedHTML;
         
         // Update progress
         document.getElementById('flashcardProgress').textContent = 
@@ -696,7 +715,7 @@ class VocabularyApp {
     }
 
     createFindSynonymsQuestion(word) {
-        const correctAnswers = word.synonyms.slice(0, 3); // Take up to 3 synonyms
+        const correctAnswers = word.synonyms.slice(0, 3).map(syn => syn.word); // Take up to 3 synonyms, extract word property
         const wrongAnswers = this.getRandomWrongAnswers(word, correctAnswers, 4 - correctAnswers.length);
         
         const allOptions = [...correctAnswers, ...wrongAnswers].sort(() => Math.random() - 0.5);
@@ -713,7 +732,7 @@ class VocabularyApp {
     }
 
     createFindAntonymsQuestion(word) {
-        const correctAnswers = word.antonyms.slice(0, 3); // Take up to 3 antonyms
+        const correctAnswers = word.antonyms.slice(0, 3).map(ant => ant.word); // Take up to 3 antonyms, extract word property
         const wrongAnswers = this.getRandomWrongAnswers(word, correctAnswers, 4 - correctAnswers.length);
         
         const allOptions = [...correctAnswers, ...wrongAnswers].sort(() => Math.random() - 0.5);
@@ -730,7 +749,7 @@ class VocabularyApp {
     }
 
     createSynonymChoiceQuestion(word) {
-        const correctAnswer = word.synonyms[Math.floor(Math.random() * word.synonyms.length)];
+        const correctAnswer = word.synonyms[Math.floor(Math.random() * word.synonyms.length)].word;
         const wrongAnswers = this.getRandomWrongAnswers(word, [correctAnswer], 3);
         
         const allOptions = [correctAnswer, ...wrongAnswers].sort(() => Math.random() - 0.5);
@@ -746,7 +765,7 @@ class VocabularyApp {
     }
 
     createAntonymChoiceQuestion(word) {
-        const correctAnswer = word.antonyms[Math.floor(Math.random() * word.antonyms.length)];
+        const correctAnswer = word.antonyms[Math.floor(Math.random() * word.antonyms.length)].word;
         const wrongAnswers = this.getRandomWrongAnswers(word, [correctAnswer], 3);
         
         const allOptions = [correctAnswer, ...wrongAnswers].sort(() => Math.random() - 0.5);
@@ -768,13 +787,13 @@ class VocabularyApp {
         if (word.synonyms && word.synonyms.length >= 2 && word.antonyms && word.antonyms.length >= 1) {
             if (Math.random() > 0.5) {
                 // 3 synonyms + 1 antonym (find the antonym)
-                correctAnswers = [word.antonyms[0]];
-                wrongAnswers = word.synonyms.slice(0, 3);
+                correctAnswers = [word.antonyms[0].word];
+                wrongAnswers = word.synonyms.slice(0, 3).map(syn => syn.word);
                 question = `Từ nào KHÁC với các từ còn lại? (Gợi ý: các từ còn lại đồng nghĩa với "${word.word}")`;
             } else {
                 // 3 antonyms + 1 synonym (find the synonym)
-                correctAnswers = [word.synonyms[0]];
-                wrongAnswers = word.antonyms.slice(0, 3);
+                correctAnswers = [word.synonyms[0].word];
+                wrongAnswers = word.antonyms.slice(0, 3).map(ant => ant.word);
                 question = `Từ nào KHÁC với các từ còn lại? (Gợi ý: các từ còn lại trái nghĩa với "${word.word}")`;
             }
         } else {
@@ -800,8 +819,8 @@ class VocabularyApp {
         // Collect words from other vocabulary
         this.vocabulary.forEach(w => {
             if (w.word !== currentWord.word) {
-                if (w.synonyms) allWords.push(...w.synonyms);
-                if (w.antonyms) allWords.push(...w.antonyms);
+                if (w.synonyms) allWords.push(...w.synonyms.map(syn => syn.word));
+                if (w.antonyms) allWords.push(...w.antonyms.map(ant => ant.word));
                 allWords.push(w.word);
             }
         });
@@ -962,15 +981,21 @@ class VocabularyApp {
                 <strong>Đáp án đúng:</strong> ${questionData.correctAnswers.join(', ')}<br>
         `;
 
-        // Add explanation
+        // Add explanation with new structure
         if (questionData.type === 'findSynonyms') {
-            resultHTML += `<strong>Giải thích:</strong> Các từ đồng nghĩa với "${questionData.word.word}" là: ${questionData.word.synonyms.join(', ')}`;
+            const synonymWords = questionData.word.synonyms.map(syn => `${syn.word} (${syn.meaning})`).join(', ');
+            resultHTML += `<strong>Giải thích:</strong> Các từ đồng nghĩa với "${questionData.word.word}" là: ${synonymWords}`;
         } else if (questionData.type === 'findAntonyms') {
-            resultHTML += `<strong>Giải thích:</strong> Các từ trái nghĩa với "${questionData.word.word}" là: ${questionData.word.antonyms.join(', ')}`;
+            const antonymWords = questionData.word.antonyms.map(ant => `${ant.word} (${ant.meaning})`).join(', ');
+            resultHTML += `<strong>Giải thích:</strong> Các từ trái nghĩa với "${questionData.word.word}" là: ${antonymWords}`;
         } else if (questionData.type === 'synonymChoice') {
-            resultHTML += `<strong>Giải thích:</strong> "${questionData.correctAnswers[0]}" có nghĩa tương tự "${questionData.word.word}"`;
+            const selectedSyn = questionData.word.synonyms.find(syn => syn.word === questionData.correctAnswers[0]);
+            const meaning = selectedSyn ? selectedSyn.meaning : '';
+            resultHTML += `<strong>Giải thích:</strong> "${questionData.correctAnswers[0]}" (${meaning}) có nghĩa tương tự "${questionData.word.word}"`;
         } else if (questionData.type === 'antonymChoice') {
-            resultHTML += `<strong>Giải thích:</strong> "${questionData.correctAnswers[0]}" có nghĩa trái ngược với "${questionData.word.word}"`;
+            const selectedAnt = questionData.word.antonyms.find(ant => ant.word === questionData.correctAnswers[0]);
+            const meaning = selectedAnt ? selectedAnt.meaning : '';
+            resultHTML += `<strong>Giải thích:</strong> "${questionData.correctAnswers[0]}" (${meaning}) có nghĩa trái ngược với "${questionData.word.word}"`;
         }
 
         resultHTML += '</div>';
@@ -1109,7 +1134,10 @@ class VocabularyApp {
         if (word.synonyms && word.synonyms.length > 0) {
             synonymsContainer.style.display = 'block';
             synonymsList.innerHTML = word.synonyms.map(syn => 
-                `<span class="badge bg-success me-1 mb-1">${syn}</span>`
+                `<div class="synonym-item mb-1">
+                    <span class="badge bg-success me-1">${syn.word}</span>
+                    <small class="text-muted">(${syn.meaning})</small>
+                </div>`
             ).join('');
         } else {
             synonymsContainer.style.display = 'none';
@@ -1121,7 +1149,10 @@ class VocabularyApp {
         if (word.antonyms && word.antonyms.length > 0) {
             antonymsContainer.style.display = 'block';
             antonymsList.innerHTML = word.antonyms.map(ant => 
-                `<span class="badge bg-danger me-1 mb-1">${ant}</span>`
+                `<div class="antonym-item mb-1">
+                    <span class="badge bg-danger me-1">${ant.word}</span>
+                    <small class="text-muted">(${ant.meaning})</small>
+                </div>`
             ).join('');
         } else {
             antonymsContainer.style.display = 'none';
@@ -1135,9 +1166,16 @@ class VocabularyApp {
             let familyHTML = '';
             Object.entries(word.wordFamily).forEach(([type, words]) => {
                 if (words && words.length > 0) {
-                    familyHTML += `<small class="d-block"><strong>${type}:</strong> `;
-                    familyHTML += words.map(w => `<span class="badge bg-info me-1">${w}</span>`).join('');
-                    familyHTML += '</small>';
+                    familyHTML += `<div class="word-family-type mb-2">
+                        <small class="fw-bold text-muted">${this.getVietnameseWordType(type)}:</small>
+                        <div class="mt-1">`;
+                    familyHTML += words.map(w => 
+                        `<div class="word-family-item mb-1">
+                            <span class="badge bg-info me-1">${w.word}</span>
+                            <small class="text-muted">(${w.meaning})</small>
+                        </div>`
+                    ).join('');
+                    familyHTML += `</div></div>`;
                 }
             });
             familyList.innerHTML = familyHTML;
@@ -1232,6 +1270,23 @@ class VocabularyApp {
             const isDuplicate = duplicateWords.has(word.word.toLowerCase());
             const cardDiv = document.createElement('div');
             cardDiv.className = 'col-md-6 col-lg-4 vocab-item';
+            
+            // Create definitions HTML
+            let definitionsHTML = '';
+            if (word.definitions && word.definitions.length > 0) {
+                definitionsHTML = `
+                    <div class="definitions-container mb-2">
+                        <small class="text-muted fw-bold">Định nghĩa:</small>
+                        ${word.definitions.map((def, index) => `
+                            <div class="definition-item small mt-1">
+                                <span class="badge bg-secondary me-1">${def.partOfSpeech}</span>
+                                <span>${def.definition}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            }
+            
             cardDiv.innerHTML = `
                 <div class="card vocab-card h-100 ${isDuplicate ? 'border-warning' : ''}">
                     <div class="card-body">
@@ -1246,9 +1301,11 @@ class VocabularyApp {
                             </div>
                             <span class="vocab-type">${word.type || 'N/A'}</span>
                         </div>
-                        <p class="vocab-meaning">${word.meaning}</p>
+                        <p class="vocab-meaning"><strong>${word.meaning}</strong></p>
                         <p class="text-muted small">${this.getPhonetic(word.word)}</p>
-                        ${word.example ? `<p class="vocab-example">"${word.example}"</p>` : ''}
+                        ${word.example ? `<p class="vocab-example fst-italic">"${word.example}"</p>` : ''}
+                        
+                        ${definitionsHTML}
                         
                         ${this.renderSynonymsAntonyms(word)}
                         ${this.renderWordFamily(word)}
@@ -1279,7 +1336,10 @@ class VocabularyApp {
                     </small>
                     <div class="synonyms-tags">
                         ${word.synonyms.map(synonym => 
-                            `<span class="badge bg-success-soft text-success me-1 mb-1">${synonym}</span>`
+                            `<div class="synonym-item d-inline-block me-2 mb-1">
+                                <span class="badge bg-success-soft text-success">${synonym.word}</span>
+                                <small class="text-muted ms-1">(${synonym.meaning})</small>
+                            </div>`
                         ).join('')}
                     </div>
                 </div>
@@ -1294,7 +1354,10 @@ class VocabularyApp {
                     </small>
                     <div class="antonyms-tags">
                         ${word.antonyms.map(antonym => 
-                            `<span class="badge bg-danger-soft text-danger me-1 mb-1">${antonym}</span>`
+                            `<div class="antonym-item d-inline-block me-2 mb-1">
+                                <span class="badge bg-danger-soft text-danger">${antonym.word}</span>
+                                <small class="text-muted ms-1">(${antonym.meaning})</small>
+                            </div>`
                         ).join('')}
                     </div>
                 </div>
@@ -1321,11 +1384,16 @@ class VocabularyApp {
         Object.entries(word.wordFamily).forEach(([type, words]) => {
             if (words && words.length > 0) {
                 html += `
-                    <div class="word-type-group mb-1">
-                        <small class="text-muted">${this.getVietnameseWordType(type)}:</small>
-                        ${words.map(w => 
-                            `<span class="badge bg-primary-soft text-primary me-1">${w}</span>`
-                        ).join('')}
+                    <div class="word-type-group mb-2">
+                        <small class="text-muted fw-bold">${this.getVietnameseWordType(type)}:</small>
+                        <div class="mt-1">
+                            ${words.map(w => 
+                                `<div class="word-family-item d-inline-block me-2 mb-1">
+                                    <span class="badge bg-primary-soft text-primary">${w.word}</span>
+                                    <small class="text-muted ms-1">(${w.meaning})</small>
+                                </div>`
+                            ).join('')}
+                        </div>
                     </div>
                 `;
             }

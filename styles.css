@@ -891,6 +891,54 @@ footer {
     background: #a1a1a1;
 }
 
+/* Definitions styling for new vocabulary structure */
+.definitions-container {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+}
+
+.definition-item {
+    margin-bottom: 8px;
+    padding: 6px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.definition-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.definition-item .badge {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+}
+
+/* Enhanced tooltips for synonyms/antonyms/word family */
+.badge[title] {
+    cursor: help;
+    position: relative;
+}
+
+.badge[title]:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}
+
+/* Flashcard definitions styling */
+.flashcard-back .border-primary {
+    border-color: #0d6efd !important;
+    border-width: 3px !important;
+}
+
+.flashcard-back .bg-light {
+    background-color: #f8f9fa !important;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
 /* Today's Words Mode Styles */
 #todayWordsArea #todayWord {
     font-size: 2.2rem;
@@ -930,6 +978,65 @@ footer {
 #todayWordsArea .badge {
     font-size: 0.8rem;
     margin: 2px;
+}
+
+/* Enhanced Synonyms, Antonyms, Word Family with Meanings */
+.synonym-item, .antonym-item, .word-family-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    padding: 4px 0;
+}
+
+.synonym-item .badge, .antonym-item .badge, .word-family-item .badge {
+    flex-shrink: 0;
+    font-size: 0.85rem;
+    padding: 4px 8px;
+}
+
+.synonym-item small, .antonym-item small, .word-family-item small {
+    font-size: 0.8rem;
+    line-height: 1.2;
+    margin-left: 6px;
+}
+
+/* Improved spacing for related words sections */
+.synonyms-section, .antonyms-section, .word-family-section {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: rgba(248, 249, 250, 0.5);
+    border-radius: 8px;
+    border-left: 3px solid;
+}
+
+.synonyms-section {
+    border-left-color: #198754;
+}
+
+.antonyms-section {
+    border-left-color: #dc3545;
+}
+
+.word-family-section {
+    border-left-color: #0d6efd;
+}
+
+/* Today's Words special styling */
+#todayWordsArea .synonym-item, 
+#todayWordsArea .antonym-item, 
+#todayWordsArea .word-family-item {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 6px 8px;
+    border-radius: 6px;
+    margin-bottom: 4px;
+}
+
+#todayWordsArea .word-family-type {
+    margin-bottom: 12px;
+}
+
+#todayWordsArea .word-family-type:last-child {
+    margin-bottom: 0;
 }
 
 #todayWordsArea .progress {
