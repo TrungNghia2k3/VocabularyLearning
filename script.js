@@ -31,6 +31,12 @@ class VocabularyApp {
         this.synAntQuizCurrentQuestion = 0;
         this.currentSynAntQuizData = [];
         
+        // Today's Words mode (last 10 words)
+        this.todayWordsIndex = 0;
+        this.todayWordsKnown = 0;
+        this.todayWordsUnknown = 0;
+        this.todayWordsList = [];
+        
         this.init();
     }
 
@@ -265,6 +271,7 @@ class VocabularyApp {
         document.getElementById('synonymAntonymQuizMode').addEventListener('click', () => this.switchMode('synonymAntonymQuiz'));
         document.getElementById('browseMode').addEventListener('click', () => this.switchMode('browse'));
         document.getElementById('practiceMode').addEventListener('click', () => this.switchMode('practice'));
+        document.getElementById('todayWordsMode').addEventListener('click', () => this.switchMode('todayWords'));
 
         // Flashcard controls
         document.getElementById('prevFlashcard').addEventListener('click', () => this.previousFlashcard());
@@ -305,6 +312,13 @@ class VocabularyApp {
             if (e.key === 'Enter') this.checkSpelling();
         });
 
+        // Today's Words mode
+        document.getElementById('startTodayWords').addEventListener('click', () => this.startTodayWords());
+        document.getElementById('nextTodayWord').addEventListener('click', () => this.nextTodayWord());
+        document.getElementById('todayWordKnownBtn').addEventListener('click', () => this.markTodayWordAsKnown());
+        document.getElementById('todayWordUnknownBtn').addEventListener('click', () => this.markTodayWordAsUnknown());
+        document.getElementById('todayWordPronounceBtn').addEventListener('click', () => this.pronounceTodayWord());
+
         // Accent selector
         document.getElementById('accentSelect').addEventListener('change', (e) => {
             this.changeAccent(e.target.value);
@@ -319,6 +333,7 @@ class VocabularyApp {
         document.getElementById('synonymAntonymQuizArea').classList.add('d-none');
         document.getElementById('browseArea').classList.add('d-none');
         document.getElementById('practiceArea').classList.add('d-none');
+        document.getElementById('todayWordsArea').classList.add('d-none');
 
         // Update button states
         document.querySelectorAll('.btn-group .btn').forEach(btn => {
@@ -353,6 +368,11 @@ class VocabularyApp {
                 document.getElementById('practiceMode').classList.add('active');
                 document.getElementById('practiceArea').classList.remove('d-none');
                 this.startPractice();
+                break;
+            case 'todayWords':
+                document.getElementById('todayWordsMode').classList.add('active');
+                document.getElementById('todayWordsArea').classList.remove('d-none');
+                this.initTodayWords();
                 break;
         }
     }
@@ -1009,6 +1029,180 @@ class VocabularyApp {
                 formCheck.classList.add('selected');
             }
         });
+    }
+
+    // Today's Words Mode (Last 10 words)
+    initTodayWords() {
+        // Get last 10 words from vocabulary
+        this.todayWordsList = this.vocabulary.slice(-10);
+        
+        if (this.todayWordsList.length === 0) {
+            this.showError('Không có từ vựng nào để học!');
+            return;
+        }
+
+        // Reset stats
+        this.todayWordsIndex = 0;
+        this.todayWordsKnown = 0;
+        this.todayWordsUnknown = 0;
+
+        // Update count display
+        document.getElementById('todayWordsCount').textContent = `${this.todayWordsList.length} từ`;
+        
+        // Hide content initially
+        document.getElementById('todayWordsContent').style.display = 'none';
+    }
+
+    startTodayWords() {
+        if (this.todayWordsList.length === 0) {
+            this.showError('Không có từ vựng nào để học!');
+            return;
+        }
+
+        // Show content and hide start button
+        document.getElementById('todayWordsContent').style.display = 'block';
+        
+        // Reset to first word
+        this.todayWordsIndex = 0;
+        this.showTodayWord();
+    }
+
+    showTodayWord() {
+        if (this.todayWordsIndex >= this.todayWordsList.length) {
+            this.showTodayWordsComplete();
+            return;
+        }
+
+        const word = this.todayWordsList[this.todayWordsIndex];
+        
+        // Update progress
+        const progress = ((this.todayWordsIndex + 1) / this.todayWordsList.length) * 100;
+        document.getElementById('todayWordsProgress').textContent = 
+            `${this.todayWordsIndex + 1} / ${this.todayWordsList.length}`;
+        document.getElementById('todayWordsProgressBar').style.width = `${progress}%`;
+        document.getElementById('todayWordsPercentage').textContent = `${Math.round(progress)}%`;
+
+        // Display word info
+        document.getElementById('todayWord').textContent = word.word;
+        document.getElementById('todayWordType').textContent = `[${word.type}]`;
+        document.getElementById('todayWordMeaning').textContent = word.meaning;
+        document.getElementById('todayWordExample').textContent = word.example;
+
+        // Display phonetic
+        const phonetic = word.phonetic && word.phonetic[this.selectedAccent] 
+            ? word.phonetic[this.selectedAccent] 
+            : `/${word.word}/`;
+        document.getElementById('todayWordPhonetic').textContent = phonetic;
+
+        // Handle synonyms, antonyms, word family
+        this.displayTodayWordRelated(word);
+
+        // Update stats
+        document.getElementById('todayWordsKnown').textContent = this.todayWordsKnown;
+        document.getElementById('todayWordsUnknown').textContent = this.todayWordsUnknown;
+    }
+
+    displayTodayWordRelated(word) {
+        // Synonyms
+        const synonymsContainer = document.getElementById('todayWordSynonyms');
+        const synonymsList = document.getElementById('todayWordSynonymsList');
+        if (word.synonyms && word.synonyms.length > 0) {
+            synonymsContainer.style.display = 'block';
+            synonymsList.innerHTML = word.synonyms.map(syn => 
+                `<span class="badge bg-success me-1 mb-1">${syn}</span>`
+            ).join('');
+        } else {
+            synonymsContainer.style.display = 'none';
+        }
+
+        // Antonyms
+        const antonymsContainer = document.getElementById('todayWordAntonyms');
+        const antonymsList = document.getElementById('todayWordAntonymsList');
+        if (word.antonyms && word.antonyms.length > 0) {
+            antonymsContainer.style.display = 'block';
+            antonymsList.innerHTML = word.antonyms.map(ant => 
+                `<span class="badge bg-danger me-1 mb-1">${ant}</span>`
+            ).join('');
+        } else {
+            antonymsContainer.style.display = 'none';
+        }
+
+        // Word Family
+        const familyContainer = document.getElementById('todayWordFamily');
+        const familyList = document.getElementById('todayWordFamilyList');
+        if (word.wordFamily && Object.keys(word.wordFamily).length > 0) {
+            familyContainer.style.display = 'block';
+            let familyHTML = '';
+            Object.entries(word.wordFamily).forEach(([type, words]) => {
+                if (words && words.length > 0) {
+                    familyHTML += `<small class="d-block"><strong>${type}:</strong> `;
+                    familyHTML += words.map(w => `<span class="badge bg-info me-1">${w}</span>`).join('');
+                    familyHTML += '</small>';
+                }
+            });
+            familyList.innerHTML = familyHTML;
+        } else {
+            familyContainer.style.display = 'none';
+        }
+    }
+
+    markTodayWordAsKnown() {
+        const word = this.todayWordsList[this.todayWordsIndex];
+        this.learnedWords.add(word.word);
+        this.todayWordsKnown++;
+        this.updateStats();
+        this.nextTodayWord();
+    }
+
+    markTodayWordAsUnknown() {
+        this.todayWordsUnknown++;
+        this.nextTodayWord();
+    }
+
+    nextTodayWord() {
+        this.todayWordsIndex++;
+        this.showTodayWord();
+    }
+
+    showTodayWordsComplete() {
+        const totalWords = this.todayWordsList.length;
+        const knownPercentage = Math.round((this.todayWordsKnown / totalWords) * 100);
+        
+        let message = '';
+        if (knownPercentage >= 80) {
+            message = 'Xuất sắc! Bạn đã nắm vững hầu hết từ mới!';
+        } else if (knownPercentage >= 60) {
+            message = 'Tốt lắm! Hãy tiếp tục ôn lại những từ chưa biết!';
+        } else {
+            message = 'Cần cố gắng thêm! Hãy ôn lại các từ mới này thường xuyên hơn!';
+        }
+
+        // Show completion alert
+        const alertHTML = `
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <h4 class="alert-heading">🎉 Hoàn thành học từ mới hôm nay!</h4>
+                <p><strong>Kết quả:</strong></p>
+                <ul>
+                    <li>Đã biết: ${this.todayWordsKnown}/${totalWords} từ (${knownPercentage}%)</li>
+                    <li>Chưa biết: ${this.todayWordsUnknown}/${totalWords} từ</li>
+                </ul>
+                <hr>
+                <p class="mb-0">${message}</p>
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        `;
+        
+        document.getElementById('todayWordsContent').innerHTML = alertHTML + 
+            `<div class="text-center mt-3">
+                <button class="btn btn-primary" onclick="location.reload()">
+                    <i class="fas fa-redo"></i> Học lại từ đầu
+                </button>
+            </div>`;
+    }
+
+    pronounceTodayWord() {
+        const word = document.getElementById('todayWord').textContent;
+        this.pronounceWord(word);
     }
 
     // Browse Mode

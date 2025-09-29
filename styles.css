@@ -890,3 +890,53 @@ footer {
 #synAntQuizOptions::-webkit-scrollbar-thumb:hover {
     background: #a1a1a1;
 }
+
+/* Today's Words Mode Styles */
+#todayWordsArea #todayWord {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #0d6efd;
+    margin-bottom: 8px;
+}
+
+#todayWordsArea #todayWordType {
+    color: #6c757d;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+#todayWordsArea #todayWordPhonetic {
+    color: #495057;
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+}
+
+#todayWordsArea #todayWordMeaning {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #198754;
+    margin-bottom: 15px;
+}
+
+#todayWordsArea #todayWordExample {
+    font-size: 1.1rem;
+    color: #6c757d;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-left: 4px solid #0d6efd;
+    border-radius: 4px;
+}
+
+#todayWordsArea .badge {
+    font-size: 0.8rem;
+    margin: 2px;
+}
+
+#todayWordsArea .progress {
+    height: 12px;
+    border-radius: 10px;
+}
+
+#todayWordsArea .btn-group .btn {
+    min-width: 120px;
+}

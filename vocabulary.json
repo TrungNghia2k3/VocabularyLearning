@@ -2769,7 +2769,7 @@
                 "adjective": [
                     "combustible"
                 ]
-            }     
+            }
         },
         {
             "word": "depletion",
@@ -2985,6 +2985,307 @@
                 ],
                 "adjective": [
                     "prairie"
+                ]
+            }
+        },
+        {
+            "word": "precautionary",
+            "meaning": "cảnh giác, đề phòng",
+            "type": "adjective",
+            "example": "The precautionary measures were implemented to ensure safety.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/prɪˈkɔːʃənəri/",
+                "en-US": "/prɪˈkɔːʃəˌnɛri/"
+            },
+            "synonyms": [
+                "preventive",
+                "protective",
+                "cautious"
+            ],
+            "antonyms": [
+                "reckless",
+                "careless"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "precaution",
+                    "precautionary"
+                ],
+                "adjective": [
+                    "precautionary"
+                ],
+                "adverb": [
+                    "precautionarily"
+                ]
+            }
+        },
+        {
+            "word": "radiation",
+            "meaning": "phóng xạ, bức xạ",
+            "type": "noun",
+            "example": "The radiation from the sun is essential for life on Earth.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈreɪdiˌeɪʃən/",
+                "en-US": "/ˈreɪdiˌeɪʃən/"
+            },
+            "synonyms": [
+                "emission",
+                "radiance",
+                "rays"
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    "radiation",
+                    "radiator"
+                ],
+                "verb": [
+                    "radiate"
+                ],
+                "adjective": [
+                    "radiative",
+                    "radiating"
+                ],
+                "adverb": [
+                    "radiatively"
+                ]
+            }
+        },
+        {
+            "word": "respiratory",
+            "meaning": "hô hấp",
+            "type": "adjective",
+            "example": "The respiratory system is vital for breathing.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈrɛspɪrətəri/",
+                "en-US": "/ˈrɛspəˌrɑtɔri/"
+            },
+            "synonyms": [
+                "breathing",
+                "pulmonary",
+                "ventilatory"
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    "respiration",
+                    "respirator"
+                ],
+                "adjective": [
+                    "respiratory"
+                ],
+                "adverb": [
+                    "respiratorily"
+                ]
+            }
+        },
+        {
+            "word": "run-off",
+            "meaning": "trận đấu phân thắng bại (sau trận hòa), dòng chảy",
+            "type": "noun",
+            "example": "The run-off election will determine the final winner.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈrʌnˌɒf/",
+                "en-US": "/ˈrʌnˌɔf/"
+            },
+            "synonyms": [
+                "final",
+                "decider",
+                "tiebreaker"
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    "run-off"
+                ],
+                "adjective": [
+                    "run-off"
+                ]
+            }
+        },
+        {
+            "word": "run-in",
+            "meaning": "cuộc cãi vã, bất đồng",
+            "type": "noun",
+            "example": "The two candidates had a run-in during the debate.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈrʌnˌɪn/",
+                "en-US": "/ˈrʌnˌɪn/"
+            },
+            "synonyms": [
+                "conflict",
+                "dispute",
+                "altercation"
+            ],
+            "antonyms": [
+                "agreement",
+                "harmony"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "run-in"
+                ],
+                "verb": [
+                    "run in"
+                ],
+                "adjective": [
+                    "run-in"
+                ]
+            }
+        },
+        {
+            "word": "run-out",
+            "meaning": "sự lệch tâm, mất cân bằng",
+            "type": "noun",
+            "example": "The run-out caused the machine to malfunction.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈrʌnˌaʊt/",
+                "en-US": "/ˈrʌnˌaʊt/"
+            },
+            "synonyms": [
+                "imbalance",
+                "misalignment",
+                "deviation"
+            ],
+            "antonyms": [
+                "balance",
+                "alignment"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "run-out"
+                ],
+                "adjective": [
+                    "run-out"
+                ]
+            }
+        },
+        {
+            "word": "soot",
+            "meaning": "nhọ nồi, bồ hóng",
+            "type": "noun",
+            "example": "The chimney was covered in soot.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/sʊt/",
+                "en-US": "/ˈsʊt/"
+            },
+            "synonyms": [
+                "carbon",
+                "smoke residue",
+                "black powder"
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    "soot"
+                ],
+                "adjective": [
+                    "sooty"
+                ]
+            }
+        },
+        {
+            "word": "speculate",
+            "meaning": "đầu cơ, tích trữ",
+            "type": "verb",
+            "example": "Investors often speculate on the stock market.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈspɛkjʊleɪt/",
+                "en-US": "/ˈspɛkjəˌleɪt/"
+            },
+            "synonyms": [
+                "theorize",
+                "conjecture",
+                "hypothesize"
+            ],
+            "antonyms": [
+                "know",
+                "understand"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "speculation",
+                    "speculator"
+                ],
+                "verb": [
+                    "speculate"
+                ],
+                "adjective": [
+                    "speculative"
+                ],
+                "adverb": [
+                    "speculatively"
+                ]
+            }
+        },
+        {
+            "word": "territory",
+            "meaning": "lãnh thổ",
+            "type": "noun",
+            "example": "The territory was marked by natural boundaries.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈtɛrɪtəri/",
+                "en-US": "/ˈtɛrɪtɔri/"
+            },
+            "synonyms": [
+                "region",
+                "area",
+                "domain"
+            ],
+            "antonyms": [
+                "global",
+                "worldwide"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "territory",
+                    "territoriality"
+                ],
+                "adjective": [
+                    "territorial"
+                ],
+                "adverb": [
+                    "territorially"
+                ]
+            }
+        },
+        {
+            "word": "vulnerably",
+            "meaning": "một cách dễ bị tổn thương",
+            "type": "adverb",
+            "example": "The community was vulnerably exposed to natural disasters.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈvʌlnərəbli/",
+                "en-US": "/ˈvʌlnərəbli/"
+            },
+            "synonyms": [
+                "susceptibly",
+                "defenselessly",
+                "exposedly"
+            ],
+            "antonyms": [
+                "securely",
+                "safely"
+            ],
+            "wordFamily": {
+                "noun": [
+                    "vulnerability"
+                ],
+                "adjective": [
+                    "vulnerable"
+                ],
+                "adverb": [
+                    "vulnerably"
                 ]
             }
         }
