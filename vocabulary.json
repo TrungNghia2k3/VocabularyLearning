@@ -7094,6 +7094,661 @@
                     }
                 ]
             }
+        },
+        {
+            "word": "boundless",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "having no boundaries; infinite or immense",
+                    "example": "The universe is boundless."
+                }
+            ],
+            "meaning": "bao la, vô hạn",
+            "type": "adjective",
+            "example": "The universe is boundless.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈbaʊndləs/",
+                "en-US": "/ˈbaʊndləs/"
+            },
+            "synonyms": [
+                {
+                    "word": "infinite",
+                    "meaning": "vô hạn"
+                },
+                {
+                    "word": "endless",
+                    "meaning": "vô tận"
+                },
+                {
+                    "word": "unlimited",
+                    "meaning": "không giới hạn"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "limited",
+                    "meaning": "có giới hạn"
+                },
+                {
+                    "word": "finite",
+                    "meaning": "hữu hạn"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "boundlessness",
+                        "meaning": "tình trạng vô hạn"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "boundless",
+                        "meaning": "bao la, vô hạn"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "boundlessly",
+                        "meaning": "một cách vô hạn"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "decayed",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "having undergone decomposition or rot; deteriorated in quality, condition, or soundness",
+                    "example": "The decayed wood was no longer usable."
+                }
+            ],
+            "meaning": "bị sâu, bị mục nát",
+            "type": "adjective",
+            "example": "The decayed wood was no longer usable.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/dɪˈkeɪd/",
+                "en-US": "/dɪˈkeɪd/"
+            },
+            "synonyms": [
+                {
+                    "word": "decomposed",
+                    "meaning": "bị phân hủy"
+                },
+                {
+                    "word": "rotted",
+                    "meaning": "bị thối rữa"
+                },
+                {
+                    "word": "deteriorated",
+                    "meaning": "bị suy giảm"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "fresh",
+                    "meaning": "tươi mới"
+                },
+                {
+                    "word": "intact",
+                    "meaning": "nguyên vẹn"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "decay",
+                        "meaning": "sự suy tàn"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "decay",
+                        "meaning": "suy tàn, mục nát"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "decayed",
+                        "meaning": "bị sâu, bị mục nát"
+                    },
+                    {
+                        "word": "decaying",
+                        "meaning": "đang mục nát"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "decayingly",
+                        "meaning": "một cách suy tàn"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "devastate",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "to cause severe and overwhelming shock or grief; to destroy or ruin (something)",
+                    "example": "The hurricane devastated the coastal town."
+                }
+            ],
+            "meaning": "tàn phá",
+            "type": "verb",
+            "example": "The hurricane devastated the coastal town.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈdɛvəsteɪt/",
+                "en-US": "/ˈdɛvəsteɪt/"
+            },
+            "synonyms": [
+                {
+                    "word": "destroy",
+                    "meaning": "phá hủy"
+                },
+                {
+                    "word": "ruin",
+                    "meaning": "phá hoại"
+                },
+                {
+                    "word": "wreck",
+                    "meaning": "làm hỏng"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "build",
+                    "meaning": "xây dựng"
+                },
+                {
+                    "word": "create",
+                    "meaning": "tạo ra"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "devastation",
+                        "meaning": "sự tàn phá"
+                    },
+                    {
+                        "word": "devastator",
+                        "meaning": "người tàn phá"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "devastate",
+                        "meaning": "tàn phá"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "devastating",
+                        "meaning": "tàn phá"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "devastatingly",
+                        "meaning": "một cách tàn phá"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "enkindle",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "to set on fire; to arouse or inspire (an emotion or feeling)",
+                    "example": "The motivational speaker's words enkindled a sense of purpose in the audience."
+                }
+            ],
+            "meaning": "nhen nhóm",
+            "type": "verb",
+            "example": "The motivational speaker's words enkindled a sense of purpose in the audience.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ɪnˈkɪndl/",
+                "en-US": "/ɪnˈkɪndl/"
+            },
+            "synonyms": [
+                {
+                    "word": "ignite",
+                    "meaning": "châm ngòi"
+                },
+                {
+                    "word": "kindle",
+                    "meaning": "nhen nhóm"
+                },
+                {
+                    "word": "arouse",
+                    "meaning": "gợi lên"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "extinguish",
+                    "meaning": "dập tắt"
+                },
+                {
+                    "word": "quench",
+                    "meaning": "dập tắt"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "enkindlement",
+                        "meaning": "sự nhen nhóm"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "enkindle",
+                        "meaning": "nhen nhóm"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "enkindled",
+                        "meaning": "được nhen nhóm"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "enkindlingly",
+                        "meaning": "một cách nhen nhóm"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "extinguish",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "to cause (a fire or light) to cease to burn or shine; to put an end to (a feeling or idea)",
+                    "example": "The firefighters worked quickly to extinguish the blaze."
+                }
+            ],
+            "meaning": "dập tắt",
+            "type": "verb",
+            "example": "The firefighters worked quickly to extinguish the blaze.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ɪkˈstɪŋɡwɪʃ/",
+                "en-US": "/ɪkˈstɪŋɡwɪʃ/"
+            },
+            "synonyms": [
+                {
+                    "word": "douse",
+                    "meaning": "dập tắt"
+                },
+                {
+                    "word": "quench",
+                    "meaning": "dập tắt"
+                },
+                {
+                    "word": "put out",
+                    "meaning": "dập tắt"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "ignite",
+                    "meaning": "châm ngòi"
+                },
+                {
+                    "word": "kindle",
+                    "meaning": "nhen nhóm"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "extinguishment",
+                        "meaning": "sự dập tắt"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "extinguish",
+                        "meaning": "dập tắt"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "extinguishable",
+                        "meaning": "có thể dập tắt"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "extinguishingly",
+                        "meaning": "một cách dập tắt"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "geodetic",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "relating to geodesy, the science of measuring and understanding the Earth's geometric shape, orientation in space, and gravitational field",
+                    "example": "The geodetic survey provided accurate measurements of the land."
+                }
+            ],
+            "meaning": "thuộc đo đạc",
+            "type": "adjective",
+            "example": "The geodetic survey provided accurate measurements of the land.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈdʒiːəʊˈdɛtɪk/",
+                "en-US": "/ˈdʒiːəˈdɛtɪk/"
+            },
+            "synonyms": [
+                {
+                    "word": "geographical",
+                    "meaning": "thuộc địa lý"
+                },
+                {
+                    "word": "topographical",
+                    "meaning": "thuộc địa hình"
+                },
+                {
+                    "word": "cartographic",
+                    "meaning": "thuộc bản đồ học"
+                }
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "geodesy",
+                        "meaning": "đo đạc"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "geodetic",
+                        "meaning": "thuộc đo đạc"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "geodetically",
+                        "meaning": "một cách thuộc đo đạc"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "harness",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "to control and make use of (natural resources), especially to produce energy; to put a harness on (a horse or other animal)",
+                    "example": "The engineers harnessed the power of the wind to generate electricity."
+                }
+            ],
+            "meaning": "khai thác",
+            "type": "verb",
+            "example": "The engineers harnessed the power of the wind to generate electricity.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈhɑːnɪs/",
+                "en-US": "/ˈhɑːrnɪs/"
+            },
+            "synonyms": [
+                {
+                    "word": "utilize",
+                    "meaning": "tận dụng"
+                },
+                {
+                    "word": "exploit",
+                    "meaning": "khai thác"
+                },
+                {
+                    "word": "employ",
+                    "meaning": "sử dụng"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "waste",
+                    "meaning": "lãng phí"
+                },
+                {
+                    "word": "neglect",
+                    "meaning": "bỏ qua"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "harness",
+                        "meaning": "dây yên cương"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "harness",
+                        "meaning": "khai thác"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "harnessed",
+                        "meaning": "được khai thác"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "harnessingly",
+                        "meaning": "một cách khai thác"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "homogeneous",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "of the same kind; alike; consisting of parts all of the same kind",
+                    "example": "The mixture was homogeneous and well-blended."
+                }
+            ],
+            "meaning": "thuần nhất, đồng nhất",
+            "type": "adjective",
+            "example": "The mixture was homogeneous and well-blended.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈhəʊməˈdʒiːnəs/",
+                "en-US": "/ˈhoʊməˈdʒinəs/"
+            },
+            "synonyms": [
+                {
+                    "word": "uniform",
+                    "meaning": "đồng nhất"
+                },
+                {
+                    "word": "consistent",
+                    "meaning": "nhất quán"
+                },
+                {
+                    "word": "similar",
+                    "meaning": "tương tự"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "heterogeneous",
+                    "meaning": "không đồng nhất"
+                },
+                {
+                    "word": "diverse",
+                    "meaning": "đa dạng"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "homogeneity",
+                        "meaning": "tính đồng nhất"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "homogeneous",
+                        "meaning": "thuần nhất, đồng nhất"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "homogeneously",
+                        "meaning": "một cách đồng nhất"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "incinerate",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "to burn (something) to ashes; to destroy (something) by burning",
+                    "example": "The waste was incinerated to reduce its volume."
+                }
+            ],
+            "meaning": "thiêu rụi",
+            "type": "verb",
+            "example": "The waste was incinerated to reduce its volume.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈɪnsɪnəreɪt/",
+                "en-US": "/ˈɪnsɪnəreɪt/"
+            },
+            "synonyms": [
+                {
+                    "word": "burn",
+                    "meaning": "đốt cháy"
+                },
+                {
+                    "word": "cremate",
+                    "meaning": "hỏa táng"
+                },
+                {
+                    "word": "combust",
+                    "meaning": "cháy"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "extinguish",
+                    "meaning": "dập tắt"
+                },
+                {
+                    "word": "quench",
+                    "meaning": "dập tắt"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "incineration",
+                        "meaning": "sự thiêu rụi"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "incinerate",
+                        "meaning": "thiêu rụi"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "incinerable",
+                        "meaning": "có thể thiêu rụi"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "incineratingly",
+                        "meaning": "một cách thiêu rụi"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "miscellaneous",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "composed of various kinds, diverse; made up of different elements or types",
+                    "example": "The box contained miscellaneous items."
+                }
+            ],
+            "meaning": "pha tạp, hỗn hợp",
+            "type": "adjective",
+            "example": "The box contained miscellaneous items.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˌmɪsəˈleɪniəs/",
+                "en-US": "/ˌmɪsəˈleɪniəs/"
+            },
+            "synonyms": [
+                {
+                    "word": "varied",
+                    "meaning": "đa dạng"
+                },
+                {
+                    "word": "diverse",
+                    "meaning": "đa dạng"
+                },
+                {
+                    "word": "assorted",
+                    "meaning": "hỗn hợp"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "uniform",
+                    "meaning": "đồng nhất"
+                },
+                {
+                    "word": "homogeneous",
+                    "meaning": "thuần nhất"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "miscellany",
+                        "meaning": "hỗn hợp"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "miscellaneous",
+                        "meaning": "pha tạp, hỗn hợp"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "miscellaneously",
+                        "meaning": "một cách pha tạp"
+                    }
+                ]
+            }
         }
     ]
 }
