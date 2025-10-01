@@ -7749,6 +7749,555 @@
                     }
                 ]
             }
+        },
+        {
+            "word": "opaque",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "not able to be seen through; not transparent; hard or impossible to understand",
+                    "example": "The glass was opaque and did not allow light to pass through."
+                }
+            ],
+            "meaning": "mờ, đục",
+            "type": "adjective",
+            "example": "The glass was opaque and did not allow light to pass through.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/əʊˈpeɪk/",
+                "en-US": "/əʊˈpeɪk/"
+            },
+            "synonyms": [
+                {
+                    "word": "non-transparent",
+                    "meaning": "không trong suốt"
+                },
+                {
+                    "word": "cloudy",
+                    "meaning": "mờ đục"
+                },
+                {
+                    "word": "obscure",
+                    "meaning": "mờ mịt"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "transparent",
+                    "meaning": "trong suốt"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "opaqueness",
+                        "meaning": "tính mờ đục"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "opaque",
+                        "meaning": "mờ, đục"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "opaquely",
+                        "meaning": "một cách mờ đục"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "radioactive",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "emitting or relating to the emission of ionizing radiation or particles; relating to or denoting a substance that exhibits such properties",
+                    "example": "The radioactive material was handled with extreme caution."
+                }
+            ],
+            "meaning": "phóng xạ",
+            "type": "adjective",
+            "example": "The radioactive material was handled with extreme caution.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˌreɪdiəʊˈæktɪv/",
+                "en-US": "/ˌreɪdiəʊˈæktɪv/"
+            },
+            "synonyms": [
+                {
+                    "word": "nuclear",
+                    "meaning": "hạt nhân"
+                },
+                {
+                    "word": "ionizing",
+                    "meaning": "ion hóa"
+                },
+                {
+                    "word": "radiant",
+                    "meaning": "phát sáng"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "non-radioactive",
+                    "meaning": "không phóng xạ"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "radioactivity",
+                        "meaning": "sự phóng xạ"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "radioactive",
+                        "meaning": "phóng xạ"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "radioactively",
+                        "meaning": "một cách phóng xạ"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "speculative",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "based on conjecture rather than knowledge; involving a high degree of risk",
+                    "example": "The speculative nature of the investment made it very risky."
+                }
+            ],
+            "meaning": "có tính chất suy đoán",
+            "type": "adjective",
+            "example": "The speculative nature of the investment made it very risky.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈspɛkjʊlətɪv/",
+                "en-US": "/ˈspɛkjʊlətɪv/"
+            },
+            "synonyms": [
+                {
+                    "word": "theoretical",
+                    "meaning": "thuộc lý thuyết"
+                },
+                {
+                    "word": "conjectural",
+                    "meaning": "giả thuyết"
+                },
+                {
+                    "word": "risky",
+                    "meaning": "mạo hiểm"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "certain",
+                    "meaning": "chắc chắn"
+                },
+                {
+                    "word": "definite",
+                    "meaning": "rõ ràng"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "speculation",
+                        "meaning": "sự suy đoán"
+                    },
+                    {
+                        "word": "speculator",
+                        "meaning": "người suy đoán"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "speculative",
+                        "meaning": "có tính chất suy đoán"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "speculatively",
+                        "meaning": "một cách suy đoán"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "stationery",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "writing and other office materials; materials for writing and office use, such as paper, pens, and envelopes",
+                    "example": "I bought some new stationery for my office."
+                }
+            ],
+            "meaning": "văn phòng phẩm",
+            "type": "noun",
+            "example": "I bought some new stationery for my office.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈsteɪʃənəri/",
+                "en-US": "/ˈsteɪʃənəri/"
+            },
+            "synonyms": [
+                {
+                    "word": "office supplies",
+                    "meaning": "vật dụng văn phòng"
+                },
+                {
+                    "word": "writing materials",
+                    "meaning": "vật liệu viết"
+                },
+                {
+                    "word": "paper goods",
+                    "meaning": "hàng giấy"
+                }
+            ],
+            "antonyms": [],
+            "wordFamily": [
+                {
+                    "word": "stationery",
+                    "meaning": "văn phòng phẩm"
+                }
+            ]
+        },
+        {
+            "word": "subdue",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "to bring under control, to conquer or overcome",
+                    "example": "The police were called in to subdue the riot."
+                }
+            ],
+            "meaning": "chinh phục, chế ngự",
+            "type": "verb",
+            "example": "The police were called in to subdue the riot.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/səbˈdjuː/",
+                "en-US": "/səbˈduː/"
+            },
+            "synonyms": [
+                {
+                    "word": "conquer",
+                    "meaning": "chinh phục"
+                },
+                {
+                    "word": "overcome",
+                    "meaning": "vượt qua"
+                },
+                {
+                    "word": "defeat",
+                    "meaning": "đánh bại"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "surrender",
+                    "meaning": "đầu hàng"
+                },
+                {
+                    "word": "yield",
+                    "meaning": "nhường"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "subduer",
+                        "meaning": "người chinh phục"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "subdue",
+                        "meaning": "chinh phục, chế ngự"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "subdued",
+                        "meaning": "bị chinh phục"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "subduingly",
+                        "meaning": "một cách chinh phục"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "surcharge",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "an additional charge or payment; an extra fee added to the usual cost",
+                    "example": "The hotel imposed a surcharge for late check-out."
+                }
+            ],
+            "meaning": "tiền trả thêm",
+            "type": "noun",
+            "example": "The hotel imposed a surcharge for late check-out.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈsɜːrˌtʃɑːrdʒ/",
+                "en-US": "/ˈsɜːrˌtʃɑːrdʒ/"
+            },
+            "synonyms": [
+                {
+                    "word": "extra charge",
+                    "meaning": "phí phụ trội"
+                },
+                {
+                    "word": "additional fee",
+                    "meaning": "phí bổ sung"
+                },
+                {
+                    "word": "premium",
+                    "meaning": "phí bảo hiểm"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "discount",
+                    "meaning": "giảm giá"
+                },
+                {
+                    "word": "rebate",
+                    "meaning": "hoàn tiền"
+                }
+            ],
+            "wordFamily": [
+                {
+                    "word": "surcharge",
+                    "meaning": "tiền trả thêm"
+                }
+            ]
+        },
+        {
+            "word": "synthetic",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "made by chemical synthesis, especially to imitate a natural product; not genuine or natural",
+                    "example": "The fabric was made from synthetic materials."
+                }
+            ],
+            "meaning": "tổng hợp",
+            "type": "noun",
+            "example": "The fabric was made from synthetic materials.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈsɪnθɛtɪk/",
+                "en-US": "/ˈsɪnθɛtɪk/"
+            },
+            "synonyms": [
+                {
+                    "word": "artificial",
+                    "meaning": "nhân tạo"
+                },
+                {
+                    "word": "manufactured",
+                    "meaning": "sản xuất"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "natural",
+                    "meaning": "tự nhiên"
+                },
+                {
+                    "word": "genuine",
+                    "meaning": "chính hãng"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "synthesis",
+                        "meaning": "sự tổng hợp"
+                    },
+                    {
+                        "word": "synthetic",
+                        "meaning": "chất tổng hợp"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "synthetic",
+                        "meaning": "tổng hợp"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "synthetically",
+                        "meaning": "một cách tổng hợp"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "unleaded",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "not containing lead, especially in reference to gasoline; free from lead",
+                    "example": "Unleaded gasoline is better for the environment."
+                }
+            ],
+            "meaning": "không có chì",
+            "type": "adjective",
+            "example": "Unleaded gasoline is better for the environment.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈʌnˌliːdɪd/",
+                "en-US": "/ˈʌnˌliːdɪd/"
+            },
+            "synonyms": [
+                {
+                    "word": "lead-free",
+                    "meaning": "không có chì"
+                },
+                {
+                    "word": "non-leaded",
+                    "meaning": "không có chì"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "leaded",
+                    "meaning": "có chì"
+                }
+            ],
+            "wordFamily": [
+                {
+                    "word": "unleaded",
+                    "meaning": "không có chì"
+                }
+            ]
+        },
+        {
+            "word": "well-grounded",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "having a good basis in reason or fact; sensible and practical",
+                    "example": "Her arguments were well-grounded and convincing."
+                }
+            ],
+            "meaning": "có cơ sở vững chắc",
+            "type": "adjective",
+            "example": "Her arguments were well-grounded and convincing.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈwɛlˈɡaʊndɪd/",
+                "en-US": "/ˈwɛlˈɡaʊndɪd/"
+            },
+            "synonyms": [
+                {
+                    "word": "well-founded",
+                    "meaning": "có cơ sở vững chắc"
+                },
+                {
+                    "word": "justified",
+                    "meaning": "hợp lý"
+                },
+                {
+                    "word": "reasonable",
+                    "meaning": "hợp lý"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "unfounded",
+                    "meaning": "không có cơ sở"
+                },
+                {
+                    "word": "baseless",
+                    "meaning": "không có cơ sở"
+                }
+            ],
+            "wordFamily": [
+                {
+                    "word": "well-grounded",
+                    "meaning": "có cơ sở vững chắc"
+                }
+            ]
+        },
+        {
+            "word": "aesthetic",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "concerned with beauty or the appreciation of beauty; relating to the principles of beauty and artistic taste",
+                    "example": "The building has an aesthetic appeal."
+                }
+            ],
+            "meaning": "có thẩm mỹ",
+            "type": "adjective",
+            "example": "The building has an aesthetic appeal.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈiːsθɛtɪk/",
+                "en-US": "/ˈiːsθɛtɪk/"
+            },
+            "synonyms": [
+                {
+                    "word": "artistic",
+                    "meaning": "thuộc nghệ thuật"
+                },
+                {
+                    "word": "beautiful",
+                    "meaning": "đẹp"
+                },
+                {
+                    "word": "tasteful",
+                    "meaning": "có khiếu thẩm mỹ"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "unattractive",
+                    "meaning": "không hấp dẫn"
+                },
+                {
+                    "word": "ugly",
+                    "meaning": "xấu xí"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "aesthetics",
+                        "meaning": "thẩm mỹ học"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "aesthetic",
+                        "meaning": "có thẩm mỹ"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "aesthetically",
+                        "meaning": "một cách có thẩm mỹ"
+                    }
+                ]
+            }
         }
     ]
 }
