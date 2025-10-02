@@ -8298,6 +8298,550 @@
                     }
                 ]
             }
+        },
+        {
+            "word": "bramble",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a prickly bush or shrub, especially one that produces blackberries or other small fruits",
+                    "example": "The garden was overgrown with brambles."
+                }
+            ],
+            "meaning": "bụi cây có gai",
+            "type": "noun",
+            "example": "The garden was overgrown with brambles.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈbræmbl/",
+                "en-US": "/ˈbræmbl/"
+            },
+            "synonyms": [
+                {
+                    "word": "thornbush",
+                    "meaning": "bụi cây có gai"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "rose",
+                    "meaning": "hoa hồng"
+                },
+                {
+                    "word": "flower",
+                    "meaning": "hoa"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "bramble",
+                        "meaning": "bụi cây có gai"
+                    }
+                ],
+                "adjective": [],
+                "adverb": []
+            }
+        },
+        {
+            "word": "exterminate",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "to destroy completely; to eliminate or eradicate",
+                    "example": "The pest control company was hired to exterminate the termites."
+                }
+            ],
+            "meaning": "tiêu diệt",
+            "type": "verb",
+            "example": "The pest control company was hired to exterminate the termites.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ɪkˈstɜːmɪneɪt/",
+                "en-US": "/ɪkˈstɜːrmɪneɪt/"
+            },
+            "synonyms": [
+                {
+                    "word": "eradicate",
+                    "meaning": "tiêu diệt"
+                },
+                {
+                    "word": "eliminate",
+                    "meaning": "loại bỏ"
+                },
+                {
+                    "word": "annihilate",
+                    "meaning": "hủy diệt"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "preserve",
+                    "meaning": "bảo tồn"
+                },
+                {
+                    "word": "save",
+                    "meaning": "cứu"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "extermination",
+                        "meaning": "sự tiêu diệt"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "exterminate",
+                        "meaning": "tiêu diệt"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "exterminable",
+                        "meaning": "có thể tiêu diệt"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "exterminatingly",
+                        "meaning": "một cách tiêu diệt"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "fossilize",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "(of organic matter) to become preserved in rock as a fossil; to make (an idea, practice, or institution) outdated or fixed",
+                    "example": "The remains of ancient plants and animals were fossilized over millions of years."
+                }
+            ],
+            "meaning": "hóa thạch",
+            "type": "verb",
+            "example": "The remains of ancient plants and animals were fossilized over millions of years.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈfɒsɪlaɪz/",
+                "en-US": "/ˈfɑːsɪlaɪz/"
+            },
+            "synonyms": [
+                {
+                    "word": "petrify",
+                    "meaning": "hóa đá"
+                },
+                {
+                    "word": "mineralize",
+                    "meaning": "khoáng hóa"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "decompose",
+                    "meaning": "phân hủy"
+                },
+                {
+                    "word": "decay",
+                    "meaning": "mục nát"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "fossil",
+                        "meaning": "hóa thạch"
+                    },
+                    {
+                        "word": "fossilization",
+                        "meaning": "sự hóa thạch"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "fossilize",
+                        "meaning": "hóa thạch"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "fossilized",
+                        "meaning": "được hóa thạch"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "fossilizingly",
+                        "meaning": "một cách hóa thạch"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "hazardous",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "risky or dangerous, especially to health or safety; involving risk or danger",
+                    "example": "The factory handles hazardous materials."
+                }
+            ],
+            "meaning": "nguy hiểm, mạo hiểm",
+            "type": "adjective",
+            "example": "The factory handles hazardous materials.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈhæzərdəs/",
+                "en-US": "/ˈhæzərdəs/"
+            },
+            "synonyms": [
+                {
+                    "word": "dangerous",
+                    "meaning": "nguy hiểm"
+                },
+                {
+                    "word": "risky",
+                    "meaning": "mạo hiểm"
+                },
+                {
+                    "word": "perilous",
+                    "meaning": "nguy hiểm"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "safe",
+                    "meaning": "an toàn"
+                },
+                {
+                    "word": "secure",
+                    "meaning": "an toàn"
+                }
+            ],
+            "wordFamily": [
+                {
+                    "word": "hazard",
+                    "meaning": "mối nguy hiểm"
+                },
+                {
+                    "word": "hazardous",
+                    "meaning": "nguy hiểm, mạo hiểm"
+                }
+            ]
+        },
+        {
+            "word": "incineration",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "the process of burning something to ashes; the act of destroying something by fire",
+                    "example": "The incineration of waste helps to reduce its volume."
+                }
+            ],
+            "meaning": "sự thiêu rụi",
+            "type": "noun",
+            "example": "The incineration of waste helps to reduce its volume.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ɪnˌsɪnəˈreɪʃən/",
+                "en-US": "/ɪnˌsɪnəˈreɪʃən/"
+            },
+            "synonyms": [
+                {
+                    "word": "burning",
+                    "meaning": "sự đốt cháy"
+                },
+                {
+                    "word": "cremation",
+                    "meaning": "sự hỏa táng"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "extinguishment",
+                    "meaning": "sự dập tắt"
+                }
+            ],
+            "wordFamily": [
+                {
+                    "word": "incinerate",
+                    "meaning": "thiêu rụi"
+                },
+                {
+                    "word": "incineration",
+                    "meaning": "sự thiêu rụi"
+                }
+            ]
+        },
+        {
+            "word": "breed",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "to produce offspring; to reproduce",
+                    "example": "Farmers breed animals for specific traits."
+                }
+            ],
+            "meaning": "sinh sản",
+            "type": "verb",
+            "example": "Farmers breed animals for specific traits.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/briːd/",
+                "en-US": "/briːd/"
+            },
+            "synonyms": [
+                {
+                    "word": "reproduce",
+                    "meaning": "sinh sản"
+                },
+                {
+                    "word": "procreate",
+                    "meaning": "sinh sản"
+                },
+                {
+                    "word": "propagate",
+                    "meaning": "sinh sản"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "sterilize",
+                    "meaning": "triệt sản"
+                },
+                {
+                    "word": "kill",
+                    "meaning": "giết chết"
+                }
+            ],
+            "wordFamily": [
+                {
+                    "word": "breeder",
+                    "meaning": "người chăn nuôi"
+                },
+                {
+                    "word": "breeding",
+                    "meaning": "sự sinh sản"
+                },
+                {
+                    "word": "breed",
+                    "meaning": "sinh sản"
+                }
+            ]
+        },
+        {
+            "word": "carnivore",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "an animal that feeds on flesh; a meat-eating animal",
+                    "example": "Lions are carnivores."
+                }
+            ],
+            "meaning": "động vật ăn thịt",
+            "type": "noun",
+            "example": "Lions are carnivores.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈkɑːrnɪvɔːr/",
+                "en-US": "/ˈkɑːrnɪvɔːr/"
+            },
+            "synonyms": [
+                {
+                    "word": "meat-eater",
+                    "meaning": "động vật ăn thịt"
+                },
+                {
+                    "word": "predator",
+                    "meaning": "động vật săn mồi"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "herbivore",
+                    "meaning": "động vật ăn cỏ"
+                },
+                {
+                    "word": "omnivore",
+                    "meaning": "động vật ăn tạp"
+                }
+            ],
+            "wordFamily": [
+                {
+                    "word": "carnivorous",
+                    "meaning": "thuộc động vật ăn thịt"
+                },
+                {
+                    "word": "carnivore",
+                    "meaning": "động vật ăn thịt"
+                }
+            ]
+        },
+        {
+            "word": "contend",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "to struggle to overcome a difficulty or danger; to compete or vie for something",
+                    "example": "The two companies are contending for market share."
+                }
+            ],
+            "meaning": "đấu tranh, tranh giành",
+            "type": "verb",
+            "example": "The two companies are contending for market share.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/kənˈtɛnd/",
+                "en-US": "/kənˈtɛnd/"
+            },
+            "synonyms": [
+                {
+                    "word": "compete",
+                    "meaning": "cạnh tranh"
+                },
+                {
+                    "word": "struggle",
+                    "meaning": "đấu tranh"
+                },
+                {
+                    "word": "vie",
+                    "meaning": "cạnh tranh"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "agree",
+                    "meaning": "đồng ý"
+                },
+                {
+                    "word": "yield",
+                    "meaning": "nhường"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "contender",
+                        "meaning": "người tranh đấu"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "contend",
+                        "meaning": "đấu tranh, tranh giành"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "contentious",
+                        "meaning": "hay tranh cãi"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "contentiously",
+                        "meaning": "một cách hay tranh cãi"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "dorsal",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "relating to the back or upper side of an animal or organ; situated on or near the back",
+                    "example": "The dorsal fin of the shark is very prominent."
+                }
+            ],
+            "meaning": "thuộc về lưng",
+            "type": "adjective",
+            "example": "The dorsal fin of the shark is very prominent.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ˈdɔːsəl/",
+                "en-US": "/ˈdɔːrsl/"
+            },
+            "synonyms": [
+                {
+                    "word": "back",
+                    "meaning": "lưng"
+                },
+                {
+                    "word": "upper",
+                    "meaning": "phía trên"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "ventral",
+                    "meaning": "thuộc về bụng"
+                },
+                {
+                    "word": "frontal",
+                    "meaning": "thuộc về mặt"
+                }
+            ],
+            "wordFamily": [
+                {
+                    "word": "dorsal",
+                    "meaning": "thuộc về lưng"
+                }
+            ]
+        },
+        {
+            "word": "ensnared",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "caught or trapped, especially in a difficult or unpleasant situation; caught in a trap",
+                    "example": "The animal was ensnared in a hunter's trap."
+                }
+            ],
+            "meaning": "bị mắc bẫy",
+            "type": "adjective",
+            "example": "The animal was ensnared in a hunter's trap.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ɪnˈsneəd/",
+                "en-US": "/ɪnˈsneɪrd/"
+            },
+            "synonyms": [
+                {
+                    "word": "trapped",
+                    "meaning": "bị mắc bẫy"
+                },
+                {
+                    "word": "caught",
+                    "meaning": "bị bắt"
+                },
+                {
+                    "word": "ensnared",
+                    "meaning": "bị mắc bẫy"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "free",
+                    "meaning": "tự do"
+                },
+                {
+                    "word": "liberated",
+                    "meaning": "được giải phóng"
+                }
+            ],
+            "wordFamily": [
+                {
+                    "word": "ensnare",
+                    "meaning": "bẫy"
+                },
+                {
+                    "word": "ensnared",
+                    "meaning": "bị mắc bẫy"
+                }
+            ]
         }
     ]
 }
