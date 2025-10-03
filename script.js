@@ -37,6 +37,13 @@ class VocabularyApp {
         this.todayWordsUnknown = 0;
         this.todayWordsList = [];
         
+        // Today's Words Practice Mode
+        this.todayWordsPracticeQuestions = [];
+        this.todayWordsPracticeIndex = 0;
+        this.todayWordsPracticeScore = 0;
+        this.todayWordsPracticeCorrect = 0;
+        this.todayWordsPracticeWrong = 0;
+        
         // Special Practice Modes Data
         this.prepositions = [];
         this.phrasalVerbs = [];
@@ -390,11 +397,18 @@ class VocabularyApp {
 
         // Today's Words mode
         document.getElementById('todayWordsNumber').addEventListener('change', () => this.updateTodayWordsCount());
+        document.getElementById('todayWordsLearnBtn').addEventListener('click', () => this.showTodayWordsLearnMode());
+        document.getElementById('todayWordsPracticeBtn').addEventListener('click', () => this.showTodayWordsPracticeMode());
         document.getElementById('startTodayWords').addEventListener('click', () => this.startTodayWords());
         document.getElementById('nextTodayWord').addEventListener('click', () => this.nextTodayWord());
         document.getElementById('todayWordKnownBtn').addEventListener('click', () => this.markTodayWordAsKnown());
         document.getElementById('todayWordUnknownBtn').addEventListener('click', () => this.markTodayWordAsUnknown());
         document.getElementById('todayWordPronounceBtn').addEventListener('click', () => this.pronounceTodayWord());
+        
+        // Today's Words Practice Mode
+        document.getElementById('todayWordsPracticeStartBtn').addEventListener('click', () => this.startTodayWordsPractice());
+        document.getElementById('todayWordsPracticeNextBtn').addEventListener('click', () => this.nextTodayWordsPracticeQuestion());
+        document.getElementById('todayWordsPracticeRestartBtn').addEventListener('click', () => this.restartTodayWordsPractice());
 
         // Phrasal Verbs Practice Mode
         document.getElementById('phrasalVerbsBrowseBtn').addEventListener('click', () => this.showPhrasalVerbsBrowse());
@@ -1363,6 +1377,237 @@ class VocabularyApp {
     pronounceTodayWord() {
         const word = document.getElementById('todayWord').textContent;
         this.pronounceWord(word);
+    }
+
+    // Today's Words Practice Mode Functions
+    showTodayWordsLearnMode() {
+        // Show learn content, hide practice content
+        document.getElementById('todayWordsContent').style.display = 'block';
+        document.getElementById('todayWordsPracticeContent').style.display = 'none';
+        
+        // Update button states
+        document.getElementById('todayWordsLearnBtn').classList.add('active');
+        document.getElementById('todayWordsPracticeBtn').classList.remove('active');
+    }
+
+    showTodayWordsPracticeMode() {
+        // Check if words are loaded
+        if (this.todayWordsList.length === 0) {
+            this.showError('Vui lòng chọn số lượng từ và bắt đầu học trước!');
+            return;
+        }
+
+        // Show practice content, hide learn content
+        document.getElementById('todayWordsContent').style.display = 'none';
+        document.getElementById('todayWordsPracticeContent').style.display = 'block';
+        
+        // Update button states
+        document.getElementById('todayWordsLearnBtn').classList.remove('active');
+        document.getElementById('todayWordsPracticeBtn').classList.add('active');
+        
+        // Reset practice state
+        this.todayWordsPracticeIndex = 0;
+        this.todayWordsPracticeScore = 0;
+        this.todayWordsPracticeCorrect = 0;
+        this.todayWordsPracticeWrong = 0;
+        
+        // Hide quiz card and summary initially
+        document.getElementById('todayWordsPracticeQuizCard').style.display = 'block';
+        document.getElementById('todayWordsPracticeSummary').classList.add('d-none');
+        
+        // Show start button
+        document.getElementById('todayWordsPracticeStartBtn').style.display = 'block';
+        document.getElementById('todayWordsPracticeNextBtn').classList.add('d-none');
+        document.getElementById('todayWordsPracticeRestartBtn').classList.add('d-none');
+        
+        // Clear question area
+        document.getElementById('todayWordsPracticeQuestion').innerHTML = 
+            '<p class="text-muted">Click "Bắt đầu luyện tập" để bắt đầu!</p>';
+        document.getElementById('todayWordsPracticeOptions').innerHTML = '';
+        document.getElementById('todayWordsPracticeResult').classList.add('d-none');
+        
+        // Update counts
+        document.getElementById('todayWordsPracticeTotalQ').textContent = this.todayWordsList.length;
+        document.getElementById('todayWordsPracticeCurrentQ').textContent = '0';
+        document.getElementById('todayWordsPracticeScore').textContent = '0';
+    }
+
+    startTodayWordsPractice() {
+        // Generate questions from today's words
+        this.todayWordsPracticeQuestions = this.generateTodayWordsPracticeQuestions();
+        
+        // Hide start button
+        document.getElementById('todayWordsPracticeStartBtn').style.display = 'none';
+        
+        // Show first question
+        this.showTodayWordsPracticeQuestion();
+    }
+
+    generateTodayWordsPracticeQuestions() {
+        // Create quiz questions from today's words list
+        return this.todayWordsList.map(word => {
+            // Get 3 random wrong answers
+            const wrongAnswers = this.vocabulary
+                .filter(w => w.word !== word.word)
+                .sort(() => Math.random() - 0.5)
+                .slice(0, 3)
+                .map(w => w.meaning);
+            
+            // Combine with correct answer and shuffle
+            const options = [...wrongAnswers, word.meaning].sort(() => Math.random() - 0.5);
+            
+            return {
+                word: word.word,
+                correctAnswer: word.meaning,
+                options: options,
+                example: word.example,
+                phonetic: word.phonetic && word.phonetic[this.selectedAccent] 
+                    ? word.phonetic[this.selectedAccent] 
+                    : `/${word.word}/`
+            };
+        });
+    }
+
+    showTodayWordsPracticeQuestion() {
+        if (this.todayWordsPracticeIndex >= this.todayWordsPracticeQuestions.length) {
+            this.showTodayWordsPracticeComplete();
+            return;
+        }
+
+        const question = this.todayWordsPracticeQuestions[this.todayWordsPracticeIndex];
+        
+        // Update progress
+        const progress = ((this.todayWordsPracticeIndex + 1) / this.todayWordsPracticeQuestions.length) * 100;
+        document.getElementById('todayWordsPracticeProgress').style.width = `${progress}%`;
+        document.getElementById('todayWordsPracticeCurrentQ').textContent = this.todayWordsPracticeIndex + 1;
+        document.getElementById('todayWordsPracticeScore').textContent = this.todayWordsPracticeScore;
+        
+        // Display question
+        document.getElementById('todayWordsPracticeQuestion').innerHTML = `
+            <div class="d-flex justify-content-center align-items-center gap-3 mb-3">
+                <h3 class="text-primary mb-0">${question.word}</h3>
+                <button class="btn btn-outline-primary btn-sm" onclick="app.pronounceWord('${question.word}')">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+            </div>
+            <p class="text-muted mb-0">${question.phonetic}</p>
+            <p class="text-muted mt-2"><strong>Chọn nghĩa đúng:</strong></p>
+        `;
+        
+        // Display options
+        const optionsHTML = question.options.map((option, index) => `
+            <button class="btn btn-outline-secondary text-start practice-option" 
+                    data-answer="${option}" 
+                    onclick="app.checkTodayWordsPracticeAnswer('${option.replace(/'/g, "\\'")}')">
+                ${String.fromCharCode(65 + index)}. ${option}
+            </button>
+        `).join('');
+        
+        document.getElementById('todayWordsPracticeOptions').innerHTML = optionsHTML;
+        
+        // Hide result and next button
+        document.getElementById('todayWordsPracticeResult').classList.add('d-none');
+        document.getElementById('todayWordsPracticeNextBtn').classList.add('d-none');
+    }
+
+    checkTodayWordsPracticeAnswer(selectedAnswer) {
+        const question = this.todayWordsPracticeQuestions[this.todayWordsPracticeIndex];
+        const isCorrect = selectedAnswer === question.correctAnswer;
+        
+        // Disable all option buttons
+        const optionButtons = document.querySelectorAll('.practice-option');
+        optionButtons.forEach(btn => {
+            btn.disabled = true;
+            const answer = btn.getAttribute('data-answer');
+            
+            if (answer === question.correctAnswer) {
+                btn.classList.remove('btn-outline-secondary');
+                btn.classList.add('btn-success');
+            } else if (answer === selectedAnswer && !isCorrect) {
+                btn.classList.remove('btn-outline-secondary');
+                btn.classList.add('btn-danger');
+            }
+        });
+        
+        // Update score
+        if (isCorrect) {
+            this.todayWordsPracticeScore += 10;
+            this.todayWordsPracticeCorrect++;
+        } else {
+            this.todayWordsPracticeWrong++;
+        }
+        
+        // Show result
+        const resultHTML = isCorrect 
+            ? `<div class="alert alert-success">
+                   <i class="fas fa-check-circle"></i> <strong>Chính xác!</strong>
+                   <p class="mb-0 mt-2"><em>Ví dụ: ${question.example}</em></p>
+               </div>`
+            : `<div class="alert alert-danger">
+                   <i class="fas fa-times-circle"></i> <strong>Sai rồi!</strong> 
+                   <p class="mb-0">Đáp án đúng: <strong>${question.correctAnswer}</strong></p>
+                   <p class="mb-0 mt-2"><em>Ví dụ: ${question.example}</em></p>
+               </div>`;
+        
+        document.getElementById('todayWordsPracticeResult').innerHTML = resultHTML;
+        document.getElementById('todayWordsPracticeResult').classList.remove('d-none');
+        
+        // Show next button
+        document.getElementById('todayWordsPracticeNextBtn').classList.remove('d-none');
+        
+        // Update score display
+        document.getElementById('todayWordsPracticeScore').textContent = this.todayWordsPracticeScore;
+    }
+
+    nextTodayWordsPracticeQuestion() {
+        this.todayWordsPracticeIndex++;
+        this.showTodayWordsPracticeQuestion();
+    }
+
+    showTodayWordsPracticeComplete() {
+        // Hide quiz card
+        document.getElementById('todayWordsPracticeQuizCard').style.display = 'none';
+        
+        // Show summary
+        document.getElementById('todayWordsPracticeSummary').classList.remove('d-none');
+        document.getElementById('todayWordsPracticeFinalScore').textContent = this.todayWordsPracticeScore;
+        document.getElementById('todayWordsPracticeCorrect').textContent = this.todayWordsPracticeCorrect;
+        document.getElementById('todayWordsPracticeWrong').textContent = this.todayWordsPracticeWrong;
+        
+        // Show restart button
+        document.getElementById('todayWordsPracticeRestartBtn').classList.remove('d-none');
+        
+        // Generate message
+        const percentage = (this.todayWordsPracticeCorrect / this.todayWordsPracticeQuestions.length) * 100;
+        let message = '';
+        if (percentage === 100) {
+            message = '🎉 Hoàn hảo! Bạn đã trả lời đúng tất cả!';
+        } else if (percentage >= 80) {
+            message = '👏 Xuất sắc! Bạn nắm vững các từ vựng mới!';
+        } else if (percentage >= 60) {
+            message = '👍 Tốt lắm! Hãy tiếp tục luyện tập!';
+        } else {
+            message = '💪 Cần cố gắng thêm! Hãy ôn lại các từ và làm lại nhé!';
+        }
+        
+        document.getElementById('todayWordsPracticeMessage').textContent = message;
+    }
+
+    restartTodayWordsPractice() {
+        // Reset and start again
+        this.todayWordsPracticeIndex = 0;
+        this.todayWordsPracticeScore = 0;
+        this.todayWordsPracticeCorrect = 0;
+        this.todayWordsPracticeWrong = 0;
+        
+        // Hide summary, show quiz card
+        document.getElementById('todayWordsPracticeSummary').classList.add('d-none');
+        document.getElementById('todayWordsPracticeQuizCard').style.display = 'block';
+        document.getElementById('todayWordsPracticeRestartBtn').classList.add('d-none');
+        
+        // Generate new questions and start
+        this.todayWordsPracticeQuestions = this.generateTodayWordsPracticeQuestions();
+        this.showTodayWordsPracticeQuestion();
     }
 
     // Browse Mode

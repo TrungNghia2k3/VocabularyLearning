@@ -1059,6 +1059,59 @@ footer {
     margin-bottom: 0;
 }
 
+/* Today's Words Practice Mode Styles */
+#todayWordsPracticeContent .practice-option {
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    padding: 15px;
+    text-align: left;
+}
+
+#todayWordsPracticeContent .practice-option:hover:not(:disabled) {
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#todayWordsPracticeContent .practice-option:disabled {
+    cursor: not-allowed;
+}
+
+#todayWordsPracticeContent .card {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#todayWordsPracticeContent .progress {
+    height: 10px;
+    border-radius: 10px;
+}
+
+#todayWordsPracticeSummary .card-body {
+    padding: 30px;
+}
+
+#todayWordsPracticeSummary h4 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#todayWordsPracticeSummary .rounded {
+    border-radius: 15px !important;
+    transition: transform 0.3s ease;
+}
+
+#todayWordsPracticeSummary .rounded:hover {
+    transform: translateY(-5px);
+}
+
+/* Active button styling for mode switch */
+#todayWordsLearnBtn.active,
+#todayWordsPracticeBtn.active {
+    background-color: var(--bs-primary);
+    color: white;
+    border-color: var(--bs-primary);
+}
+
 #todayWordsArea .progress {
     height: 12px;
     border-radius: 10px;
