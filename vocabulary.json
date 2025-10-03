@@ -9089,18 +9089,24 @@
                 }
             ],
             "wordFamily": {
-                "noun": {
-                    "word": "gargantuan",
-                    "meaning": "khổng lồ"
-                },
-                "adjective": {
-                    "word": "gargantuan",
-                    "meaning": "khổng lồ"
-                },
-                "adverb": {
-                    "word": "gargantuanly",
-                    "meaning": "một cách khổng lồ"
-                }
+                "noun": [
+                    {
+                        "word": "gargantuan",
+                        "meaning": "sự khổng lồ"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "gargantuan",
+                        "meaning": "khổng lồ"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "gargantuanly",
+                        "meaning": "một cách khổng lồ"
+                    }
+                ]
             }
         },
         {
