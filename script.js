@@ -389,6 +389,7 @@ class VocabularyApp {
         });
 
         // Today's Words mode
+        document.getElementById('todayWordsNumber').addEventListener('change', () => this.updateTodayWordsCount());
         document.getElementById('startTodayWords').addEventListener('click', () => this.startTodayWords());
         document.getElementById('nextTodayWord').addEventListener('click', () => this.nextTodayWord());
         document.getElementById('todayWordKnownBtn').addEventListener('click', () => this.markTodayWordAsKnown());
@@ -1164,8 +1165,14 @@ class VocabularyApp {
 
     // Today's Words Mode (Last 10 words)
     initTodayWords() {
-        // Get last 10 words from vocabulary
-        this.todayWordsList = this.vocabulary.slice(-10);
+        // Get user-specified number of words (default 10)
+        const numberOfWords = parseInt(document.getElementById('todayWordsNumber').value) || 10;
+        
+        // Validate and limit the number
+        const validNumber = Math.min(Math.max(numberOfWords, 1), this.vocabulary.length);
+        
+        // Get words from the end (newest) going backwards
+        this.todayWordsList = this.vocabulary.slice(-validNumber);
         
         if (this.todayWordsList.length === 0) {
             this.showError('Không có từ vựng nào để học!');
@@ -1180,9 +1187,18 @@ class VocabularyApp {
         // Update count display
         document.getElementById('todayWordsCount').textContent = `${this.todayWordsList.length} từ`;
         
+        // Update the input field with the actual number (in case it was adjusted)
+        document.getElementById('todayWordsNumber').value = validNumber;
+        
         // Hide content initially
         document.getElementById('todayWordsContent').style.display = 'none';
     }
+
+    updateTodayWordsCount() {
+        // Re-initialize with new number
+        this.initTodayWords();
+    }
+
 
     startTodayWords() {
         if (this.todayWordsList.length === 0) {
