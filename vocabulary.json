@@ -9020,16 +9020,32 @@
                     "meaning": "sự bao gồm"
                 }
             ],
-            "wordFamily": [
-                {
-                    "word": "expel",
-                    "meaning": "đuổi"
-                },
-                {
-                    "word": "expulsion",
-                    "meaning": "sự trục xuất"
-                }
-            ]
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "expulsion",
+                        "meaning": "sự trục xuất"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "expel",
+                        "meaning": "trục xuất"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "expulsive",
+                        "meaning": "có tính trục xuất"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "expulsively",
+                        "meaning": "một cách có tính trục xuất"
+                    }
+                ]
+            }
         },
         {
             "word": "gargantuan",
@@ -9072,12 +9088,20 @@
                     "meaning": "nhỏ"
                 }
             ],
-            "wordFamily": [
-                {
+            "wordFamily": {
+                "noun": {
                     "word": "gargantuan",
                     "meaning": "khổng lồ"
+                },
+                "adjective": {
+                    "word": "gargantuan",
+                    "meaning": "khổng lồ"
+                },
+                "adverb": {
+                    "word": "gargantuanly",
+                    "meaning": "một cách khổng lồ"
                 }
-            ]
+            }
         },
         {
             "word": "gestation",
@@ -9116,16 +9140,26 @@
                     "meaning": "sự sinh đẻ"
                 }
             ],
-            "wordFamily": [
-                {
-                    "word": "gestate",
-                    "meaning": "thai nghén"
-                },
-                {
-                    "word": "gestation",
-                    "meaning": "thời kỳ thai nghén"
-                }
-            ]
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "gestation",
+                        "meaning": "thời kỳ thai nghén"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "gestate",
+                        "meaning": "mang thai"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "gestational",
+                        "meaning": "thuộc về thai nghén"
+                    }
+                ]
+            }
         },
         {
             "word": "groove",
@@ -9168,12 +9202,26 @@
                     "meaning": "cục"
                 }
             ],
-            "wordFamily": [
-                {
-                    "word": "groove",
-                    "meaning": "đường rãnh"
-                }
-            ]
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "groove",
+                        "meaning": "đường rãnh"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "groove",
+                        "meaning": "tạo rãnh"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "grooved",
+                        "meaning": "có rãnh"
+                    }
+                ]
+            }
         },
         {
             "word": "herbicide",
@@ -9208,12 +9256,20 @@
                     "meaning": "phân bón"
                 }
             ],
-            "wordFamily": [
-                {
-                    "word": "herbicide",
-                    "meaning": "thuốc diệt cỏ"
-                }
-            ]
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "herbicide",
+                        "meaning": "thuốc diệt cỏ"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "herbicidal",
+                        "meaning": "thuộc về thuốc diệt cỏ"
+                    }
+                ]
+            }
         },
         {
             "word": "justification",
@@ -9256,16 +9312,32 @@
                     "meaning": "sự buộc tội"
                 }
             ],
-            "wordFamily": [
-                {
-                    "word": "justify",
-                    "meaning": "biện minh"
-                },
-                {
-                    "word": "justification",
-                    "meaning": "sự biện minh"
-                }
-            ]
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "justification",
+                        "meaning": "sự biện minh"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "justify",
+                        "meaning": "biện minh"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "justifiable",
+                        "meaning": "có thể biện minh"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "justifiably",
+                        "meaning": "một cách có thể biện minh"
+                    }
+                ]
+            }
         },
         {
             "word": "maturity",
@@ -9308,16 +9380,26 @@
                     "meaning": "tuổi trẻ"
                 }
             ],
-            "wordFamily": [
-                {
-                    "word": "mature",
-                    "meaning": "trưởng thành"
-                },
-                {
-                    "word": "maturity",
-                    "meaning": "sự trưởng thành"
-                }
-            ]
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "maturity",
+                        "meaning": "sự trưởng thành"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "mature",
+                        "meaning": "trưởng thành"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "maturely",
+                        "meaning": "một cách trưởng thành"
+                    }
+                ]
+            }
         },
         {
             "word": "moss",
@@ -9352,16 +9434,20 @@
                     "meaning": "tảo"
                 }
             ],
-            "wordFamily": [
-                {
-                    "word": "mossy",
-                    "meaning": "có rêu"
-                },
-                {
-                    "word": "moss",
-                    "meaning": "rêu"
-                }
-            ]
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "moss",
+                        "meaning": "rêu"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "mossy",
+                        "meaning": "có rêu"
+                    }
+                ]
+            }
         }
     ]
 }
