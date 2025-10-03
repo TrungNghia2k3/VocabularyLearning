@@ -37,6 +37,25 @@ class VocabularyApp {
         this.todayWordsUnknown = 0;
         this.todayWordsList = [];
         
+        // Special Practice Modes Data
+        this.prepositions = [];
+        this.phrasalVerbs = [];
+        this.idioms = [];
+        
+        // Phrasal Verbs Practice Mode
+        this.phrasalVerbsQuizScore = 0;
+        this.phrasalVerbsQuizTotal = 0;
+        this.phrasalVerbsCurrentQuestion = 0;
+        this.currentPhrasalVerbsQuizData = [];
+        this.phrasalVerbsPracticeMode = false;
+        
+        // Idioms Practice Mode
+        this.idiomsQuizScore = 0;
+        this.idiomsQuizTotal = 0;
+        this.idiomsCurrentQuestion = 0;
+        this.currentIdiomsQuizData = [];
+        this.idiomsPracticeMode = false;
+        
         this.init();
     }
 
@@ -245,6 +264,58 @@ class VocabularyApp {
         }
     }
 
+    // Load special practice data
+    async loadPrepositions() {
+        try {
+            const response = await fetch('prepositions.json');
+            if (!response.ok) {
+                throw new Error('Không thể tải file prepositions.json');
+            }
+            const data = await response.json();
+            this.prepositions = data.prepositions || [];
+            console.log(`Đã tải ${this.prepositions.length} giới từ`);
+            this.displayPrepositions();
+        } catch (error) {
+            console.error('Lỗi tải prepositions:', error);
+            this.prepositions = [];
+            this.displayPrepositions();
+        }
+    }
+
+    async loadPhrasalVerbs() {
+        try {
+            const response = await fetch('phrasal_verbs.json');
+            if (!response.ok) {
+                throw new Error('Không thể tải file phrasal_verbs.json');
+            }
+            const data = await response.json();
+            this.phrasalVerbs = data.phrasalVerbs || [];
+            console.log(`Đã tải ${this.phrasalVerbs.length} cụm động từ`);
+            this.showPhrasalVerbsBrowse();
+        } catch (error) {
+            console.error('Lỗi tải phrasal verbs:', error);
+            this.phrasalVerbs = [];
+            this.displayPhrasalVerbs();
+        }
+    }
+
+    async loadIdioms() {
+        try {
+            const response = await fetch('idioms.json');
+            if (!response.ok) {
+                throw new Error('Không thể tải file idioms.json');
+            }
+            const data = await response.json();
+            this.idioms = data.idioms || [];
+            console.log(`Đã tải ${this.idioms.length} thành ngữ`);
+            this.showIdiomsBrowse();
+        } catch (error) {
+            console.error('Lỗi tải idioms:', error);
+            this.idioms = [];
+            this.displayIdioms();
+        }
+    }
+
     getSampleVocabulary() {
         return [
             {
@@ -272,6 +343,11 @@ class VocabularyApp {
         document.getElementById('browseMode').addEventListener('click', () => this.switchMode('browse'));
         document.getElementById('practiceMode').addEventListener('click', () => this.switchMode('practice'));
         document.getElementById('todayWordsMode').addEventListener('click', () => this.switchMode('todayWords'));
+
+        // Special practice modes
+        document.getElementById('prepositionsMode').addEventListener('click', () => this.switchMode('prepositions'));
+        document.getElementById('phrasalVerbsMode').addEventListener('click', () => this.switchMode('phrasalVerbs'));
+        document.getElementById('idiomsMode').addEventListener('click', () => this.switchMode('idioms'));
 
         // Flashcard controls
         document.getElementById('prevFlashcard').addEventListener('click', () => this.previousFlashcard());
@@ -319,6 +395,18 @@ class VocabularyApp {
         document.getElementById('todayWordUnknownBtn').addEventListener('click', () => this.markTodayWordAsUnknown());
         document.getElementById('todayWordPronounceBtn').addEventListener('click', () => this.pronounceTodayWord());
 
+        // Phrasal Verbs Practice Mode
+        document.getElementById('phrasalVerbsBrowseBtn').addEventListener('click', () => this.showPhrasalVerbsBrowse());
+        document.getElementById('phrasalVerbsPracticeBtn').addEventListener('click', () => this.showPhrasalVerbsPractice());
+        document.getElementById('phrasalVerbsStartBtn').addEventListener('click', () => this.startPhrasalVerbsQuiz());
+        document.getElementById('phrasalVerbsNextBtn').addEventListener('click', () => this.nextPhrasalVerbsQuestion());
+
+        // Idioms Practice Mode
+        document.getElementById('idiomsBrowseBtn').addEventListener('click', () => this.showIdiomsBrowse());
+        document.getElementById('idiomsPracticeBtn').addEventListener('click', () => this.showIdiomsPractice());
+        document.getElementById('idiomsStartBtn').addEventListener('click', () => this.startIdiomsQuiz());
+        document.getElementById('idiomsNextBtn').addEventListener('click', () => this.nextIdiomsQuestion());
+
         // Accent selector
         document.getElementById('accentSelect').addEventListener('change', (e) => {
             this.changeAccent(e.target.value);
@@ -334,6 +422,9 @@ class VocabularyApp {
         document.getElementById('browseArea').classList.add('d-none');
         document.getElementById('practiceArea').classList.add('d-none');
         document.getElementById('todayWordsArea').classList.add('d-none');
+        document.getElementById('prepositionsArea').classList.add('d-none');
+        document.getElementById('phrasalVerbsArea').classList.add('d-none');
+        document.getElementById('idiomsArea').classList.add('d-none');
 
         // Update button states
         document.querySelectorAll('.btn-group .btn').forEach(btn => {
@@ -373,6 +464,21 @@ class VocabularyApp {
                 document.getElementById('todayWordsMode').classList.add('active');
                 document.getElementById('todayWordsArea').classList.remove('d-none');
                 this.initTodayWords();
+                break;
+            case 'prepositions':
+                document.getElementById('prepositionsMode').classList.add('active');
+                document.getElementById('prepositionsArea').classList.remove('d-none');
+                this.loadPrepositions();
+                break;
+            case 'phrasalVerbs':
+                document.getElementById('phrasalVerbsMode').classList.add('active');
+                document.getElementById('phrasalVerbsArea').classList.remove('d-none');
+                this.loadPhrasalVerbs();
+                break;
+            case 'idioms':
+                document.getElementById('idiomsMode').classList.add('active');
+                document.getElementById('idiomsArea').classList.remove('d-none');
+                this.loadIdioms();
                 break;
         }
     }
@@ -1250,7 +1356,20 @@ class VocabularyApp {
         container.innerHTML = '';
 
         if (wordsToShow.length === 0) {
-            container.innerHTML = '<div class="col-12"><p class="text-center text-muted">Không tìm thấy từ vựng nào.</p></div>';
+            const searchTerm = document.getElementById('searchInput').value.trim();
+            if (searchTerm) {
+                container.innerHTML = `
+                    <div class="col-12">
+                        <div class="alert alert-info text-center">
+                            <h5><i class="fas fa-search"></i> Không tìm thấy kết quả</h5>
+                            <p>Không tìm thấy từ vựng nào cho từ khóa: <strong>"${searchTerm}"</strong></p>
+                            <small class="text-muted">Hãy thử tìm kiếm với từ khóa khác hoặc kiểm tra chính tả.</small>
+                        </div>
+                    </div>
+                `;
+            } else {
+                container.innerHTML = '<div class="col-12"><p class="text-center text-muted">Không có từ vựng nào để hiển thị.</p></div>';
+            }
             return;
         }
 
@@ -1474,35 +1593,50 @@ class VocabularyApp {
     performSearch(searchTerm) {
         const trimmedTerm = searchTerm.toLowerCase().trim();
         
+        // Clear previous highlights
+        this.clearHighlights();
+        
         if (!trimmedTerm) {
             this.displayVocabularyList();
             return;
         }
 
         const filteredWords = this.vocabulary.filter(word => {
-            // Tìm kiếm trong từ gốc, nghĩa, và ví dụ
+            // Tìm kiếm trong từ gốc và nghĩa chính
             if (word.word.toLowerCase().includes(trimmedTerm) ||
                 word.meaning.toLowerCase().includes(trimmedTerm) ||
                 (word.example && word.example.toLowerCase().includes(trimmedTerm))) {
                 return true;
             }
             
-            // Tìm kiếm trong synonyms
+            // Tìm kiếm trong definitions array
+            if (word.definitions && word.definitions.some(def => 
+                def.definition.toLowerCase().includes(trimmedTerm) ||
+                (def.example && def.example.toLowerCase().includes(trimmedTerm)) ||
+                def.partOfSpeech.toLowerCase().includes(trimmedTerm))) {
+                return true;
+            }
+            
+            // Tìm kiếm trong synonyms (new structure: array of objects)
             if (word.synonyms && word.synonyms.some(synonym => 
-                synonym.toLowerCase().includes(trimmedTerm))) {
+                synonym.word.toLowerCase().includes(trimmedTerm) ||
+                synonym.meaning.toLowerCase().includes(trimmedTerm))) {
                 return true;
             }
             
-            // Tìm kiếm trong antonyms
+            // Tìm kiếm trong antonyms (new structure: array of objects)
             if (word.antonyms && word.antonyms.some(antonym => 
-                antonym.toLowerCase().includes(trimmedTerm))) {
+                antonym.word.toLowerCase().includes(trimmedTerm) ||
+                antonym.meaning.toLowerCase().includes(trimmedTerm))) {
                 return true;
             }
             
-            // Tìm kiếm trong word family
+            // Tìm kiếm trong word family (new structure: object with arrays of objects)
             if (word.wordFamily) {
                 for (const [type, words] of Object.entries(word.wordFamily)) {
-                    if (words && words.some(w => w.toLowerCase().includes(trimmedTerm))) {
+                    if (words && Array.isArray(words) && words.some(w => 
+                        w.word.toLowerCase().includes(trimmedTerm) ||
+                        w.meaning.toLowerCase().includes(trimmedTerm))) {
                         return true;
                     }
                 }
@@ -1512,6 +1646,72 @@ class VocabularyApp {
         });
 
         this.displayVocabularyList(filteredWords);
+        
+        // Highlight search term in results if there are matches
+        if (filteredWords.length > 0 && trimmedTerm) {
+            this.highlightSearchTerms(trimmedTerm);
+        }
+    }
+
+    // Clear highlight marks
+    clearHighlights() {
+        const container = document.getElementById('vocabularyList');
+        if (container) {
+            const marks = container.querySelectorAll('mark');
+            marks.forEach(mark => {
+                const parent = mark.parentNode;
+                parent.replaceChild(document.createTextNode(mark.textContent), mark);
+                parent.normalize();
+            });
+        }
+    }
+
+    // Highlight search terms in the vocabulary display
+    highlightSearchTerms(searchTerm) {
+        const container = document.getElementById('vocabularyList');
+        const textNodes = this.getTextNodes(container);
+        
+        textNodes.forEach(node => {
+            if (node.textContent.toLowerCase().includes(searchTerm)) {
+                const parent = node.parentNode;
+                const html = node.textContent.replace(
+                    new RegExp(`(${searchTerm})`, 'gi'),
+                    '<mark class="bg-warning">$1</mark>'
+                );
+                const wrapper = document.createElement('span');
+                wrapper.innerHTML = html;
+                parent.replaceChild(wrapper, node);
+            }
+        });
+    }
+
+    // Helper function to get all text nodes
+    getTextNodes(element) {
+        const textNodes = [];
+        const walker = document.createTreeWalker(
+            element,
+            NodeFilter.SHOW_TEXT,
+            {
+                acceptNode: function(node) {
+                    // Skip script and style elements
+                    if (node.parentNode.tagName === 'SCRIPT' || 
+                        node.parentNode.tagName === 'STYLE') {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+                    // Only accept text nodes with actual content
+                    if (node.textContent.trim().length > 0) {
+                        return NodeFilter.FILTER_ACCEPT;
+                    }
+                    return NodeFilter.FILTER_REJECT;
+                }
+            }
+        );
+        
+        let node;
+        while (node = walker.nextNode()) {
+            textNodes.push(node);
+        }
+        return textNodes;
     }
 
     // Legacy search function for backward compatibility
@@ -1709,6 +1909,630 @@ class VocabularyApp {
         toastElement.addEventListener('hidden.bs.toast', () => {
             toastElement.remove();
         });
+    }
+
+    // Prepositions Mode
+    displayPrepositions() {
+        const container = document.querySelector('#prepositionsArea .card-body');
+        if (!this.prepositions || this.prepositions.length === 0) {
+            container.innerHTML = `
+                <div class="alert alert-warning">
+                    <h5><i class="fas fa-exclamation-triangle"></i> Không có dữ liệu giới từ!</h5>
+                    <p>Có thể do:</p>
+                    <ul>
+                        <li>File <code>prepositions.json</code> không tồn tại hoặc lỗi</li>
+                        <li>Cần chạy ứng dụng trên web server (không phải mở file trực tiếp)</li>
+                        <li>Kiểm tra Console để xem lỗi chi tiết</li>
+                    </ul>
+                    <small>Hãy đảm bảo file <code>prepositions.json</code> nằm cùng thư mục với <code>index.html</code></small>
+                </div>
+            `;
+            return;
+        }
+
+        let html = '<div class="row">';
+        this.prepositions.forEach((prep, index) => {
+            html += `
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="card-title mb-0 d-flex justify-content-between align-items-center">
+                                <span><strong>${prep.preposition}</strong></span>
+                                <div>
+                                    <span class="badge bg-light text-dark me-2">${prep.category}</span>
+                                    <button class="btn btn-sm btn-light" onclick="app.pronounceWord('${prep.preposition}')">
+                                        <i class="fas fa-volume-up"></i>
+                                    </button>
+                                </div>
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text"><strong>Nghĩa:</strong> ${prep.meaning}</p>
+                            
+                            ${prep.uses && prep.uses.length > 0 ? `
+                                <div class="mb-3">
+                                    <strong>Cách sử dụng:</strong>
+                                    ${prep.uses.map(use => `
+                                        <div class="mt-2 p-2 bg-light rounded">
+                                            <h6 class="text-primary mb-1">${use.usage}</h6>
+                                            <p class="small mb-2">${use.description}</p>
+                                            <div class="ms-2">
+                                                ${use.examples.map(ex => `
+                                                    <div class="mb-1">
+                                                        <em>"${ex.sentence}"</em><br>
+                                                        <small class="text-muted">${ex.translation}</small>
+                                                    </div>
+                                                `).join('')}
+                                            </div>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            ` : ''}
+                            
+                            ${prep.commonMistakes && prep.commonMistakes.length > 0 ? `
+                                <div class="alert alert-warning p-2">
+                                    <small><strong>Lỗi thường gặp:</strong></small>
+                                    ${prep.commonMistakes.map(mistake => `
+                                        <div class="mt-1">
+                                            <small>
+                                                <strong>❌ Sai:</strong> ${mistake.incorrect}<br>
+                                                <strong>✅ Đúng:</strong> ${mistake.correct}<br>
+                                                <em>${mistake.explanation}</em>
+                                            </small>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            ` : ''}
+
+                            ${prep.relatedPrepositions && prep.relatedPrepositions.length > 0 ? `
+                                <div class="mt-2">
+                                    <small><strong>Giới từ liên quan:</strong></small><br>
+                                    ${prep.relatedPrepositions.map(rel => `<span class="badge bg-secondary me-1">${rel}</span>`).join('')}
+                                </div>
+                            ` : ''}
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+        html += '</div>';
+        
+        container.innerHTML = html;
+    }
+
+    // Phrasal Verbs Mode
+    displayPhrasalVerbs() {
+        const container = document.querySelector('#phrasalVerbsBrowseContent');
+        if (!this.phrasalVerbs || this.phrasalVerbs.length === 0) {
+            container.innerHTML = `
+                <div class="alert alert-warning">
+                    <h5><i class="fas fa-exclamation-triangle"></i> Không có dữ liệu cụm động từ!</h5>
+                    <p>Có thể do:</p>
+                    <ul>
+                        <li>File <code>phrasal_verbs.json</code> không tồn tại hoặc lỗi</li>
+                        <li>Cần chạy ứng dụng trên web server (không phải mở file trực tiếp)</li>
+                        <li>Kiểm tra Console để xem lỗi chi tiết</li>
+                    </ul>
+                    <small>Hãy đảm bảo file <code>phrasal_verbs.json</code> nằm cùng thư mục với <code>index.html</code></small>
+                </div>
+            `;
+            return;
+        }
+
+        let html = '<div class="row">';
+        this.phrasalVerbs.forEach((verb, index) => {
+            html += `
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header bg-success text-white">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="card-title mb-0">
+                                        <strong>${verb.verb}</strong>
+                                    </h5>
+                                    <span class="badge bg-light text-dark mt-1">${verb.type}</span>
+                                </div>
+                                <button class="btn btn-sm btn-light" onclick="app.pronounceWord('${verb.verb}')">
+                                    <i class="fas fa-volume-up"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            ${verb.meanings && verb.meanings.length > 0 ? `
+                                <div class="mb-3">
+                                    <strong>Nghĩa:</strong>
+                                    ${verb.meanings.map((meaning, idx) => `
+                                        <div class="mt-2 p-2 ${idx % 2 === 0 ? 'bg-light' : 'bg-white'} rounded border">
+                                            <h6 class="text-success mb-1">${meaning.definition}</h6>
+                                            <p class="small text-muted mb-2">${meaning.vietnamese}</p>
+                                            <div class="ms-2">
+                                                ${meaning.examples.map(ex => `
+                                                    <div class="mb-1">
+                                                        <em>"${ex.sentence}"</em><br>
+                                                        <small class="text-muted">${ex.translation}</small>
+                                                    </div>
+                                                `).join('')}
+                                            </div>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            ` : ''}
+                            
+                            ${verb.note ? `
+                                <div class="alert alert-info p-2">
+                                    <small><strong>Ghi chú:</strong> ${verb.note}</small>
+                                </div>
+                            ` : ''}
+
+                            ${verb.synonyms && verb.synonyms.length > 0 ? `
+                                <div class="mt-2">
+                                    <small><strong>Từ đồng nghĩa:</strong></small><br>
+                                    ${verb.synonyms.map(syn => `<span class="badge bg-success me-1">${syn}</span>`).join('')}
+                                </div>
+                            ` : ''}
+
+                            ${verb.relatedVerbs && verb.relatedVerbs.length > 0 ? `
+                                <div class="mt-2">
+                                    <small><strong>Cụm động từ liên quan:</strong></small><br>
+                                    ${verb.relatedVerbs.map(rel => `<span class="badge bg-secondary me-1">${rel}</span>`).join('')}
+                                </div>
+                            ` : ''}
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+        html += '</div>';
+        
+        container.innerHTML = html;
+    }
+
+    // Idioms Mode
+    displayIdioms() {
+        const container = document.querySelector('#idiomsBrowseContent');
+        if (!this.idioms || this.idioms.length === 0) {
+            container.innerHTML = `
+                <div class="alert alert-warning">
+                    <h5><i class="fas fa-exclamation-triangle"></i> Không có dữ liệu thành ngữ!</h5>
+                    <p>Có thể do:</p>
+                    <ul>
+                        <li>File <code>idioms.json</code> không tồn tại hoặc lỗi</li>
+                        <li>Cần chạy ứng dụng trên web server (không phải mở file trực tiếp)</li>
+                        <li>Kiểm tra Console để xem lỗi chi tiết</li>
+                    </ul>
+                    <small>Hãy đảm bảo file <code>idioms.json</code> nằm cùng thư mục với <code>index.html</code></small>
+                </div>
+            `;
+            return;
+        }
+
+        let html = '<div class="row">';
+        this.idioms.forEach((idiom, index) => {
+            html += `
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header bg-info text-white">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="flex-grow-1">
+                                    <h5 class="card-title mb-1">
+                                        <strong>${idiom.idiom}</strong>
+                                    </h5>
+                                    <div class="d-flex flex-wrap gap-1 mt-2">
+                                        <span class="badge bg-light text-dark">${idiom.category}</span>
+                                        <span class="badge bg-warning text-dark">Level: ${idiom.difficulty}</span>
+                                        ${idiom.frequency ? `<span class="badge bg-secondary">${idiom.frequency}</span>` : ''}
+                                        ${idiom.formalityLevel ? `<span class="badge bg-dark">${idiom.formalityLevel}</span>` : ''}
+                                    </div>
+                                </div>
+                                <button class="btn btn-sm btn-light ms-2" onclick="app.pronounceWord('${idiom.idiom}')">
+                                    <i class="fas fa-volume-up"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <p class="card-text"><strong>Nghĩa:</strong> ${idiom.meaning}</p>
+                                ${idiom.vietnamese ? `<p class="text-muted"><em>${idiom.vietnamese}</em></p>` : ''}
+                            </div>
+                            
+                            ${idiom.examples && idiom.examples.length > 0 ? `
+                                <div class="mb-3">
+                                    <strong>Ví dụ:</strong>
+                                    ${idiom.examples.map(ex => `
+                                        <div class="mt-2 p-2 bg-light rounded">
+                                            <em>"${ex.sentence}"</em><br>
+                                            <small class="text-muted">${ex.translation}</small>
+                                            ${ex.context ? `<br><span class="badge bg-info text-white mt-1">${ex.context}</span>` : ''}
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            ` : ''}
+                            
+                            ${idiom.origin ? `
+                                <div class="alert alert-secondary p-2 mb-2">
+                                    <small><strong>Nguồn gốc:</strong> ${idiom.origin}</small>
+                                </div>
+                            ` : ''}
+
+                            ${idiom.usage ? `
+                                <div class="alert alert-light p-2 mb-2">
+                                    <small><strong>Cách sử dụng:</strong> ${idiom.usage}</small>
+                                </div>
+                            ` : ''}
+
+                            ${idiom.synonyms && idiom.synonyms.length > 0 ? `
+                                <div class="mt-2">
+                                    <small><strong>Từ đồng nghĩa:</strong></small><br>
+                                    ${idiom.synonyms.map(syn => `<span class="badge bg-info me-1">${syn}</span>`).join('')}
+                                </div>
+                            ` : ''}
+
+                            ${idiom.relatedIdioms && idiom.relatedIdioms.length > 0 ? `
+                                <div class="mt-2">
+                                    <small><strong>Thành ngữ liên quan:</strong></small><br>
+                                    ${idiom.relatedIdioms.map(rel => `<span class="badge bg-secondary me-1">${rel}</span>`).join('')}
+                                </div>
+                            ` : ''}
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+        html += '</div>';
+        
+        container.innerHTML = html;
+    }
+
+    // Phrasal Verbs Browse/Practice Mode Switching
+    showPhrasalVerbsBrowse() {
+        this.phrasalVerbsPracticeMode = false;
+        document.getElementById('phrasalVerbsBrowseContent').classList.remove('d-none');
+        document.getElementById('phrasalVerbsPracticeContent').classList.add('d-none');
+        document.getElementById('phrasalVerbsBrowseBtn').classList.add('active');
+        document.getElementById('phrasalVerbsPracticeBtn').classList.remove('active');
+        this.displayPhrasalVerbs();
+    }
+
+    showPhrasalVerbsPractice() {
+        this.phrasalVerbsPracticeMode = true;
+        document.getElementById('phrasalVerbsBrowseContent').classList.add('d-none');
+        document.getElementById('phrasalVerbsPracticeContent').classList.remove('d-none');
+        document.getElementById('phrasalVerbsBrowseBtn').classList.remove('active');
+        document.getElementById('phrasalVerbsPracticeBtn').classList.add('active');
+    }
+
+    // Idioms Browse/Practice Mode Switching
+    showIdiomsBrowse() {
+        this.idiomsPracticeMode = false;
+        document.getElementById('idiomsBrowseContent').classList.remove('d-none');
+        document.getElementById('idiomsPracticeContent').classList.add('d-none');
+        document.getElementById('idiomsBrowseBtn').classList.add('active');
+        document.getElementById('idiomsPracticeBtn').classList.remove('active');
+        this.displayIdioms();
+    }
+
+    showIdiomsPractice() {
+        this.idiomsPracticeMode = true;
+        document.getElementById('idiomsBrowseContent').classList.add('d-none');
+        document.getElementById('idiomsPracticeContent').classList.remove('d-none');
+        document.getElementById('idiomsBrowseBtn').classList.remove('active');
+        document.getElementById('idiomsPracticeBtn').classList.add('active');
+    }
+
+    // Phrasal Verbs Quiz Functions
+    startPhrasalVerbsQuiz() {
+        if (!this.phrasalVerbs || this.phrasalVerbs.length === 0) {
+            this.showError('Không có dữ liệu cụm động từ để luyện tập!');
+            return;
+        }
+
+        this.phrasalVerbsQuizScore = 0;
+        this.phrasalVerbsCurrentQuestion = 0;
+        this.currentPhrasalVerbsQuizData = this.generatePhrasalVerbsQuestions();
+        this.phrasalVerbsQuizTotal = this.currentPhrasalVerbsQuizData.length;
+
+        document.getElementById('phrasalVerbsStartBtn').classList.add('d-none');
+        document.getElementById('phrasalVerbsScore').textContent = this.phrasalVerbsQuizScore;
+        document.getElementById('phrasalVerbsTotalQ').textContent = this.phrasalVerbsQuizTotal;
+
+        this.showPhrasalVerbsQuestion();
+    }
+
+    generatePhrasalVerbsQuestions() {
+        const questions = [];
+        const usedVerbs = new Set();
+
+        // Generate different types of questions
+        this.phrasalVerbs.forEach(verb => {
+            if (usedVerbs.has(verb.verb)) return;
+            usedVerbs.add(verb.verb);
+
+            // Question type 1: Meaning to phrasal verb
+            if (verb.meanings && verb.meanings.length > 0) {
+                const meaning = verb.meanings[0];
+                const wrongAnswers = this.phrasalVerbs
+                    .filter(v => v.verb !== verb.verb)
+                    .slice(0, 3)
+                    .map(v => v.verb);
+
+                questions.push({
+                    type: 'meaning-to-verb',
+                    question: `Cụm động từ nào có nghĩa: "${meaning.vietnamese}"?`,
+                    correct: verb.verb,
+                    options: [verb.verb, ...wrongAnswers].sort(() => Math.random() - 0.5),
+                    explanation: `"${verb.verb}" có nghĩa là "${meaning.vietnamese}"`
+                });
+            }
+
+            // Question type 2: Complete the sentence
+            if (verb.meanings && verb.meanings[0].examples && verb.meanings[0].examples.length > 0) {
+                const example = verb.meanings[0].examples[0];
+                const sentence = example.sentence.replace(new RegExp(verb.verb, 'gi'), '___');
+                
+                questions.push({
+                    type: 'complete-sentence',
+                    question: `Hoàn thành câu: "${sentence}"`,
+                    correct: verb.verb,
+                    options: [verb.verb, ...this.phrasalVerbs.filter(v => v.verb !== verb.verb).slice(0, 3).map(v => v.verb)]
+                        .sort(() => Math.random() - 0.5),
+                    explanation: `Câu đầy đủ: "${example.sentence}"`
+                });
+            }
+        });
+
+        return questions.slice(0, Math.min(10, questions.length));
+    }
+
+    showPhrasalVerbsQuestion() {
+        if (this.phrasalVerbsCurrentQuestion >= this.currentPhrasalVerbsQuizData.length) {
+            this.showPhrasalVerbsResults();
+            return;
+        }
+
+        const question = this.currentPhrasalVerbsQuizData[this.phrasalVerbsCurrentQuestion];
+        const progress = ((this.phrasalVerbsCurrentQuestion + 1) / this.phrasalVerbsQuizTotal) * 100;
+
+        document.getElementById('phrasalVerbsProgress').style.width = `${progress}%`;
+        document.getElementById('phrasalVerbsCurrentQ').textContent = this.phrasalVerbsCurrentQuestion + 1;
+
+        document.getElementById('phrasalVerbsQuestion').innerHTML = `
+            <h5>${question.question}</h5>
+        `;
+
+        const optionsHtml = question.options.map((option, index) => 
+            `<button class="btn btn-outline-success w-100 mb-2 quiz-option" onclick="app.answerPhrasalVerbsQuestion('${option}', this)">
+                ${String.fromCharCode(65 + index)}. ${option}
+            </button>`
+        ).join('');
+
+        document.getElementById('phrasalVerbsOptions').innerHTML = optionsHtml;
+        document.getElementById('phrasalVerbsResult').classList.add('d-none');
+        document.getElementById('phrasalVerbsNextBtn').classList.add('d-none');
+    }
+
+    answerPhrasalVerbsQuestion(answer, buttonElement) {
+        const question = this.currentPhrasalVerbsQuizData[this.phrasalVerbsCurrentQuestion];
+        const isCorrect = answer === question.correct;
+        
+        // Disable all option buttons
+        document.querySelectorAll('#phrasalVerbsOptions .quiz-option').forEach(btn => {
+            btn.disabled = true;
+            if (btn.textContent.includes(question.correct)) {
+                btn.classList.remove('btn-outline-success');
+                btn.classList.add('btn-success');
+            } else if (btn === buttonElement && !isCorrect) {
+                btn.classList.remove('btn-outline-success');
+                btn.classList.add('btn-danger');
+            }
+        });
+
+        if (isCorrect) {
+            this.phrasalVerbsQuizScore++;
+            document.getElementById('phrasalVerbsScore').textContent = this.phrasalVerbsQuizScore;
+        }
+
+        // Show result
+        document.getElementById('phrasalVerbsResult').innerHTML = `
+            <div class="alert ${isCorrect ? 'alert-success' : 'alert-danger'}">
+                <h6>${isCorrect ? '✅ Chính xác!' : '❌ Sai rồi!'}</h6>
+                <p>${question.explanation || `Đáp án đúng: ${question.correct}`}</p>
+            </div>
+        `;
+        document.getElementById('phrasalVerbsResult').classList.remove('d-none');
+        document.getElementById('phrasalVerbsNextBtn').classList.remove('d-none');
+    }
+
+    nextPhrasalVerbsQuestion() {
+        this.phrasalVerbsCurrentQuestion++;
+        this.showPhrasalVerbsQuestion();
+    }
+
+    showPhrasalVerbsResults() {
+        const percentage = Math.round((this.phrasalVerbsQuizScore / this.phrasalVerbsQuizTotal) * 100);
+        let message = '';
+        
+        if (percentage >= 80) {
+            message = 'Xuất sắc! Bạn đã nắm vững cụm động từ!';
+        } else if (percentage >= 60) {
+            message = 'Tốt lắm! Hãy tiếp tục luyện tập!';
+        } else {
+            message = 'Cần cố gắng thêm! Hãy xem lại các cụm động từ!';
+        }
+
+        document.getElementById('phrasalVerbsQuestion').innerHTML = `
+            <div class="text-center">
+                <h4>🎉 Hoàn thành!</h4>
+                <h2 class="text-success">${this.phrasalVerbsQuizScore}/${this.phrasalVerbsQuizTotal}</h2>
+                <h3>${percentage}%</h3>
+                <p class="mt-3">${message}</p>
+                <button class="btn btn-success mt-3" onclick="app.startPhrasalVerbsQuiz()">
+                    <i class="fas fa-redo"></i> Làm lại
+                </button>
+                <button class="btn btn-outline-success mt-3 ms-2" onclick="app.showPhrasalVerbsBrowse()">
+                    <i class="fas fa-list"></i> Xem danh sách
+                </button>
+            </div>
+        `;
+        
+        document.getElementById('phrasalVerbsOptions').innerHTML = '';
+        document.getElementById('phrasalVerbsResult').classList.add('d-none');
+        document.getElementById('phrasalVerbsNextBtn').classList.add('d-none');
+    }
+
+    // Idioms Quiz Functions
+    startIdiomsQuiz() {
+        if (!this.idioms || this.idioms.length === 0) {
+            this.showError('Không có dữ liệu thành ngữ để luyện tập!');
+            return;
+        }
+
+        this.idiomsQuizScore = 0;
+        this.idiomsCurrentQuestion = 0;
+        this.currentIdiomsQuizData = this.generateIdiomsQuestions();
+        this.idiomsQuizTotal = this.currentIdiomsQuizData.length;
+
+        document.getElementById('idiomsStartBtn').classList.add('d-none');
+        document.getElementById('idiomsScore').textContent = this.idiomsQuizScore;
+        document.getElementById('idiomsTotalQ').textContent = this.idiomsQuizTotal;
+
+        this.showIdiomsQuestion();
+    }
+
+    generateIdiomsQuestions() {
+        const questions = [];
+        const usedIdioms = new Set();
+
+        this.idioms.forEach(idiom => {
+            if (usedIdioms.has(idiom.idiom)) return;
+            usedIdioms.add(idiom.idiom);
+
+            // Question type 1: Meaning to idiom
+            const wrongAnswers = this.idioms
+                .filter(i => i.idiom !== idiom.idiom)
+                .slice(0, 3)
+                .map(i => i.idiom);
+
+            questions.push({
+                type: 'meaning-to-idiom',
+                question: `Thành ngữ nào có nghĩa: "${idiom.vietnamese || idiom.meaning}"?`,
+                correct: idiom.idiom,
+                options: [idiom.idiom, ...wrongAnswers].sort(() => Math.random() - 0.5),
+                explanation: `"${idiom.idiom}" có nghĩa là "${idiom.vietnamese || idiom.meaning}"`
+            });
+
+            // Question type 2: Complete the sentence
+            if (idiom.examples && idiom.examples.length > 0) {
+                const example = idiom.examples[0];
+                const sentence = example.sentence.replace(new RegExp(idiom.idiom, 'gi'), '___');
+                
+                questions.push({
+                    type: 'complete-sentence',
+                    question: `Hoàn thành câu: "${sentence}"`,
+                    correct: idiom.idiom,
+                    options: [idiom.idiom, ...this.idioms.filter(i => i.idiom !== idiom.idiom).slice(0, 3).map(i => i.idiom)]
+                        .sort(() => Math.random() - 0.5),
+                    explanation: `Câu đầy đủ: "${example.sentence}"`
+                });
+            }
+        });
+
+        return questions.slice(0, Math.min(10, questions.length));
+    }
+
+    showIdiomsQuestion() {
+        if (this.idiomsCurrentQuestion >= this.currentIdiomsQuizData.length) {
+            this.showIdiomsResults();
+            return;
+        }
+
+        const question = this.currentIdiomsQuizData[this.idiomsCurrentQuestion];
+        const progress = ((this.idiomsCurrentQuestion + 1) / this.idiomsQuizTotal) * 100;
+
+        document.getElementById('idiomsProgress').style.width = `${progress}%`;
+        document.getElementById('idiomsCurrentQ').textContent = this.idiomsCurrentQuestion + 1;
+
+        document.getElementById('idiomsQuestion').innerHTML = `
+            <h5>${question.question}</h5>
+        `;
+
+        const optionsHtml = question.options.map((option, index) => 
+            `<button class="btn btn-outline-info w-100 mb-2 quiz-option" onclick="app.answerIdiomsQuestion('${option}', this)">
+                ${String.fromCharCode(65 + index)}. ${option}
+            </button>`
+        ).join('');
+
+        document.getElementById('idiomsOptions').innerHTML = optionsHtml;
+        document.getElementById('idiomsResult').classList.add('d-none');
+        document.getElementById('idiomsNextBtn').classList.add('d-none');
+    }
+
+    answerIdiomsQuestion(answer, buttonElement) {
+        const question = this.currentIdiomsQuizData[this.idiomsCurrentQuestion];
+        const isCorrect = answer === question.correct;
+        
+        // Disable all option buttons
+        document.querySelectorAll('#idiomsOptions .quiz-option').forEach(btn => {
+            btn.disabled = true;
+            if (btn.textContent.includes(question.correct)) {
+                btn.classList.remove('btn-outline-info');
+                btn.classList.add('btn-info');
+            } else if (btn === buttonElement && !isCorrect) {
+                btn.classList.remove('btn-outline-info');
+                btn.classList.add('btn-danger');
+            }
+        });
+
+        if (isCorrect) {
+            this.idiomsQuizScore++;
+            document.getElementById('idiomsScore').textContent = this.idiomsQuizScore;
+        }
+
+        // Show result
+        document.getElementById('idiomsResult').innerHTML = `
+            <div class="alert ${isCorrect ? 'alert-success' : 'alert-danger'}">
+                <h6>${isCorrect ? '✅ Chính xác!' : '❌ Sai rồi!'}</h6>
+                <p>${question.explanation || `Đáp án đúng: ${question.correct}`}</p>
+            </div>
+        `;
+        document.getElementById('idiomsResult').classList.remove('d-none');
+        document.getElementById('idiomsNextBtn').classList.remove('d-none');
+    }
+
+    nextIdiomsQuestion() {
+        this.idiomsCurrentQuestion++;
+        this.showIdiomsQuestion();
+    }
+
+    showIdiomsResults() {
+        const percentage = Math.round((this.idiomsQuizScore / this.idiomsQuizTotal) * 100);
+        let message = '';
+        
+        if (percentage >= 80) {
+            message = 'Xuất sắc! Bạn đã nắm vững thành ngữ!';
+        } else if (percentage >= 60) {
+            message = 'Tốt lắm! Hãy tiếp tục luyện tập!';
+        } else {
+            message = 'Cần cố gắng thêm! Hãy xem lại các thành ngữ!';
+        }
+
+        document.getElementById('idiomsQuestion').innerHTML = `
+            <div class="text-center">
+                <h4>🎉 Hoàn thành!</h4>
+                <h2 class="text-info">${this.idiomsQuizScore}/${this.idiomsQuizTotal}</h2>
+                <h3>${percentage}%</h3>
+                <p class="mt-3">${message}</p>
+                <button class="btn btn-info mt-3" onclick="app.startIdiomsQuiz()">
+                    <i class="fas fa-redo"></i> Làm lại
+                </button>
+                <button class="btn btn-outline-info mt-3 ms-2" onclick="app.showIdiomsBrowse()">
+                    <i class="fas fa-list"></i> Xem danh sách
+                </button>
+            </div>
+        `;
+        
+        document.getElementById('idiomsOptions').innerHTML = '';
+        document.getElementById('idiomsResult').classList.add('d-none');
+        document.getElementById('idiomsNextBtn').classList.add('d-none');
     }
 }
 

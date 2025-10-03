@@ -1,0 +1,79 @@
+{
+    "idioms": [
+        {
+            "idiom": "break the ice",
+            "meaning": "to start a conversation or make people feel more comfortable",
+            "vietnamese": "phá tan bầu không khí ngượng ngùng, bắt đầu cuộc trò chuyện",
+            "category": "social",
+            "origin": "From the literal meaning of breaking ice to create a path for ships",
+            "examples": [
+                {
+                    "sentence": "John told a funny joke to break the ice at the meeting.",
+                    "translation": "John kể một câu chuyện cười để phá tan bầu không khí ngượng ngùng trong cuộc họp.",
+                    "context": "business meeting"
+                },
+                {
+                    "sentence": "At parties, I always struggle to break the ice with new people.",
+                    "translation": "Trong các bữa tiệc, tôi luôn gặp khó khăn trong việc bắt đầu cuộc trò chuyện với những người mới.",
+                    "context": "social situation"
+                }
+            ],
+            "synonyms": ["start the conversation", "get things going", "warm up the atmosphere"],
+            "relatedIdioms": ["break down barriers", "get the ball rolling"],
+            "difficulty": "beginner",
+            "frequency": "common",
+            "formalityLevel": "informal",
+            "usage": "Often used when describing social situations where people don't know each other well"
+        },
+        {
+            "idiom": "spill the beans",
+            "meaning": "to reveal a secret or tell something that was supposed to be kept secret",
+            "vietnamese": "tiết lộ bí mật, nói lộ chuyện",
+            "category": "secrets",
+            "origin": "From ancient Greek voting system where beans were used as ballots",
+            "examples": [
+                {
+                    "sentence": "Don't spill the beans about the surprise party!",
+                    "translation": "Đừng tiết lộ chuyện bữa tiệc bất ngờ nhé!",
+                    "context": "keeping a secret"
+                },
+                {
+                    "sentence": "Sarah accidentally spilled the beans about her promotion.",
+                    "translation": "Sarah vô tình tiết lộ chuyện thăng chức của cô ấy.",
+                    "context": "accidentally revealing information"
+                }
+            ],
+            "synonyms": ["let the cat out of the bag", "reveal the secret", "tell all"],
+            "relatedIdioms": ["let slip", "give away", "blow the whistle"],
+            "difficulty": "intermediate",
+            "frequency": "common",
+            "formalityLevel": "informal",
+            "usage": "Usually refers to accidentally or intentionally revealing something that should have been kept secret"
+        },
+        {
+            "idiom": "once in a blue moon",
+            "meaning": "very rarely, almost never",
+            "vietnamese": "hiếm khi, rất ít khi",
+            "category": "frequency",
+            "origin": "From the rare occurrence of two full moons in one calendar month",
+            "examples": [
+                {
+                    "sentence": "I only eat fast food once in a blue moon.",
+                    "translation": "Tôi chỉ ăn đồ ăn nhanh rất hiếm khi thôi.",
+                    "context": "describing rare habits"
+                },
+                {
+                    "sentence": "My grandmother visits us once in a blue moon because she lives so far away.",
+                    "translation": "Bà tôi hiếm khi đến thăm chúng tôi vì bà ở rất xa.",
+                    "context": "describing infrequent events"
+                }
+            ],
+            "synonyms": ["rarely", "seldom", "hardly ever"],
+            "relatedIdioms": ["few and far between", "once in a while", "every now and then"],
+            "difficulty": "intermediate",
+            "frequency": "common",
+            "formalityLevel": "neutral",
+            "usage": "Used to emphasize how infrequently something happens"
+        }
+    ]
+}

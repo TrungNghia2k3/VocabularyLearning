@@ -127,6 +127,22 @@
                                 <i class="fas fa-calendar-day me-2"></i>Từ mới hôm nay
                             </button>
                         </div>
+                        
+                        <!-- Special Practice Modes -->
+                        <div class="mt-3">
+                            <h6 class="text-muted mb-2">Chế độ luyện tập đặc biệt:</h6>
+                            <div class="btn-group d-flex flex-wrap gap-2" role="group">
+                                <button type="button" class="btn btn-outline-dark" id="prepositionsMode">
+                                    <i class="fas fa-link me-2"></i>Giới từ
+                                </button>
+                                <button type="button" class="btn btn-outline-dark" id="phrasalVerbsMode">
+                                    <i class="fas fa-code-branch me-2"></i>Cụm động từ
+                                </button>
+                                <button type="button" class="btn btn-outline-dark" id="idiomsMode">
+                                    <i class="fas fa-comments me-2"></i>Thành ngữ
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -465,6 +481,180 @@
                                             <p class="text-success fw-bold mb-0">
                                                 <i class="fas fa-calendar-day"></i> 10 từ mới nhất
                                             </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Prepositions Practice Mode -->
+        <div id="prepositionsArea" class="col-12 d-none">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0"><i class="fas fa-link me-2"></i>Luyện tập Giới từ</h5>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-outline-primary btn-sm" id="prepBrowseBtn">
+                            <i class="fas fa-list me-1"></i>Xem danh sách
+                        </button>
+                        <button type="button" class="btn btn-primary btn-sm" id="prepPracticeBtn">
+                            <i class="fas fa-dumbbell me-1"></i>Luyện tập
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <!-- Browse Mode -->
+                    <div id="prepBrowseContent">
+                        <div class="text-center">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Đang tải...</span>
+                            </div>
+                            <p class="mt-2">Đang tải dữ liệu giới từ...</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Practice Mode -->
+                    <div id="prepPracticeContent" class="d-none">
+                        <div class="row">
+                            <div class="col-md-8 mx-auto">
+                                <div class="text-center mb-4">
+                                    <h4>🎯 Luyện tập Giới từ</h4>
+                                    <div class="progress mb-3" style="height: 8px;">
+                                        <div id="prepProgress" class="progress-bar bg-primary" style="width: 0%"></div>
+                                    </div>
+                                    <p class="text-muted mb-0">
+                                        Câu hỏi <span id="prepCurrentQ">0</span> / <span id="prepTotalQ">0</span>
+                                        | Điểm: <span id="prepScore">0</span>
+                                    </p>
+                                </div>
+                                
+                                <div id="prepQuizCard" class="card shadow">
+                                    <div class="card-body text-center">
+                                        <div id="prepQuestion"></div>
+                                        <div id="prepOptions" class="mt-4"></div>
+                                        <div id="prepResult" class="mt-4 d-none"></div>
+                                        <div class="mt-4">
+                                            <button id="prepNextBtn" class="btn btn-primary d-none">Câu tiếp theo</button>
+                                            <button id="prepStartBtn" class="btn btn-primary">Bắt đầu luyện tập</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Phrasal Verbs Practice Mode -->
+        <div id="phrasalVerbsArea" class="col-12 d-none">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0"><i class="fas fa-code-branch me-2"></i>Luyện tập Cụm động từ</h5>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-outline-success btn-sm" id="phrasalVerbsBrowseBtn">
+                            <i class="fas fa-list me-1"></i>Xem danh sách
+                        </button>
+                        <button type="button" class="btn btn-success btn-sm" id="phrasalVerbsPracticeBtn">
+                            <i class="fas fa-dumbbell me-1"></i>Luyện tập
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <!-- Browse Mode -->
+                    <div id="phrasalVerbsBrowseContent">
+                        <div class="text-center">
+                            <div class="spinner-border text-success" role="status">
+                                <span class="visually-hidden">Đang tải...</span>
+                            </div>
+                            <p class="mt-2">Đang tải dữ liệu cụm động từ...</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Practice Mode -->
+                    <div id="phrasalVerbsPracticeContent" class="d-none">
+                        <div class="row">
+                            <div class="col-md-8 mx-auto">
+                                <div class="text-center mb-4">
+                                    <h4>🎯 Luyện tập Cụm động từ</h4>
+                                    <div class="progress mb-3" style="height: 8px;">
+                                        <div id="phrasalVerbsProgress" class="progress-bar bg-success" style="width: 0%"></div>
+                                    </div>
+                                    <p class="text-muted mb-0">
+                                        Câu hỏi <span id="phrasalVerbsCurrentQ">0</span> / <span id="phrasalVerbsTotalQ">0</span>
+                                        | Điểm: <span id="phrasalVerbsScore">0</span>
+                                    </p>
+                                </div>
+                                
+                                <div id="phrasalVerbsQuizCard" class="card shadow">
+                                    <div class="card-body text-center">
+                                        <div id="phrasalVerbsQuestion"></div>
+                                        <div id="phrasalVerbsOptions" class="mt-4"></div>
+                                        <div id="phrasalVerbsResult" class="mt-4 d-none"></div>
+                                        <div class="mt-4">
+                                            <button id="phrasalVerbsNextBtn" class="btn btn-success d-none">Câu tiếp theo</button>
+                                            <button id="phrasalVerbsStartBtn" class="btn btn-success">Bắt đầu luyện tập</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Idioms Practice Mode -->
+        <div id="idiomsArea" class="col-12 d-none">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0"><i class="fas fa-comments me-2"></i>Luyện tập Thành ngữ</h5>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-outline-info btn-sm" id="idiomsBrowseBtn">
+                            <i class="fas fa-list me-1"></i>Xem danh sách
+                        </button>
+                        <button type="button" class="btn btn-info btn-sm" id="idiomsPracticeBtn">
+                            <i class="fas fa-dumbbell me-1"></i>Luyện tập
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <!-- Browse Mode -->
+                    <div id="idiomsBrowseContent">
+                        <div class="text-center">
+                            <div class="spinner-border text-info" role="status">
+                                <span class="visually-hidden">Đang tải...</span>
+                            </div>
+                            <p class="mt-2">Đang tải dữ liệu thành ngữ...</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Practice Mode -->
+                    <div id="idiomsPracticeContent" class="d-none">
+                        <div class="row">
+                            <div class="col-md-8 mx-auto">
+                                <div class="text-center mb-4">
+                                    <h4>🎯 Luyện tập Thành ngữ</h4>
+                                    <div class="progress mb-3" style="height: 8px;">
+                                        <div id="idiomsProgress" class="progress-bar bg-info" style="width: 0%"></div>
+                                    </div>
+                                    <p class="text-muted mb-0">
+                                        Câu hỏi <span id="idiomsCurrentQ">0</span> / <span id="idiomsTotalQ">0</span>
+                                        | Điểm: <span id="idiomsScore">0</span>
+                                    </p>
+                                </div>
+                                
+                                <div id="idiomsQuizCard" class="card shadow">
+                                    <div class="card-body text-center">
+                                        <div id="idiomsQuestion"></div>
+                                        <div id="idiomsOptions" class="mt-4"></div>
+                                        <div id="idiomsResult" class="mt-4 d-none"></div>
+                                        <div class="mt-4">
+                                            <button id="idiomsNextBtn" class="btn btn-info d-none">Câu tiếp theo</button>
+                                            <button id="idiomsStartBtn" class="btn btn-info">Bắt đầu luyện tập</button>
                                         </div>
                                     </div>
                                 </div>

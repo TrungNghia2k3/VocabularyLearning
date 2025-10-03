@@ -8842,6 +8842,526 @@
                     "meaning": "bị mắc bẫy"
                 }
             ]
+        },
+        {
+            "word": "prove",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "to demonstrate the truth or existence of something by evidence or argument",
+                    "example": "He tried to prove his innocence in court."
+                }
+            ],
+            "meaning": "chứng minh",
+            "type": "verb",
+            "example": "He tried to prove his innocence in court.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/pruːv/",
+                "en-US": "/pruːv/"
+            },
+            "synonyms": [
+                {
+                    "word": "demonstrate",
+                    "meaning": "chứng minh"
+                },
+                {
+                    "word": "verify",
+                    "meaning": "xác minh"
+                },
+                {
+                    "word": "confirm",
+                    "meaning": "xác nhận"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "disprove",
+                    "meaning": "bác bỏ"
+                },
+                {
+                    "word": "refute",
+                    "meaning": "bác bỏ"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "proof",
+                        "meaning": "bằng chứng"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "prove",
+                        "meaning": "chứng minh"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "provable",
+                        "meaning": "có thể chứng minh"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "provably",
+                        "meaning": "một cách có thể chứng minh"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "reveal",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "to make something known or visible",
+                    "example": "The investigation revealed the truth."
+                }
+            ],
+            "meaning": "tiết lộ",
+            "type": "verb",
+            "example": "The investigation revealed the truth.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/rɪˈviːl/",
+                "en-US": "/rɪˈviːl/"
+            },
+            "synonyms": [
+                {
+                    "word": "disclose",
+                    "meaning": "tiết lộ"
+                },
+                {
+                    "word": "uncover",
+                    "meaning": "khám phá"
+                },
+                {
+                    "word": "expose",
+                    "meaning": "phơi bày"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "conceal",
+                    "meaning": "che giấu"
+                },
+                {
+                    "word": "hide",
+                    "meaning": "giấu"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "revelation",
+                        "meaning": "sự tiết lộ"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "reveal",
+                        "meaning": "tiết lộ"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "revealing",
+                        "meaning": "mang tính tiết lộ"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "revealingly",
+                        "meaning": "một cách mang tính tiết lộ"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "expulsion",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "to make something known or visible",
+                    "example": "The investigation revealed the truth."
+                }
+            ],
+            "meaning": "sự trục xuất",
+            "type": "noun",
+            "example": "The expulsion of the student was controversial.",
+            "level": "basic",
+            "phonetic": {
+                "en-GB": "/ɪkˈspʌlʃən/",
+                "en-US": "/ɪkˈspʌlʃən/"
+            },
+            "synonyms": [
+                {
+                    "word": "ejection",
+                    "meaning": "sự đuổi"
+                },
+                {
+                    "word": "removal",
+                    "meaning": "sự loại bỏ"
+                },
+                {
+                    "word": "banishment",
+                    "meaning": "sự trục xuất"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "admission",
+                    "meaning": "sự nhận vào"
+                },
+                {
+                    "word": "inclusion",
+                    "meaning": "sự bao gồm"
+                }
+            ],
+            "wordFamily": [
+                {
+                    "word": "expel",
+                    "meaning": "đuổi"
+                },
+                {
+                    "word": "expulsion",
+                    "meaning": "sự trục xuất"
+                }
+            ]
+        },
+        {
+            "word": "gargantuan",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "extremely large",
+                    "example": "The gargantuan statue towered over the city."
+                }
+            ],
+            "meaning": "khổng lồ",
+            "type": "adjective",
+            "example": "The gargantuan statue towered over the city.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ɡɑːˈɡæn.tʃu.ən/",
+                "en-US": "/ɡɑːrˈɡæn.tʃu.ən/"
+            },
+            "synonyms": [
+                {
+                    "word": "huge",
+                    "meaning": "to lớn"
+                },
+                {
+                    "word": "enormous",
+                    "meaning": "to lớn"
+                },
+                {
+                    "word": "gigantic",
+                    "meaning": "khổng lồ"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "tiny",
+                    "meaning": "nhỏ bé"
+                },
+                {
+                    "word": "small",
+                    "meaning": "nhỏ"
+                }
+            ],
+            "wordFamily": [
+                {
+                    "word": "gargantuan",
+                    "meaning": "khổng lồ"
+                }
+            ]
+        },
+        {
+            "word": "gestation",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "the process of carrying or being carried in the womb between conception and birth; the period of development during pregnancy",
+                    "example": "The gestation period for elephants is about 22 months."
+                }
+            ],
+            "meaning": "thời kỳ thái nghén",
+            "type": "noun",
+            "example": "The gestation period for elephants is about 22 months.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ɡɛsˈteɪ.ʃən/",
+                "en-US": "/ɡɛsˈteɪ.ʃən/"
+            },
+            "synonyms": [
+                {
+                    "word": "pregnancy",
+                    "meaning": "thai nghén"
+                },
+                {
+                    "word": "gestation",
+                    "meaning": "thời kỳ thai nghén"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "birth",
+                    "meaning": "sinh"
+                },
+                {
+                    "word": "delivery",
+                    "meaning": "sự sinh đẻ"
+                }
+            ],
+            "wordFamily": [
+                {
+                    "word": "gestate",
+                    "meaning": "thai nghén"
+                },
+                {
+                    "word": "gestation",
+                    "meaning": "thời kỳ thai nghén"
+                }
+            ]
+        },
+        {
+            "word": "groove",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a long, narrow cut or depression in a surface; a furrow or channel",
+                    "example": "The record had a scratch in the groove."
+                }
+            ],
+            "meaning": "đường rãnh",
+            "type": "noun",
+            "example": "The record had a scratch in the groove.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ɡruːv/",
+                "en-US": "/ɡruːv/"
+            },
+            "synonyms": [
+                {
+                    "word": "channel",
+                    "meaning": "kênh"
+                },
+                {
+                    "word": "furrow",
+                    "meaning": "rãnh"
+                },
+                {
+                    "word": "trench",
+                    "meaning": "mương"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "ridge",
+                    "meaning": "gờ"
+                },
+                {
+                    "word": "bump",
+                    "meaning": "cục"
+                }
+            ],
+            "wordFamily": [
+                {
+                    "word": "groove",
+                    "meaning": "đường rãnh"
+                }
+            ]
+        },
+        {
+            "word": "herbicide",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a substance that is toxic to plants and is used to destroy unwanted vegetation",
+                    "example": "Farmers often use herbicides to control weeds."
+                }
+            ],
+            "meaning": "thuốc diệt cỏ",
+            "type": "noun",
+            "example": "Farmers often use herbicides to control weeds.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈhɜː.bɪ.saɪd/",
+                "en-US": "/ˈhɜːr.bɪ.saɪd/"
+            },
+            "synonyms": [
+                {
+                    "word": "weed killer",
+                    "meaning": "thuốc diệt cỏ"
+                },
+                {
+                    "word": "herbicide",
+                    "meaning": "thuốc diệt cỏ"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "fertilizer",
+                    "meaning": "phân bón"
+                }
+            ],
+            "wordFamily": [
+                {
+                    "word": "herbicide",
+                    "meaning": "thuốc diệt cỏ"
+                }
+            ]
+        },
+        {
+            "word": "justification",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "the action of showing something to be right or reasonable",
+                    "example": "The justification for the new policy was based on recent research."
+                }
+            ],
+            "meaning": "sự biện minh",
+            "type": "noun",
+            "example": "The justification for the new policy was based on recent research.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˌdʒʌs.tɪ.fɪˈkeɪ.ʃən/",
+                "en-US": "/ˌdʒʌs.tɪ.fɪˈkeɪ.ʃən/"
+            },
+            "synonyms": [
+                {
+                    "word": "explanation",
+                    "meaning": "sự giải thích"
+                },
+                {
+                    "word": "rationale",
+                    "meaning": "lý do cơ bản"
+                },
+                {
+                    "word": "defense",
+                    "meaning": "sự bảo vệ"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "criticism",
+                    "meaning": "sự phê bình"
+                },
+                {
+                    "word": "accusation",
+                    "meaning": "sự buộc tội"
+                }
+            ],
+            "wordFamily": [
+                {
+                    "word": "justify",
+                    "meaning": "biện minh"
+                },
+                {
+                    "word": "justification",
+                    "meaning": "sự biện minh"
+                }
+            ]
+        },
+        {
+            "word": "maturity",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "the state of being fully developed or grown",
+                    "example": "The maturity of the fruit is determined by its color and firmness."
+                }
+            ],
+            "meaning": "sự trưởng thành",
+            "type": "noun",
+            "example": "The maturity of the fruit is determined by its color and firmness.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/məˈtʃʊə.rɪ.ti/",
+                "en-US": "/məˈtʃʊr.ɪ.t̬i/"
+            },
+            "synonyms": [
+                {
+                    "word": "adulthood",
+                    "meaning": "tuổi trưởng thành"
+                },
+                {
+                    "word": "development",
+                    "meaning": "sự phát triển"
+                },
+                {
+                    "word": "ripeness",
+                    "meaning": "sự chín muồi"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "immaturity",
+                    "meaning": "sự chưa trưởng thành"
+                },
+                {
+                    "word": "youth",
+                    "meaning": "tuổi trẻ"
+                }
+            ],
+            "wordFamily": [
+                {
+                    "word": "mature",
+                    "meaning": "trưởng thành"
+                },
+                {
+                    "word": "maturity",
+                    "meaning": "sự trưởng thành"
+                }
+            ]
+        },
+        {
+            "word": "moss",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a small, green plant that grows in damp places and often forms a thick carpet on the ground",
+                    "example": "The moss covered the rocks and trees in the forest."
+                }
+            ],
+            "meaning": "rêu",
+            "type": "noun",
+            "example": "The moss covered the rocks and trees in the forest.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/mɒs/",
+                "en-US": "/mɔs/"
+            },
+            "synonyms": [
+                {
+                    "word": "bryophyte",
+                    "meaning": "thực vật rêu"
+                },
+                {
+                    "word": "lichen",
+                    "meaning": "địa y"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "algae",
+                    "meaning": "tảo"
+                }
+            ],
+            "wordFamily": [
+                {
+                    "word": "mossy",
+                    "meaning": "có rêu"
+                },
+                {
+                    "word": "moss",
+                    "meaning": "rêu"
+                }
+            ]
         }
     ]
 }

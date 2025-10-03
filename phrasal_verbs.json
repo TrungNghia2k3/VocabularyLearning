@@ -1,0 +1,127 @@
+{
+    "phrasalVerbs": [
+        {
+            "verb": "look up",
+            "type": "separable",
+            "meanings": [
+                {
+                    "definition": "to search for information",
+                    "vietnamese": "tra cứu, tìm kiếm thông tin",
+                    "examples": [
+                        {
+                            "sentence": "I need to look up this word in the dictionary.",
+                            "translation": "Tôi cần tra từ này trong từ điển."
+                        },
+                        {
+                            "sentence": "You can look it up online.",
+                            "translation": "Bạn có thể tra cứu nó trên mạng."
+                        }
+                    ]
+                },
+                {
+                    "definition": "to improve or become better",
+                    "vietnamese": "cải thiện, trở nên tốt hơn",
+                    "examples": [
+                        {
+                            "sentence": "Things are looking up for our company.",
+                            "translation": "Mọi thứ đang trở nên tốt hơn cho công ty chúng tôi."
+                        }
+                    ]
+                }
+            ],
+            "particles": ["up"],
+            "commonForms": {
+                "past": "looked up",
+                "presentParticiple": "looking up",
+                "pastParticiple": "looked up"
+            },
+            "usage": "When the object is a pronoun, it must come between the verb and particle: 'look it up', not 'look up it'",
+            "synonyms": ["search for", "find", "research"],
+            "difficulty": "beginner"
+        },
+        {
+            "verb": "give up",
+            "type": "inseparable",
+            "meanings": [
+                {
+                    "definition": "to stop trying or quit",
+                    "vietnamese": "từ bỏ, bỏ cuộc",
+                    "examples": [
+                        {
+                            "sentence": "Don't give up on your dreams.",
+                            "translation": "Đừng từ bỏ ước mơ của bạn."
+                        },
+                        {
+                            "sentence": "I gave up smoking last year.",
+                            "translation": "Tôi đã bỏ thuốc năm ngoái."
+                        }
+                    ]
+                },
+                {
+                    "definition": "to surrender or yield",
+                    "vietnamese": "đầu hàng, nhượng bộ",
+                    "examples": [
+                        {
+                            "sentence": "The criminal gave himself up to the police.",
+                            "translation": "Tên tội phạm đã đầu hàng cảnh sát."
+                        }
+                    ]
+                }
+            ],
+            "particles": ["up"],
+            "commonForms": {
+                "past": "gave up",
+                "presentParticiple": "giving up",
+                "pastParticiple": "given up"
+            },
+            "usage": "Often followed by a gerund (-ing form) when talking about stopping a habit",
+            "synonyms": ["quit", "abandon", "surrender"],
+            "difficulty": "beginner"
+        },
+        {
+            "verb": "run into",
+            "type": "inseparable",
+            "meanings": [
+                {
+                    "definition": "to meet someone unexpectedly",
+                    "vietnamese": "tình cờ gặp ai đó",
+                    "examples": [
+                        {
+                            "sentence": "I ran into my old teacher at the mall.",
+                            "translation": "Tôi tình cờ gặp giáo viên cũ ở trung tâm thương mại."
+                        }
+                    ]
+                },
+                {
+                    "definition": "to collide with something",
+                    "vietnamese": "đâm vào, va chạm với",
+                    "examples": [
+                        {
+                            "sentence": "The car ran into a tree.",
+                            "translation": "Chiếc xe đâm vào một cái cây."
+                        }
+                    ]
+                },
+                {
+                    "definition": "to encounter a problem",
+                    "vietnamese": "gặp phải vấn đề",
+                    "examples": [
+                        {
+                            "sentence": "We ran into some technical difficulties.",
+                            "translation": "Chúng tôi gặp phải một số khó khăn kỹ thuật."
+                        }
+                    ]
+                }
+            ],
+            "particles": ["into"],
+            "commonForms": {
+                "past": "ran into",
+                "presentParticiple": "running into",
+                "pastParticiple": "run into"
+            },
+            "usage": "Cannot be separated - the object always comes after 'into'",
+            "synonyms": ["encounter", "meet", "bump into"],
+            "difficulty": "intermediate"
+        }
+    ]
+}

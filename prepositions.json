@@ -1,0 +1,148 @@
+{
+    "prepositions": [
+        {
+            "preposition": "in",
+            "meaning": "trong, ở",
+            "category": "place",
+            "uses": [
+                {
+                    "usage": "Location (inside)",
+                    "description": "Chỉ vị trí bên trong",
+                    "examples": [
+                        {
+                            "sentence": "The book is in the bag.",
+                            "translation": "Cuốn sách ở trong túi."
+                        },
+                        {
+                            "sentence": "She lives in New York.",
+                            "translation": "Cô ấy sống ở New York."
+                        }
+                    ]
+                },
+                {
+                    "usage": "Time (months, years, periods)",
+                    "description": "Chỉ thời gian (tháng, năm, khoảng thời gian)",
+                    "examples": [
+                        {
+                            "sentence": "I was born in 1990.",
+                            "translation": "Tôi sinh năm 1990."
+                        },
+                        {
+                            "sentence": "We'll meet in the morning.",
+                            "translation": "Chúng ta sẽ gặp nhau vào buổi sáng."
+                        }
+                    ]
+                }
+            ],
+            "commonMistakes": [
+                {
+                    "mistake": "Using 'in' with days of the week",
+                    "correct": "on Monday",
+                    "incorrect": "in Monday",
+                    "explanation": "Dùng 'on' với các ngày trong tuần"
+                }
+            ],
+            "relatedPrepositions": [
+                "into",
+                "inside",
+                "within"
+            ]
+        },
+        {
+            "preposition": "on",
+            "meaning": "trên, vào",
+            "category": "place",
+            "uses": [
+                {
+                    "usage": "Surface contact",
+                    "description": "Chỉ vị trí tiếp xúc với bề mặt",
+                    "examples": [
+                        {
+                            "sentence": "The cup is on the table.",
+                            "translation": "Cái cốc ở trên bàn."
+                        },
+                        {
+                            "sentence": "There's a picture on the wall.",
+                            "translation": "Có một bức tranh trên tường."
+                        }
+                    ]
+                },
+                {
+                    "usage": "Days and dates",
+                    "description": "Chỉ ngày và các ngày cụ thể",
+                    "examples": [
+                        {
+                            "sentence": "I'll see you on Monday.",
+                            "translation": "Tôi sẽ gặp bạn vào thứ Hai."
+                        },
+                        {
+                            "sentence": "My birthday is on June 15th.",
+                            "translation": "Sinh nhật tôi là ngày 15 tháng 6."
+                        }
+                    ]
+                }
+            ],
+            "commonMistakes": [
+                {
+                    "mistake": "Using 'on' with months",
+                    "correct": "in June",
+                    "incorrect": "on June",
+                    "explanation": "Dùng 'in' với các tháng"
+                }
+            ],
+            "relatedPrepositions": [
+                "onto",
+                "upon",
+                "above"
+            ]
+        },
+        {
+            "preposition": "at",
+            "meaning": "tại, ở",
+            "category": "place",
+            "uses": [
+                {
+                    "usage": "Specific points",
+                    "description": "Chỉ điểm cụ thể",
+                    "examples": [
+                        {
+                            "sentence": "Meet me at the station.",
+                            "translation": "Gặp tôi tại nhà ga."
+                        },
+                        {
+                            "sentence": "He's at work.",
+                            "translation": "Anh ấy đang ở chỗ làm."
+                        }
+                    ]
+                },
+                {
+                    "usage": "Specific times",
+                    "description": "Chỉ thời gian cụ thể",
+                    "examples": [
+                        {
+                            "sentence": "The meeting is at 3 PM.",
+                            "translation": "Cuộc họp lúc 3 giờ chiều."
+                        },
+                        {
+                            "sentence": "I wake up at sunrise.",
+                            "translation": "Tôi thức dậy lúc mặt trời mọc."
+                        }
+                    ]
+                }
+            ],
+            "commonMistakes": [
+                {
+                    "mistake": "Using 'at' with large places",
+                    "correct": "in London",
+                    "incorrect": "at London",
+                    "explanation": "Dùng 'in' với các thành phố lớn"
+                }
+            ],
+            "relatedPrepositions": [
+                "by",
+                "near",
+                "beside"
+            ]
+        }
+    ]
+}
