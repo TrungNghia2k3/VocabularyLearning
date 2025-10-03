@@ -7964,12 +7964,32 @@
                 }
             ],
             "antonyms": [],
-            "wordFamily": [
-                {
-                    "word": "stationery",
-                    "meaning": "văn phòng phẩm"
-                }
-            ]
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "stationery",
+                        "meaning": "văn phòng phẩm"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "stationery",
+                        "meaning": "thuộc văn phòng phẩm"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "stationerily",
+                        "meaning": "một cách thuộc văn phòng phẩm"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "stationerize",
+                        "meaning": "làm cho thành văn phòng phẩm"
+                    }
+                ]
+            }
         },
         {
             "word": "subdue",
@@ -8080,12 +8100,32 @@
                     "meaning": "hoàn tiền"
                 }
             ],
-            "wordFamily": [
-                {
-                    "word": "surcharge",
-                    "meaning": "tiền trả thêm"
-                }
-            ]
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "surcharge",
+                        "meaning": "tiền trả thêm"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "surcharge",
+                        "meaning": "tính phí thêm"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "surcharged",
+                        "meaning": "bị tính phí thêm"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "surchargingly",
+                        "meaning": "một cách tính phí thêm"
+                    }
+                ]
+            }
         },
         {
             "word": "synthetic",
@@ -8182,12 +8222,27 @@
                     "meaning": "có chì"
                 }
             ],
-            "wordFamily": [
-                {
-                    "word": "unleaded",
-                    "meaning": "không có chì"
-                }
-            ]
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "unleaded",
+                        "meaning": "không có chì"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "unleadedly",
+                        "meaning": "một cách không có chì"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "unleadedness",
+                        "meaning": "tính không có chì"
+                    }
+                ],
+                "verb": []
+            }
         },
         {
             "word": "well-grounded",
@@ -8230,12 +8285,27 @@
                     "meaning": "không có cơ sở"
                 }
             ],
-            "wordFamily": [
-                {
-                    "word": "well-grounded",
-                    "meaning": "có cơ sở vững chắc"
-                }
-            ]
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "well-grounded",
+                        "meaning": "có cơ sở vững chắc"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "well-groundedly",
+                        "meaning": "một cách có cơ sở vững chắc"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "well-groundedness",
+                        "meaning": "tính có cơ sở vững chắc"
+                    }
+                ],
+                "verb": []
+            }
         },
         {
             "word": "aesthetic",
@@ -8520,16 +8590,30 @@
                     "meaning": "an toàn"
                 }
             ],
-            "wordFamily": [
-                {
-                    "word": "hazard",
-                    "meaning": "mối nguy hiểm"
-                },
-                {
-                    "word": "hazardous",
-                    "meaning": "nguy hiểm, mạo hiểm"
-                }
-            ]
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "hazard",
+                        "meaning": "nguy hiểm"
+                    },
+                    {
+                        "word": "hazardousness",
+                        "meaning": "tính nguy hiểm"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "hazardous",
+                        "meaning": "nguy hiểm, mạo hiểm"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "hazardously",
+                        "meaning": "một cách nguy hiểm"
+                    }
+                ]
+            }
         },
         {
             "word": "incineration",
@@ -8564,16 +8648,32 @@
                     "meaning": "sự dập tắt"
                 }
             ],
-            "wordFamily": [
-                {
-                    "word": "incinerate",
-                    "meaning": "thiêu rụi"
-                },
-                {
-                    "word": "incineration",
-                    "meaning": "sự thiêu rụi"
-                }
-            ]
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "incineration",
+                        "meaning": "sự thiêu rụi"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "incinerate",
+                        "meaning": "thiêu rụi"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "incinerable",
+                        "meaning": "có thể thiêu rụi"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "incineratingly",
+                        "meaning": "một cách thiêu rụi"
+                    }
+                ]
+            }
         },
         {
             "word": "breed",
@@ -8616,20 +8716,36 @@
                     "meaning": "giết chết"
                 }
             ],
-            "wordFamily": [
-                {
-                    "word": "breeder",
-                    "meaning": "người chăn nuôi"
-                },
-                {
-                    "word": "breeding",
-                    "meaning": "sự sinh sản"
-                },
-                {
-                    "word": "breed",
-                    "meaning": "sinh sản"
-                }
-            ]
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "breed",
+                        "meaning": "giống loài"
+                    },
+                    {
+                        "word": "breeder",
+                        "meaning": "người chăn nuôi"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "breed",
+                        "meaning": "sinh sản"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "breeding",
+                        "meaning": "liên quan đến sinh sản"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "breedingly",
+                        "meaning": "một cách sinh sản"
+                    }
+                ]
+            }
         },
         {
             "word": "carnivore",
@@ -8668,16 +8784,27 @@
                     "meaning": "động vật ăn tạp"
                 }
             ],
-            "wordFamily": [
-                {
-                    "word": "carnivorous",
-                    "meaning": "thuộc động vật ăn thịt"
-                },
-                {
-                    "word": "carnivore",
-                    "meaning": "động vật ăn thịt"
-                }
-            ]
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "carnivore",
+                        "meaning": "động vật ăn thịt"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "carnivorous",
+                        "meaning": "ăn thịt"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "carnivorously",
+                        "meaning": "một cách ăn thịt"
+                    }
+                ],
+                "verb": []
+            }
         },
         {
             "word": "contend",
@@ -8784,12 +8911,21 @@
                     "meaning": "thuộc về mặt"
                 }
             ],
-            "wordFamily": [
-                {
-                    "word": "dorsal",
-                    "meaning": "thuộc về lưng"
-                }
-            ]
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "dorsum",
+                        "meaning": "lưng"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "dorsal",
+                        "meaning": "thuộc về lưng"
+                    }
+                ],
+                "adverb": []
+            }
         },
         {
             "word": "ensnared",
@@ -8832,16 +8968,26 @@
                     "meaning": "được giải phóng"
                 }
             ],
-            "wordFamily": [
-                {
-                    "word": "ensnare",
-                    "meaning": "bẫy"
-                },
-                {
-                    "word": "ensnared",
-                    "meaning": "bị mắc bẫy"
-                }
-            ]
+            "wordFamily":{
+                "verb": [
+                    {
+                        "word": "ensnare",
+                        "meaning": "bẫy"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "ensnared",
+                        "meaning": "bị mắc bẫy"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "ensnaringly",
+                        "meaning": "một cách mắc bẫy"
+                    }
+                ]
+            }
         },
         {
             "word": "prove",
