@@ -8968,7 +8968,7 @@
                     "meaning": "được giải phóng"
                 }
             ],
-            "wordFamily":{
+            "wordFamily": {
                 "verb": [
                     {
                         "word": "ensnare",
@@ -9597,6 +9597,521 @@
                     {
                         "word": "mossy",
                         "meaning": "có rêu"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "navel",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "the small, central scar on the abdomen, marking the spot where the umbilical cord was attached",
+                    "example": "The baby’s navel was still healing after the birth."
+                }
+            ],
+            "meaning": "rốn",
+            "type": "noun",
+            "example": "The baby’s navel was still healing after the birth.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈneɪ.vəl/",
+                "en-US": "/ˈneɪ.vəl/"
+            },
+            "synonyms": [
+                {
+                    "word": "umbilicus",
+                    "meaning": "rốn"
+                }
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "navel",
+                        "meaning": "rốn"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "navel",
+                        "meaning": "thuộc về rốn"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "poacher",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a person who illegally hunts or captures animals",
+                    "example": "The poacher was caught trying to sell endangered species."
+                }
+            ],
+            "meaning": "người săn trộm",
+            "type": "noun",
+            "example": "The poacher was caught trying to sell endangered species.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈpəʊ.tʃər/",
+                "en-US": "/ˈpoʊ.tʃər/"
+            },
+            "synonyms": [
+                {
+                    "word": "illegal hunter",
+                    "meaning": "thợ săn bất hợp pháp"
+                },
+                {
+                    "word": "game thief",
+                    "meaning": "kẻ trộm thú"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "conservationist",
+                    "meaning": "nhà bảo tồn"
+                },
+                {
+                    "word": "wildlife protector",
+                    "meaning": "người bảo vệ động vật hoang dã"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "poacher",
+                        "meaning": "người săn trộm"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "poach",
+                        "meaning": "săn trộm"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "poaching",
+                        "meaning": "liên quan đến săn trộm"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "precious",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "of great value; not to be wasted or treated carelessly",
+                    "example": "Time is a precious resource."
+                }
+            ],
+            "meaning": "quý giá",
+            "type": "adjective",
+            "example": "Time is a precious resource.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈprɛʃ.əs/",
+                "en-US": "/ˈprɛʃ.əs/"
+            },
+            "synonyms": [
+                {
+                    "word": "valuable",
+                    "meaning": "có giá trị"
+                },
+                {
+                    "word": "invaluable",
+                    "meaning": "vô giá"
+                },
+                {
+                    "word": "priceless",
+                    "meaning": "vô giá"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "worthless",
+                    "meaning": "vô giá trị"
+                },
+                {
+                    "word": "cheap",
+                    "meaning": "rẻ tiền"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "preciousness",
+                        "meaning": "sự quý giá"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "precious",
+                        "meaning": "quý giá"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "preciously",
+                        "meaning": "một cách quý giá"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "prosperous",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "successful in material terms; flourishing financially",
+                    "example": "The prosperous businessman donated a large sum to charity."
+                }
+            ],
+            "meaning": "thịnh vượng",
+            "type": "adjective",
+            "example": "The prosperous businessman donated a large sum to charity.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈprɒs.pər.əs/",
+                "en-US": "/ˈprɑː.spɚ.əs/"
+            },
+            "synonyms": [
+                {
+                    "word": "wealthy",
+                    "meaning": "giàu có"
+                },
+                {
+                    "word": "affluent",
+                    "meaning": "thịnh vượng"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "poor",
+                    "meaning": "nghèo"
+                },
+                {
+                    "word": "impoverished",
+                    "meaning": "nghèo khổ"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "prosperity",
+                        "meaning": "sự thịnh vượng"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "prosper",
+                        "meaning": "thịnh vượng"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "prosperous",
+                        "meaning": "thịnh vượng"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "provision",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "the action of providing or supplying something for use",
+                    "example": "The provision of clean water is essential for health."
+                }
+            ],
+            "meaning": "cung cấp",
+            "type": "noun",
+            "example": "The provision of clean water is essential for health.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/prəˈvɪʒ.ən/",
+                "en-US": "/prəˈvɪʒ.ən/"
+            },
+            "synonyms": [
+                {
+                    "word": "supply",
+                    "meaning": "cung cấp"
+                },
+                {
+                    "word": "furnishing",
+                    "meaning": "sự cung cấp"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "withholding",
+                    "meaning": "sự giữ lại"
+                },
+                {
+                    "word": "deprivation",
+                    "meaning": "sự thiếu hụt"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "provision",
+                        "meaning": "sự cung cấp"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "provide",
+                        "meaning": "cung cấp"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "provisional",
+                        "meaning": "tạm thời"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "provisionally",
+                        "meaning": "một cách tạm thời"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "rostrum",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a raised platform or podium for public speaking",
+                    "example": "The politician addressed the crowd from the rostrum."
+                }
+            ],
+            "meaning": "bục phát biểu",
+            "type": "noun",
+            "example": "The politician addressed the crowd from the rostrum.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈrɒstrəm/",
+                "en-US": "/ˈrɑstrəm/"
+            },
+            "synonyms": [
+                {
+                    "word": "podium",
+                    "meaning": "bục phát biểu"
+                },
+                {
+                    "word": "platform",
+                    "meaning": "sân khấu"
+                }
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "rostrum",
+                        "meaning": "bục phát biểu"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "rostral",
+                        "meaning": "thuộc về mõm"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "sophisticated",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a person who is knowledgeable and cultured",
+                    "example": "She is a sophisticated individual with a taste for the finer things in life."
+                }
+            ],
+            "meaning": "tinh vi, phức tạp",
+            "type": "adjective",
+            "example": "The software has a sophisticated design that enhances user experience.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/səˈfɪs.tɪ.keɪ.tɪd/",
+                "en-US": "/səˈfɪs.tɪ.keɪ.tɪd/"
+            },
+            "synonyms": [
+                {
+                    "word": "complex",
+                    "meaning": "phức tạp"
+                },
+                {
+                    "word": "advanced",
+                    "meaning": "tiên tiến"
+                },
+                {
+                    "word": "refined",
+                    "meaning": "tinh tế"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "simple",
+                    "meaning": "đơn giản"
+                },
+                {
+                    "word": "unsophisticated",
+                    "meaning": "không tinh vi"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "sophistication",
+                        "meaning": "sự tinh vi"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "sophisticated",
+                        "meaning": "tinh vi"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "sophisticatedly",
+                        "meaning": "một cách tinh vi"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "timber",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "wood that is prepared for use in building and carpentry",
+                    "example": "The house was built with timber from the local forest."
+                }
+            ],
+            "meaning": "gỗ",
+            "type": "noun",
+            "example": "The house was built with timber from the local forest.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈtɪm.bər/",
+                "en-US": "/ˈtɪm.bɚ/"
+            },
+            "synonyms": [
+                {
+                    "word": "lumber",
+                    "meaning": "gỗ xẻ"
+                },
+                {
+                    "word": "wood",
+                    "meaning": "gỗ"
+                }
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "timber",
+                        "meaning": "gỗ"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "timbered",
+                        "meaning": "làm bằng gỗ"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "tissue",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a group of cells in an organism that have a similar structure and function",
+                    "example": "Muscle tissue is responsible for movement in the body."
+                }
+            ],
+            "meaning": "mô",
+            "type": "noun",
+            "example": "Muscle tissue is responsible for movement in the body.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈtɪʃ.uː/",
+                "en-US": "/ˈtɪʃ.uː/"
+            },
+            "synonyms": [
+                {
+                    "word": "cell group",
+                    "meaning": "nhóm tế bào"
+                },
+                {
+                    "word": "biological tissue",
+                    "meaning": "mô sinh học"
+                }
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "tissue",
+                        "meaning": "mô"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "tissue",
+                        "meaning": "thuộc về mô"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "trunk",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "the main woody stem of a tree",
+                    "example": "The trunk of the tree was thick and sturdy."
+                }
+            ],
+            "meaning": "thân cây",
+            "type": "noun",
+            "example": "The trunk of the tree was thick and sturdy.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/trʌŋk/",
+                "en-US": "/trʌŋk/"
+            },
+            "synonyms": [
+                {
+                    "word": "stem",
+                    "meaning": "thân cây"
+                },
+                {
+                    "word": "bole",
+                    "meaning": "thân cây"
+                }
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "trunk",
+                        "meaning": "thân cây"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "trunked",
+                        "meaning": "có thân cây"
                     }
                 ]
             }
