@@ -10115,6 +10115,574 @@
                     }
                 ]
             }
+        },
+        {
+            "word": "unprecedented",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "never done or known before",
+                    "example": "The pandemic led to unprecedented changes in the workplace."
+                }
+            ],
+            "meaning": "chưa từng có",
+            "type": "adjective",
+            "example": "The pandemic led to unprecedented changes in the workplace.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ʌnˈprɛsɪdɛntɪd/",
+                "en-US": "/ʌnˈprɛsɪdɛntɪd/"
+            },
+            "synonyms": [
+                {
+                    "word": "unmatched",
+                    "meaning": "vô song"
+                },
+                {
+                    "word": "extraordinary",
+                    "meaning": "phi thường"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "commonplace",
+                    "meaning": "thông thường"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "unprecedentedness",
+                        "meaning": "tính chưa từng có"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "unprecedented",
+                        "meaning": "chưa từng có"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "unprecedentedly",
+                        "meaning": "một cách chưa từng có"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "unprecede",
+                        "meaning": "làm cho chưa từng có"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "amphibian",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a cold-blooded vertebrate animal that is born in water and breathes with gills, but as an adult breathes air through lungs",
+                    "example": "Frogs and salamanders are examples of amphibians."
+                }
+            ],
+            "meaning": "động vật lưỡng cư",
+            "type": "noun",
+            "example": "Frogs and salamanders are examples of amphibians.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/æmˈfɪb.i.ən/",
+                "en-US": "/æmˈfɪb.i.ən/"
+            },
+            "synonyms": [
+                {
+                    "word": "anuran",
+                    "meaning": "ếch nhái"
+                },
+                {
+                    "word": "caudate",
+                    "meaning": "có đuôi (như kỳ giông)"
+                }
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "amphibian",
+                        "meaning": "động vật lưỡng cư"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "amphibious",
+                        "meaning": "thuộc về lưỡng cư"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "amphibiously",
+                        "meaning": "một cách lưỡng cư"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "arguably",
+            "definitions": [
+                {
+                    "partOfSpeech": "adverb",
+                    "definition": "it may be argued (used to qualify the statement of an opinion or belief)",
+                    "example": "He is arguably the best player in the team."
+                }
+            ],
+            "meaning": "có thể cho rằng",
+            "type": "adverb",
+            "example": "He is arguably the best player in the team.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈɑːɡjuəbl/",
+                "en-US": "/ˈɑːrɡjuəbl/"
+            },
+            "synonyms": [
+                {
+                    "word": "possibly",
+                    "meaning": "có thể"
+                },
+                {
+                    "word": "likely",
+                    "meaning": "có khả năng"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "undoubtedly",
+                    "meaning": "chắc chắn"
+                },
+                {
+                    "word": "definitely",
+                    "meaning": "chắc chắn"
+                }
+            ],
+            "wordFamily": {
+                "adverb": [
+                    {
+                        "word": "arguably",
+                        "meaning": "có thể cho rằng"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "argue",
+                        "meaning": "tranh luận"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "argument",
+                        "meaning": "cuộc tranh luận"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "argumentative",
+                        "meaning": "hay tranh luận"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "barren",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "not able to produce plants or fruit",
+                    "example": "The barren landscape was devoid of life."
+                }
+            ],
+            "meaning": "cằn cỗi",
+            "type": "adjective",
+            "example": "The barren landscape was devoid of life.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈbær.ən/",
+                "en-US": "/ˈber.ən/"
+            },
+            "synonyms": [
+                {
+                    "word": "infertile",
+                    "meaning": "không màu mỡ"
+                },
+                {
+                    "word": "sterile",
+                    "meaning": "cằn cỗi"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "fertile",
+                    "meaning": "màu mỡ"
+                },
+                {
+                    "word": "productive",
+                    "meaning": "sản xuất"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "barrenness",
+                        "meaning": "sự cằn cỗi"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "barren",
+                        "meaning": "cằn cỗi"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "barrenly",
+                        "meaning": "một cách cằn cỗi"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "biosphere",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "the global sum of all ecosystems",
+                    "example": "The biosphere is a closed system with limited resources."
+                }
+            ],
+            "meaning": "sinh quyển",
+            "type": "noun",
+            "example": "The biosphere is a closed system with limited resources.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈbaɪ.əʊ.sfɪə/",
+                "en-US": "/ˈbaɪ.oʊ.sfɪr/"
+            },
+            "synonyms": [
+                {
+                    "word": "ecosystem",
+                    "meaning": "hệ sinh thái"
+                },
+                {
+                    "word": "environment",
+                    "meaning": "môi trường"
+                }
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "biosphere",
+                        "meaning": "sinh quyển"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "biospheric",
+                        "meaning": "thuộc về sinh quyển"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "biospherically",
+                        "meaning": "một cách thuộc về sinh quyển"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "canopy",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "the uppermost branches and leaves of trees in a forest",
+                    "example": "The canopy of the rainforest is home to many species of birds."
+                }
+            ],
+            "meaning": "tán cây",
+            "type": "noun",
+            "example": "The canopy of the rainforest is home to many species of birds.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈkæn.ə.pi/",
+                "en-US": "/ˈkæn.ə.pi/"
+            },
+            "synonyms": [
+                {
+                    "word": "overstory",
+                    "meaning": "tầng trên của rừng"
+                },
+                {
+                    "word": "tree cover",
+                    "meaning": "mái che cây"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "understory",
+                    "meaning": "tầng dưới của rừng"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "canopy",
+                        "meaning": "tán cây"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "canopied",
+                        "meaning": "có tán cây"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "curb",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "to restrain or control",
+                    "example": "The city implemented measures to curb pollution."
+                }
+            ],
+            "meaning": "kiềm chế, nén lại, hãm lại",
+            "type": "verb",
+            "example": "The city implemented measures to curb pollution.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/kɜːb/",
+                "en-US": "/kɜːrb/"
+            },
+            "synonyms": [
+                {
+                    "word": "restrain",
+                    "meaning": "kiềm chế"
+                },
+                {
+                    "word": "control",
+                    "meaning": "kiểm soát"
+                },
+                {
+                    "word": "limit",
+                    "meaning": "giới hạn"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "encourage",
+                    "meaning": "khuyến khích"
+                },
+                {
+                    "word": "promote",
+                    "meaning": "thúc đẩy"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "curb",
+                        "meaning": "lề đường; sự kiềm chế"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "curb",
+                        "meaning": "kiềm chế"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "curbed",
+                        "meaning": "bị kiềm chế"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "afforestation",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "the process of planting trees in a barren land",
+                    "example": "Afforestation is essential for combating climate change."
+                }
+            ],
+            "meaning": "trồng rừng",
+            "type": "noun",
+            "example": "Afforestation is essential for combating climate change.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˌæf.ɔːr.ɪˈsteɪ.ʃən/",
+                "en-US": "/ˌæf.ɔːr.ɪˈsteɪ.ʃən/"
+            },
+            "synonyms": [
+                {
+                    "word": "reforestation",
+                    "meaning": "trồng lại rừng"
+                },
+                {
+                    "word": "tree planting",
+                    "meaning": "trồng cây"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "deforestation",
+                    "meaning": "phá rừng"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "afforestation",
+                        "meaning": "sự trồng rừng"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "afforest",
+                        "meaning": "trồng rừng"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "afforested",
+                        "meaning": "được trồng rừng"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "degradation",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "the process of degrading or being degraded",
+                    "example": "The degradation of the environment is a serious issue."
+                }
+            ],
+            "meaning": "sự suy thoái",
+            "type": "noun",
+            "example": "The degradation of the environment is a serious issue.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˌdɛɡrəˈdeɪʃən/",
+                "en-US": "/ˌdɛɡrəˈdeɪʃən/"
+            },
+            "synonyms": [
+                {
+                    "word": "deterioration",
+                    "meaning": "sự suy thoái"
+                },
+                {
+                    "word": "decline",
+                    "meaning": "sự suy giảm"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "improvement",
+                    "meaning": "sự cải thiện"
+                },
+                {
+                    "word": "enhancement",
+                    "meaning": "sự nâng cao"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "degradation",
+                        "meaning": "sự suy thoái"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "degrade",
+                        "meaning": "làm suy thoái"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "degradable",
+                        "meaning": "có thể phân hủy"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "degradably",
+                        "meaning": "một cách có thể phân hủy"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "indisputably",
+            "definitions": [
+                {
+                    "partOfSpeech": "adverb",
+                    "definition": "in a way that is not able to be challenged or denied",
+                    "example": "She is indisputably the best candidate for the job."
+                }
+            ],
+            "meaning": "không thể tranh cãi",
+            "type": "adverb",
+            "example": "She is indisputably the best candidate for the job.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˌɪndɪˈspjuːtəbl/",
+                "en-US": "/ˌɪndɪˈspjuːtəbl/"
+            },
+            "synonyms": [
+                {
+                    "word": "undeniably",
+                    "meaning": "không thể phủ nhận"
+                },
+                {
+                    "word": "unquestionably",
+                    "meaning": "không thể nghi ngờ"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "arguably",
+                    "meaning": "có thể cho rằng"
+                }
+            ],
+            "wordFamily": {
+                "adverb": [
+                    {
+                        "word": "indisputably",
+                        "meaning": "không thể tranh cãi"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "dispute",
+                        "meaning": "tranh cãi"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "dispute",
+                        "meaning": "cuộc tranh cãi"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "indisputable",
+                        "meaning": "không thể tranh cãi"
+                    }
+                ]
+            }
         }
     ]
 }
