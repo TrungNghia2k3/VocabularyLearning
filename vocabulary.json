@@ -10683,6 +10683,595 @@
                     }
                 ]
             }
+        },
+        {
+            "word": "integrity",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "the quality of being honest and having strong moral principles",
+                    "example": "She has a reputation for integrity and fairness."
+                },
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "the state of being whole and undivided",
+                    "example": "The integrity of the data is crucial for accurate analysis."
+                }
+            ],
+            "meaning": "tính toàn vẹn, nguyên vẹn",
+            "type": "noun",
+            "example": "She has a reputation for integrity and fairness.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ɪnˈtɛɡrɪti/",
+                "en-US": "/ɪnˈtɛɡrɪti/"
+            },
+            "synonyms": [
+                {
+                    "word": "honesty",
+                    "meaning": "sự trung thực"
+                },
+                {
+                    "word": "wholeness",
+                    "meaning": "tính toàn vẹn"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "dishonesty",
+                    "meaning": "sự không trung thực"
+                },
+                {
+                    "word": "corruption",
+                    "meaning": "sự tham nhũng"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "integrity",
+                        "meaning": "tính toàn vẹn"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "integral",
+                        "meaning": "toàn bộ, trọn vẹn"
+                    },
+                    {
+                        "word": "integrated",
+                        "meaning": "được tích hợp"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "integrate",
+                        "meaning": "hội nhập, tích hợp"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "integrally",
+                        "meaning": "một cách toàn bộ"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "perpetuate",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "to make something continue indefinitely",
+                    "example": "The law perpetuates the inequality between the rich and the poor."
+                }
+            ],
+            "meaning": "duy trì, kéo dài",
+            "type": "verb",
+            "example": "The law perpetuates the inequality between the rich and the poor.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/pəˈpɛtʃueɪt/",
+                "en-US": "/pərˈpɛtʃueɪt/"
+            },
+            "synonyms": [
+                {
+                    "word": "maintain",
+                    "meaning": "duy trì"
+                },
+                {
+                    "word": "sustain",
+                    "meaning": "duy trì"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "end",
+                    "meaning": "kết thúc"
+                },
+                {
+                    "word": "terminate",
+                    "meaning": "chấm dứt"
+                }
+            ],
+            "wordFamily": {
+                "verb": [
+                    {
+                        "word": "perpetuate",
+                        "meaning": "duy trì"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "perpetuation",
+                        "meaning": "sự duy trì"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "perpetual",
+                        "meaning": "vĩnh viễn"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "perpetually",
+                        "meaning": "một cách vĩnh viễn"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "porous",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "having small holes that allow air or liquid to pass through",
+                    "example": "The porous material allowed water to seep through."
+                },
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "easily influenced or affected",
+                    "example": "The porous border made it easy for people to cross."
+                },
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "able to absorb or take in",
+                    "example": "The porous soil absorbed the rainwater quickly."
+                }
+            ],
+            "meaning": "rỗ, có nhiều lỗ rỗng",
+            "type": "adjective",
+            "example": "The porous material allowed water to seep through.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈpɔːrəs/",
+                "en-US": "/ˈpɔːrəs/"
+            },
+            "synonyms": [
+                {
+                    "word": "permeable",
+                    "meaning": "thấm qua được"
+                },
+                {
+                    "word": "spongy",
+                    "meaning": "xốp"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "impermeable",
+                    "meaning": "không thấm qua được"
+                },
+                {
+                    "word": "solid",
+                    "meaning": "rắn chắc"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "porous",
+                        "meaning": "rỗ"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "porosity",
+                        "meaning": "tính rỗ"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "porously",
+                        "meaning": "một cách rỗ"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "primate",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a member of the order Primates, which includes lemurs, monkeys, and apes",
+                    "example": "Humans are classified as primates."
+                }
+            ],
+            "meaning": "loài linh trưởng",
+            "type": "noun",
+            "example": "Humans are classified as primates.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˌprɪmeɪt/",
+                "en-US": "/ˌprɪmeɪt/"
+            },
+            "synonyms": [
+                {
+                    "word": "ape",
+                    "meaning": "vượn"
+                },
+                {
+                    "word": "monkey",
+                    "meaning": "khỉ"
+                }
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "primate",
+                        "meaning": "loài linh trưởng"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "primate",
+                        "meaning": "thuộc về loài linh trưởng"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "ranching",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "the practice of raising animals for food, fiber, or other products",
+                    "example": "Ranching is a significant part of the agricultural industry."
+                }
+            ],
+            "meaning": "chăn nuôi gia súc",
+            "type": "noun",
+            "example": "Ranching is a significant part of the agricultural industry.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈræntʃɪŋ/",
+                "en-US": "/ˈræntʃɪŋ/"
+            },
+            "synonyms": [
+                {
+                    "word": "animal husbandry",
+                    "meaning": "chăn nuôi"
+                },
+                {
+                    "word": "livestock farming",
+                    "meaning": "chăn nuôi gia súc"
+                }
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "ranching",
+                        "meaning": "sự chăn nuôi gia súc"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "ranch",
+                        "meaning": "chăn nuôi gia súc"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "ranching",
+                        "meaning": "thuộc về chăn nuôi gia súc"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "slugging",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "moving slowly or lazily",
+                    "example": "The slugging pace of the meeting made it hard to stay focused."
+                }
+            ],
+            "meaning": "chậm chạp, lề mề",
+            "type": "adjective",
+            "example": "The slugging pace of the meeting made it hard to stay focused.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˌslʌɡɪŋ/",
+                "en-US": "/ˌslʌɡɪŋ/"
+            },
+            "synonyms": [
+                {
+                    "word": "sluggish",
+                    "meaning": "chậm chạp"
+                },
+                {
+                    "word": "lethargic",
+                    "meaning": "uể oải"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "energetic",
+                    "meaning": "năng động"
+                },
+                {
+                    "word": "lively",
+                    "meaning": "sống động"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "slugging",
+                        "meaning": "chậm chạp"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "slug",
+                        "meaning": "đánh mạnh"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "slug",
+                        "meaning": "con ốc sên; cú đánh mạnh"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "stink",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "to have a strong, unpleasant smell",
+                    "example": "The garbage stinks up the whole neighborhood."
+                },
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a strong, unpleasant smell",
+                    "example": "There was a stink coming from the old refrigerator."
+                }
+            ],
+            "meaning": "bốc mùi hôi thối",
+            "type": "verb, noun",
+            "example": "The garbage stinks up the whole neighborhood.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/stɪŋk/",
+                "en-US": "/stɪŋk/"
+            },
+            "synonyms": [
+                {
+                    "word": "reek",
+                    "meaning": "bốc mùi hôi thối"
+                },
+                {
+                    "word": "smell",
+                    "meaning": "mùi"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "fragrance",
+                    "meaning": "hương thơm"
+                },
+                {
+                    "word": "aroma",
+                    "meaning": "hương vị"
+                }
+            ],
+            "wordFamily": {
+                "verb": [
+                    {
+                        "word": "stink",
+                        "meaning": "bốc mùi hôi thối"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "stink",
+                        "meaning": "mùi hôi thối"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "stinky",
+                        "meaning": "hôi thối"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "unequivocally",
+            "definitions": [
+                {
+                    "partOfSpeech": "adverb",
+                    "definition": "in a way that is clear and unambiguous",
+                    "example": "She stated unequivocally that she would not be running for office."
+                }
+            ],
+            "meaning": "một cách rõ ràng, không mơ hồ",
+            "type": "adverb",
+            "example": "She stated unequivocally that she would not be running for office.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˌjuːnɪˈkwɪvəkəli/",
+                "en-US": "/ˌjuːnɪˈkwɪvəkəli/"
+            },
+            "synonyms": [
+                {
+                    "word": "clearly",
+                    "meaning": "rõ ràng"
+                },
+                {
+                    "word": "unambiguously",
+                    "meaning": "không mơ hồ"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "ambiguously",
+                    "meaning": "mơ hồ"
+                },
+                {
+                    "word": "vaguely",
+                    "meaning": "mơ hồ"
+                }
+            ],
+            "wordFamily": {
+                "adverb": [
+                    {
+                        "word": "unequivocally",
+                        "meaning": "một cách rõ ràng"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "unequivocal",
+                        "meaning": "rõ ràng, không mơ hồ"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "equivocation",
+                        "meaning": "sự nói nước đôi"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "equivocate",
+                        "meaning": "nói nước đôi"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "unobstructed",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "not blocked or hindered",
+                    "example": "The view from the top of the mountain was unobstructed."
+                }
+            ],
+            "meaning": "không bị cản trở",
+            "type": "adjective",
+            "example": "The view from the top of the mountain was unobstructed.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˌʌnəbˈstrʌktɪd/",
+                "en-US": "/ˌʌnəbˈstrʌktɪd/"
+            },
+            "synonyms": [
+                {
+                    "word": "clear",
+                    "meaning": "rõ ràng"
+                },
+                {
+                    "word": "open",
+                    "meaning": "mở"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "blocked",
+                    "meaning": "bị chặn"
+                },
+                {
+                    "word": "obstructed",
+                    "meaning": "bị cản trở"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "unobstructed",
+                        "meaning": "không bị cản trở"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "obstruct",
+                        "meaning": "cản trở"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "obstruction",
+                        "meaning": "sự cản trở"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "unobstructedly",
+                        "meaning": "một cách không bị cản trở"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "acupuncture",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a traditional Chinese medical practice that involves inserting thin needles into specific points on the body",
+                    "example": "Acupuncture is often used to relieve pain and promote healing."
+                }
+            ],
+            "meaning": "châm cứu",
+            "type": "noun",
+            "example": "Acupuncture is often used to relieve pain and promote healing.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈæk.jʊˌpʌŋk.tʃər/",
+                "en-US": "/ˈæk.jʊˌpʌŋk.tʃər/"
+            },
+            "synonyms": [
+                {
+                    "word": "acupressure",
+                    "meaning": "bấm huyệt"
+                },
+                {
+                    "word": "moxibustion",
+                    "meaning": "ngải cứu"
+                }
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "acupuncture",
+                        "meaning": "châm cứu"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "acupunctural",
+                        "meaning": "thuộc về châm cứu"
+                    }
+                ]
+            }
         }
     ]
 }
