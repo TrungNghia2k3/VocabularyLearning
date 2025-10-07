@@ -10758,65 +10758,64 @@
             }
         },
         {
-            "word": "perpetuate",
+            "word": "appetite",
             "definitions": [
                 {
-                    "partOfSpeech": "verb",
-                    "definition": "to make something continue indefinitely",
-                    "example": "The law perpetuates the inequality between the rich and the poor."
+                    "partOfSpeech": "noun",
+                    "definition": "a natural desire to satisfy a bodily need, especially for food",
+                    "example": "The smell of the food increased my appetite."
+                },
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a strong desire or liking for something",
+                    "example": "She has an appetite for adventure."
                 }
             ],
-            "meaning": "duy trì, kéo dài",
-            "type": "verb",
-            "example": "The law perpetuates the inequality between the rich and the poor.",
+            "meaning": "thèm ăn, sự thèm muốn",
+            "type": "noun",
+            "example": "The smell of the food increased my appetite.",
             "level": "advanced",
             "phonetic": {
-                "en-GB": "/pəˈpɛtʃueɪt/",
-                "en-US": "/pərˈpɛtʃueɪt/"
+                "en-GB": "/ˈæpɪtaɪt/",
+                "en-US": "/ˈæpɪtaɪt/"
             },
             "synonyms": [
                 {
-                    "word": "maintain",
-                    "meaning": "duy trì"
+                    "word": "hunger",
+                    "meaning": "cơn đói"
                 },
                 {
-                    "word": "sustain",
-                    "meaning": "duy trì"
+                    "word": "craving",
+                    "meaning": "sự thèm muốn"
                 }
             ],
             "antonyms": [
                 {
-                    "word": "end",
-                    "meaning": "kết thúc"
+                    "word": "satiety",
+                    "meaning": "sự no nê"
                 },
                 {
-                    "word": "terminate",
-                    "meaning": "chấm dứt"
+                    "word": "dislike",
+                    "meaning": "sự không thích"
                 }
             ],
             "wordFamily": {
-                "verb": [
-                    {
-                        "word": "perpetuate",
-                        "meaning": "duy trì"
-                    }
-                ],
                 "noun": [
                     {
-                        "word": "perpetuation",
-                        "meaning": "sự duy trì"
+                        "word": "appetite",
+                        "meaning": "sự thèm ăn"
                     }
                 ],
                 "adjective": [
                     {
-                        "word": "perpetual",
-                        "meaning": "vĩnh viễn"
+                        "word": "appetitive",
+                        "meaning": "thuộc về sự thèm ăn"
                     }
                 ],
                 "adverb": [
                     {
-                        "word": "perpetually",
-                        "meaning": "một cách vĩnh viễn"
+                        "word": "appetitively",
+                        "meaning": "một cách thèm ăn"
                     }
                 ]
             }
@@ -11269,6 +11268,558 @@
                     {
                         "word": "acupunctural",
                         "meaning": "thuộc về châm cứu"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "blocky",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "having a solid, heavy appearance",
+                    "example": "The blocky design of the building made it stand out in the skyline."
+                },
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "having a thick, muscular build",
+                    "example": "The blocky athlete was known for his strength and power."
+                }
+            ],
+            "meaning": "lùn và mập",
+            "type": "noun",
+            "example": "The blocky design of the building made it stand out in the skyline.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈblɒk.i/",
+                "en-US": "/ˈblɑː.ki/"
+            },
+            "synonyms": [
+                {
+                    "word": "chunky",
+                    "meaning": "lùn và mập"
+                },
+                {
+                    "word": "stocky",
+                    "meaning": "lùn và mập"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "slender",
+                    "meaning": "thon thả"
+                },
+                {
+                    "word": "slim",
+                    "meaning": "mảnh mai"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "blocky",
+                        "meaning": "lùn và mập"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "block",
+                        "meaning": "khối, tảng"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "block",
+                        "meaning": "chặn"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "chronic",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "persisting for a long time or constantly recurring",
+                    "example": "He suffers from chronic back pain."
+                }
+            ],
+            "meaning": "kéo dài kinh niên",
+            "type": "adjective",
+            "example": "He suffers from chronic back pain.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈkrɒn.ɪk/",
+                "en-US": "/ˈkrɑː.nɪk/"
+            },
+            "synonyms": [
+                {
+                    "word": "persistent",
+                    "meaning": "kiên trì, bền bỉ"
+                },
+                {
+                    "word": "long-term",
+                    "meaning": "dài hạn"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "acute",
+                    "meaning": "cấp tính"
+                },
+                {
+                    "word": "temporary",
+                    "meaning": "tạm thời"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "chronic",
+                        "meaning": "kéo dài kinh niên"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "chronicler",
+                        "meaning": "người ghi chép"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "chronicle",
+                        "meaning": "ghi chép"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "buxom",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "having a full, rounded figure",
+                    "example": "The buxom actress was known for her curvy silhouette."
+                }
+            ],
+            "meaning": "đẫy đà, đầy đặn",
+            "type": "adjective",
+            "example": "The buxom actress was known for her curvy silhouette.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈbʌk.səm/",
+                "en-US": "/ˈbʌk.səm/"
+            },
+            "synonyms": [
+                {
+                    "word": "curvy",
+                    "meaning": "đầy đặn"
+                },
+                {
+                    "word": "voluptuous",
+                    "meaning": "gợi cảm"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "slim",
+                    "meaning": "mảnh mai"
+                },
+                {
+                    "word": "thin",
+                    "meaning": "gầy"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "buxom",
+                        "meaning": "đẫy đà"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "buxomness",
+                        "meaning": "tính đẫy đà"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "expel",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "to force someone to leave a place",
+                    "example": "The school decided to expel the student for cheating."
+                }
+            ],
+            "meaning": "trục xuất, đuổi học",
+            "type": "verb",
+            "example": "The school decided to expel the student for cheating.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ɪkˈspɛl/",
+                "en-US": "/ɪkˈspɛl/"
+            },
+            "synonyms": [
+                {
+                    "word": "eject",
+                    "meaning": "đuổi ra"
+                },
+                {
+                    "word": "oust",
+                    "meaning": "đuổi ra"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "admit",
+                    "meaning": "cho vào"
+                },
+                {
+                    "word": "accept",
+                    "meaning": "chấp nhận"
+                }
+            ],
+            "wordFamily": {
+                "verb": [
+                    {
+                        "word": "expel",
+                        "meaning": "trục xuất"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "expulsion",
+                        "meaning": "sự trục xuất"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "expellable",
+                        "meaning": "có thể bị trục xuất"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "hypertension",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a condition in which the force of the blood against the artery walls is too high",
+                    "example": "Hypertension is often called the 'silent killer' because it usually has no symptoms."
+                }
+            ],
+            "meaning": "tăng huyết áp",
+            "type": "noun",
+            "example": "Hypertension is often called the 'silent killer' because it usually has no symptoms.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˌhaɪ.pəˈtɛn.ʃən/",
+                "en-US": "/ˌhaɪ.pərˈtɛn.ʃən/"
+            },
+            "synonyms": [
+                {
+                    "word": "high blood pressure",
+                    "meaning": "huyết áp cao"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "hypotension",
+                    "meaning": "huyết áp thấp"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "hypertension",
+                        "meaning": "tăng huyết áp"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "hypertensive",
+                        "meaning": "liên quan đến tăng huyết áp"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "immunity",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "the ability of an organism to resist infection or disease",
+                    "example": "Vaccination can help boost your immunity against certain diseases."
+                }
+            ],
+            "meaning": "miễn dịch",
+            "type": "noun",
+            "example": "Vaccination can help boost your immunity against certain diseases.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ɪˈmjuː.nə.ti/",
+                "en-US": "/ɪˈmjuː.nə.ti/"
+            },
+            "synonyms": [
+                {
+                    "word": "resistance",
+                    "meaning": "sức đề kháng"
+                },
+                {
+                    "word": "protection",
+                    "meaning": "sự bảo vệ"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "susceptibility",
+                    "meaning": "sự dễ bị tổn thương"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "immunity",
+                        "meaning": "miễn dịch"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "immune",
+                        "meaning": "miễn dịch"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "immunize",
+                        "meaning": "tiêm chủng"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "immunologically",
+                        "meaning": "một cách miễn dịch"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "meditation",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a practice of focused attention and awareness, often used for relaxation and stress reduction",
+                    "example": "Meditation can help calm the mind and improve concentration."
+                }
+            ],
+            "meaning": "thiền",
+            "type": "noun",
+            "example": "Meditation can help calm the mind and improve concentration.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˌmɛdɪˈteɪʃən/",
+                "en-US": "/ˌmɛdɪˈteɪʃən/"
+            },
+            "synonyms": [
+                {
+                    "word": "contemplation",
+                    "meaning": "sự suy ngẫm"
+                },
+                {
+                    "word": "reflection",
+                    "meaning": "sự phản chiếu"
+                }
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "meditation",
+                        "meaning": "thiền"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "meditate",
+                        "meaning": "thiền"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "meditative",
+                        "meaning": "thuộc về thiền"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "meditatively",
+                        "meaning": "một cách thiền"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "rejuvenate",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "to make someone or something look or feel younger, fresher, or more lively",
+                    "example": "The spa treatment is designed to rejuvenate the skin."
+                }
+            ],
+            "meaning": "trẻ hóa",
+            "type": "verb",
+            "example": "The spa treatment is designed to rejuvenate the skin.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/rɪˈdʒuː.vən.eɪt/",
+                "en-US": "/rɪˈdʒuː.vən.eɪt/"
+            },
+            "synonyms": [
+                {
+                    "word": "revitalize",
+                    "meaning": "tái sinh"
+                },
+                {
+                    "word": "refresh",
+                    "meaning": "làm mới"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "age",
+                    "meaning": "làm già đi"
+                },
+                {
+                    "word": "worsen",
+                    "meaning": "làm tồi tệ hơn"
+                }
+            ],
+            "wordFamily": {
+                "verb": [
+                    {
+                        "word": "rejuvenate",
+                        "meaning": "trẻ hóa"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "rejuvenation",
+                        "meaning": "sự trẻ hóa"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "rejuvenated",
+                        "meaning": "được trẻ hóa"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "sanctuary",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a place of refuge or safety",
+                    "example": "The wildlife sanctuary is home to many endangered species."
+                }
+            ],
+            "meaning": "nơi trú ẩn",
+            "type": "noun",
+            "example": "The wildlife sanctuary is home to many endangered species.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈsæŋk.tʃuː.ər.i/",
+                "en-US": "/ˈsæŋk.tʃuː.ər.i/"
+            },
+            "synonyms": [
+                {
+                    "word": "refuge",
+                    "meaning": "nơi trú ẩn"
+                },
+                {
+                    "word": "haven",
+                    "meaning": "nơi an toàn"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "danger",
+                    "meaning": "nguy hiểm"
+                },
+                {
+                    "word": "threat",
+                    "meaning": "mối đe dọa"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "sanctuary",
+                        "meaning": "nơi trú ẩn"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "sanctuarial",
+                        "meaning": "thuộc về nơi trú ẩn"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "stubby",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "short and thick",
+                    "example": "The stubby pencil was difficult to hold."
+                }
+            ],
+            "meaning": "ngắn và dày",
+            "type": "adjective",
+            "example": "The stubby pencil was difficult to hold.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈstʌb.i/",
+                "en-US": "/ˈstʌb.i/"
+            },
+            "synonyms": [
+                {
+                    "word": "short",
+                    "meaning": "ngắn"
+                },
+                {
+                    "word": "thickset",
+                    "meaning": "dày đặc"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "long",
+                    "meaning": "dài"
+                },
+                {
+                    "word": "slender",
+                    "meaning": "thon thả"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "stubby",
+                        "meaning": "ngắn và dày"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "stub",
+                        "meaning": "gốc, mẩu"
                     }
                 ]
             }
