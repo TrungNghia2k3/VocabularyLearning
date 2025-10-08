@@ -1098,6 +1098,98 @@ footer {
     font-weight: bold;
 }
 
+/* Today's Words Writing Mode Styles */
+#todayWordsWritingContent .card {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#todayWordsWritingInput {
+    transition: all 0.3s ease;
+    border: 2px solid #dee2e6;
+}
+
+#todayWordsWritingInput:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    transform: scale(1.02);
+}
+
+#todayWordsWritingInput:disabled {
+    background-color: #f8f9fa;
+    opacity: 0.8;
+}
+
+#todayWordsWritingExercise .alert {
+    border-radius: 12px;
+    border: none;
+    animation: fadeInUp 0.5s ease;
+}
+
+#todayWordsWritingExercise .btn {
+    transition: all 0.3s ease;
+}
+
+#todayWordsWritingExercise .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bg-primary .badge.bg-light {
+    color: #495057 !important;
+}
+
+#todayWordsWritingHintBtn:disabled {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: white;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Writing Summary Styles */
+#todayWordsWritingSummary .card-body {
+    padding: 30px;
+}
+
+#todayWordsWritingSummary h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#todayWordsWritingSummary .card {
+    transition: transform 0.3s ease;
+}
+
+#todayWordsWritingSummary .card:hover {
+    transform: translateY(-5px);
+}
+
+/* Writing Review Modal Styles */
+#writingReviewModal .card {
+    transition: transform 0.2s ease;
+}
+
+#writingReviewModal .card:hover {
+    transform: translateX(5px);
+}
+
+#writingReviewModal code {
+    background-color: #f8f9fa;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
 /* Today's Words Practice Mode Styles */
 #todayWordsPracticeContent .practice-option {
     transition: all 0.3s ease;

@@ -631,9 +631,9 @@
             <div id="todayWordsWritingContent" style="display: none;">
                 <div class="text-center mb-4">
                     <h4 class="text-warning">
-                        <i class="fas fa-edit"></i> Luyện tập viết
+                        <i class="fas fa-keyboard"></i> Luyện tập viết từ
                     </h4>
-                    <p class="text-muted">Viết câu sử dụng từ vựng được cho</p>
+                    <p class="text-muted">Nhìn nghĩa tiếng Việt, viết lại từ tiếng Anh chính xác</p>
                 </div>
 
                 <!-- Writing Exercise -->
@@ -651,79 +651,111 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <!-- Current Word Info -->
-                            <div class="row mb-4">
-                                <div class="col-md-6">
-                                    <div class="card bg-light">
-                                        <div class="card-body text-center">
-                                            <h3 class="text-primary mb-2" id="todayWordsWritingWord">Word</h3>
-                                            <p class="text-muted mb-1" id="todayWordsWritingType">[noun]</p>
-                                            <p class="mb-2" id="todayWordsWritingPhonetic">/word/</p>
-                                            <button class="btn btn-outline-primary btn-sm" id="todayWordsWritingPronounceBtn">
-                                                <i class="fas fa-volume-up"></i> Phát âm
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="card bg-info text-white">
-                                        <div class="card-body">
-                                            <h6><i class="fas fa-lightbulb"></i> Nghĩa:</h6>
-                                            <p class="mb-2" id="todayWordsWritingMeaning">Meaning of the word</p>
-                                            <h6><i class="fas fa-quote-left"></i> Ví dụ mẫu:</h6>
-                                            <p class="fst-italic mb-0" id="todayWordsWritingExample">Example sentence</p>
-                                        </div>
+                            <!-- Vietnamese Meaning (Question) -->
+                            <div class="card bg-primary text-white mb-4">
+                                <div class="card-body text-center">
+                                    <h5><i class="fas fa-question-circle"></i> Từ tiếng Anh có nghĩa là:</h5>
+                                    <h2 class="mb-3" id="todayWordsWritingMeaning">Nghĩa tiếng Việt</h2>
+                                    <p class="mb-2">
+                                        <strong>Loại từ:</strong> 
+                                        <span class="badge bg-light text-dark" id="todayWordsWritingType">[noun]</span>
+                                    </p>
+                                    <div id="todayWordsWritingExampleSection" style="display: none;">
+                                        <small class="text-light">
+                                            <i class="fas fa-lightbulb"></i> Gợi ý: 
+                                            <span id="todayWordsWritingExample">Example sentence</span>
+                                        </small>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Writing Area -->
+                            <!-- Answer Input -->
                             <div class="card border-success">
                                 <div class="card-header bg-success text-white">
                                     <h6 class="mb-0">
-                                        <i class="fas fa-pencil-alt"></i> Viết câu của bạn sử dụng từ 
-                                        "<span id="todayWordsWritingTargetWord">word</span>"
+                                        <i class="fas fa-edit"></i> Viết từ tiếng Anh:
                                     </h6>
                                 </div>
                                 <div class="card-body">
-                                    <textarea 
-                                        class="form-control mb-3" 
-                                        id="todayWordsWritingTextarea" 
-                                        rows="4" 
-                                        placeholder="Hãy viết một câu hoặc đoạn văn ngắn sử dụng từ này..."
-                                        style="font-size: 1.1rem; line-height: 1.6;"></textarea>
+                                    <div class="input-group mb-3">
+                                        <input type="text" 
+                                               class="form-control form-control-lg text-center fw-bold" 
+                                               id="todayWordsWritingInput" 
+                                               placeholder="Nhập từ tiếng Anh..."
+                                               style="font-size: 1.5rem; letter-spacing: 2px;"
+                                               autocomplete="off"
+                                               spellcheck="false">
+                                        <button class="btn btn-outline-info" id="todayWordsWritingHintBtn" type="button">
+                                            <i class="fas fa-lightbulb"></i> Gợi ý
+                                        </button>
+                                    </div>
+                                    
+                                    <!-- Feedback Area -->
+                                    <div id="todayWordsWritingFeedback" style="display: none;">
+                                        <!-- Correct Answer -->
+                                        <div id="todayWordsWritingCorrect" class="alert alert-success" style="display: none;">
+                                            <div class="d-flex align-items-center">
+                                                <i class="fas fa-check-circle fa-2x me-3"></i>
+                                                <div>
+                                                    <h6 class="mb-1">Chính xác! 🎉</h6>
+                                                    <p class="mb-0">Bạn đã viết đúng từ: <strong id="todayWordsWritingCorrectWord">word</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Wrong Answer -->
+                                        <div id="todayWordsWritingWrong" class="alert alert-danger" style="display: none;">
+                                            <div class="d-flex align-items-center">
+                                                <i class="fas fa-times-circle fa-2x me-3"></i>
+                                                <div>
+                                                    <h6 class="mb-1">Chưa đúng</h6>
+                                                    <p class="mb-1">Bạn viết: <strong id="todayWordsWritingUserAnswer">user input</strong></p>
+                                                    <p class="mb-0">Đáp án đúng: <strong id="todayWordsWritingCorrectAnswer">correct word</strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div>
-                                            <small class="text-muted">
-                                                <span id="todayWordsWritingCharCount">0</span> ký tự |
-                                                <span id="todayWordsWritingWordCount">0</span> từ
-                                            </small>
+                                            <button class="btn btn-outline-secondary" id="todayWordsWritingSkipBtn">
+                                                <i class="fas fa-forward"></i> Bỏ qua
+                                            </button>
                                         </div>
                                         <div class="d-flex gap-2">
-                                            <button class="btn btn-outline-secondary" id="todayWordsWritingClearBtn">
-                                                <i class="fas fa-eraser"></i> Xóa
+                                            <button class="btn btn-outline-primary" id="todayWordsWritingPronounceBtn" style="display: none;">
+                                                <i class="fas fa-volume-up"></i> Phát âm
                                             </button>
                                             <button class="btn btn-success" id="todayWordsWritingSubmitBtn">
-                                                <i class="fas fa-check"></i> Hoàn thành
+                                                <i class="fas fa-check"></i> Kiểm tra
+                                            </button>
+                                            <button class="btn btn-primary" id="todayWordsWritingNextBtn" style="display: none;">
+                                                <i class="fas fa-arrow-right"></i> Tiếp theo
                                             </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Hints and Tips -->
-                            <div class="card border-info mt-3" id="todayWordsWritingHints">
+                            <!-- Word Details (shown after answer) -->
+                            <div class="card border-info mt-3" id="todayWordsWritingDetails" style="display: none;">
                                 <div class="card-body">
-                                    <h6 class="text-info">
-                                        <i class="fas fa-lightbulb"></i> Gợi ý viết:
-                                    </h6>
-                                    <ul class="mb-0" id="todayWordsWritingHintsList">
-                                        <li>Hãy tạo một câu đơn giản nhưng có nghĩa</li>
-                                        <li>Sử dụng từ trong bối cảnh phù hợp</li>
-                                        <li>Có thể viết về kinh nghiệm cá nhân</li>
-                                        <li>Đảm bảo ngữ pháp đúng</li>
-                                    </ul>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h6 class="text-info">
+                                                <i class="fas fa-book"></i> Chi tiết từ vựng:
+                                            </h6>
+                                            <p><strong>Từ:</strong> <span id="todayWordsWritingDetailWord">word</span></p>
+                                            <p><strong>Phiên âm:</strong> <span id="todayWordsWritingPhonetic">/word/</span></p>
+                                            <p><strong>Loại từ:</strong> <span id="todayWordsWritingDetailType">noun</span></p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h6 class="text-info">
+                                                <i class="fas fa-quote-left"></i> Ví dụ:
+                                            </h6>
+                                            <p class="fst-italic" id="todayWordsWritingDetailExample">Example sentence</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -738,40 +770,48 @@
                         </div>
                         <div class="card-body text-center">
                             <div class="row mb-4">
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="card bg-primary text-white">
                                         <div class="card-body">
                                             <h2 id="todayWordsWritingTotalWords">0</h2>
-                                            <p class="mb-0">Từ đã viết</p>
+                                            <p class="mb-0">Tổng từ</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="card bg-success text-white">
                                         <div class="card-body">
-                                            <h2 id="todayWordsWritingTotalSentences">0</h2>
-                                            <p class="mb-0">Câu đã viết</p>
+                                            <h2 id="todayWordsWritingCorrectCount">0</h2>
+                                            <p class="mb-0">Viết đúng</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
+                                    <div class="card bg-danger text-white">
+                                        <div class="card-body">
+                                            <h2 id="todayWordsWritingWrongCount">0</h2>
+                                            <p class="mb-0">Viết sai</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
                                     <div class="card bg-warning text-white">
                                         <div class="card-body">
-                                            <h2 id="todayWordsWritingTotalChars">0</h2>
-                                            <p class="mb-0">Ký tự đã viết</p>
+                                            <h2 id="todayWordsWritingAccuracy">0%</h2>
+                                            <p class="mb-0">Độ chính xác</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             
                             <div class="mb-4">
-                                <h5>🎉 Tuyệt vời! Bạn đã hoàn thành bài luyện viết</h5>
-                                <p class="text-muted">Viết câu là cách tuyệt vời để ghi nhớ từ vựng!</p>
+                                <h5 id="todayWordsWritingResultMessage">🎉 Tuyệt vời!</h5>
+                                <p class="text-muted">Luyện viết từ vựng giúp bạn ghi nhớ tốt hơn!</p>
                             </div>
 
                             <div class="d-flex gap-2 justify-content-center">
                                 <button class="btn btn-primary" id="todayWordsWritingReviewBtn">
-                                    <i class="fas fa-eye"></i> Xem lại bài viết
+                                    <i class="fas fa-eye"></i> Xem kết quả chi tiết
                                 </button>
                                 <button class="btn btn-success" id="todayWordsWritingRestartBtn">
                                     <i class="fas fa-redo"></i> Luyện lại
@@ -787,9 +827,9 @@
                 <!-- Start Writing Button -->
                 <div id="todayWordsWritingStart" class="text-center">
                     <button class="btn btn-warning btn-lg" id="todayWordsWritingStartBtn">
-                        <i class="fas fa-edit"></i> Bắt đầu luyện viết
+                        <i class="fas fa-keyboard"></i> Bắt đầu luyện viết từ
                     </button>
-                    <p class="text-muted mt-2">Luyện tập viết câu với các từ vựng đã chọn</p>
+                    <p class="text-muted mt-2">Nhìn nghĩa tiếng Việt, viết lại từ tiếng Anh</p>
                 </div>
             </div>
         </div>

@@ -48,9 +48,9 @@ class VocabularyApp {
         this.todayWordsWritingIndex = 0;
         this.todayWordsWritingList = [];
         this.todayWordsWritingAnswers = [];
-        this.todayWordsWritingTotalWords = 0;
-        this.todayWordsWritingTotalChars = 0;
-        this.todayWordsWritingTotalSentences = 0;
+        this.todayWordsWritingCorrect = 0;
+        this.todayWordsWritingWrong = 0;
+        this.todayWordsWritingHintUsed = false;
         
         // Special Practice Modes Data
         this.prepositions = [];
@@ -429,12 +429,16 @@ class VocabularyApp {
         // Today's Words Writing Mode
         document.getElementById('todayWordsWritingStartBtn').addEventListener('click', () => this.startTodayWordsWriting());
         document.getElementById('todayWordsWritingSubmitBtn').addEventListener('click', () => this.submitTodayWordsWriting());
-        document.getElementById('todayWordsWritingClearBtn').addEventListener('click', () => this.clearTodayWordsWriting());
+        document.getElementById('todayWordsWritingSkipBtn').addEventListener('click', () => this.skipTodayWordsWriting());
+        document.getElementById('todayWordsWritingNextBtn').addEventListener('click', () => this.nextTodayWordsWriting());
+        document.getElementById('todayWordsWritingHintBtn').addEventListener('click', () => this.showTodayWordsWritingHint());
         document.getElementById('todayWordsWritingPronounceBtn').addEventListener('click', () => this.pronounceTodayWordsWriting());
         document.getElementById('todayWordsWritingReviewBtn').addEventListener('click', () => this.reviewTodayWordsWriting());
         document.getElementById('todayWordsWritingRestartBtn').addEventListener('click', () => this.restartTodayWordsWriting());
         document.getElementById('todayWordsWritingNewWordsBtn').addEventListener('click', () => this.newTodayWordsWriting());
-        document.getElementById('todayWordsWritingTextarea').addEventListener('input', () => this.updateTodayWordsWritingStats());
+        document.getElementById('todayWordsWritingInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') this.submitTodayWordsWriting();
+        });
 
         // Phrasal Verbs Practice Mode
         document.getElementById('phrasalVerbsBrowseBtn').addEventListener('click', () => this.showPhrasalVerbsBrowse());
@@ -1742,9 +1746,9 @@ class VocabularyApp {
         this.todayWordsWritingIndex = 0;
         this.todayWordsWritingList = [...this.todayWordsList];
         this.todayWordsWritingAnswers = [];
-        this.todayWordsWritingTotalWords = 0;
-        this.todayWordsWritingTotalChars = 0;
-        this.todayWordsWritingTotalSentences = 0;
+        this.todayWordsWritingCorrect = 0;
+        this.todayWordsWritingWrong = 0;
+        this.todayWordsWritingHintUsed = false;
         
         // Show start section, hide exercise and summary
         document.getElementById('todayWordsWritingStart').style.display = 'block';
@@ -1776,99 +1780,142 @@ class VocabularyApp {
         document.getElementById('todayWordsWritingProgressBar').style.width = `${progress}%`;
         document.getElementById('todayWordsWritingPercentage').textContent = `${Math.round(progress)}%`;
 
-        // Display word info
-        document.getElementById('todayWordsWritingWord').textContent = word.word;
-        document.getElementById('todayWordsWritingType').textContent = `[${word.type}]`;
+        // Display question (Vietnamese meaning)
         document.getElementById('todayWordsWritingMeaning').textContent = word.meaning;
+        document.getElementById('todayWordsWritingType').textContent = `[${word.type}]`;
         document.getElementById('todayWordsWritingExample').textContent = word.example;
-        document.getElementById('todayWordsWritingTargetWord').textContent = word.word;
 
+        // Reset UI
+        document.getElementById('todayWordsWritingInput').value = '';
+        document.getElementById('todayWordsWritingInput').disabled = false;
+        document.getElementById('todayWordsWritingFeedback').style.display = 'none';
+        document.getElementById('todayWordsWritingCorrect').style.display = 'none';
+        document.getElementById('todayWordsWritingWrong').style.display = 'none';
+        document.getElementById('todayWordsWritingDetails').style.display = 'none';
+        document.getElementById('todayWordsWritingExampleSection').style.display = 'none';
+        
+        // Button states
+        document.getElementById('todayWordsWritingSubmitBtn').style.display = 'inline-block';
+        document.getElementById('todayWordsWritingNextBtn').style.display = 'none';
+        document.getElementById('todayWordsWritingPronounceBtn').style.display = 'none';
+        
+        // Reset hint
+        this.todayWordsWritingHintUsed = false;
+        
+        // Focus on input
+        document.getElementById('todayWordsWritingInput').focus();
+    }
+
+    submitTodayWordsWriting() {
+        const input = document.getElementById('todayWordsWritingInput');
+        const userAnswer = input.value.trim().toLowerCase();
+        
+        if (userAnswer === '') {
+            this.showError('Vui lòng nhập từ tiếng Anh!');
+            return;
+        }
+
+        const word = this.todayWordsWritingList[this.todayWordsWritingIndex];
+        const correctAnswer = word.word.toLowerCase();
+        const isCorrect = userAnswer === correctAnswer;
+
+        // Show feedback
+        document.getElementById('todayWordsWritingFeedback').style.display = 'block';
+        
+        if (isCorrect) {
+            // Correct answer
+            document.getElementById('todayWordsWritingCorrect').style.display = 'block';
+            document.getElementById('todayWordsWritingWrong').style.display = 'none';
+            document.getElementById('todayWordsWritingCorrectWord').textContent = word.word;
+            this.todayWordsWritingCorrect++;
+        } else {
+            // Wrong answer
+            document.getElementById('todayWordsWritingCorrect').style.display = 'none';
+            document.getElementById('todayWordsWritingWrong').style.display = 'block';
+            document.getElementById('todayWordsWritingUserAnswer').textContent = input.value;
+            document.getElementById('todayWordsWritingCorrectAnswer').textContent = word.word;
+            this.todayWordsWritingWrong++;
+        }
+
+        // Save answer
+        this.todayWordsWritingAnswers.push({
+            word: word.word,
+            meaning: word.meaning,
+            userAnswer: input.value,
+            correctAnswer: word.word,
+            isCorrect: isCorrect,
+            hintUsed: this.todayWordsWritingHintUsed
+        });
+
+        // Show word details
+        this.showTodayWordsWritingDetails(word);
+        
+        // Update buttons
+        document.getElementById('todayWordsWritingSubmitBtn').style.display = 'none';
+        document.getElementById('todayWordsWritingNextBtn').style.display = 'inline-block';
+        document.getElementById('todayWordsWritingPronounceBtn').style.display = 'inline-block';
+        
+        // Disable input
+        input.disabled = true;
+    }
+
+    showTodayWordsWritingDetails(word) {
         // Display phonetic
         const phonetic = word.phonetic && word.phonetic[this.selectedAccent] 
             ? word.phonetic[this.selectedAccent] 
             : `/${word.word}/`;
         document.getElementById('todayWordsWritingPhonetic').textContent = phonetic;
 
-        // Clear textarea and update stats
-        document.getElementById('todayWordsWritingTextarea').value = '';
-        this.updateTodayWordsWritingStats();
-        
-        // Generate dynamic hints
-        this.generateTodayWordsWritingHints(word);
-        
-        // Focus on textarea
-        document.getElementById('todayWordsWritingTextarea').focus();
+        // Update detail fields
+        document.getElementById('todayWordsWritingDetailWord').textContent = word.word;
+        document.getElementById('todayWordsWritingDetailType').textContent = word.type;
+        document.getElementById('todayWordsWritingDetailExample').textContent = word.example;
+
+        // Show details section
+        document.getElementById('todayWordsWritingDetails').style.display = 'block';
     }
 
-    generateTodayWordsWritingHints(word) {
-        const hintsList = document.getElementById('todayWordsWritingHintsList');
-        const hints = [
-            `Hãy tạo một câu sử dụng từ "${word.word}" với nghĩa là "${word.meaning}"`,
-            `Bạn có thể viết về kinh nghiệm cá nhân liên quan đến từ này`,
-            `Thử mô tả một tình huống mà từ "${word.word}" được sử dụng`,
-            `Có thể kết hợp với các từ đồng nghĩa hoặc trái nghĩa`,
-            `Viết câu đơn giản nhưng đầy đủ nghĩa`
-        ];
-        
-        // Pick 3 random hints
-        const selectedHints = hints.sort(() => 0.5 - Math.random()).slice(0, 3);
-        
-        hintsList.innerHTML = selectedHints.map(hint => `<li>${hint}</li>`).join('');
-    }
-
-    updateTodayWordsWritingStats() {
-        const textarea = document.getElementById('todayWordsWritingTextarea');
-        const text = textarea.value;
-        
-        // Count characters
-        const charCount = text.length;
-        
-        // Count words (split by spaces and filter empty)
-        const wordCount = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
-        
-        // Update display
-        document.getElementById('todayWordsWritingCharCount').textContent = charCount;
-        document.getElementById('todayWordsWritingWordCount').textContent = wordCount;
-        
-        // Enable/disable submit button
-        const submitBtn = document.getElementById('todayWordsWritingSubmitBtn');
-        if (text.trim().length > 0) {
-            submitBtn.disabled = false;
-        } else {
-            submitBtn.disabled = true;
-        }
-    }
-
-    clearTodayWordsWriting() {
-        document.getElementById('todayWordsWritingTextarea').value = '';
-        this.updateTodayWordsWritingStats();
-        document.getElementById('todayWordsWritingTextarea').focus();
-    }
-
-    submitTodayWordsWriting() {
-        const textarea = document.getElementById('todayWordsWritingTextarea');
-        const text = textarea.value.trim();
-        
-        if (text === '') {
-            this.showError('Vui lòng viết câu trước khi hoàn thành!');
-            return;
+    showTodayWordsWritingHint() {
+        if (this.todayWordsWritingHintUsed) {
+            return; // Hint already used
         }
 
-        // Save the answer
         const word = this.todayWordsWritingList[this.todayWordsWritingIndex];
+        
+        // Show example sentence as hint
+        document.getElementById('todayWordsWritingExampleSection').style.display = 'block';
+        this.todayWordsWritingHintUsed = true;
+        
+        // Disable hint button
+        document.getElementById('todayWordsWritingHintBtn').disabled = true;
+        document.getElementById('todayWordsWritingHintBtn').innerHTML = '<i class="fas fa-check"></i> Đã dùng';
+    }
+
+    skipTodayWordsWriting() {
+        const word = this.todayWordsWritingList[this.todayWordsWritingIndex];
+        
+        // Save as skipped
         this.todayWordsWritingAnswers.push({
             word: word.word,
             meaning: word.meaning,
-            answer: text,
-            wordCount: text.split(/\s+/).length,
-            charCount: text.length
+            userAnswer: '(Bỏ qua)',
+            correctAnswer: word.word,
+            isCorrect: false,
+            hintUsed: this.todayWordsWritingHintUsed,
+            skipped: true
         });
 
-        // Update totals
-        this.todayWordsWritingTotalChars += text.length;
-        this.todayWordsWritingTotalWords += text.split(/\s+/).length;
-        this.todayWordsWritingTotalSentences += text.split(/[.!?]+/).filter(s => s.trim()).length;
+        this.todayWordsWritingWrong++;
+        
+        // Move to next word
+        this.nextTodayWordsWriting();
+    }
 
+    nextTodayWordsWriting() {
+        // Reset hint button
+        document.getElementById('todayWordsWritingHintBtn').disabled = false;
+        document.getElementById('todayWordsWritingHintBtn').innerHTML = '<i class="fas fa-lightbulb"></i> Gợi ý';
+        
         // Move to next word
         this.todayWordsWritingIndex++;
         this.showTodayWordsWritingWord();
@@ -1884,34 +1931,69 @@ class VocabularyApp {
         document.getElementById('todayWordsWritingExercise').style.display = 'none';
         document.getElementById('todayWordsWritingSummary').style.display = 'block';
         
-        // Update summary stats
-        document.getElementById('todayWordsWritingTotalWords').textContent = this.todayWordsWritingTotalWords;
-        document.getElementById('todayWordsWritingTotalSentences').textContent = this.todayWordsWritingTotalSentences;
-        document.getElementById('todayWordsWritingTotalChars').textContent = this.todayWordsWritingTotalChars;
+        // Calculate stats
+        const totalWords = this.todayWordsWritingList.length;
+        const accuracy = totalWords > 0 ? Math.round((this.todayWordsWritingCorrect / totalWords) * 100) : 0;
+        
+        // Update summary display
+        document.getElementById('todayWordsWritingTotalWords').textContent = totalWords;
+        document.getElementById('todayWordsWritingCorrectCount').textContent = this.todayWordsWritingCorrect;
+        document.getElementById('todayWordsWritingWrongCount').textContent = this.todayWordsWritingWrong;
+        document.getElementById('todayWordsWritingAccuracy').textContent = `${accuracy}%`;
+        
+        // Set result message based on accuracy
+        const messageElement = document.getElementById('todayWordsWritingResultMessage');
+        if (accuracy >= 90) {
+            messageElement.textContent = '🏆 Xuất sắc! Bạn thật tuyệt vời!';
+            messageElement.className = 'text-success';
+        } else if (accuracy >= 70) {
+            messageElement.textContent = '👍 Tốt lắm! Hãy tiếp tục cố gắng!';
+            messageElement.className = 'text-primary';
+        } else if (accuracy >= 50) {
+            messageElement.textContent = '📚 Khá ổn! Cần luyện tập thêm nữa!';
+            messageElement.className = 'text-warning';
+        } else {
+            messageElement.textContent = '💪 Đừng bỏ cuộc! Hãy luyện tập nhiều hơn!';
+            messageElement.className = 'text-danger';
+        }
     }
 
     reviewTodayWordsWriting() {
-        // Create a review modal or new page showing all answers
+        // Create detailed review modal
         let reviewContent = '<div class="modal fade" id="writingReviewModal" tabindex="-1">';
         reviewContent += '<div class="modal-dialog modal-lg modal-dialog-scrollable">';
         reviewContent += '<div class="modal-content">';
         reviewContent += '<div class="modal-header">';
-        reviewContent += '<h5 class="modal-title"><i class="fas fa-eye"></i> Xem lại bài viết</h5>';
+        reviewContent += '<h5 class="modal-title"><i class="fas fa-chart-line"></i> Kết quả chi tiết</h5>';
         reviewContent += '<button type="button" class="btn-close" data-bs-dismiss="modal"></button>';
         reviewContent += '</div>';
         reviewContent += '<div class="modal-body">';
         
         this.todayWordsWritingAnswers.forEach((answer, index) => {
+            const cardClass = answer.isCorrect ? 'border-success' : 'border-danger';
+            const iconClass = answer.isCorrect ? 'fas fa-check-circle text-success' : 'fas fa-times-circle text-danger';
+            const resultText = answer.skipped ? 'Đã bỏ qua' : (answer.isCorrect ? 'Chính xác' : 'Sai');
+            
             reviewContent += `
-                <div class="card mb-3">
-                    <div class="card-header">
-                        <h6 class="mb-0">${index + 1}. ${answer.word} - <em>${answer.meaning}</em></h6>
+                <div class="card mb-3 ${cardClass}">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h6 class="mb-0">
+                            ${index + 1}. ${answer.word} - <em>${answer.meaning}</em>
+                        </h6>
+                        <span class="badge ${answer.isCorrect ? 'bg-success' : 'bg-danger'}">
+                            <i class="${iconClass}"></i> ${resultText}
+                        </span>
                     </div>
                     <div class="card-body">
-                        <p>${answer.answer}</p>
-                        <small class="text-muted">
-                            ${answer.wordCount} từ | ${answer.charCount} ký tự
-                        </small>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p><strong>Bạn viết:</strong> <code>${answer.userAnswer}</code></p>
+                            </div>
+                            <div class="col-md-6">
+                                <p><strong>Đáp án:</strong> <code>${answer.correctAnswer}</code></p>
+                            </div>
+                        </div>
+                        ${answer.hintUsed ? '<small class="text-muted"><i class="fas fa-lightbulb"></i> Đã sử dụng gợi ý</small>' : ''}
                     </div>
                 </div>
             `;
@@ -1941,9 +2023,9 @@ class VocabularyApp {
         // Reset state
         this.todayWordsWritingIndex = 0;
         this.todayWordsWritingAnswers = [];
-        this.todayWordsWritingTotalWords = 0;
-        this.todayWordsWritingTotalChars = 0;
-        this.todayWordsWritingTotalSentences = 0;
+        this.todayWordsWritingCorrect = 0;
+        this.todayWordsWritingWrong = 0;
+        this.todayWordsWritingHintUsed = false;
         
         // Show exercise, hide summary
         document.getElementById('todayWordsWritingSummary').style.display = 'none';
