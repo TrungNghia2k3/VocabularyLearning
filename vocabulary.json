@@ -11823,6 +11823,560 @@
                     }
                 ]
             }
+        },
+        {
+            "word": "supplanted",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "to replace one thing with another",
+                    "example": "The old technology was supplanted by newer innovations."
+                }
+            ],
+            "meaning": "thay thế",
+            "type": "verb",
+            "example": "The old technology was supplanted by newer innovations.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/səˈplɑːn.tɪd/",
+                "en-US": "/səˈplæn.tɪd/"
+            },
+            "synonyms": [
+                {
+                    "word": "replace",
+                    "meaning": "thay thế"
+                },
+                {
+                    "word": "supersede",
+                    "meaning": "thay thế"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "retain",
+                    "meaning": "giữ lại"
+                },
+                {
+                    "word": "keep",
+                    "meaning": "giữ"
+                }
+            ],
+            "wordFamily": {
+                "verb": [
+                    {
+                        "word": "supplant",
+                        "meaning": "thay thế"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "supplantation",
+                        "meaning": "sự thay thế"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "supplantable",
+                        "meaning": "có thể bị thay thế"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "extensive",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "covering a large area; having a wide scope",
+                    "example": "The extensive research provided valuable insights."
+                }
+            ],
+            "meaning": "rộng rãi",
+            "type": "adjective",
+            "example": "The extensive research provided valuable insights.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ɪkˈstɛnsɪv/",
+                "en-US": "/ɪkˈstɛnsɪv/"
+            },
+            "synonyms": [
+                {
+                    "word": "comprehensive",
+                    "meaning": "toàn diện"
+                },
+                {
+                    "word": "wide-ranging",
+                    "meaning": "phạm vi rộng"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "limited",
+                    "meaning": "hạn chế"
+                },
+                {
+                    "word": "narrow",
+                    "meaning": "hẹp"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "extensive",
+                        "meaning": "rộng rãi"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "extension",
+                        "meaning": "sự mở rộng"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "extend",
+                        "meaning": "mở rộng"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "extensively",
+                        "meaning": "một cách rộng rãi"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "intimacy",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "closeness or familiarity",
+                    "example": "The intimacy between the friends was evident."
+                }
+            ],
+            "meaning": "sự thân mật",
+            "type": "noun",
+            "example": "The intimacy between the friends was evident.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈɪn.tɪ.mə.si/",
+                "en-US": "/ˈɪn.tɪ.mə.si/"
+            },
+            "synonyms": [
+                {
+                    "word": "closeness",
+                    "meaning": "sự thân mật"
+                },
+                {
+                    "word": "familiarity",
+                    "meaning": "sự quen thuộc"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "distance",
+                    "meaning": "khoảng cách"
+                },
+                {
+                    "word": "aloofness",
+                    "meaning": "sự tách biệt"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "intimacy",
+                        "meaning": "sự thân mật"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "intimate",
+                        "meaning": "thân mật"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "intimate",
+                        "meaning": "gợi ý"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "intimately",
+                        "meaning": "một cách thân mật"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "seldom",
+            "definitions": [
+                {
+                    "partOfSpeech": "adverb",
+                    "definition": "not often; rarely",
+                    "example": "She seldom goes to the gym."
+                }
+            ],
+            "meaning": "hiếm khi",
+            "type": "adverb",
+            "example": "She seldom goes to the gym.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈsɛl.dəm/",
+                "en-US": "/ˈsɛl.dəm/"
+            },
+            "synonyms": [
+                {
+                    "word": "rarely",
+                    "meaning": "hiếm khi"
+                },
+                {
+                    "word": "infrequently",
+                    "meaning": "ít khi"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "often",
+                    "meaning": "thường xuyên"
+                },
+                {
+                    "word": "frequently",
+                    "meaning": "thường xuyên"
+                }
+            ],
+            "wordFamily": {
+                "adverb": [
+                    {
+                        "word": "seldom",
+                        "meaning": "hiếm khi"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "seldomly",
+                        "meaning": "hiếm khi"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "ailment",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a physical disorder or illness",
+                    "example": "He suffered from a chronic ailment."
+                }
+            ],
+            "meaning": "bệnh tật",
+            "type": "noun",
+            "example": "He suffered from a chronic ailment.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈeɪl.mənt/",
+                "en-US": "/ˈeɪl.mənt/"
+            },
+            "synonyms": [
+                {
+                    "word": "illness",
+                    "meaning": "bệnh tật"
+                },
+                {
+                    "word": "disorder",
+                    "meaning": "rối loạn"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "health",
+                    "meaning": "sức khỏe"
+                },
+                {
+                    "word": "wellness",
+                    "meaning": "sự khỏe mạnh"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "ailment",
+                        "meaning": "bệnh tật"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "ail",
+                        "meaning": "bị bệnh"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "ail",
+                        "meaning": "làm đau đớn"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "fungus",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a type of organism that feeds on organic matter",
+                    "example": "Mushrooms are a common type of fungus."
+                }
+            ],
+            "meaning": "nấm",
+            "type": "noun",
+            "example": "Mushrooms are a common type of fungus.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈfʌŋ.ɡəs/",
+                "en-US": "/ˈfʌŋ.ɡəs/"
+            },
+            "synonyms": [
+                {
+                    "word": "mushroom",
+                    "meaning": "nấm"
+                },
+                {
+                    "word": "mold",
+                    "meaning": "nấm mốc"
+                }
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "fungus",
+                        "meaning": "nấm"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "fungal",
+                        "meaning": "thuộc về nấm"
+                    }
+                ],
+                "verb": []
+            }
+        },
+        {
+            "word": "yeast",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a type of fungus used in baking and brewing",
+                    "example": "Yeast is essential for making bread rise."
+                }
+            ],
+            "meaning": "nấm men",
+            "type": "noun",
+            "example": "Yeast is essential for making bread rise.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/jiːst/",
+                "en-US": "/jiːst/"
+            },
+            "synonyms": [
+                {
+                    "word": "leaven",
+                    "meaning": "chất làm nở"
+                },
+                {
+                    "word": "baker's yeast",
+                    "meaning": "nấm men làm bánh"
+                }
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "yeast",
+                        "meaning": "nấm men"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "yeasty",
+                        "meaning": "có nấm men"
+                    }
+                ],
+                "verb": []
+            }
+        },
+        {
+            "word": "inevitable",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "something that is certain to happen",
+                    "example": "Change is an inevitable part of life."
+                }
+            ],
+            "meaning": "điều không thể tránh khỏi",
+            "type": "noun",
+            "example": "Change is an inevitable part of life.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ɪˈnɛvɪtəbl/",
+                "en-US": "/ɪˈnɛvɪtəbl/"
+            },
+            "synonyms": [
+                {
+                    "word": "unavoidable",
+                    "meaning": "không thể tránh khỏi"
+                },
+                {
+                    "word": "certain",
+                    "meaning": "chắc chắn"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "avoidable",
+                    "meaning": "có thể tránh khỏi"
+                },
+                {
+                    "word": "uncertain",
+                    "meaning": "không chắc chắn"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "inevitable",
+                        "meaning": "điều không thể tránh khỏi"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "inevitably",
+                        "meaning": "một cách không thể tránh khỏi"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "inevitability",
+                        "meaning": "tính không thể tránh khỏi"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "civilisations",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "the stage of human social development and organization that is considered most advanced.",
+                    "example": "The ancient civilisations of Mesopotamia were known for their innovations in writing and architecture."
+                }
+            ],
+            "meaning": "nền văn minh",
+            "type": "noun",
+            "example": "The ancient civilisations of Mesopotamia were known for their innovations in writing and architecture.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˌsɪv.ɪ.ləˈzeɪ.ʃən/",
+                "en-US": "/ˌsɪv.ɪ.ləˈzeɪ.ʃən/"
+            },
+            "synonyms": [
+                {
+                    "word": "society",
+                    "meaning": "xã hội"
+                },
+                {
+                    "word": "culture",
+                    "meaning": "văn hóa"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "barbarism",
+                    "meaning": "thời kỳ man rợ"
+                },
+                {
+                    "word": "savagery",
+                    "meaning": "thời kỳ dã man"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "civilisation",
+                        "meaning": "nền văn minh"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "civilised",
+                        "meaning": "văn minh"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "civilise",
+                        "meaning": "làm cho văn minh"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "resultant",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a quantity that results from the combination of two or more quantities.",
+                    "example": "The resultant of the two forces was calculated to determine the net force acting on the object."
+                }
+            ],
+            "meaning": "kết quả, thành phẩm, thành quả, hệ quả",
+            "type": "noun",
+            "example": "The resultant of the two forces was calculated to determine the net force acting on the object.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/rɪˈzʌltənt/",
+                "en-US": "/rɪˈzʌltənt/"
+            },
+            "synonyms": [
+                {
+                    "word": "outcome",
+                    "meaning": "kết quả"
+                },
+                {
+                    "word": "consequence",
+                    "meaning": "hệ quả"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "cause",
+                    "meaning": "nguyên nhân"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "result",
+                        "meaning": "kết quả"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "resultant",
+                        "meaning": "kết quả"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "result",
+                        "meaning": "dẫn đến"
+                    }
+                ]
+            }
         }
     ]
 }

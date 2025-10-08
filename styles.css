@@ -1059,6 +1059,45 @@ footer {
     margin-bottom: 0;
 }
 
+/* Today's Words Definitions Styles */
+#todayWordDefinitions .card {
+    background-color: #f8f9fa;
+    border-left: 4px solid var(--bs-primary) !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#todayWordDefinitions .card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#todayWordDefinitions .badge {
+    font-size: 0.8rem;
+}
+
+#todayWordDefinitions .fa-quote-left {
+    font-size: 0.8rem;
+    margin-right: 5px;
+}
+
+/* Today's Words Selection Mode Styles */
+.btn-check:checked + .btn-outline-primary,
+.btn-check:checked + .btn-outline-info {
+    background-color: var(--bs-primary);
+    color: white;
+}
+
+#countModeSection, #rangeModeSection {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+}
+
+#rangeModeSection .form-control {
+    text-align: center;
+    font-weight: bold;
+}
+
 /* Today's Words Practice Mode Styles */
 #todayWordsPracticeContent .practice-option {
     transition: all 0.3s ease;
@@ -1110,6 +1149,68 @@ footer {
     background-color: var(--bs-primary);
     color: white;
     border-color: var(--bs-primary);
+}
+
+/* Today's Words Writing Mode Styles */
+#todayWordsWritingContent .card {
+    border-radius: 15px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#todayWordsWritingContent .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+#todayWordsWritingTextarea {
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    resize: vertical;
+    min-height: 120px;
+}
+
+#todayWordsWritingTextarea:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+#todayWordsWritingHints {
+    background-color: #f8f9fa;
+}
+
+#todayWordsWritingHints ul li {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+#todayWordsWritingSubmitBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#todayWordsWritingSummary .card-body {
+    padding: 30px;
+}
+
+#todayWordsWritingSummary h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#todayWordsWritingSummary .card {
+    transition: transform 0.3s ease;
+}
+
+#todayWordsWritingSummary .card:hover {
+    transform: translateY(-5px);
+}
+
+/* Active button styling for writing mode */
+#todayWordsWritingBtn.active {
+    background-color: var(--bs-warning);
+    color: white;
+    border-color: var(--bs-warning);
 }
 
 #todayWordsArea .progress {
