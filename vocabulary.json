@@ -12377,6 +12377,520 @@
                     }
                 ]
             }
+        },
+        {
+            "word": "pinkish",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a quantity that results from the combination of two or more quantities.",
+                    "example": "The resultant of the two forces was calculated to determine the net force acting on the object."
+                }
+            ],
+            "meaning": "hồng nhạt, hơi hồng",
+            "type": "noun",
+            "example": "The sky had a pinkish hue at sunset.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈpɪŋkɪʃ/",
+                "en-US": "/ˈpɪŋkɪʃ/"
+            },
+            "synonyms": [
+                {
+                    "word": "rosy",
+                    "meaning": "hồng hào"
+                },
+                {
+                    "word": "blush",
+                    "meaning": "hồng nhạt"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "pale",
+                    "meaning": "nhợt nhạt"
+                },
+                {
+                    "word": "dull",
+                    "meaning": "tối, xỉn"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "pinkish",
+                        "meaning": "hồng nhạt, hơi hồng"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "tinge",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a slight degree of a color or quality",
+                    "example": "The sky had a pinkish hue at sunset."
+                }
+            ],
+            "meaning": "sắc thái, chút ít",
+            "type": "noun",
+            "example": "The painting had a subtle tinge of blue.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/tɪndʒ/",
+                "en-US": "/tɪndʒ/"
+            },
+            "synonyms": [
+                {
+                    "word": "shade",
+                    "meaning": "sắc thái"
+                },
+                {
+                    "word": "hint",
+                    "meaning": "chút ít"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "pure",
+                    "meaning": "nguyên chất"
+                },
+                {
+                    "word": "unmixed",
+                    "meaning": "không pha trộn"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "tinge",
+                        "meaning": "sắc thái, chút ít"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "tinge",
+                        "meaning": "làm nhuốm màu"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "classification",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a category or group of things that share similar characteristics.",
+                    "example": "The classification of animals is based on their physical traits."
+                }
+            ],
+            "meaning": "phân loại",
+            "type": "noun",
+            "example": "The classification of animals is based on their physical traits.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˌklæsɪfɪˈkeɪʃən/",
+                "en-US": "/ˌklæsɪfɪˈkeɪʃən/"
+            },
+            "synonyms": [
+                {
+                    "word": "categorization",
+                    "meaning": "sự phân loại"
+                },
+                {
+                    "word": "grouping",
+                    "meaning": "sự nhóm"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "disorganization",
+                    "meaning": "sự vô tổ chức"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "classification",
+                        "meaning": "phân loại"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "classify",
+                        "meaning": "phân loại"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "classified",
+                        "meaning": "được phân loại"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "rivaling",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "to compete with or be equal to someone or something",
+                    "example": "The new product is rivaling the market leader in sales."
+                }
+            ],
+            "meaning": "đối đầu, cạnh tranh",
+            "type": "verb",
+            "example": "The new product is rivaling the market leader in sales.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈraɪvəlɪŋ/",
+                "en-US": "/ˈraɪvəlɪŋ/"
+            },
+            "synonyms": [
+                {
+                    "word": "competing",
+                    "meaning": "cạnh tranh"
+                },
+                {
+                    "word": "challenging",
+                    "meaning": "thách thức"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "cooperating",
+                    "meaning": "hợp tác"
+                },
+                {
+                    "word": "supporting",
+                    "meaning": "hỗ trợ"
+                }
+            ],
+            "wordFamily": {
+                "verb": [
+                    {
+                        "word": "rival",
+                        "meaning": "đối đầu, cạnh tranh"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "rival",
+                        "meaning": "đối thủ"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "rival",
+                        "meaning": "đối địch"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "predominant",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "having superior strength, influence, or authority",
+                    "example": "The predominant culture in the region is influenced by ancient traditions."
+                }
+            ],
+            "meaning": "chiếm ưu thế, nổi bật",
+            "type": "adjective",
+            "example": "The predominant culture in the region is influenced by ancient traditions.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/prɪˈdɒmɪnənt/",
+                "en-US": "/prɪˈdɑːmɪnənt/"
+            },
+            "synonyms": [
+                {
+                    "word": "dominant",
+                    "meaning": "thống trị"
+                },
+                {
+                    "word": "prevailing",
+                    "meaning": "thịnh hành"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "subordinate",
+                    "meaning": "phụ thuộc"
+                },
+                {
+                    "word": "minor",
+                    "meaning": "nhỏ, phụ"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "predominant",
+                        "meaning": "chiếm ưu thế, nổi bật"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "predominance",
+                        "meaning": "sự chiếm ưu thế"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "predominate",
+                        "meaning": "chiếm ưu thế"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "predominantly",
+                        "meaning": "phần lớn, chủ yếu"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "varietal",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "relating to or characteristic of a variety, especially of wine.",
+                    "example": "The vineyard produces several varietal wines, each with its own unique flavor profile."
+                }
+            ],
+            "meaning": "(thuộc) giống, (thuộc) loại",
+            "type": "noun",
+            "example": "The vineyard produces several varietal wines, each with its own unique flavor profile.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈværaɪətəl/",
+                "en-US": "/ˈværaɪətəl/"
+            },
+            "synonyms": [
+                {
+                    "word": "type",
+                    "meaning": "loại"
+                },
+                {
+                    "word": "kind",
+                    "meaning": "loại"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "uniform",
+                    "meaning": "đồng nhất"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "varietal",
+                        "meaning": "(thuộc) giống, (thuộc) loại"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "variety",
+                        "meaning": "sự đa dạng"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "trademark",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a symbol, word, or words legally registered or established by use as representing a company or product.",
+                    "example": "The company's logo is a registered trademark."
+                }
+            ],
+            "meaning": "nhãn hiệu, thương hiệu",
+            "type": "noun",
+            "example": "The company's logo is a registered trademark.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈtreɪdˌmɑːk/",
+                "en-US": "/ˈtreɪdˌmɑːrk/"
+            },
+            "synonyms": [
+                {
+                    "word": "brand",
+                    "meaning": "thương hiệu"
+                },
+                {
+                    "word": "logo",
+                    "meaning": "biểu tượng"
+                }
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "trademark",
+                        "meaning": "nhãn hiệu, thương hiệu"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "trademark",
+                        "meaning": "đăng ký nhãn hiệu"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "generic",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "characteristic of or relating to a class or group of things; not specific.",
+                    "example": "The store sells generic brands that are more affordable."
+                }
+            ],
+            "meaning": "chung, phổ biến",
+            "type": "adjective",
+            "example": "The store sells generic brands that are more affordable.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/dʒəˈnɛrɪk/",
+                "en-US": "/dʒəˈnɛrɪk/"
+            },
+            "synonyms": [
+                {
+                    "word": "common",
+                    "meaning": "chung"
+                },
+                {
+                    "word": "general",
+                    "meaning": "chung, tổng quát"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "specific",
+                    "meaning": "cụ thể"
+                },
+                {
+                    "word": "particular",
+                    "meaning": "riêng biệt"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "generic",
+                        "meaning": "chung, phổ biến"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "generality",
+                        "meaning": "tính chung"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "generically",
+                        "meaning": "một cách chung"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "attempt",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "an effort to achieve or complete a task.",
+                    "example": "Her attempt to climb the mountain was unsuccessful."
+                }
+            ],
+            "meaning": "nỗ lực, cố gắng",
+            "type": "noun",
+            "example": "Her attempt to climb the mountain was unsuccessful.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/əˈtɛmpt/",
+                "en-US": "/əˈtɛmpt/"
+            },
+            "synonyms": [
+                {
+                    "word": "effort",
+                    "meaning": "nỗ lực"
+                },
+                {
+                    "word": "endeavor",
+                    "meaning": "sự cố gắng"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "failure",
+                    "meaning": "sự thất bại"
+                },
+                {
+                    "word": "neglect",
+                    "meaning": "sự bỏ bê"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "attempt",
+                        "meaning": "nỗ lực, cố gắng"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "attempt",
+                        "meaning": "cố gắng"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "vinification",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "the process of making wine from grapes.",
+                    "example": "Vinification involves the fermentation of grape juice to produce wine."
+                }
+            ],
+            "meaning": "quá trình biến nho thành rượu",
+            "type": "noun",
+            "example": "Vinification involves the fermentation of grape juice to produce wine.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˌvɪnɪfɪˈkeɪʃən/",
+                "en-US": "/ˌvɪnɪfɪˈkeɪʃən/"
+            },
+            "synonyms": [
+                {
+                    "word": "winemaking",
+                    "meaning": "nghệ thuật làm rượu"
+                }
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "vinification",
+                        "meaning": "quá trình biến nho thành rượu"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "vinify",
+                        "meaning": "làm rượu"
+                    }
+                ]
+            }
         }
     ]
 }
