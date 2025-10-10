@@ -29,14 +29,20 @@
                     ]
                 }
             ],
-            "particles": ["up"],
+            "particles": [
+                "up"
+            ],
             "commonForms": {
                 "past": "looked up",
                 "presentParticiple": "looking up",
                 "pastParticiple": "looked up"
             },
             "usage": "When the object is a pronoun, it must come between the verb and particle: 'look it up', not 'look up it'",
-            "synonyms": ["search for", "find", "research"],
+            "synonyms": [
+                "search for",
+                "find",
+                "research"
+            ],
             "difficulty": "beginner"
         },
         {
@@ -68,14 +74,20 @@
                     ]
                 }
             ],
-            "particles": ["up"],
+            "particles": [
+                "up"
+            ],
             "commonForms": {
                 "past": "gave up",
                 "presentParticiple": "giving up",
                 "pastParticiple": "given up"
             },
             "usage": "Often followed by a gerund (-ing form) when talking about stopping a habit",
-            "synonyms": ["quit", "abandon", "surrender"],
+            "synonyms": [
+                "quit",
+                "abandon",
+                "surrender"
+            ],
             "difficulty": "beginner"
         },
         {
@@ -113,15 +125,393 @@
                     ]
                 }
             ],
-            "particles": ["into"],
+            "particles": [
+                "into"
+            ],
             "commonForms": {
                 "past": "ran into",
                 "presentParticiple": "running into",
                 "pastParticiple": "run into"
             },
             "usage": "Cannot be separated - the object always comes after 'into'",
-            "synonyms": ["encounter", "meet", "bump into"],
+            "synonyms": [
+                "encounter",
+                "meet",
+                "bump into"
+            ],
             "difficulty": "intermediate"
+        },
+        {
+            "verb": "approve of",
+            "type": "inseparable",
+            "meanings": [
+                {
+                    "definition": "to have a positive opinion about something or someone",
+                    "vietnamese": "tán thành, đồng ý với ai đó hoặc điều gì đó",
+                    "examples": [
+                        {
+                            "sentence": "I don't approve of smoking in public places.",
+                            "translation": "Tôi không tán thành việc hút thuốc ở nơi công cộng."
+                        },
+                        {
+                            "sentence": "Her parents don't approve of her new boyfriend.",
+                            "translation": "Cha mẹ cô ấy không đồng ý với bạn trai mới của cô ấy."
+                        }
+                    ]
+                },
+                {
+                    "definition": "to officially accept or agree to something",
+                    "vietnamese": "chấp thuận, phê duyệt",
+                    "examples": [
+                        {
+                            "sentence": "The committee approved of the new policy.",
+                            "translation": "Ủy ban đã phê duyệt chính sách mới."
+                        }
+                    ]
+                }
+            ],
+            "particles": [
+                "of"
+            ],
+            "commonForms": {
+                "past": "approved of",
+                "presentParticiple": "approving of",
+                "pastParticiple": "approved of"
+            },
+            "usage": "Always followed by a noun or pronoun; cannot be separated",
+            "synonyms": [
+                "support",
+                "endorse",
+                "accept"
+            ],
+            "difficulty": "intermediate"
+        },
+        {
+            "verb": "close to the bone",
+            "type": "inseparable",
+            "meanings": [
+                {
+                    "definition": "to say something that is very personal or sensitive, often causing discomfort",
+                    "vietnamese": "nói điều gì đó rất cá nhân hoặc nhạy cảm, thường gây khó chịu",
+                    "examples": [
+                        {
+                            "sentence": "His comments were too close to the bone.",
+                            "translation": "Những bình luận của anh ấy đã quá nhạy cảm."
+                        }
+                    ]
+                },
+                {
+                    "definition": "to be very near to causing harm or offense",
+                    "vietnamese": "rất gần với việc gây hại hoặc xúc phạm",
+                    "examples": [
+                        {
+                            "sentence": "The joke was close to the bone and offended some people.",
+                            "translation": "Trò đùa đó rất nhạy cảm và làm xúc phạm một số người."
+                        }
+                    ]
+                }
+            ],
+            "particles": [
+                "to the bone"
+            ],
+            "commonForms": {
+                "past": "was close to the bone",
+                "presentParticiple": "being close to the bone",
+                "pastParticiple": "been close to the bone"
+            },
+            "usage": "Typically used in the context of speech or behavior that is sensitive or potentially offensive",
+            "synonyms": [
+                "sensitive",
+                "touchy",
+                "offensive"
+            ],
+            "difficulty": "advanced"
+        },
+        {
+            "verb": "come into play",
+            "type": "inseparable",
+            "meanings": [
+                {
+                    "definition": "to become relevant or effective",
+                    "vietnamese": "trở nên có liên quan hoặc hiệu quả",
+                    "examples": [
+                        {
+                            "sentence": "New evidence may come into play during the trial.",
+                            "translation": "Bằng chứng mới có thể trở nên có liên quan trong phiên tòa."
+                        }
+                    ]
+                },
+                {
+                    "definition": "to start to have an effect",
+                    "vietnamese": "bắt đầu có ảnh hưởng",
+                    "examples": [
+                        {
+                            "sentence": "The new rules will come into play next month.",
+                            "translation": "Các quy tắc mới sẽ bắt đầu có hiệu lực vào tháng tới."
+                        }
+                    ]
+                }
+            ],
+            "particles": [
+                "into play"
+            ],
+            "commonForms": {
+                "past": "came into play",
+                "presentParticiple": "coming into play",
+                "pastParticiple": "come into play"
+            },
+            "usage": "Often used in discussions about rules, laws, or factors that influence situations",
+            "synonyms": [
+                "become relevant",
+                "take effect",
+                "influence"
+            ],
+            "difficulty": "intermediate"
+        },
+        {
+            "verb": "down to the wire",
+            "type": "inseparable",
+            "meanings": [
+                {
+                    "definition": "to happen at the last possible moment",
+                    "vietnamese": "xảy ra vào phút chót",
+                    "examples": [
+                        {
+                            "sentence": "The decision came down to the wire.",
+                            "translation": "Quyết định đã được đưa ra vào phút chót."
+                        }
+                    ]
+                },
+                {
+                    "definition": "to be very close to a deadline or end point",
+                    "vietnamese": "rất gần với thời hạn hoặc điểm kết thúc",
+                    "examples": [
+                        {
+                            "sentence": "We worked down to the wire to finish the project.",
+                            "translation": "Chúng tôi đã làm việc đến phút chót để hoàn thành dự án."
+                        }
+                    ]
+                }
+            ],
+            "particles": [
+                "to the wire"
+            ],
+            "commonForms": {
+                "past": "came down to the wire",
+                "presentParticiple": "coming down to the wire",
+                "pastParticiple": "come down to the wire"
+            },
+            "usage": "Often used in competitive situations or when discussing deadlines",
+            "synonyms": [
+                "last minute",
+                "final moment",
+                "eleventh hour"
+            ],
+            "difficulty": "intermediate"
+        },
+        {
+            "verb": "get off",
+            "type": "inseparable",
+            "meanings": [
+                {
+                    "definition": "to leave a vehicle, aircraft, or ship",
+                    "vietnamese": "xuống khỏi phương tiện giao thông",
+                    "examples": [
+                        {
+                            "sentence": "We need to get off the bus at the next stop.",
+                            "translation": "Chúng ta cần xuống xe buýt ở trạm tiếp theo."
+                        }
+                    ]
+                },
+                {
+                    "definition": "to avoid punishment or consequences",
+                    "vietnamese": "tránh khỏi hình phạt hoặc hậu quả",
+                    "examples": [
+                        {
+                            "sentence": "He got off with a warning from the police.",
+                            "translation": "Anh ta đã tránh được hình phạt với một lời cảnh cáo từ cảnh sát."
+                        }
+                    ]
+                }
+            ],
+            "particles": [
+                "off"
+            ],
+            "commonForms": {
+                "past": "got off",
+                "presentParticiple": "getting off",
+                "pastParticiple": "gotten off"
+            },
+            "usage": "Cannot be separated - the object always comes after 'off'",
+            "synonyms": [
+                "leave",
+                "escape",
+                "avoid"
+            ],
+            "difficulty": "beginner"
+        },
+        {
+            "verb": "put on",
+            "type": "inseparable",
+            "meanings": [
+                {
+                    "definition": "to dress oneself in clothing or accessories",
+                    "vietnamese": "mặc quần áo hoặc phụ kiện",
+                    "examples": [
+                        {
+                            "sentence": "She put on her coat before going outside.",
+                            "translation": "Cô ấy mặc áo khoác trước khi ra ngoài."
+                        }
+                    ]
+                },
+                {
+                    "definition": "to gain weight",
+                    "vietnamese": "tăng cân",
+                    "examples": [
+                        {
+                            "sentence": "He has put on a few pounds over the holidays.",
+                            "translation": "Anh ấy đã tăng vài cân trong kỳ nghỉ."
+                        }
+                    ]
+                }
+            ],
+            "particles": [
+                "on"
+            ],
+            "commonForms": {
+                "past": "put on",
+                "presentParticiple": "putting on",
+                "pastParticiple": "put on"
+            },
+            "usage": "Cannot be separated - the object always comes after 'on'",
+            "synonyms": [
+                "dress in",
+                "gain weight"
+            ],
+            "difficulty": "beginner"
+        },
+        {
+            "verb": "take off",
+            "type": "inseparable",
+            "meanings": [
+                {
+                    "definition": "to remove clothing or accessories",
+                    "vietnamese": "cởi quần áo hoặc phụ kiện",
+                    "examples": [
+                        {
+                            "sentence": "He took off his shoes before entering the house.",
+                            "translation": "Anh ấy cởi giày trước khi vào nhà."
+                        }
+                    ]
+                },
+                {
+                    "definition": "to leave the ground and begin to fly (for aircraft)",
+                    "vietnamese": "cất cánh (đối với máy bay)",
+                    "examples": [
+                        {
+                            "sentence": "The plane took off on time.",
+                            "translation": "Chiếc máy bay đã cất cánh đúng giờ."
+                        }
+                    ]
+                }
+            ],
+            "particles": [
+                "off"
+            ],
+            "commonForms": {
+                "past": "took off",
+                "presentParticiple": "taking off",
+                "pastParticiple": "taken off"
+            },
+            "usage": "Cannot be separated - the object always comes after 'off'",
+            "synonyms": [
+                "remove",
+                "depart",
+                "ascend"
+            ],
+            "difficulty": "beginner"
+        },
+        {
+            "verb": "call up",
+            "type": "inseparable",
+            "meanings": [
+                {
+                    "definition": "to make a phone call",
+                    "vietnamese": "gọi điện thoại",
+                    "examples": [
+                        {
+                            "sentence": "I need to call up my friend to confirm our plans.",
+                            "translation": "Tôi cần gọi điện cho bạn để xác nhận kế hoạch của chúng tôi."
+                        }
+                    ]
+                },
+                {
+                    "definition": "to summon someone for military service",
+                    "vietnamese": "triệu tập ai đó nhập ngũ",
+                    "examples": [
+                        {
+                            "sentence": "He was called up for military duty last year.",
+                            "translation": "Anh ấy đã được triệu tập nhập ngũ năm ngoái."
+                        }
+                    ]
+                }
+            ],
+            "particles": [
+                "up"
+            ],
+            "commonForms": {
+                "past": "called up",
+                "presentParticiple": "calling up",
+                "pastParticiple": "called up"
+            },
+            "usage": "Cannot be separated - the object always comes after 'up'",
+            "synonyms": [
+                "phone",
+                "summon",
+                "contact"
+            ],
+            "difficulty": "intermediate"
+        },
+        {
+            "verb": "right away",
+            "type": "inseparable",
+            "meanings": [
+                {
+                    "definition": "to do something immediately",
+                    "vietnamese": "làm điều gì đó ngay lập tức",
+                    "examples": [
+                        {
+                            "sentence": "I will finish the report right away.",
+                            "translation": "Tôi sẽ hoàn thành báo cáo ngay lập tức."
+                        }
+                    ]
+                },
+                {
+                    "definition": "to respond or act without delay",
+                    "vietnamese": "phản ứng hoặc hành động không trì hoãn",
+                    "examples": [
+                        {
+                            "sentence": "She answered the question right away.",
+                            "translation": "Cô ấy trả lời câu hỏi ngay lập tức."
+                        }
+                    ]
+                }
+            ],
+            "particles": [
+                "right away"
+            ],
+            "commonForms": {
+                "past": "did something right away",
+                "presentParticiple": "doing something right away",
+                "pastParticiple": "done something right away"
+            },
+            "usage": "Typically used to emphasize the immediacy of an action",
+            "synonyms": [
+                "immediately",
+                "at once",
+                "instantly"
+            ],
+            "difficulty": "beginner"
         }
     ]
 }

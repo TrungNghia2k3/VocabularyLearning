@@ -11,12 +11,12 @@
                 {
                     "partOfSpeech": "noun",
                     "definition": "an improvement relating to a particular activity or area of knowledge",
-                    "example": "Her hard work led to her advancement within the company."
+                    "example": "The President's speech to the conference centered on the advancement of alternative fuel sources as a means of ensuring our future survival."
                 }
             ],
             "meaning": "sự tiến bộ",
             "type": "noun",
-            "example": "Technological advancement has changed the way we live.",
+            "example": "The President's speech to the conference centered on the advancement of alternative fuel sources as a means of ensuring our future survival.",
             "level": "basic",
             "phonetic": {
                 "en-GB": "/ədˈvɑːnsmənt/",
@@ -12888,6 +12888,523 @@
                     {
                         "word": "vinify",
                         "meaning": "làm rượu"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "superficial",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "existing or occurring at or on the surface.",
+                    "example": "The wound was only superficial and did not require stitches."
+                }
+            ],
+            "meaning": "nông cạn, hời hợt",
+            "type": "adjective",
+            "example": "The wound was only superficial and did not require stitches.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˌsuːpəˈfɪʃəl/",
+                "en-US": "/ˌsuːpəˈfɪʃəl/"
+            },
+            "synonyms": [
+                {
+                    "word": "shallow",
+                    "meaning": "nông cạn"
+                },
+                {
+                    "word": "cursory",
+                    "meaning": "hời hợt"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "deep",
+                    "meaning": "sâu sắc"
+                },
+                {
+                    "word": "thorough",
+                    "meaning": "tỉ mỉ"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "superficial",
+                        "meaning": "nông cạn, hời hợt"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "superficially",
+                        "meaning": "một cách hời hợt"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "superficiality",
+                        "meaning": "tính hời hợt"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "symptom",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a physical or mental feature that indicates a condition or disease.",
+                    "example": "Fever is a common symptom of many illnesses."
+                }
+            ],
+            "meaning": "triệu chứng",
+            "type": "noun",
+            "example": "Fever is a common symptom of many illnesses.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈsɪmptəm/",
+                "en-US": "/ˈsɪmptəm/"
+            },
+            "synonyms": [
+                {
+                    "word": "sign",
+                    "meaning": "dấu hiệu"
+                },
+                {
+                    "word": "indicator",
+                    "meaning": "chỉ số"
+                }
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "symptom",
+                        "meaning": "triệu chứng"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "symptomatic",
+                        "meaning": "có triệu chứng"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "temptation",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "the desire to do something, especially something wrong or unwise.",
+                    "example": "The temptation to eat junk food can be hard to resist."
+                }
+            ],
+            "meaning": "cám dỗ",
+            "type": "noun",
+            "example": "The temptation to eat junk food can be hard to resist.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˌtɛmpˈteɪʃən/",
+                "en-US": "/ˌtɛmpˈteɪʃən/"
+            },
+            "synonyms": [
+                {
+                    "word": "allure",
+                    "meaning": "sự quyến rũ"
+                },
+                {
+                    "word": "enticement",
+                    "meaning": "sự dụ dỗ"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "repulsion",
+                    "meaning": "sự ghê tởm"
+                },
+                {
+                    "word": "deterrent",
+                    "meaning": "sự ngăn cản"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "temptation",
+                        "meaning": "cám dỗ"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "tempt",
+                        "meaning": "cám dỗ"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "tempting",
+                        "meaning": "hấp dẫn"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "amputate",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "to surgically remove a limb or part of the body.",
+                    "example": "The doctor had to amputate the patient's leg due to severe infection."
+                }
+            ],
+            "meaning": "cắt cụt (bộ phận cơ thể)",
+            "type": "verb",
+            "example": "The doctor had to amputate the patient's leg due to severe infection.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈæmpjʊteɪt/",
+                "en-US": "/ˈæmpjʊteɪt/"
+            },
+            "synonyms": [
+                {
+                    "word": "remove",
+                    "meaning": "loại bỏ"
+                },
+                {
+                    "word": "sever",
+                    "meaning": "cắt đứt"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "attach",
+                    "meaning": "gắn vào"
+                },
+                {
+                    "word": "reconnect",
+                    "meaning": "kết nối lại"
+                }
+            ],
+            "wordFamily": {
+                "verb": [
+                    {
+                        "word": "amputate",
+                        "meaning": "cắt cụt (bộ phận cơ thể)"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "amputation",
+                        "meaning": "sự cắt cụt"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "amputated",
+                        "meaning": "bị cắt cụt"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "devote",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "to give all or a large part of one's time or resources to a person, activity, or cause.",
+                    "example": "She decided to devote her life to helping others."
+                }
+            ],
+            "meaning": "cống hiến",
+            "type": "verb",
+            "example": "She decided to devote her life to helping others.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/dɪˈvəʊt/",
+                "en-US": "/dɪˈvəʊt/"
+            },
+            "synonyms": [
+                {
+                    "word": "dedicate",
+                    "meaning": "cống hiến"
+                },
+                {
+                    "word": "commit",
+                    "meaning": "cam kết"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "neglect",
+                    "meaning": "bỏ bê"
+                },
+                {
+                    "word": "ignore",
+                    "meaning": "phớt lờ"
+                }
+            ],
+            "wordFamily": {
+                "verb": [
+                    {
+                        "word": "devote",
+                        "meaning": "cống hiến"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "devotion",
+                        "meaning": "sự cống hiến"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "devoted",
+                        "meaning": "tận tụy"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "diagnose",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "to identify the nature of an illness or problem by examination of the symptoms.",
+                    "example": "The doctor was able to diagnose the disease early."
+                }
+            ],
+            "meaning": "chẩn đoán",
+            "type": "noun",
+            "example": "The diagnosis of the disease was confirmed by further tests.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˌdaɪəɡˈnoʊs/",
+                "en-US": "/ˌdaɪəɡˈnoʊs/"
+            },
+            "synonyms": [
+                {
+                    "word": "identify",
+                    "meaning": "xác định"
+                },
+                {
+                    "word": "determine",
+                    "meaning": "xác định"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "misdiagnose",
+                    "meaning": "chẩn đoán sai"
+                }
+            ],
+            "wordFamily": {
+                "verb": [
+                    {
+                        "word": "diagnose",
+                        "meaning": "chẩn đoán"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "diagnosis",
+                        "meaning": "sự chẩn đoán"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "diagnostic",
+                        "meaning": "thuộc chẩn đoán"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "distinguish",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "to recognize or point out a difference; to set apart.",
+                    "example": "It's important to distinguish between fact and opinion."
+                }
+            ],
+            "meaning": "phân biệt",
+            "type": "noun",
+            "example": "The distinction between right and wrong is not always clear.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˌdɪstɪŋˈɡwɪʃ/",
+                "en-US": "/ˌdɪstɪŋˈɡwɪʃ/"
+            },
+            "synonyms": [
+                {
+                    "word": "differentiate",
+                    "meaning": "phân biệt"
+                },
+                {
+                    "word": "discern",
+                    "meaning": "nhận thức"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "confuse",
+                    "meaning": "làm bối rối"
+                },
+                {
+                    "word": "mix up",
+                    "meaning": "trộn lẫn"
+                }
+            ],
+            "wordFamily": {
+                "verb": [
+                    {
+                        "word": "distinguish",
+                        "meaning": "phân biệt"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "distinction",
+                        "meaning": "sự phân biệt"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "distinguished",
+                        "meaning": "kiệt xuất"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "encyclopaedist",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a person who compiles or writes for an encyclopedia.",
+                    "example": "The encyclopaedist spent years researching and writing articles for the comprehensive reference work."
+                }
+            ],
+            "meaning": "người biên soạn bách khoa toàn thư",
+            "type": "noun",
+            "example": "The encyclopaedist spent years researching and writing articles for the comprehensive reference work.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ɪnˌsaɪkləˈpiːdɪst/",
+                "en-US": "/ɪnˌsaɪkləˈpiːdɪst/"
+            },
+            "synonyms": [
+                {
+                    "word": "lexicographer",
+                    "meaning": "nhà từ điển học"
+                }
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "encyclopaedist",
+                        "meaning": "người biên soạn bách khoa toàn thư"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "encyclopaedic",
+                        "meaning": "thuộc bách khoa toàn thư"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "prodigy",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a person, especially a young one, endowed with exceptional qualities or abilities.",
+                    "example": "The young pianist was considered a prodigy for her extraordinary talent."
+                }
+            ],
+            "meaning": "thiên tài, người phi thường",
+            "type": "noun",
+            "example": "The young pianist was considered a prodigy for her extraordinary talent.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈprɒdɪdʒi/",
+                "en-US": "/ˈprɑːdɪdʒi/"
+            },
+            "synonyms": [
+                {
+                    "word": "genius",
+                    "meaning": "thiên tài"
+                },
+                {
+                    "word": "whiz",
+                    "meaning": "người xuất sắc"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "ordinary person",
+                    "meaning": "người bình thường"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "prodigy",
+                        "meaning": "thiên tài, người phi thường"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "prodigious",
+                        "meaning": "phi thường"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "prosthetic",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "relating to an artificial body part.",
+                    "example": "The patient was fitted with a prosthetic limb after the accident."
+                }
+            ],
+            "meaning": "chân tay giả",
+            "type": "noun",
+            "example": "The patient was fitted with a prosthetic limb after the accident.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˌprɒsˈθɛtɪk/",
+                "en-US": "/ˌprɑːsˈθɛtɪk/"
+            },
+            "synonyms": [
+                {
+                    "word": "artificial limb",
+                    "meaning": "chân tay giả"
+                },
+                {
+                    "word": "fake body part",
+                    "meaning": "bộ phận cơ thể giả"
+                }
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "prosthetic",
+                        "meaning": "chân tay giả"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "prosthesis",
+                        "meaning": "sự lắp chân tay giả"
                     }
                 ]
             }

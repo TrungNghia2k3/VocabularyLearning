@@ -57,6 +57,10 @@ class VocabularyApp {
         this.phrasalVerbs = [];
         this.idioms = [];
         
+        // Filtered data for search
+        this.filteredPhrasalVerbs = [];
+        this.filteredIdioms = [];
+        
         // Phrasal Verbs Practice Mode
         this.phrasalVerbsQuizScore = 0;
         this.phrasalVerbsQuizTotal = 0;
@@ -305,11 +309,18 @@ class VocabularyApp {
             }
             const data = await response.json();
             this.phrasalVerbs = data.phrasalVerbs || [];
+            this.filteredPhrasalVerbs = [...this.phrasalVerbs];
+            
             console.log(`Đã tải ${this.phrasalVerbs.length} cụm động từ`);
+            
+            // Check for duplicates
+            this.checkPhrasalVerbsDuplicates();
+            
             this.showPhrasalVerbsBrowse();
         } catch (error) {
             console.error('Lỗi tải phrasal verbs:', error);
             this.phrasalVerbs = [];
+            this.filteredPhrasalVerbs = [];
             this.displayPhrasalVerbs();
         }
     }
@@ -322,11 +333,18 @@ class VocabularyApp {
             }
             const data = await response.json();
             this.idioms = data.idioms || [];
+            this.filteredIdioms = [...this.idioms];
+            
             console.log(`Đã tải ${this.idioms.length} thành ngữ`);
+            
+            // Check for duplicates
+            this.checkIdiomsDuplicates();
+            
             this.showIdiomsBrowse();
         } catch (error) {
             console.error('Lỗi tải idioms:', error);
             this.idioms = [];
+            this.filteredIdioms = [];
             this.displayIdioms();
         }
     }
@@ -445,12 +463,16 @@ class VocabularyApp {
         document.getElementById('phrasalVerbsPracticeBtn').addEventListener('click', () => this.showPhrasalVerbsPractice());
         document.getElementById('phrasalVerbsStartBtn').addEventListener('click', () => this.startPhrasalVerbsQuiz());
         document.getElementById('phrasalVerbsNextBtn').addEventListener('click', () => this.nextPhrasalVerbsQuestion());
+        document.getElementById('phrasalVerbsSearchInput').addEventListener('input', () => this.searchPhrasalVerbs());
+        document.getElementById('phrasalVerbsClearSearch').addEventListener('click', () => this.clearPhrasalVerbsSearch());
 
         // Idioms Practice Mode
         document.getElementById('idiomsBrowseBtn').addEventListener('click', () => this.showIdiomsBrowse());
         document.getElementById('idiomsPracticeBtn').addEventListener('click', () => this.showIdiomsPractice());
         document.getElementById('idiomsStartBtn').addEventListener('click', () => this.startIdiomsQuiz());
         document.getElementById('idiomsNextBtn').addEventListener('click', () => this.nextIdiomsQuestion());
+        document.getElementById('idiomsSearchInput').addEventListener('input', () => this.searchIdioms());
+        document.getElementById('idiomsClearSearch').addEventListener('click', () => this.clearIdiomsSearch());
 
         // Accent selector
         document.getElementById('accentSelect').addEventListener('change', (e) => {
@@ -2694,6 +2716,11 @@ class VocabularyApp {
     // Phrasal Verbs Mode
     displayPhrasalVerbs() {
         const container = document.querySelector('#phrasalVerbsBrowseContent');
+        const dataToShow = this.filteredPhrasalVerbs.length >= 0 ? this.filteredPhrasalVerbs : this.phrasalVerbs;
+        
+        // Update total count
+        document.getElementById('phrasalVerbsTotal').textContent = `${this.phrasalVerbs.length} cụm động từ`;
+        
         if (!this.phrasalVerbs || this.phrasalVerbs.length === 0) {
             container.innerHTML = `
                 <div class="alert alert-warning">
@@ -2709,9 +2736,22 @@ class VocabularyApp {
             `;
             return;
         }
+        
+        if (dataToShow.length === 0) {
+            container.innerHTML = `
+                <div class="alert alert-info text-center">
+                    <h5><i class="fas fa-search"></i> Không tìm thấy kết quả</h5>
+                    <p>Không có cụm động từ nào khớp với từ khóa tìm kiếm.</p>
+                    <button class="btn btn-primary" onclick="app.clearPhrasalVerbsSearch()">
+                        <i class="fas fa-times"></i> Xóa bộ lọc
+                    </button>
+                </div>
+            `;
+            return;
+        }
 
         let html = '<div class="row">';
-        this.phrasalVerbs.forEach((verb, index) => {
+        dataToShow.forEach((verb, index) => {
             html += `
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card h-100 shadow-sm">
@@ -2781,6 +2821,13 @@ class VocabularyApp {
     // Idioms Mode
     displayIdioms() {
         const container = document.querySelector('#idiomsBrowseContent');
+        
+        // Use filtered idioms for display
+        const idiomsToShow = this.filteredIdioms.length >= 0 ? this.filteredIdioms : this.idioms;
+        
+        // Update total count
+        document.getElementById('idiomsTotal').textContent = `${this.idioms.length} thành ngữ`;
+        
         if (!this.idioms || this.idioms.length === 0) {
             container.innerHTML = `
                 <div class="alert alert-warning">
@@ -2796,9 +2843,22 @@ class VocabularyApp {
             `;
             return;
         }
+        
+        if (idiomsToShow.length === 0) {
+            container.innerHTML = `
+                <div class="alert alert-info text-center">
+                    <h5><i class="fas fa-search"></i> Không tìm thấy kết quả</h5>
+                    <p>Không có thành ngữ nào khớp với từ khóa tìm kiếm.</p>
+                    <button class="btn btn-info" onclick="app.clearIdiomsSearch()">
+                        <i class="fas fa-times"></i> Xóa bộ lọc
+                    </button>
+                </div>
+            `;
+            return;
+        }
 
         let html = '<div class="row">';
-        this.idioms.forEach((idiom, index) => {
+        idiomsToShow.forEach((idiom, index) => {
             html += `
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card h-100 shadow-sm">
@@ -2874,6 +2934,202 @@ class VocabularyApp {
         container.innerHTML = html;
     }
 
+    // Duplicate Detection Functions
+    checkPhrasalVerbsDuplicates() {
+        const seen = new Set();
+        const duplicates = [];
+        
+        this.phrasalVerbs.forEach((item, index) => {
+            const key = item.verb.toLowerCase().trim();
+            if (seen.has(key)) {
+                duplicates.push({ item, index });
+            } else {
+                seen.add(key);
+            }
+        });
+        
+        if (duplicates.length > 0) {
+            this.showPhrasalVerbsDuplicateAlert(duplicates);
+        }
+    }
+    
+    checkIdiomsDuplicates() {
+        const seen = new Set();
+        const duplicates = [];
+        
+        this.idioms.forEach((item, index) => {
+            const key = item.idiom.toLowerCase().trim();
+            if (seen.has(key)) {
+                duplicates.push({ item, index });
+            } else {
+                seen.add(key);
+            }
+        });
+        
+        if (duplicates.length > 0) {
+            this.showIdiomsDuplicateAlert(duplicates);
+        }
+    }
+    
+    showPhrasalVerbsDuplicateAlert(duplicates) {
+        const alert = document.getElementById('phrasalVerbsDuplicateAlert');
+        const message = document.getElementById('phrasalVerbsDuplicateMessage');
+        
+        const duplicateVerbs = duplicates.map(d => d.item.verb).join(', ');
+        message.textContent = `Có ${duplicates.length} cụm động từ bị trùng lặp: ${duplicateVerbs}`;
+        
+        alert.classList.remove('d-none');
+        
+        console.warn('Phrasal Verbs Duplicates:', duplicates);
+    }
+    
+    showIdiomsDuplicateAlert(duplicates) {
+        const alert = document.getElementById('idiomsDuplicateAlert');
+        const message = document.getElementById('idiomsDuplicateMessage');
+        
+        const duplicateIdioms = duplicates.map(d => d.item.idiom).join(', ');
+        message.textContent = `Có ${duplicates.length} thành ngữ bị trùng lặp: ${duplicateIdioms}`;
+        
+        alert.classList.remove('d-none');
+        
+        console.warn('Idioms Duplicates:', duplicates);
+    }
+
+    // Search Functions
+    searchPhrasalVerbs() {
+        const searchTerm = document.getElementById('phrasalVerbsSearchInput').value.toLowerCase().trim();
+        
+        if (searchTerm === '') {
+            this.filteredPhrasalVerbs = [...this.phrasalVerbs];
+        } else {
+            this.filteredPhrasalVerbs = this.phrasalVerbs.filter(item => {
+                // Search in verb field (primary search field for phrasal verbs)
+                const verbMatch = item.verb && item.verb.toLowerCase().includes(searchTerm);
+                
+                // Search in meanings
+                const meaningMatch = item.meanings && item.meanings.some(meaning => 
+                    (meaning.definition && meaning.definition.toLowerCase().includes(searchTerm)) ||
+                    (meaning.vietnamese && meaning.vietnamese.toLowerCase().includes(searchTerm)) ||
+                    (meaning.examples && meaning.examples.some(example => 
+                        (example.sentence && example.sentence.toLowerCase().includes(searchTerm)) ||
+                        (example.translation && example.translation.toLowerCase().includes(searchTerm))
+                    ))
+                );
+                
+                // Search in synonyms
+                const synonymMatch = item.synonyms && item.synonyms.some(synonym => 
+                    synonym.toLowerCase().includes(searchTerm)
+                );
+                
+                // Search in usage notes
+                const usageMatch = item.usage && item.usage.toLowerCase().includes(searchTerm);
+                
+                // Search in type and difficulty
+                const typeMatch = (item.type && item.type.toLowerCase().includes(searchTerm)) ||
+                                (item.difficulty && item.difficulty.toLowerCase().includes(searchTerm));
+                
+                return verbMatch || meaningMatch || synonymMatch || usageMatch || typeMatch;
+            });
+        }
+        
+        // Update search results display
+        this.updatePhrasalVerbsSearchResults();
+        this.displayPhrasalVerbs();
+    }
+    
+    updatePhrasalVerbsSearchResults() {
+        const searchTerm = document.getElementById('phrasalVerbsSearchInput').value.toLowerCase().trim();
+        const resultsElement = document.getElementById('phrasalVerbsSearchResults');
+        
+        if (searchTerm === '') {
+            resultsElement.innerHTML = '<i class="fas fa-list me-1"></i>Hiển thị tất cả';
+            resultsElement.className = 'text-muted';
+        } else {
+            const count = this.filteredPhrasalVerbs.length;
+            if (count > 0) {
+                resultsElement.innerHTML = `<i class="fas fa-check-circle me-1 text-success"></i>Tìm thấy <strong>${count}</strong> kết quả`;
+                resultsElement.className = 'text-success';
+            } else {
+                resultsElement.innerHTML = '<i class="fas fa-exclamation-circle me-1 text-warning"></i>Không tìm thấy kết quả nào';
+                resultsElement.className = 'text-warning';
+            }
+        }
+    }
+    
+    clearPhrasalVerbsSearch() {
+        document.getElementById('phrasalVerbsSearchInput').value = '';
+        this.searchPhrasalVerbs();
+    }
+    
+    searchIdioms() {
+        const searchTerm = document.getElementById('idiomsSearchInput').value.toLowerCase().trim();
+        
+        if (searchTerm === '') {
+            this.filteredIdioms = [...this.idioms];
+        } else {
+            this.filteredIdioms = this.idioms.filter(item => {
+                // Search in idiom field (primary search field for idioms)
+                const idiomMatch = item.idiom && item.idiom.toLowerCase().includes(searchTerm);
+                
+                // Search in meaning and vietnamese translation
+                const meaningMatch = (item.meaning && item.meaning.toLowerCase().includes(searchTerm)) ||
+                                   (item.vietnamese && item.vietnamese.toLowerCase().includes(searchTerm));
+                
+                // Search in examples
+                const exampleMatch = item.examples && item.examples.some(example => 
+                    (example.sentence && example.sentence.toLowerCase().includes(searchTerm)) ||
+                    (example.translation && example.translation.toLowerCase().includes(searchTerm)) ||
+                    (example.context && example.context.toLowerCase().includes(searchTerm))
+                );
+                
+                // Search in synonyms and related idioms
+                const synonymMatch = (item.synonyms && item.synonyms.some(synonym => 
+                    synonym.toLowerCase().includes(searchTerm)
+                )) || (item.relatedIdioms && item.relatedIdioms.some(related => 
+                    related.toLowerCase().includes(searchTerm)
+                ));
+                
+                // Search in category, origin, usage and other metadata
+                const metadataMatch = (item.category && item.category.toLowerCase().includes(searchTerm)) ||
+                                    (item.origin && item.origin.toLowerCase().includes(searchTerm)) ||
+                                    (item.usage && item.usage.toLowerCase().includes(searchTerm)) ||
+                                    (item.difficulty && item.difficulty.toLowerCase().includes(searchTerm)) ||
+                                    (item.frequency && item.frequency.toLowerCase().includes(searchTerm)) ||
+                                    (item.formalityLevel && item.formalityLevel.toLowerCase().includes(searchTerm));
+                
+                return idiomMatch || meaningMatch || exampleMatch || synonymMatch || metadataMatch;
+            });
+        }
+        
+        // Update search results display
+        this.updateIdiomsSearchResults();
+        this.displayIdioms();
+    }
+    
+    updateIdiomsSearchResults() {
+        const searchTerm = document.getElementById('idiomsSearchInput').value.toLowerCase().trim();
+        const resultsElement = document.getElementById('idiomsSearchResults');
+        
+        if (searchTerm === '') {
+            resultsElement.innerHTML = '<i class="fas fa-list me-1"></i>Hiển thị tất cả';
+            resultsElement.className = 'text-muted';
+        } else {
+            const count = this.filteredIdioms.length;
+            if (count > 0) {
+                resultsElement.innerHTML = `<i class="fas fa-check-circle me-1 text-success"></i>Tìm thấy <strong>${count}</strong> kết quả`;
+                resultsElement.className = 'text-success';
+            } else {
+                resultsElement.innerHTML = '<i class="fas fa-exclamation-circle me-1 text-warning"></i>Không tìm thấy kết quả nào';
+                resultsElement.className = 'text-warning';
+            }
+        }
+    }
+    
+    clearIdiomsSearch() {
+        document.getElementById('idiomsSearchInput').value = '';
+        this.searchIdioms();
+    }
+
     // Phrasal Verbs Browse/Practice Mode Switching
     showPhrasalVerbsBrowse() {
         this.phrasalVerbsPracticeMode = false;
@@ -2881,6 +3137,10 @@ class VocabularyApp {
         document.getElementById('phrasalVerbsPracticeContent').classList.add('d-none');
         document.getElementById('phrasalVerbsBrowseBtn').classList.add('active');
         document.getElementById('phrasalVerbsPracticeBtn').classList.remove('active');
+        
+        // Show search bar
+        document.getElementById('phrasalVerbsSearchRow').style.display = 'flex';
+        
         this.displayPhrasalVerbs();
     }
 
@@ -2890,6 +3150,9 @@ class VocabularyApp {
         document.getElementById('phrasalVerbsPracticeContent').classList.remove('d-none');
         document.getElementById('phrasalVerbsBrowseBtn').classList.remove('active');
         document.getElementById('phrasalVerbsPracticeBtn').classList.add('active');
+        
+        // Hide search bar
+        document.getElementById('phrasalVerbsSearchRow').style.display = 'none';
     }
 
     // Idioms Browse/Practice Mode Switching
@@ -2899,6 +3162,10 @@ class VocabularyApp {
         document.getElementById('idiomsPracticeContent').classList.add('d-none');
         document.getElementById('idiomsBrowseBtn').classList.add('active');
         document.getElementById('idiomsPracticeBtn').classList.remove('active');
+        
+        // Show search bar
+        document.getElementById('idiomsSearchRow').style.display = 'flex';
+        
         this.displayIdioms();
     }
 
@@ -2908,6 +3175,9 @@ class VocabularyApp {
         document.getElementById('idiomsPracticeContent').classList.remove('d-none');
         document.getElementById('idiomsBrowseBtn').classList.remove('active');
         document.getElementById('idiomsPracticeBtn').classList.add('active');
+        
+        // Hide search bar
+        document.getElementById('idiomsSearchRow').style.display = 'none';
     }
 
     // Phrasal Verbs Quiz Functions

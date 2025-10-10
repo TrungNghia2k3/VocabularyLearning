@@ -1406,3 +1406,66 @@ mark.bg-warning {
     box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
     transform: translateY(-2px);
 }
+
+/* Search Bar Styles */
+.input-group.shadow-sm {
+    transition: all 0.3s ease;
+}
+
+.input-group.shadow-sm:focus-within {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+    transform: translateY(-1px);
+}
+
+.input-group-text.bg-primary,
+.input-group-text.bg-info {
+    border: none;
+    font-weight: 500;
+}
+
+.form-control.border-primary:focus,
+.form-control.border-info:focus {
+    border-color: inherit;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-info:hover {
+    color: white;
+    background-color: transparent;
+    border-color: currentColor;
+}
+
+/* Search Results Styling */
+#phrasalVerbsSearchResults,
+#idiomsSearchResults {
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+#phrasalVerbsSearchResults.text-success,
+#idiomsSearchResults.text-success {
+    font-weight: 600;
+}
+
+#phrasalVerbsSearchResults.text-warning,
+#idiomsSearchResults.text-warning {
+    font-weight: 500;
+}
+
+/* Search Container Animation */
+#phrasalVerbsSearchRow,
+#idiomsSearchRow {
+    animation: fadeInDown 0.5s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

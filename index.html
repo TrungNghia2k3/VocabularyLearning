@@ -895,15 +895,55 @@
         <!-- Phrasal Verbs Practice Mode -->
         <div id="phrasalVerbsArea" class="col-12 d-none">
             <div class="card">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                    <h5 class="mb-0"><i class="fas fa-code-branch me-2"></i>Luyện tập Cụm động từ</h5>
-                    <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-outline-success btn-sm" id="phrasalVerbsBrowseBtn">
-                            <i class="fas fa-list me-1"></i>Xem danh sách
-                        </button>
-                        <button type="button" class="btn btn-success btn-sm" id="phrasalVerbsPracticeBtn">
-                            <i class="fas fa-dumbbell me-1"></i>Luyện tập
-                        </button>
+                <div class="card-header">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h5 class="mb-0"><i class="fas fa-code-branch me-2"></i>Luyện tập Cụm động từ</h5>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-outline-success btn-sm" id="phrasalVerbsBrowseBtn">
+                                <i class="fas fa-list me-1"></i>Xem danh sách
+                            </button>
+                            <button type="button" class="btn btn-success btn-sm" id="phrasalVerbsPracticeBtn">
+                                <i class="fas fa-dumbbell me-1"></i>Luyện tập
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Search Bar -->
+                    <div class="row align-items-center mb-4" id="phrasalVerbsSearchRow" style="display: none;">
+                        <div class="col-md-8">
+                            <div class="input-group shadow-sm">
+                                <span class="input-group-text bg-primary text-white border-primary">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                                <input type="text" class="form-control border-primary" id="phrasalVerbsSearchInput" 
+                                       placeholder="Tìm kiếm theo verb, nghĩa, ví dụ, từ đồng nghĩa...">
+                                <button class="btn btn-outline-primary" type="button" id="phrasalVerbsClearSearch" 
+                                        title="Xóa từ khóa tìm kiếm">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="d-flex flex-column">
+                                <small class="fw-bold mb-1">
+                                    <span id="phrasalVerbsSearchResults">
+                                        <i class="fas fa-list me-1"></i>Hiển thị tất cả
+                                    </span>
+                                </small>
+                                <small class="text-muted">
+                                    <i class="fas fa-database me-1"></i>
+                                    <span id="phrasalVerbsTotal">0 cụm động từ</span>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Duplicate Alert -->
+                    <div class="alert alert-warning alert-dismissible d-none" id="phrasalVerbsDuplicateAlert">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        <strong>Phát hiện trùng lặp!</strong>
+                        <span id="phrasalVerbsDuplicateMessage">Có 0 cụm động từ bị trùng lặp</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                     </div>
                 </div>
                 <div class="card-body">
@@ -953,15 +993,55 @@
         <!-- Idioms Practice Mode -->
         <div id="idiomsArea" class="col-12 d-none">
             <div class="card">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                    <h5 class="mb-0"><i class="fas fa-comments me-2"></i>Luyện tập Thành ngữ</h5>
-                    <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-outline-info btn-sm" id="idiomsBrowseBtn">
-                            <i class="fas fa-list me-1"></i>Xem danh sách
-                        </button>
-                        <button type="button" class="btn btn-info btn-sm" id="idiomsPracticeBtn">
-                            <i class="fas fa-dumbbell me-1"></i>Luyện tập
-                        </button>
+                <div class="card-header">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h5 class="mb-0"><i class="fas fa-comments me-2"></i>Luyện tập Thành ngữ</h5>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-outline-info btn-sm" id="idiomsBrowseBtn">
+                                <i class="fas fa-list me-1"></i>Xem danh sách
+                            </button>
+                            <button type="button" class="btn btn-info btn-sm" id="idiomsPracticeBtn">
+                                <i class="fas fa-dumbbell me-1"></i>Luyện tập
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Search Bar -->
+                    <div class="row align-items-center mb-4" id="idiomsSearchRow" style="display: none;">
+                        <div class="col-md-8">
+                            <div class="input-group shadow-sm">
+                                <span class="input-group-text bg-info text-white border-info">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                                <input type="text" class="form-control border-info" id="idiomsSearchInput" 
+                                       placeholder="Tìm kiếm theo idiom, nghĩa, ví dụ, danh mục...">
+                                <button class="btn btn-outline-info" type="button" id="idiomsClearSearch" 
+                                        title="Xóa từ khóa tìm kiếm">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="d-flex flex-column">
+                                <small class="fw-bold mb-1">
+                                    <span id="idiomsSearchResults">
+                                        <i class="fas fa-list me-1"></i>Hiển thị tất cả
+                                    </span>
+                                </small>
+                                <small class="text-muted">
+                                    <i class="fas fa-database me-1"></i>
+                                    <span id="idiomsTotal">0 thành ngữ</span>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Duplicate Alert -->
+                    <div class="alert alert-warning alert-dismissible d-none" id="idiomsDuplicateAlert">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        <strong>Phát hiện trùng lặp!</strong>
+                        <span id="idiomsDuplicateMessage">Có 0 thành ngữ bị trùng lặp</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                     </div>
                 </div>
                 <div class="card-body">
