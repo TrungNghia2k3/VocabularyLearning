@@ -13408,6 +13408,526 @@
                     }
                 ]
             }
+        },
+        {
+            "word": "augment",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "to make something greater by adding to it; increase.",
+                    "example": "The company plans to augment its workforce to meet the growing demand."
+                }
+            ],
+            "meaning": "tăng cường",
+            "type": "verb",
+            "example": "The company plans to augment its workforce to meet the growing demand.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ɔːɡˈmɛnt/",
+                "en-US": "/ɔːɡˈmɛnt/"
+            },
+            "synonyms": [
+                {
+                    "word": "increase",
+                    "meaning": "tăng"
+                },
+                {
+                    "word": "enhance",
+                    "meaning": "nâng cao"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "decrease",
+                    "meaning": "giảm"
+                },
+                {
+                    "word": "reduce",
+                    "meaning": "giảm bớt"
+                }
+            ],
+            "wordFamily": {
+                "verb": [
+                    {
+                        "word": "augment",
+                        "meaning": "tăng cường"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "augmentation",
+                        "meaning": "sự tăng cường"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "augmented",
+                        "meaning": "được tăng cường"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "care-taker",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a person who takes care of a building or property.",
+                    "example": "The care-taker is responsible for maintaining the cleanliness and security of the premises."
+                }
+            ],
+            "meaning": "người quản gia, người trông nom",
+            "type": "noun",
+            "example": "The care-taker is responsible for maintaining the cleanliness and security of the premises.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈkeəˌteɪkə/",
+                "en-US": "/ˈkerˌteɪkər/"
+            },
+            "synonyms": [
+                {
+                    "word": "custodian",
+                    "meaning": "người trông nom"
+                },
+                {
+                    "word": "janitor",
+                    "meaning": "người gác cổng"
+                }
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "care-taker",
+                        "meaning": "người quản gia, người trông nom"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "cram",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "to study intensively over a short period of time.",
+                    "example": "Students often cram for exams the night before."
+                }
+            ],
+            "meaning": "học nhồi",
+            "type": "verb",
+            "example": "Students often cram for exams the night before.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/kræm/",
+                "en-US": "/kræm/"
+            },
+            "synonyms": [
+                {
+                    "word": "study intensively",
+                    "meaning": "học tập chuyên sâu"
+                },
+                {
+                    "word": "swot",
+                    "meaning": "học chăm chỉ"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "neglect",
+                    "meaning": "bỏ bê"
+                },
+                {
+                    "word": "ignore",
+                    "meaning": "phớt lờ"
+                }
+            ],
+            "wordFamily": {
+                "verb": [
+                    {
+                        "word": "cram",
+                        "meaning": "học nhồi"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "cramming",
+                        "meaning": "sự học nhồi"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "daunting",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "seeming difficult to deal with in anticipation; intimidating.",
+                    "example": "The daunting task of climbing the mountain required careful preparation."
+                }
+            ],
+            "meaning": "nản chí, chán nản",
+            "type": "noun",
+            "example": "The daunting task of climbing the mountain required careful preparation.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˌdɔːntɪŋ/",
+                "en-US": "/ˈdɔːntɪŋ/"
+            },
+            "synonyms": [
+                {
+                    "word": "intimidating",
+                    "meaning": "gây e sợ"
+                },
+                {
+                    "word": "formidable",
+                    "meaning": "đáng gờm"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "encouraging",
+                    "meaning": "khích lệ"
+                },
+                {
+                    "word": "reassuring",
+                    "meaning": "trấn an"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "daunting",
+                        "meaning": "nản chí, chán nản"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "daunt",
+                        "meaning": "làm nản chí"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "deplorable",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "deserving strong condemnation; shockingly bad.",
+                    "example": "The deplorable conditions in the refugee camp drew international outrage."
+                }
+            ],
+            "meaning": "đáng trách, tồi tệ",
+            "type": "noun",
+            "example": "The deplorable conditions in the refugee camp drew international outrage.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/dɪˈplɔːrəbl/",
+                "en-US": "/dɪˈplɔːrəbəl/"
+            },
+            "synonyms": [
+                {
+                    "word": "shameful",
+                    "meaning": "đáng xấu hổ"
+                },
+                {
+                    "word": "disgraceful",
+                    "meaning": "đáng hổ thẹn"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "commendable",
+                    "meaning": "đáng khen ngợi"
+                },
+                {
+                    "word": "praiseworthy",
+                    "meaning": "đáng ca ngợi"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "deplorable",
+                        "meaning": "đáng trách, tồi tệ"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "deplorably",
+                        "meaning": "một cách đáng trách"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "deplorability",
+                        "meaning": "tính đáng trách"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "diligent",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "showing care and effort in your work or duties.",
+                    "example": "She was a diligent student, always studying hard for her exams."
+                }
+            ],
+            "meaning": "siêng năng, cần cù",
+            "type": "noun",
+            "example": "Her diligence in studying paid off when she aced the exam.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈdɪlɪdʒənt/",
+                "en-US": "/ˈdɪlɪdʒənt/"
+            },
+            "synonyms": [
+                {
+                    "word": "hardworking",
+                    "meaning": "chăm chỉ"
+                },
+                {
+                    "word": "industrious",
+                    "meaning": "siêng năng"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "lazy",
+                    "meaning": "lười biếng"
+                },
+                {
+                    "word": "negligent",
+                    "meaning": "cẩu thả"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "diligent",
+                        "meaning": "siêng năng, cần cù"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "diligence",
+                        "meaning": "sự siêng năng"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "diligently",
+                        "meaning": "một cách siêng năng"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "dolefully",
+            "definitions": [
+                {
+                    "partOfSpeech": "adverb",
+                    "definition": "in a way that expresses sorrow or sadness.",
+                    "example": "She looked dolefully at the empty plate, wishing for more food."
+                }
+            ],
+            "meaning": "buồn bã, ảm đạm",
+            "type": "noun",
+            "example": "She looked dolefully at the empty plate, wishing for more food.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈdəʊl.fəl.i/",
+                "en-US": "/ˈdoʊl.fəl.i/"
+            },
+            "synonyms": [
+                {
+                    "word": "sadly",
+                    "meaning": "một cách buồn bã"
+                },
+                {
+                    "word": "mournfully",
+                    "meaning": "một cách thương tiếc"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "happily",
+                    "meaning": "một cách vui vẻ"
+                },
+                {
+                    "word": "cheerfully",
+                    "meaning": "một cách vui tươi"
+                }
+            ],
+            "wordFamily": {
+                "adverb": [
+                    {
+                        "word": "dolefully",
+                        "meaning": "buồn bã, ảm đạm"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "doleful",
+                        "meaning": "u sầu"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "exasperate",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "to irritate or annoy greatly; to make very angry.",
+                    "example": "The constant noise from the construction site exasperated the residents."
+                }
+            ],
+            "meaning": "làm bực tức, làm phát cáu",
+            "type": "verb",
+            "example": "The patient's exasperation was evident as he waited for the doctor.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ɪɡˈzæspəreɪt/",
+                "en-US": "/ɪɡˈzæspəreɪt/"
+            },
+            "synonyms": [
+                {
+                    "word": "irritate",
+                    "meaning": "làm phát cáu"
+                },
+                {
+                    "word": "annoy",
+                    "meaning": "làm phiền"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "please",
+                    "meaning": "làm hài lòng"
+                },
+                {
+                    "word": "delight",
+                    "meaning": "làm vui thích"
+                }
+            ],
+            "wordFamily": {
+                "verb": [
+                    {
+                        "word": "exasperate",
+                        "meaning": "làm bực tức, làm phát cáu"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "exasperated",
+                        "meaning": "bị làm bực tức"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "exasperation",
+                        "meaning": "sự bực tức"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "flip-chart",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a large pad of paper mounted on a stand, used for displaying information in meetings or presentations.",
+                    "example": "The presenter used a flip-chart to illustrate his points."
+                }
+            ],
+            "meaning": "bảng giấy lật, bảng kẹp giấy",
+            "type": "noun",
+            "example": "The presenter used a flip-chart to illustrate his points.",
+            "level": "intermediate",
+            "phonetic": {
+                "en-GB": "/ˈflɪpˌtʃɑːt/",
+                "en-US": "/ˈflɪpˌtʃɑːrt/"
+            },
+            "synonyms": [
+                {
+                    "word": "presentation board",
+                    "meaning": "bảng thuyết trình"
+                },
+                {
+                    "word": "easel pad",
+                    "meaning": "bảng vẽ có chân"
+                }
+            ],
+            "antonyms": [],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "flip-chart",
+                        "meaning": "bảng giấy lật, bảng kẹp giấy"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "giftedness",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "the quality of being exceptionally talented or intelligent.",
+                    "example": "Her giftedness in music was evident from a young age."
+                }
+            ],
+            "meaning": "tính cách thiên tài",
+            "type": "noun",
+            "example": "Her giftedness in music was evident from a young age.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈɡɪftɪdnəs/",
+                "en-US": "/ˈɡɪftɪdnəs/"
+            },
+            "synonyms": [
+                {
+                    "word": "talent",
+                    "meaning": "tài năng"
+                },
+                {
+                    "word": "ability",
+                    "meaning": "khả năng"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "mediocrity",
+                    "meaning": "sự tầm thường"
+                },
+                {
+                    "word": "incompetence",
+                    "meaning": "sự thiếu năng lực"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "giftedness",
+                        "meaning": "tính cách thiên tài"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "gifted",
+                        "meaning": "có tài năng"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "gift",
+                        "meaning": "ban tặng"
+                    }
+                ]
+            }
         }
     ]
 }
