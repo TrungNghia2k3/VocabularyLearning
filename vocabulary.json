@@ -13928,6 +13928,548 @@
                     }
                 ]
             }
+        },
+        {
+            "word": "kinesthetic",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "relating to the sensation of movement or strain in muscles, tendons, and joints; muscular sense.",
+                    "example": "Kinesthetic learners prefer hands-on activities to understand concepts better."
+                }
+            ],
+            "meaning": "liên quan đến cảm giác vận động",
+            "type": "adjective",
+            "example": "Her kinesthetic learning style was evident in her preference for hands-on activities.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈkɪnəˌθɛtɪk/",
+                "en-US": "/ˈkɪnəˌθɛtɪk/"
+            },
+            "synonyms": [
+                {
+                    "word": "motor",
+                    "meaning": "liên quan đến vận động"
+                },
+                {
+                    "word": "physical",
+                    "meaning": "thuộc về thể chất"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "sensory",
+                    "meaning": "thuộc về cảm giác"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "kinesthetic",
+                        "meaning": "liên quan đến cảm giác vận động"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "kinesthesia",
+                        "meaning": "cảm giác vận động"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "mortgage",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a legal agreement by which a bank or creditor lends money at interest in exchange for taking title of the debtor's property.",
+                    "example": "They took out a mortgage to buy their first home."
+                }
+            ],
+            "meaning": "thế chấp",
+            "type": "noun",
+            "example": "They took out a mortgage to buy their first home.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈmɔːɡɪdʒ/",
+                "en-US": "/ˈmɔːrɡɪdʒ/"
+            },
+            "synonyms": [
+                {
+                    "word": "loan",
+                    "meaning": "khoản vay"
+                },
+                {
+                    "word": "debt",
+                    "meaning": "nợ"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "ownership",
+                    "meaning": "sở hữu"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "mortgage",
+                        "meaning": "thế chấp"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "mortgage",
+                        "meaning": "thế chấp"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "pathetically",
+            "definitions": [
+                {
+                    "partOfSpeech": "adverb",
+                    "definition": "in a way that arouses pity, especially through vulnerability or sadness.",
+                    "example": "The stray dog looked pathetically at the passerby, hoping for some food."
+                }
+            ],
+            "meaning": "một cách đáng thương",
+            "type": "adverb",
+            "example": "The stray dog looked pathetically at the passerby, hoping for some food.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/pəˈθɛtɪkli/",
+                "en-US": "/pəˈθɛtɪkli/"
+            },
+            "synonyms": [
+                {
+                    "word": "pitifully",
+                    "meaning": "một cách đáng thương"
+                },
+                {
+                    "word": "miserably",
+                    "meaning": "một cách khốn khổ"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "confidently",
+                    "meaning": "một cách tự tin"
+                },
+                {
+                    "word": "proudly",
+                    "meaning": "một cách tự hào"
+                }
+            ],
+            "wordFamily": {
+                "adverb": [
+                    {
+                        "word": "pathetically",
+                        "meaning": "một cách đáng thương"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "pathetic",
+                        "meaning": "đáng thương"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "requisite",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a thing that is necessary for the achievement of a specified end.",
+                    "example": "The requisite for the course is a good understanding of mathematics."
+                }
+            ],
+            "meaning": "điều kiện tiên quyết",
+            "type": "noun",
+            "example": "The requisite for the course is a good understanding of mathematics.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈrɛkwɪzɪt/",
+                "en-US": "/ˈrɛkwɪzɪt/"
+            },
+            "synonyms": [
+                {
+                    "word": "necessity",
+                    "meaning": "sự cần thiết"
+                },
+                {
+                    "word": "requirement",
+                    "meaning": "yêu cầu"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "optional",
+                    "meaning": "tùy chọn"
+                },
+                {
+                    "word": "unnecessary",
+                    "meaning": "không cần thiết"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "requisite",
+                        "meaning": "điều kiện tiên quyết"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "requisite",
+                        "meaning": "cần thiết"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "restrictively",
+            "definitions": [
+                {
+                    "partOfSpeech": "adverb",
+                    "definition": "in a way that limits or controls something.",
+                    "example": "The new policy was restrictively applied to only a few departments."
+                }
+            ],
+            "meaning": "một cách hạn chế",
+            "type": "adverb",
+            "example": "The new policy was restrictively applied to only a few departments.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/rɪˈstrɪktɪvli/",
+                "en-US": "/rɪˈstrɪktɪvli/"
+            },
+            "synonyms": [
+                {
+                    "word": "limitingly",
+                    "meaning": "một cách hạn chế"
+                },
+                {
+                    "word": "confiningly",
+                    "meaning": "một cách giới hạn"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "freely",
+                    "meaning": "một cách tự do"
+                },
+                {
+                    "word": "liberally",
+                    "meaning": "một cách rộng rãi"
+                }
+            ],
+            "wordFamily": {
+                "adverb": [
+                    {
+                        "word": "restrictively",
+                        "meaning": "một cách hạn chế"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "restrictive",
+                        "meaning": "hạn chế"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "restrict",
+                        "meaning": "giới hạn"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "arbitrarily",
+            "definitions": [
+                {
+                    "partOfSpeech": "adverb",
+                    "definition": "in a way that is based on random choice or personal whim, rather than any reason or system.",
+                    "example": "The rules seemed to be applied arbitrarily, causing confusion among the participants."
+                }
+            ],
+            "meaning": "một cách tùy ý",
+            "type": "adverb",
+            "example": "The rules seemed to be applied arbitrarily, causing confusion among the participants.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈɑːbɪtrərɪli/",
+                "en-US": "/ˈɑːrbɪtrərɪli/"
+            },
+            "synonyms": [
+                {
+                    "word": "randomly",
+                    "meaning": "một cách ngẫu nhiên"
+                },
+                {
+                    "word": "haphazardly",
+                    "meaning": "một cách bừa bãi"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "systematically",
+                    "meaning": "một cách có hệ thống"
+                },
+                {
+                    "word": "methodically",
+                    "meaning": "một cách có phương pháp"
+                }
+            ],
+            "wordFamily": {
+                "adverb": [
+                    {
+                        "word": "arbitrarily",
+                        "meaning": "một cách tùy ý"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "arbitrary",
+                        "meaning": "tùy ý"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "arbitrariness",
+                        "meaning": "tính tùy ý"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "spontaneously",
+            "definitions": [
+                {
+                    "partOfSpeech": "adverb",
+                    "definition": "in a way that is unplanned and occurs as a result of a sudden impulse or inclination.",
+                    "example": "The crowd spontaneously erupted into applause after the performance."
+                }
+            ],
+            "meaning": "một cách tự phát",
+            "type": "adverb",
+            "example": "The crowd spontaneously erupted into applause after the performance.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈspɒntənɪəsli/",
+                "en-US": "/spɑːnˈteɪnəsli/"
+            },
+            "synonyms": [
+                {
+                    "word": "impulsively",
+                    "meaning": "một cách bốc đồng"
+                },
+                {
+                    "word": "unplannedly",
+                    "meaning": "một cách không kế hoạch"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "deliberately",
+                    "meaning": "một cách có chủ ý"
+                },
+                {
+                    "word": "intentionally",
+                    "meaning": "một cách cố ý"
+                }
+            ],
+            "wordFamily": {
+                "adverb": [
+                    {
+                        "word": "spontaneously",
+                        "meaning": "một cách tự phát"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "spontaneous",
+                        "meaning": "tự phát"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "spontaneity",
+                        "meaning": "tính tự phát"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "satisfactory",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "meeting the requirements or expectations; adequate.",
+                    "example": "The results of the experiment were satisfactory, confirming the hypothesis."
+                }
+            ],
+            "meaning": "đạt yêu cầu, thỏa đáng",
+            "type": "adjective",
+            "example": "The results of the experiment were satisfactory, confirming the hypothesis.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈsætɪsfəktəri/",
+                "en-US": "/ˈsætɪsfəktəri/"
+            },
+            "synonyms": [
+                {
+                    "word": "adequate",
+                    "meaning": "đầy đủ"
+                },
+                {
+                    "word": "acceptable",
+                    "meaning": "chấp nhận được"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "unsatisfactory",
+                    "meaning": "không thỏa đáng"
+                },
+                {
+                    "word": "inadequate",
+                    "meaning": "không đầy đủ"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "satisfactory",
+                        "meaning": "đạt yêu cầu, thỏa đáng"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "satisfactorily",
+                        "meaning": "một cách thỏa đáng"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "satisfaction",
+                        "meaning": "sự hài lòng"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "severity",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "the fact or condition of being severe; strictness, sternness, or harshness.",
+                    "example": "The severity of the punishment was meant to deter others from committing the same crime."
+                }
+            ],
+            "meaning": "tính nghiêm trọng, tính nghiêm khắc",
+            "type": "noun",
+            "example": "The severity of the punishment was meant to deter others from committing the same crime.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/sɪˈvɛrɪti/",
+                "en-US": "/ˈsɪˈvɛrɪti/"
+            },
+            "synonyms": [
+                {
+                    "word": "harshness",
+                    "meaning": "sự khắc nghiệt"
+                },
+                {
+                    "word": "sternness",
+                    "meaning": "sự nghiêm khắc"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "leniency",
+                    "meaning": "sự khoan dung"
+                },
+                {
+                    "word": "mildness",
+                    "meaning": "sự nhẹ nhàng"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "severity",
+                        "meaning": "tính nghiêm trọng, tính nghiêm khắc"
+                    }
+                ],
+                "adjective": [
+                    {
+                        "word": "severe",
+                        "meaning": "nghiêm trọng, nghiêm khắc"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "severely",
+                        "meaning": "một cách nghiêm trọng"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "vocational",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "relating to an occupation or employment.",
+                    "example": "She enrolled in a vocational training program to learn new skills for her career."
+                }
+            ],
+            "meaning": "thuộc về nghề nghiệp",
+            "type": "adjective",
+            "example": "She enrolled in a vocational training program to learn new skills for her career.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈvəʊkeɪʃənl/",
+                "en-US": "/voʊˈkeɪʃənl/"
+            },
+            "synonyms": [
+                {
+                    "word": "occupational",
+                    "meaning": "thuộc về nghề nghiệp"
+                },
+                {
+                    "word": "professional",
+                    "meaning": "chuyên nghiệp"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "academic",
+                    "meaning": "thuộc về học thuật"
+                },
+                {
+                    "word": "theoretical",
+                    "meaning": "thuộc về lý thuyết"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "vocational",
+                        "meaning": "thuộc về nghề nghiệp"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "vocation",
+                        "meaning": "nghề nghiệp"
+                    }
+                ]
+            }
         }
     ]
 }
