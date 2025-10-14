@@ -399,6 +399,9 @@
                         <button class="btn btn-outline-warning btn-sm" id="todayWordsWritingBtn">
                             <i class="fas fa-edit"></i> Luyện viết
                         </button>
+                        <button class="btn btn-outline-secondary btn-sm" id="todayWordsSynAntQuizBtn" title="Quiz Đồng/Trái nghĩa cho từ hôm nay" style="display: block !important; visibility: visible !important;">
+                            <i class="fas fa-random"></i> Đồng/Trái nghĩa
+                        </button>
                         <div>
                             <span class="badge bg-info me-2" id="todayWordsProgress">1 / 10</span>
                             <span class="badge bg-primary" id="todayWordsCount">10 từ</span>
@@ -830,6 +833,230 @@
                         <i class="fas fa-keyboard"></i> Bắt đầu luyện viết từ
                     </button>
                     <p class="text-muted mt-2">Nhìn nghĩa tiếng Việt, viết lại từ tiếng Anh</p>
+                </div>
+
+                <!-- Settings -->
+                <div id="todayWordsSynAntSettings">
+                        <div class="card border-secondary">
+                            <div class="card-header bg-secondary text-white">
+                                <h5 class="mb-0">
+                                    <i class="fas fa-random"></i> Quiz Đồng/Trái nghĩa - Từ hôm nay
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="todayWordsSynAntNumber" class="form-label">
+                                                <i class="fas fa-hashtag"></i> Số lượng câu hỏi:
+                                            </label>
+                                            <select class="form-select" id="todayWordsSynAntNumber">
+                                                <option value="5">5 câu hỏi</option>
+                                                <option value="10" selected>10 câu hỏi</option>
+                                                <option value="15">15 câu hỏi</option>
+                                                <option value="20">20 câu hỏi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label class="form-label">
+                                            <i class="fas fa-filter"></i> Loại câu hỏi:
+                                        </label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="todayWordsSynAntType" id="synAntBoth" value="both" checked>
+                                            <label class="form-check-label" for="synAntBoth">
+                                                Cả đồng nghĩa và trái nghĩa
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="todayWordsSynAntType" id="synAntSynonyms" value="synonyms">
+                                            <label class="form-check-label" for="synAntSynonyms">
+                                                Chỉ từ đồng nghĩa
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="todayWordsSynAntType" id="synAntAntonyms" value="antonyms">
+                                            <label class="form-check-label" for="synAntAntonyms">
+                                                Chỉ từ trái nghĩa
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="alert alert-info">
+                                <i class="fas fa-info-circle"></i>
+                                <strong>Hướng dẫn:</strong> Quiz sẽ chỉ sử dụng các từ trong danh sách "Từ mới hôm nay" 
+                                của bạn mà có từ đồng nghĩa hoặc trái nghĩa.
+                            </div>
+                            
+                            <div class="text-center">
+                                <button class="btn btn-secondary btn-lg" id="todayWordsSynAntStartBtn">
+                                    <i class="fas fa-play"></i> Bắt đầu Quiz
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quiz Content -->
+                    <div id="todayWordsSynAntContent" style="display: none;">
+                        <!-- Initial Setup Screen -->
+                        <div id="todayWordsSynAntSetup" class="text-center">
+                            <h4 class="mb-4">🔄 Quiz Đồng/Trái nghĩa - Từ hôm nay</h4>
+                            <p class="text-muted mb-4">Luyện tập từ đồng nghĩa và trái nghĩa với các từ đã học</p>
+                            
+                            <!-- Selection Mode -->
+                            <div class="mb-4">
+                                <label class="form-label fw-bold">Chọn cách chọn từ:</label>
+                                <div class="btn-group d-flex mb-3" role="group">
+                                    <input type="radio" class="btn-check" name="synAntSelectMode" id="synAntSelectModeCount" checked>
+                                    <label class="btn btn-outline-primary" for="synAntSelectModeCount">
+                                        <i class="fas fa-calculator"></i> Theo số lượng
+                                    </label>
+                                    
+                                    <input type="radio" class="btn-check" name="synAntSelectMode" id="synAntSelectModeRange">
+                                    <label class="btn btn-outline-info" for="synAntSelectModeRange">
+                                        <i class="fas fa-list-ol"></i> Theo khoảng
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Count Selection -->
+                            <div id="synAntCountSelection" class="mb-4">
+                                <label class="form-label fw-bold">Số lượng từ muốn học:</label>
+                                <div class="row justify-content-center">
+                                    <div class="col-md-4">
+                                        <input type="number" class="form-control text-center" id="synAntWordsCount" 
+                                               value="10" min="5" max="50" step="1">
+                                        <small class="text-muted">từ (từ mới nhất)</small>
+                                        <p class="text-muted mt-2">Từ sẽ được lấy từ cuối danh sách (từ mới nhất)</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Range Selection -->
+                            <div id="synAntRangeSelection" class="mb-4" style="display: none;">
+                                <label class="form-label fw-bold">Chọn khoảng từ:</label>
+                                <div class="row justify-content-center">
+                                    <div class="col-md-3">
+                                        <label class="form-label">Từ vị trí:</label>
+                                        <input type="number" class="form-control text-center" id="synAntFromIndex" 
+                                               value="1" min="1" step="1">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">Đến vị trí:</label>
+                                        <input type="number" class="form-control text-center" id="synAntToIndex" 
+                                               value="20" min="1" step="1">
+                                    </div>
+                                </div>
+                                <small class="text-muted">Chọn từ theo vị trí trong danh sách từ vựng</small>
+                            </div>
+
+                            <!-- Quiz Settings -->
+                            <div class="card mt-4 mb-4">
+                                <div class="card-header bg-info text-white">
+                                    <h6 class="mb-0">⚙️ Cài đặt Quiz</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="synAntQuizCount" class="form-label">
+                                                    <i class="fas fa-hashtag"></i> Số lượng câu hỏi:
+                                                </label>
+                                                <select class="form-select" id="synAntQuizCount">
+                                                    <option value="5">5 câu hỏi</option>
+                                                    <option value="10" selected>10 câu hỏi</option>
+                                                    <option value="15">15 câu hỏi</option>
+                                                    <option value="20">20 câu hỏi</option>
+                                                    <option value="all">Tất cả từ có syn/ant</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">
+                                                    <i class="fas fa-filter"></i> Loại câu hỏi:
+                                                </label>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="synAntQuizType" id="synAntBothType" value="both" checked>
+                                                    <label class="form-check-label" for="synAntBothType">
+                                                        Cả đồng nghĩa và trái nghĩa
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="synAntQuizType" id="synAntSynonymsType" value="synonyms">
+                                                    <label class="form-check-label" for="synAntSynonymsType">
+                                                        Chỉ từ đồng nghĩa
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="synAntQuizType" id="synAntAntonymsType" value="antonyms">
+                                                    <label class="form-check-label" for="synAntAntonymsType">
+                                                        Chỉ từ trái nghĩa
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="alert alert-info mb-0">
+                                        <i class="fas fa-info-circle"></i>
+                                        <strong>Hướng dẫn:</strong> Quiz sẽ chỉ sử dụng các từ trong phạm vi đã chọn 
+                                        mà có từ đồng nghĩa hoặc trái nghĩa.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Start Button -->
+                            <button class="btn btn-info btn-lg" id="todayWordsSynAntStartSetupBtn">
+                                <i class="fas fa-play"></i> Bắt đầu làm bài tập từ đồng/trái nghĩa
+                            </button>
+                        </div>
+
+                        <!-- Quiz Area (Initially hidden) -->
+                        <div id="todayWordsSynAntQuizArea" style="display: none;">
+                            <div class="row">
+                                <div class="col-md-8 mx-auto">
+                                    <div class="text-center mb-4">
+                                        <h4>🔄 Quiz Đồng/Trái nghĩa</h4>
+                                        <p class="text-muted">Luyện tập từ đồng nghĩa và trái nghĩa</p>
+                                        <div class="progress mb-3" style="height: 10px;">
+                                            <div id="synAntProgressBar" class="progress-bar bg-info" style="width: 0%"></div>
+                                        </div>
+                                        <p class="text-muted mb-0">
+                                            Câu hỏi <span id="synAntCurrentQ">0</span> / <span id="synAntTotalQ">0</span>
+                                            | Điểm: <span id="synAntScore">0</span>
+                                        </p>
+                                    </div>
+                                    
+                                    <!-- Quiz Card -->
+                                    <div id="synAntQuizCard" class="card shadow">
+                                        <div class="card-body">
+                                            <div id="synAntQuestion" class="text-center mb-4">
+                                                <!-- Question will be displayed here -->
+                                            </div>
+                                            <div id="synAntOptions" class="d-grid gap-2">
+                                                <!-- Options will be displayed here -->
+                                            </div>
+                                            <div id="synAntResult" class="mt-4 d-none">
+                                                <!-- Result will be displayed here -->
+                                            </div>
+                                            <div class="text-center mt-4 d-flex justify-content-center align-items-center">
+                                                <button id="synAntNextBtn" class="btn btn-primary d-none">
+                                                    <i class="fas fa-arrow-right"></i> Câu tiếp theo
+                                                </button>
+                                                <button id="synAntRestartBtn" class="btn btn-success d-none">
+                                                    <i class="fas fa-redo"></i> Làm lại
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

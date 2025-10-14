@@ -356,14 +356,79 @@ class VocabularyApp {
                 meaning: "xin chào",
                 type: "interjection",
                 example: "Hello, how are you?",
-                level: "basic"
+                level: "basic",
+                synonyms: [
+                    { word: "hi", meaning: "chào" },
+                    { word: "greetings", meaning: "lời chào" },
+                    { word: "salutations", meaning: "lời chào hỏi" }
+                ],
+                antonyms: [
+                    { word: "goodbye", meaning: "tạm biệt" },
+                    { word: "farewell", meaning: "lời chia tay" }
+                ]
             },
             {
                 word: "computer",
                 meaning: "máy tính",
                 type: "noun",
                 example: "I use my computer every day.",
-                level: "basic"
+                level: "basic",
+                synonyms: [
+                    { word: "machine", meaning: "máy móc" },
+                    { word: "device", meaning: "thiết bị" },
+                    { word: "laptop", meaning: "máy tính xách tay" }
+                ]
+            },
+            {
+                word: "good",
+                meaning: "tốt",
+                type: "adjective", 
+                example: "This is a good book.",
+                level: "basic",
+                synonyms: [
+                    { word: "excellent", meaning: "xuất sắc" },
+                    { word: "great", meaning: "tuyệt vời" },
+                    { word: "wonderful", meaning: "tuyệt diệu" }
+                ],
+                antonyms: [
+                    { word: "bad", meaning: "xấu" },
+                    { word: "terrible", meaning: "tệ hại" },
+                    { word: "awful", meaning: "kinh khủng" }
+                ]
+            },
+            {
+                word: "happy",
+                meaning: "hạnh phúc",
+                type: "adjective",
+                example: "I am happy today.",
+                level: "basic",
+                synonyms: [
+                    { word: "joyful", meaning: "vui vẻ" },
+                    { word: "cheerful", meaning: "tươi cười" },
+                    { word: "delighted", meaning: "vui mừng" }
+                ],
+                antonyms: [
+                    { word: "sad", meaning: "buồn" },
+                    { word: "unhappy", meaning: "không hạnh phúc" },
+                    { word: "miserable", meaning: "khổ sở" }
+                ]
+            },
+            {
+                word: "big",
+                meaning: "to, lớn",
+                type: "adjective",
+                example: "This is a big house.",
+                level: "basic",
+                synonyms: [
+                    { word: "large", meaning: "rộng lớn" },
+                    { word: "huge", meaning: "khổng lồ" },
+                    { word: "enormous", meaning: "to lớn" }
+                ],
+                antonyms: [
+                    { word: "small", meaning: "nhỏ" },
+                    { word: "tiny", meaning: "tí hon" },
+                    { word: "little", meaning: "bé" }
+                ]
             }
         ];
     }
@@ -457,6 +522,9 @@ class VocabularyApp {
         document.getElementById('todayWordsWritingInput').addEventListener('keypress', (e) => {
             if (e.key === 'Enter') this.submitTodayWordsWriting();
         });
+        // Today's Words Syn/Ant Quiz
+        document.getElementById('todayWordsSynAntQuizBtn').addEventListener('click', () => this.showTodayWordsSynAntQuiz());
+        document.getElementById('todayWordsSynAntStartBtn').addEventListener('click', () => this.startTodayWordsSynAntQuiz());
 
         // Phrasal Verbs Practice Mode
         document.getElementById('phrasalVerbsBrowseBtn').addEventListener('click', () => this.showPhrasalVerbsBrowse());
@@ -816,6 +884,7 @@ class VocabularyApp {
     startSynonymAntonymQuiz() {
         // Hide start button and show quiz content
         document.getElementById('synAntQuizContent').style.display = 'block';
+        
         // Filter words that have synonyms or antonyms
         const wordsWithSynonymsAntonyms = this.vocabulary.filter(word => 
             (word.synonyms && word.synonyms.length > 0) || 
@@ -848,6 +917,157 @@ class VocabularyApp {
         this.showSynAntQuestion();
     }
 
+    // Start Synonym/Antonym Quiz but only using Today's Words
+    startTodayWordsSynAntQuiz() {
+        // Ensure today's list exists
+        const todayPool = this.todayWordsList && this.todayWordsList.length > 0 ? this.todayWordsList : null;
+        if (!todayPool || todayPool.length === 0) {
+            this.showError('Chưa có danh sách từ hôm nay. Vui lòng chọn và bắt đầu "Today\'s Words" trước.');
+            return;
+        }
+
+        // Filter today's words which have synonyms or antonyms in the main vocabulary entries
+        // todayPool may contain simple word strings or full objects depending on implementation
+        const wordsWithSynonymsAntonyms = [];
+
+        // Get quiz preferences from UI
+        const quizNumber = parseInt(document.getElementById('todayWordsSynAntNumber').value) || 10;
+        const quizType = document.querySelector('input[name="todayWordsSynAntType"]:checked').value;
+
+        todayPool.forEach(tw => {
+            // try to find matching entry in full vocabulary by word/verb/idiom
+            const key = (typeof tw === 'string') ? tw : (tw.word || tw.verb || tw.idiom || '');
+            const match = this.vocabulary.find(v => v.word === key || v.word === (tw.word) || v.verb === key || v.idiom === key);
+            
+            if (match) {
+                let hasRequiredType = false;
+                
+                // Check based on quiz type selection
+                if (quizType === 'both') {
+                    hasRequiredType = (match.synonyms && match.synonyms.length > 0) || (match.antonyms && match.antonyms.length > 0);
+                } else if (quizType === 'synonyms') {
+                    hasRequiredType = (match.synonyms && match.synonyms.length > 0);
+                } else if (quizType === 'antonyms') {
+                    hasRequiredType = (match.antonyms && match.antonyms.length > 0);
+                }
+                
+                if (hasRequiredType) {
+                    wordsWithSynonymsAntonyms.push(match);
+                }
+            }
+        });
+
+        if (wordsWithSynonymsAntonyms.length < 3) {
+            let errorMsg = 'Cần ít nhất 3 từ trong danh sách hôm nay có ';
+            if (quizType === 'synonyms') errorMsg += 'từ đồng nghĩa';
+            else if (quizType === 'antonyms') errorMsg += 'từ trái nghĩa';
+            else errorMsg += 'từ đồng nghĩa hoặc trái nghĩa';
+            errorMsg += ' để bắt đầu quiz!';
+            this.showError(errorMsg);
+            return;
+        }
+
+        // Prepare quiz state similar to global SynAnt quiz
+        this.synAntQuizScore = 0;
+        this.synAntQuizTotal = Math.min(quizNumber, wordsWithSynonymsAntonyms.length);
+        this.synAntQuizCurrentQuestion = 0;
+        this.currentSynAntQuizData = [];
+        this.todayWordsSynAntQuizType = quizType; // Store quiz type for question generation
+
+        for (let i = 0; i < this.synAntQuizTotal; i++) {
+            const questionData = this.generateSynAntQuestion(wordsWithSynonymsAntonyms);
+            if (questionData) this.currentSynAntQuizData.push(questionData);
+        }
+
+        if (this.currentSynAntQuizData.length === 0) {
+            this.showError('Không thể tạo câu hỏi từ danh sách hôm nay. Vui lòng thêm synonyms/antonyms cho các từ.');
+            return;
+        }
+
+        // Set a flag so we know this is a Today's Words limited quiz
+        this.isTodayWordsSynAntQuiz = true;
+
+        // Hide settings and show quiz content within Today's Words area
+        document.getElementById('todayWordsSynAntSettings').style.display = 'none';
+        document.getElementById('todayWordsSynAntQuizContent').style.display = 'block';
+
+        this.showTodayWordsSynAntQuestion();
+    }
+
+    // Show Synonym/Antonym question within Today's Words area
+    showTodayWordsSynAntQuestion() {
+        const questionData = this.currentSynAntQuizData[this.synAntQuizCurrentQuestion];
+        
+        document.getElementById('todayWordsSynAntWordText').textContent = questionData.targetWord;
+        document.getElementById('todayWordsSynAntDefinition').textContent = questionData.definition;
+        document.getElementById('todayWordsSynAntQuestionType').textContent = questionData.questionType === 'synonym' ? 'Từ đồng nghĩa' : 'Từ trái nghĩa';
+        
+        // Display options
+        const optionsContainer = document.getElementById('todayWordsSynAntOptions');
+        optionsContainer.innerHTML = '';
+        
+        questionData.options.forEach((option, index) => {
+            const optionDiv = document.createElement('div');
+            optionDiv.className = 'option-item';
+            optionDiv.innerHTML = `
+                <input type="radio" name="todayWordsSynAntOption" value="${index}" id="todayWordsSynAntOpt${index}">
+                <label for="todayWordsSynAntOpt${index}">${option}</label>
+            `;
+            optionsContainer.appendChild(optionDiv);
+        });
+        
+        // Update progress
+        document.getElementById('todayWordsSynAntProgress').textContent = 
+            `Câu hỏi ${this.synAntQuizCurrentQuestion + 1}/${this.synAntQuizTotal}`;
+    }
+
+    // Handle answer for Today's Words syn/ant quiz
+    submitTodayWordsSynAntAnswer() {
+        const selectedOption = document.querySelector('input[name="todayWordsSynAntOption"]:checked');
+        
+        if (!selectedOption) {
+            this.showError('Vui lòng chọn một đáp án!');
+            return;
+        }
+        
+        const answer = parseInt(selectedOption.value);
+        const questionData = this.currentSynAntQuizData[this.synAntQuizCurrentQuestion];
+        
+        if (answer === questionData.correctAnswer) {
+            this.synAntQuizScore++;
+            this.showSuccess('Chính xác!');
+        } else {
+            this.showError(`Sai rồi! Đáp án đúng là: ${questionData.options[questionData.correctAnswer]}`);
+        }
+        
+        this.synAntQuizCurrentQuestion++;
+        
+        if (this.synAntQuizCurrentQuestion < this.synAntQuizTotal) {
+            setTimeout(() => {
+                this.showTodayWordsSynAntQuestion();
+            }, 1500);
+        } else {
+            this.finishTodayWordsSynAntQuiz();
+        }
+    }
+
+    // Finish Today's Words syn/ant quiz
+    finishTodayWordsSynAntQuiz() {
+        const percentage = ((this.synAntQuizScore / this.synAntQuizTotal) * 100).toFixed(1);
+        
+        setTimeout(() => {
+            alert(`Quiz hoàn thành!\nĐiểm số: ${this.synAntQuizScore}/${this.synAntQuizTotal} (${percentage}%)`);
+            
+            // Reset quiz state
+            this.isTodayWordsSynAntQuiz = false;
+            this.todayWordsSynAntQuizType = null;
+            
+            // Return to settings view
+            document.getElementById('todayWordsSynAntQuizContent').style.display = 'none';
+            document.getElementById('todayWordsSynAntSettings').style.display = 'block';
+        }, 1000);
+    }
+
     generateSynAntQuestion(wordsWithSynonymsAntonyms) {
         // Random word with synonyms/antonyms
         const randomWord = wordsWithSynonymsAntonyms[Math.floor(Math.random() * wordsWithSynonymsAntonyms.length)];
@@ -855,12 +1075,19 @@ class VocabularyApp {
         // Question types
         const questionTypes = [];
         
-        if (randomWord.synonyms && randomWord.synonyms.length > 0) {
-            questionTypes.push('findSynonyms', 'synonymChoice', 'findOddOne');
+        // Check if this is Today's Words quiz with specific type filter
+        const isFilteredQuiz = this.isTodayWordsSynAntQuiz && this.todayWordsSynAntQuizType;
+        
+        if (!isFilteredQuiz || this.todayWordsSynAntQuizType === 'both' || this.todayWordsSynAntQuizType === 'synonyms') {
+            if (randomWord.synonyms && randomWord.synonyms.length > 0) {
+                questionTypes.push('findSynonyms', 'synonymChoice', 'findOddOne');
+            }
         }
         
-        if (randomWord.antonyms && randomWord.antonyms.length > 0) {
-            questionTypes.push('findAntonyms', 'antonymChoice', 'findOddOne');
+        if (!isFilteredQuiz || this.todayWordsSynAntQuizType === 'both' || this.todayWordsSynAntQuizType === 'antonyms') {
+            if (randomWord.antonyms && randomWord.antonyms.length > 0) {
+                questionTypes.push('findAntonyms', 'antonymChoice', 'findOddOne');
+            }
         }
 
         if (questionTypes.length === 0) return null;
@@ -1204,6 +1431,12 @@ class VocabularyApp {
         document.getElementById('quizResultPercentage').textContent = `${percentage}%`;
         document.getElementById('quizResultMessage').textContent = message;
 
+        // Reset Today's Words quiz flags if this was a Today's Words quiz
+        if (this.isTodayWordsSynAntQuiz) {
+            this.isTodayWordsSynAntQuiz = false;
+            this.todayWordsSynAntQuizType = null;
+        }
+
         // Show modal
         const modal = new bootstrap.Modal(document.getElementById('quizResultModal'));
         modal.show();
@@ -1517,11 +1750,13 @@ class VocabularyApp {
         document.getElementById('todayWordsContent').style.display = 'block';
         document.getElementById('todayWordsPracticeContent').style.display = 'none';
         document.getElementById('todayWordsWritingContent').style.display = 'none';
+        document.getElementById('todayWordsSynAntContent').style.display = 'none';
         
         // Update button states
         document.getElementById('todayWordsLearnBtn').classList.add('active');
         document.getElementById('todayWordsPracticeBtn').classList.remove('active');
         document.getElementById('todayWordsWritingBtn').classList.remove('active');
+        document.getElementById('todayWordsSynAntQuizBtn').classList.remove('active');
     }
 
     showTodayWordsPracticeMode() {
@@ -1535,11 +1770,13 @@ class VocabularyApp {
         document.getElementById('todayWordsContent').style.display = 'none';
         document.getElementById('todayWordsPracticeContent').style.display = 'block';
         document.getElementById('todayWordsWritingContent').style.display = 'none';
+        document.getElementById('todayWordsSynAntContent').style.display = 'none';
         
         // Update button states
         document.getElementById('todayWordsLearnBtn').classList.remove('active');
         document.getElementById('todayWordsPracticeBtn').classList.add('active');
         document.getElementById('todayWordsWritingBtn').classList.remove('active');
+        document.getElementById('todayWordsSynAntQuizBtn').classList.remove('active');
         
         // Reset practice state
         this.todayWordsPracticeIndex = 0;
@@ -1758,11 +1995,13 @@ class VocabularyApp {
         document.getElementById('todayWordsContent').style.display = 'none';
         document.getElementById('todayWordsPracticeContent').style.display = 'none';
         document.getElementById('todayWordsWritingContent').style.display = 'block';
+        document.getElementById('todayWordsSynAntContent').style.display = 'none';
         
         // Update button states
         document.getElementById('todayWordsLearnBtn').classList.remove('active');
         document.getElementById('todayWordsPracticeBtn').classList.remove('active');
         document.getElementById('todayWordsWritingBtn').classList.add('active');
+        document.getElementById('todayWordsSynAntQuizBtn').classList.remove('active');
         
         // Reset writing state
         this.todayWordsWritingIndex = 0;
@@ -1776,6 +2015,31 @@ class VocabularyApp {
         document.getElementById('todayWordsWritingStart').style.display = 'block';
         document.getElementById('todayWordsWritingExercise').style.display = 'none';
         document.getElementById('todayWordsWritingSummary').style.display = 'none';
+    }
+
+    // Today's Words Syn/Ant Quiz Mode
+    showTodayWordsSynAntQuiz() {
+        // Check if words are loaded
+        if (this.todayWordsList.length === 0) {
+            this.showError('Vui lòng chọn số lượng từ và bắt đầu học trước!');
+            return;
+        }
+
+        // Show syn/ant content, hide other contents
+        document.getElementById('todayWordsContent').style.display = 'none';
+        document.getElementById('todayWordsPracticeContent').style.display = 'none';
+        document.getElementById('todayWordsWritingContent').style.display = 'none';
+        document.getElementById('todayWordsSynAntContent').style.display = 'block';
+        
+        // Reset quiz UI to settings view
+        document.getElementById('todayWordsSynAntSettings').style.display = 'block';
+        document.getElementById('todayWordsSynAntQuizContent').style.display = 'none';
+        
+        // Update button states
+        document.getElementById('todayWordsLearnBtn').classList.remove('active');
+        document.getElementById('todayWordsPracticeBtn').classList.remove('active');
+        document.getElementById('todayWordsWritingBtn').classList.remove('active');
+        document.getElementById('todayWordsSynAntQuizBtn').classList.add('active');
     }
 
     startTodayWordsWriting() {

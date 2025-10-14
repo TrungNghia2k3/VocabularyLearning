@@ -14470,6 +14470,1128 @@
                     }
                 ]
             }
+        },
+        {
+            "word": "adventurous",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "willing to take risks or try out new experiences.",
+                    "example": "She has an adventurous spirit and loves exploring new places."
+                }
+            ],
+            "meaning": "thích phiêu lưu, thích mạo hiểm",
+            "type": "adjective",
+            "example": "She has an adventurous spirit and loves exploring new places.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ədˈvɛn.tʃər.əs/",
+                "en-US": "/ədˈvɛn.tʃər.əs/"
+            },
+            "synonyms": [
+                {
+                    "word": "bold",
+                    "meaning": "táo bạo"
+                },
+                {
+                    "word": "daring",
+                    "meaning": "dũng cảm"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "cautious",
+                    "meaning": "thận trọng"
+                },
+                {
+                    "word": "timid",
+                    "meaning": "rụt rè"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "adventurous",
+                        "meaning": "thích phiêu lưu, thích mạo hiểm"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "adventurously",
+                        "meaning": "một cách thích phiêu lưu"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "adventurousness",
+                        "meaning": "tính thích phiêu lưu"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "chivalrous",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "courteous and gallant, especially towards women.",
+                    "example": "He was known for his chivalrous behavior, always opening doors and offering his seat to others."
+                }
+            ],
+            "meaning": "lịch thiệp, hào hiệp",
+            "type": "adjective",
+            "example": "He was known for his chivalrous behavior, always opening doors and offering his seat to others.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈʃɪvəlrəs/",
+                "en-US": "/ˈʃɪvəlrəs/"
+            },
+            "synonyms": [
+                {
+                    "word": "gallant",
+                    "meaning": "dũng cảm, hào hiệp"
+                },
+                {
+                    "word": "courteous",
+                    "meaning": "lịch sự"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "rude",
+                    "meaning": "thô lỗ"
+                },
+                {
+                    "word": "impolite",
+                    "meaning": "bất lịch sự"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "chivalrous",
+                        "meaning": "lịch thiệp, hào hiệp"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "chivalrously",
+                        "meaning": "một cách lịch thiệp"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "chivalry",
+                        "meaning": "tính hào hiệp"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "bold",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "showing a willingness to take risks; confident and courageous.",
+                    "example": "The bold explorer ventured into uncharted territories."
+                }
+            ],
+            "meaning": "táo bạo, dũng cảm",
+            "type": "adjective",
+            "example": "The bold explorer ventured into uncharted territories.",
+            "level": "intermediate",
+            "phonetic": {
+                "en-GB": "/bəʊld/",
+                "en-US": "/boʊld/"
+            },
+            "synonyms": [
+                {
+                    "word": "courageous",
+                    "meaning": "dũng cảm"
+                },
+                {
+                    "word": "fearless",
+                    "meaning": "không sợ hãi"
+                },
+                {
+                    "word": "brave",
+                    "meaning": "dũng cảm"
+                },
+                {
+                    "word": "daring",
+                    "meaning": "táo bạo"
+                },
+                {
+                    "word": "valiant",
+                    "meaning": "dũng cảm"
+                },
+                {
+                    "word": "intrepid",
+                    "meaning": "dũng cảm, gan dạ"
+                },
+                {
+                    "word": "adventurous",
+                    "meaning": "thích phiêu lưu, thích mạo hiểm"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "timid",
+                    "meaning": "rụt rè"
+                },
+                {
+                    "word": "cowardly",
+                    "meaning": "hèn nhát"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "bold",
+                        "meaning": "táo bạo, dũng cảm"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "boldly",
+                        "meaning": "một cách táo bạo"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "boldness",
+                        "meaning": "tính táo bạo"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "daring",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "adventurous or audaciously bold.",
+                    "example": "The daring stuntman performed a series of death-defying tricks."
+                }
+            ],
+            "meaning": "táo bạo, dũng cảm",
+            "type": "adjective",
+            "example": "The daring stuntman performed a series of death-defying tricks.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈdɛərɪŋ/",
+                "en-US": "/ˈdɛərɪŋ/"
+            },
+            "synonyms": [
+                {
+                    "word": "bold",
+                    "meaning": "táo bạo"
+                },
+                {
+                    "word": "courageous",
+                    "meaning": "dũng cảm"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "timid",
+                    "meaning": "rụt rè"
+                },
+                {
+                    "word": "cowardly",
+                    "meaning": "hèn nhát"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "daring",
+                        "meaning": "táo bạo, dũng cảm"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "daringly",
+                        "meaning": "một cách táo bạo"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "daring",
+                        "meaning": "sự táo bạo"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "intrepid",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "fearless; adventurous (often used for rhetorical or humorous effect).",
+                    "example": "The intrepid journalist traveled to dangerous locations to report the news."
+                }
+            ],
+            "meaning": "dũng cảm, gan dạ",
+            "type": "adjective",
+            "example": "The intrepid journalist traveled to dangerous locations to report the news.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ɪnˈtrɛpɪd/",
+                "en-US": "/ɪnˈtrɛpɪd/"
+            },
+            "synonyms": [
+                {
+                    "word": "fearless",
+                    "meaning": "dũng cảm"
+                },
+                {
+                    "word": "brave",
+                    "meaning": "dũng cảm"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "cowardly",
+                    "meaning": "hèn nhát"
+                },
+                {
+                    "word": "timid",
+                    "meaning": "rụt rè"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "intrepid",
+                        "meaning": "dũng cảm, gan dạ"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "intrepidity",
+                        "meaning": "tính dũng cảm"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "complacent",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "showing smug or uncritical satisfaction with oneself or one's achievements.",
+                    "example": "He became complacent after winning the award and stopped striving for excellence."
+                }
+            ],
+            "meaning": "tự mãn, thỏa mãn với bản thân",
+            "type": "adjective",
+            "example": "He became complacent after winning the award and stopped striving for excellence.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/kəmˈpleɪsənt/",
+                "en-US": "/kəmˈpleɪsənt/"
+            },
+            "synonyms": [
+                {
+                    "word": "self-satisfied",
+                    "meaning": "tự mãn"
+                },
+                {
+                    "word": "smug",
+                    "meaning": "tự mãn"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "dissatisfied",
+                    "meaning": "không hài lòng"
+                },
+                {
+                    "word": "ambitious",
+                    "meaning": "tham vọng"
+                },
+                {
+                    "word": "discontented",
+                    "meaning": "không hài lòng"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "complacent",
+                        "meaning": "tự mãn, thỏa mãn với bản thân"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "complacently",
+                        "meaning": "một cách tự mãn"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "competent",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "having the necessary ability, knowledge, or skill to do something successfully.",
+                    "example": "She is a competent teacher who manages her classroom well."
+                }
+            ],
+            "meaning": "có năng lực, thành thạo",
+            "type": "adjective",
+            "example": "She is a competent teacher who manages her classroom well.",
+            "level": "intermediate",
+            "phonetic": {
+                "en-GB": "/kəmˈpɛtənt/",
+                "en-US": "/kəmˈpɛtənt/"
+            },
+            "synonyms": [
+                {
+                    "word": "capable",
+                    "meaning": "có khả năng"
+                },
+                {
+                    "word": "proficient",
+                    "meaning": "thành thạo"
+                },
+                {
+                    "word": "skilled",
+                    "meaning": "có kỹ năng"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "incompetent",
+                    "meaning": "không có năng lực"
+                },
+                {
+                    "word": "inept",
+                    "meaning": "vụng về"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "competent",
+                        "meaning": "có năng lực, thành thạo"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "competently",
+                        "meaning": "một cách thành thạo"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "competence",
+                        "meaning": "năng lực"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "compassionate",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "feeling or showing sympathy and concern for others.",
+                    "example": "The compassionate nurse comforted the patient during a difficult time."
+                }
+            ],
+            "meaning": "có lòng từ bi, thương xót",
+            "type": "adjective",
+            "example": "The compassionate nurse comforted the patient during a difficult time.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/kəmˈpæʃənət/",
+                "en-US": "/kəmˈpæʃənət/"
+            },
+            "synonyms": [
+                {
+                    "word": "empathetic",
+                    "meaning": "đồng cảm"
+                },
+                {
+                    "word": "kind-hearted",
+                    "meaning": "tốt bụng"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "unfeeling",
+                    "meaning": "vô cảm"
+                },
+                {
+                    "word": "cold-hearted",
+                    "meaning": "lạnh lùng"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "compassionate",
+                        "meaning": "có lòng từ bi, thương xót"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "compassionately",
+                        "meaning": "một cách thương xót"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "compassion",
+                        "meaning": "lòng từ bi"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "chunk",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a thick, solid piece of something.",
+                    "example": "He cut the cheese into large chunks."
+                }
+            ],
+            "meaning": "miếng, khối",
+            "type": "noun",
+            "example": "He cut the cheese into large chunks.",
+            "level": "intermediate",
+            "phonetic": {
+                "en-GB": "/tʃʌŋk/",
+                "en-US": "/tʃʌŋk/"
+            },
+            "synonyms": [
+                {
+                    "word": "piece",
+                    "meaning": "miếng"
+                },
+                {
+                    "word": "block",
+                    "meaning": "khối"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "fragment",
+                    "meaning": "mảnh vỡ"
+                },
+                {
+                    "word": "shard",
+                    "meaning": "mảnh vỡ"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "chunk",
+                        "meaning": "miếng, khối"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "chunk",
+                        "meaning": "cắt thành miếng"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "excluded",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "not included; left out.",
+                    "example": "She felt excluded from the group activities."
+                }
+            ],
+            "meaning": "bị loại trừ",
+            "type": "adjective",
+            "example": "She felt excluded from the group activities.",
+            "level": "intermediate",
+            "phonetic": {
+                "en-GB": "/ɪkˈskluːdɪd/",
+                "en-US": "/ɪkˈskluːdɪd/"
+            },
+            "synonyms": [
+                {
+                    "word": "omitted",
+                    "meaning": "bị bỏ qua"
+                },
+                {
+                    "word": "left out",
+                    "meaning": "bị bỏ lại"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "included",
+                    "meaning": "được bao gồm"
+                },
+                {
+                    "word": "embraced",
+                    "meaning": "được chấp nhận"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "excluded",
+                        "meaning": "bị loại trừ"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "exclude",
+                        "meaning": "loại trừ"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "bubble",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a thin sphere of liquid enclosing air or another gas.",
+                    "example": "The children were blowing bubbles in the park."
+                }
+            ],
+            "meaning": "bong bóng",
+            "type": "noun",
+            "example": "The children were blowing bubbles in the park.",
+            "level": "beginner",
+            "phonetic": {
+                "en-GB": "/ˈbʌbəl/",
+                "en-US": "/ˈbʌbəl/"
+            },
+            "synonyms": [
+                {
+                    "word": "sphere",
+                    "meaning": "hình cầu"
+                },
+                {
+                    "word": "ball",
+                    "meaning": "quả bóng"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "solid",
+                    "meaning": "rắn"
+                },
+                {
+                    "word": "block",
+                    "meaning": "khối"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "bubble",
+                        "meaning": "bong bóng"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "bubble",
+                        "meaning": "sôi sục, sủi bọt"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "blare",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "make or cause to make a loud, harsh sound.",
+                    "example": "The car horn blared loudly in the traffic jam."
+                }
+            ],
+            "meaning": "kêu to, thổi to",
+            "type": "verb",
+            "example": "The car horn blared loudly in the traffic jam.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/bleə/",
+                "en-US": "/blɛr/"
+            },
+            "synonyms": [
+                {
+                    "word": "blast",
+                    "meaning": "phát ra âm thanh lớn"
+                },
+                {
+                    "word": "roar",
+                    "meaning": "gầm rú"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "whisper",
+                    "meaning": "thì thầm"
+                },
+                {
+                    "word": "murmur",
+                    "meaning": "lẩm bẩm"
+                }
+            ],
+            "wordFamily": {
+                "verb": [
+                    {
+                        "word": "blare",
+                        "meaning": "kêu to, thổi to"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "blare",
+                        "meaning": "tiếng kêu to"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "blurb",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a short description or promotional piece accompanying a creative work.",
+                    "example": "The back cover of the book featured a blurb praising the author's storytelling."
+                }
+            ],
+            "meaning": "mô tả ngắn gọn",
+            "type": "noun",
+            "example": "The back cover of the book featured a blurb praising the author's storytelling.",
+            "level": "intermediate",
+            "phonetic": {
+                "en-GB": "/blɜːb/",
+                "en-US": "/blɜːrb/"
+            },
+            "synonyms": [
+                {
+                    "word": "summary",
+                    "meaning": "tóm tắt"
+                },
+                {
+                    "word": "description",
+                    "meaning": "mô tả"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "detailed review",
+                    "meaning": "bài đánh giá chi tiết"
+                },
+                {
+                    "word": "full analysis",
+                    "meaning": "phân tích đầy đủ"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "blurb",
+                        "meaning": "mô tả ngắn gọn"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "taps",
+            "definitions": [
+                {
+                    "partOfSpeech": "noun",
+                    "definition": "a device for controlling the flow of liquid or gas from a pipe or container.",
+                    "example": "He turned on the taps to fill the bathtub with water."
+                }
+            ],
+            "meaning": "vòi nước, van",
+            "type": "noun",
+            "example": "He turned on the taps to fill the bathtub with water.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/tæps/",
+                "en-US": "/tæps/"
+            },
+            "synonyms": [
+                {
+                    "word": "faucet",
+                    "meaning": "vòi nước"
+                },
+                {
+                    "word": "valve",
+                    "meaning": "van"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "plug",
+                    "meaning": "nút"
+                },
+                {
+                    "word": "stopper",
+                    "meaning": "nút chặn"
+                }
+            ],
+            "wordFamily": {
+                "noun": [
+                    {
+                        "word": "tap",
+                        "meaning": "vòi nước, van"
+                    }
+                ],
+                "verb": [
+                    {
+                        "word": "tap",
+                        "meaning": "vặn vòi, mở van"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "clucks",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "make a short, guttural sound, typically to express disapproval or to get someone's attention.",
+                    "example": "The mother hen clucked to call her chicks."
+                }
+            ],
+            "meaning": "kêu cục cục (gà), kêu lắc rắc (người)",
+            "type": "verb",
+            "example": "The mother hen clucked to call her chicks.",
+            "level": "intermediate",
+            "phonetic": {
+                "en-GB": "/klʌk/",
+                "en-US": "/klʌk/"
+            },
+            "synonyms": [
+                {
+                    "word": "clatter",
+                    "meaning": "kêu lách cách"
+                },
+                {
+                    "word": "chatter",
+                    "meaning": "lẩm bẩm"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "silence",
+                    "meaning": "sự im lặng"
+                },
+                {
+                    "word": "quiet",
+                    "meaning": "sự yên tĩnh"
+                }
+            ],
+            "wordFamily": {
+                "verb": [
+                    {
+                        "word": "cluck",
+                        "meaning": "kêu cục cục (gà), kêu lắc rắc (người)"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "cluck",
+                        "meaning": "tiếng kêu cục cục"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "prods",
+            "definitions": [
+                {
+                    "partOfSpeech": "verb",
+                    "definition": "poke (someone) with a finger, foot, or pointed object.",
+                    "example": "He prodded the fire with a stick to keep it burning."
+                }
+            ],
+            "meaning": "thúc đẩy, kích thích",
+            "type": "verb",
+            "example": "She prodded him to take action.",
+            "level": "intermediate",
+            "phonetic": {
+                "en-GB": "/prɒd/",
+                "en-US": "/prɑd/"
+            },
+            "synonyms": [
+                {
+                    "word": "poke",
+                    "meaning": "chọc"
+                },
+                {
+                    "word": "jab",
+                    "meaning": "đâm"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "ignore",
+                    "meaning": "phớt lờ"
+                },
+                {
+                    "word": "neglect",
+                    "meaning": "bỏ bê"
+                }
+            ],
+            "wordFamily": {
+                "verb": [
+                    {
+                        "word": "prod",
+                        "meaning": "thúc đẩy, kích thích"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "prod",
+                        "meaning": "sự thúc đẩy"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "cordial",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "warm and friendly.",
+                    "example": "The host gave a cordial welcome to the guests."
+                }
+            ],
+            "meaning": "nồng ấm, thân ái",
+            "type": "adjective",
+            "example": "The host gave a cordial welcome to the guests.",
+            "level": "intermediate",
+            "phonetic": {
+                "en-GB": "/ˈkɔːdiəl/",
+                "en-US": "/ˈkɔrdʒəl/"
+            },
+            "synonyms": [
+                {
+                    "word": "friendly",
+                    "meaning": "thân thiện"
+                },
+                {
+                    "word": "warm",
+                    "meaning": "nồng ấm"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "hostile",
+                    "meaning": "thù địch"
+                },
+                {
+                    "word": "cold",
+                    "meaning": "lạnh lùng"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "cordial",
+                        "meaning": "nồng ấm, thân ái"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "cordially",
+                        "meaning": "một cách nồng ấm"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "cordiality",
+                        "meaning": "sự nồng ấm"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "morose",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "sullen and ill-tempered.",
+                    "example": "She became morose and withdrawn after her friend moved away."
+                }
+            ],
+            "meaning": "buồn rầu, ủ rũ",
+            "type": "adjective",
+            "example": "She became morose and withdrawn after her friend moved away.",
+            "level": "intermediate",
+            "phonetic": {
+                "en-GB": "/məˈrəʊs/",
+                "en-US": "/məˈroʊs/"
+            },
+            "synonyms": [
+                {
+                    "word": "sullen",
+                    "meaning": "ủ rũ"
+                },
+                {
+                    "word": "gloomy",
+                    "meaning": "ảm đạm"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "cheerful",
+                    "meaning": "vui vẻ"
+                },
+                {
+                    "word": "happy",
+                    "meaning": "hạnh phúc"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "morose",
+                        "meaning": "buồn rầu, ủ rũ"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "morosely",
+                        "meaning": "một cách ủ rũ"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "moroseness",
+                        "meaning": "tính ủ rũ"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "amiable",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "having or displaying a friendly and pleasant manner.",
+                    "example": "She was an amiable young woman, always ready to help others."
+                }
+            ],
+            "meaning": "dễ gần, thân thiện",
+            "type": "adjective",
+            "example": "She was an amiable young woman, always ready to help others.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ˈeɪ.mi.ə.bəl/",
+                "en-US": "/ˈeɪ.mi.ə.bəl/"
+            },
+            "synonyms": [
+                {
+                    "word": "friendly",
+                    "meaning": "thân thiện"
+                },
+                {
+                    "word": "pleasant",
+                    "meaning": "dễ chịu"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "unfriendly",
+                    "meaning": "không thân thiện"
+                },
+                {
+                    "word": "hostile",
+                    "meaning": "thù địch"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "amiable",
+                        "meaning": "dễ gần, thân thiện"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "amiably",
+                        "meaning": "một cách thân thiện"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "amiability",
+                        "meaning": "tính thân thiện"
+                    }
+                ]
+            }
+        },
+        {
+            "word": "exuberant",
+            "definitions": [
+                {
+                    "partOfSpeech": "adjective",
+                    "definition": "filled with or characterized by a lively energy and excitement.",
+                    "example": "The exuberant crowd cheered as the team scored the winning goal."
+                }
+            ],
+            "meaning": "hào hứng, tràn đầy năng lượng",
+            "type": "adjective",
+            "example": "The exuberant crowd cheered as the team scored the winning goal.",
+            "level": "advanced",
+            "phonetic": {
+                "en-GB": "/ɪɡˈzjuː.bər.ənt/",
+                "en-US": "/ɪɡˈzjuː.bɚ.ənt/"
+            },
+            "synonyms": [
+                {
+                    "word": "enthusiastic",
+                    "meaning": "nhiệt tình"
+                },
+                {
+                    "word": "joyful",
+                    "meaning": "vui mừng"
+                }
+            ],
+            "antonyms": [
+                {
+                    "word": "lethargic",
+                    "meaning": "uể oải"
+                },
+                {
+                    "word": "apathetic",
+                    "meaning": "thờ ơ"
+                }
+            ],
+            "wordFamily": {
+                "adjective": [
+                    {
+                        "word": "exuberant",
+                        "meaning": "hào hứng, tràn đầy năng lượng"
+                    }
+                ],
+                "adverb": [
+                    {
+                        "word": "exuberantly",
+                        "meaning": "một cách hào hứng"
+                    }
+                ],
+                "noun": [
+                    {
+                        "word": "exuberance",
+                        "meaning": "sự hào hứng"
+                    }
+                ]
+            }
         }
     ]
 }
