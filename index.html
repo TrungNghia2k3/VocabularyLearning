@@ -142,6 +142,9 @@
                                 <button type="button" class="btn btn-outline-dark" id="idiomsMode">
                                     <i class="fas fa-comments me-2"></i>Thành ngữ
                                 </button>
+                                <button type="button" class="btn btn-outline-dark" id="collocationsMode">
+                                    <i class="fas fa-puzzle-piece me-2"></i>Collocation
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1305,6 +1308,96 @@
                                         <div class="mt-4">
                                             <button id="idiomsNextBtn" class="btn btn-info d-none">Câu tiếp theo</button>
                                             <button id="idiomsStartBtn" class="btn btn-info">Bắt đầu luyện tập</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Collocations Practice Mode -->
+        <div id="collocationsArea" class="col-12 d-none">
+            <div class="card">
+                <div class="card-header">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h5 class="mb-0"><i class="fas fa-puzzle-piece me-2"></i>Luyện tập Collocation</h5>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-outline-warning btn-sm" id="collocationsBrowseBtn">
+                                <i class="fas fa-list me-1"></i>Xem danh sách
+                            </button>
+                            <button type="button" class="btn btn-warning btn-sm" id="collocationsPracticeBtn">
+                                <i class="fas fa-dumbbell me-1"></i>Luyện tập
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Search Bar -->
+                    <div class="row align-items-center mb-4" id="collocationsSearchRow" style="display: none;">
+                        <div class="col-md-8">
+                            <div class="input-group shadow-sm">
+                                <span class="input-group-text bg-warning text-white border-warning">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                                <input type="text" class="form-control border-warning" id="collocationsSearchInput" 
+                                       placeholder="Tìm kiếm theo từ, collocation, nghĩa, ví dụ...">
+                                <button class="btn btn-outline-warning" type="button" id="collocationsClearSearch" 
+                                        title="Xóa từ khóa tìm kiếm">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="d-flex flex-column">
+                                <small class="fw-bold mb-1">
+                                    <span id="collocationsSearchResults">
+                                        <i class="fas fa-list me-1"></i>Hiển thị tất cả
+                                    </span>
+                                </small>
+                                <small class="text-muted">
+                                    <i class="fas fa-database me-1"></i>
+                                    <span id="collocationsTotal">0 collocations</span>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <!-- Browse Mode -->
+                    <div id="collocationsBrowseContent">
+                        <div class="text-center">
+                            <div class="spinner-border text-warning" role="status">
+                                <span class="visually-hidden">Đang tải...</span>
+                            </div>
+                            <p class="mt-2">Đang tải dữ liệu collocation...</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Practice Mode -->
+                    <div id="collocationsPracticeContent" class="d-none">
+                        <div class="row">
+                            <div class="col-md-8 mx-auto">
+                                <div class="text-center mb-4">
+                                    <h4>🎯 Luyện tập Collocation</h4>
+                                    <div class="progress mb-3" style="height: 8px;">
+                                        <div id="collocationsProgress" class="progress-bar bg-warning" style="width: 0%"></div>
+                                    </div>
+                                    <p class="text-muted mb-0">
+                                        Câu hỏi <span id="collocationsCurrentQ">0</span> / <span id="collocationsTotalQ">0</span>
+                                        | Điểm: <span id="collocationsScore">0</span>
+                                    </p>
+                                </div>
+                                
+                                <div id="collocationsQuizCard" class="card shadow">
+                                    <div class="card-body text-center">
+                                        <div id="collocationsQuestion"></div>
+                                        <div id="collocationsOptions" class="mt-4"></div>
+                                        <div id="collocationsResult" class="mt-4 d-none"></div>
+                                        <div class="mt-4">
+                                            <button id="collocationsNextBtn" class="btn btn-warning d-none">Câu tiếp theo</button>
+                                            <button id="collocationsStartBtn" class="btn btn-warning">Bắt đầu luyện tập</button>
                                         </div>
                                     </div>
                                 </div>

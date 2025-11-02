@@ -1,0 +1,362 @@
+[
+    {
+        "id": 1,
+        "word": "make",
+        "collocations": [
+            {
+                "phrase": "make a decision",
+                "meaning": "đưa ra quyết định",
+                "example": "We need to make a decision about this project soon.",
+                "exampleTranslation": "Chúng ta cần đưa ra quyết định về dự án này sớm."
+            },
+            {
+                "phrase": "make a mistake",
+                "meaning": "phạm sai lầm",
+                "example": "Everyone makes mistakes sometimes.",
+                "exampleTranslation": "Mọi người đều phạm sai lầm đôi khi."
+            },
+            {
+                "phrase": "make progress",
+                "meaning": "tiến bộ",
+                "example": "She's making good progress in learning English.",
+                "exampleTranslation": "Cô ấy đang tiến bộ tốt trong việc học tiếng Anh."
+            },
+            {
+                "phrase": "make an effort",
+                "meaning": "nỗ lực",
+                "example": "You should make an effort to improve your skills.",
+                "exampleTranslation": "Bạn nên nỗ lực để cải thiện kỹ năng của mình."
+            },
+            {
+                "phrase": "make a difference",
+                "meaning": "tạo ra sự khác biệt",
+                "example": "Your contribution can make a difference.",
+                "exampleTranslation": "Đóng góp của bạn có thể tạo ra sự khác biệt."
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "word": "take",
+        "collocations": [
+            {
+                "phrase": "take a break",
+                "meaning": "nghỉ giải lao",
+                "example": "Let's take a break for 10 minutes.",
+                "exampleTranslation": "Hãy nghỉ giải lao 10 phút."
+            },
+            {
+                "phrase": "take a chance",
+                "meaning": "nắm lấy cơ hội, mạo hiểm",
+                "example": "Sometimes you need to take a chance.",
+                "exampleTranslation": "Đôi khi bạn cần mạo hiểm."
+            },
+            {
+                "phrase": "take action",
+                "meaning": "hành động",
+                "example": "We must take action immediately.",
+                "exampleTranslation": "Chúng ta phải hành động ngay lập tức."
+            },
+            {
+                "phrase": "take care of",
+                "meaning": "chăm sóc",
+                "example": "I'll take care of the children.",
+                "exampleTranslation": "Tôi sẽ chăm sóc bọn trẻ."
+            },
+            {
+                "phrase": "take responsibility",
+                "meaning": "chịu trách nhiệm",
+                "example": "You need to take responsibility for your actions.",
+                "exampleTranslation": "Bạn cần chịu trách nhiệm cho hành động của mình."
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "word": "give",
+        "collocations": [
+            {
+                "phrase": "give advice",
+                "meaning": "đưa ra lời khuyên",
+                "example": "Can you give me some advice about this?",
+                "exampleTranslation": "Bạn có thể cho tôi vài lời khuyên về việc này không?"
+            },
+            {
+                "phrase": "give permission",
+                "meaning": "cho phép",
+                "example": "The teacher gave us permission to leave early.",
+                "exampleTranslation": "Giáo viên cho phép chúng tôi về sớm."
+            },
+            {
+                "phrase": "give priority",
+                "meaning": "ưu tiên",
+                "example": "We should give priority to urgent tasks.",
+                "exampleTranslation": "Chúng ta nên ưu tiên các công việc khẩn cấp."
+            },
+            {
+                "phrase": "give feedback",
+                "meaning": "đưa ra phản hồi",
+                "example": "Please give me feedback on my presentation.",
+                "exampleTranslation": "Hãy cho tôi phản hồi về bài thuyết trình của tôi."
+            },
+            {
+                "phrase": "give an example",
+                "meaning": "đưa ra ví dụ",
+                "example": "Can you give an example to illustrate your point?",
+                "exampleTranslation": "Bạn có thể đưa ra một ví dụ để minh họa quan điểm của mình không?"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "word": "do",
+        "collocations": [
+            {
+                "phrase": "do homework",
+                "meaning": "làm bài tập về nhà",
+                "example": "I need to do my homework tonight.",
+                "exampleTranslation": "Tôi cần làm bài tập về nhà tối nay."
+            },
+            {
+                "phrase": "do business",
+                "meaning": "kinh doanh",
+                "example": "They do business with many countries.",
+                "exampleTranslation": "Họ kinh doanh với nhiều quốc gia."
+            },
+            {
+                "phrase": "do research",
+                "meaning": "nghiên cứu",
+                "example": "Scientists are doing research on this topic.",
+                "exampleTranslation": "Các nhà khoa học đang nghiên cứu về chủ đề này."
+            },
+            {
+                "phrase": "do your best",
+                "meaning": "cố gắng hết sức",
+                "example": "Just do your best and don't worry.",
+                "exampleTranslation": "Chỉ cần cố gắng hết sức và đừng lo lắng."
+            },
+            {
+                "phrase": "do damage",
+                "meaning": "gây thiệt hại",
+                "example": "The storm did a lot of damage to the crops.",
+                "exampleTranslation": "Cơn bão đã gây nhiều thiệt hại cho mùa màng."
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "word": "have",
+        "collocations": [
+            {
+                "phrase": "have a conversation",
+                "meaning": "có cuộc trò chuyện",
+                "example": "We had a long conversation about our future.",
+                "exampleTranslation": "Chúng tôi đã có cuộc trò chuyện dài về tương lai."
+            },
+            {
+                "phrase": "have an impact",
+                "meaning": "có tác động",
+                "example": "This decision will have an impact on everyone.",
+                "exampleTranslation": "Quyết định này sẽ có tác động đến mọi người."
+            },
+            {
+                "phrase": "have difficulty",
+                "meaning": "gặp khó khăn",
+                "example": "I'm having difficulty understanding this concept.",
+                "exampleTranslation": "Tôi đang gặp khó khăn trong việc hiểu khái niệm này."
+            },
+            {
+                "phrase": "have access to",
+                "meaning": "có quyền truy cập",
+                "example": "Students have access to the library 24/7.",
+                "exampleTranslation": "Sinh viên có quyền truy cập thư viện 24/7."
+            },
+            {
+                "phrase": "have an opportunity",
+                "meaning": "có cơ hội",
+                "example": "I hope to have an opportunity to visit Japan.",
+                "exampleTranslation": "Tôi hy vọng có cơ hội đến thăm Nhật Bản."
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "word": "pay",
+        "collocations": [
+            {
+                "phrase": "pay attention",
+                "meaning": "chú ý",
+                "example": "Please pay attention to what I'm saying.",
+                "exampleTranslation": "Hãy chú ý đến những gì tôi đang nói."
+            },
+            {
+                "phrase": "pay a visit",
+                "meaning": "đến thăm",
+                "example": "We should pay a visit to our grandparents.",
+                "exampleTranslation": "Chúng ta nên đến thăm ông bà."
+            },
+            {
+                "phrase": "pay respect",
+                "meaning": "tỏ lòng kính trọng",
+                "example": "We came to pay respect to the fallen soldiers.",
+                "exampleTranslation": "Chúng tôi đến để tỏ lòng kính trọng với những người lính đã hy sinh."
+            },
+            {
+                "phrase": "pay a compliment",
+                "meaning": "khen ngợi",
+                "example": "He paid her a compliment on her presentation.",
+                "exampleTranslation": "Anh ấy khen ngợi cô ấy về bài thuyết trình."
+            },
+            {
+                "phrase": "pay the price",
+                "meaning": "trả giá",
+                "example": "If you make mistakes, you'll pay the price.",
+                "exampleTranslation": "Nếu bạn phạm sai lầm, bạn sẽ phải trả giá."
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "word": "catch",
+        "collocations": [
+            {
+                "phrase": "catch a cold",
+                "meaning": "bị cảm lạnh",
+                "example": "I think I'm catching a cold.",
+                "exampleTranslation": "Tôi nghĩ tôi đang bị cảm lạnh."
+            },
+            {
+                "phrase": "catch someone's attention",
+                "meaning": "thu hút sự chú ý",
+                "example": "The bright colors caught my attention.",
+                "exampleTranslation": "Những màu sắc tươi sáng đã thu hút sự chú ý của tôi."
+            },
+            {
+                "phrase": "catch fire",
+                "meaning": "bắt lửa",
+                "example": "The old building caught fire last night.",
+                "exampleTranslation": "Tòa nhà cũ đã bắt lửa đêm qua."
+            },
+            {
+                "phrase": "catch up with",
+                "meaning": "bắt kịp",
+                "example": "I need to catch up with my work.",
+                "exampleTranslation": "Tôi cần bắt kịp công việc của mình."
+            },
+            {
+                "phrase": "catch sight of",
+                "meaning": "thoáng thấy",
+                "example": "I caught sight of her in the crowd.",
+                "exampleTranslation": "Tôi thoáng thấy cô ấy trong đám đông."
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "word": "keep",
+        "collocations": [
+            {
+                "phrase": "keep in touch",
+                "meaning": "giữ liên lạc",
+                "example": "Let's keep in touch after graduation.",
+                "exampleTranslation": "Hãy giữ liên lạc sau khi tốt nghiệp."
+            },
+            {
+                "phrase": "keep calm",
+                "meaning": "giữ bình tĩnh",
+                "example": "Try to keep calm in difficult situations.",
+                "exampleTranslation": "Cố gắng giữ bình tĩnh trong những tình huống khó khăn."
+            },
+            {
+                "phrase": "keep a promise",
+                "meaning": "giữ lời hứa",
+                "example": "He always keeps his promises.",
+                "exampleTranslation": "Anh ấy luôn giữ lời hứa."
+            },
+            {
+                "phrase": "keep track of",
+                "meaning": "theo dõi",
+                "example": "I keep track of my expenses every month.",
+                "exampleTranslation": "Tôi theo dõi chi tiêu của mình mỗi tháng."
+            },
+            {
+                "phrase": "keep up with",
+                "meaning": "bắt kịp, theo kịp",
+                "example": "It's hard to keep up with technology changes.",
+                "exampleTranslation": "Thật khó để theo kịp những thay đổi công nghệ."
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "word": "break",
+        "collocations": [
+            {
+                "phrase": "break the law",
+                "meaning": "vi phạm pháp luật",
+                "example": "You shouldn't break the law.",
+                "exampleTranslation": "Bạn không nên vi phạm pháp luật."
+            },
+            {
+                "phrase": "break a record",
+                "meaning": "phá kỷ lục",
+                "example": "She broke the world record in swimming.",
+                "exampleTranslation": "Cô ấy đã phá kỷ lục thế giới về bơi lội."
+            },
+            {
+                "phrase": "break the news",
+                "meaning": "thông báo tin (thường là tin xấu)",
+                "example": "I don't know how to break the news to him.",
+                "exampleTranslation": "Tôi không biết làm thế nào để thông báo tin này cho anh ấy."
+            },
+            {
+                "phrase": "break someone's heart",
+                "meaning": "làm ai đó đau lòng",
+                "example": "Don't break her heart.",
+                "exampleTranslation": "Đừng làm cô ấy đau lòng."
+            },
+            {
+                "phrase": "break the ice",
+                "meaning": "phá vỡ sự im lặng/ngượng ngùng",
+                "example": "He told a joke to break the ice.",
+                "exampleTranslation": "Anh ấy kể một câu chuyện cười để phá vỡ sự ngượng ngùng."
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "word": "save",
+        "collocations": [
+            {
+                "phrase": "save time",
+                "meaning": "tiết kiệm thời gian",
+                "example": "Using shortcuts can save time.",
+                "exampleTranslation": "Sử dụng phím tắt có thể tiết kiệm thời gian."
+            },
+            {
+                "phrase": "save money",
+                "meaning": "tiết kiệm tiền",
+                "example": "I'm trying to save money for a vacation.",
+                "exampleTranslation": "Tôi đang cố gắng tiết kiệm tiền cho kỳ nghỉ."
+            },
+            {
+                "phrase": "save energy",
+                "meaning": "tiết kiệm năng lượng",
+                "example": "Turn off lights to save energy.",
+                "exampleTranslation": "Tắt đèn để tiết kiệm năng lượng."
+            },
+            {
+                "phrase": "save someone's life",
+                "meaning": "cứu mạng ai đó",
+                "example": "The doctor saved his life.",
+                "exampleTranslation": "Bác sĩ đã cứu mạng anh ấy."
+            },
+            {
+                "phrase": "save face",
+                "meaning": "giữ thể diện",
+                "example": "He lied to save face.",
+                "exampleTranslation": "Anh ấy nói dối để giữ thể diện."
+            }
+        ]
+    }
+]

@@ -56,10 +56,12 @@ class VocabularyApp {
         this.prepositions = [];
         this.phrasalVerbs = [];
         this.idioms = [];
+        this.collocations = [];
         
         // Filtered data for search
         this.filteredPhrasalVerbs = [];
         this.filteredIdioms = [];
+        this.filteredCollocations = [];
         
         // Phrasal Verbs Practice Mode
         this.phrasalVerbsQuizScore = 0;
@@ -74,6 +76,13 @@ class VocabularyApp {
         this.idiomsCurrentQuestion = 0;
         this.currentIdiomsQuizData = [];
         this.idiomsPracticeMode = false;
+        
+        // Collocations Practice Mode
+        this.collocationsQuizScore = 0;
+        this.collocationsQuizTotal = 0;
+        this.collocationsCurrentQuestion = 0;
+        this.currentCollocationsQuizData = [];
+        this.collocationsPracticeMode = false;
         
         this.init();
     }
@@ -349,6 +358,27 @@ class VocabularyApp {
         }
     }
 
+    async loadCollocations() {
+        try {
+            const response = await fetch('collocation.json');
+            if (!response.ok) {
+                throw new Error('Không thể tải file collocation.json');
+            }
+            const data = await response.json();
+            this.collocations = data || [];
+            this.filteredCollocations = [...this.collocations];
+            
+            console.log(`Đã tải ${this.collocations.length} từ với collocations`);
+            
+            this.showCollocationsBrowse();
+        } catch (error) {
+            console.error('Lỗi tải collocations:', error);
+            this.collocations = [];
+            this.filteredCollocations = [];
+            this.displayCollocations();
+        }
+    }
+
     getSampleVocabulary() {
         return [
             {
@@ -446,6 +476,7 @@ class VocabularyApp {
         document.getElementById('prepositionsMode').addEventListener('click', () => this.switchMode('prepositions'));
         document.getElementById('phrasalVerbsMode').addEventListener('click', () => this.switchMode('phrasalVerbs'));
         document.getElementById('idiomsMode').addEventListener('click', () => this.switchMode('idioms'));
+        document.getElementById('collocationsMode').addEventListener('click', () => this.switchMode('collocations'));
 
         // Flashcard controls
         document.getElementById('prevFlashcard').addEventListener('click', () => this.previousFlashcard());
@@ -542,6 +573,14 @@ class VocabularyApp {
         document.getElementById('idiomsSearchInput').addEventListener('input', () => this.searchIdioms());
         document.getElementById('idiomsClearSearch').addEventListener('click', () => this.clearIdiomsSearch());
 
+        // Collocations Practice Mode
+        document.getElementById('collocationsBrowseBtn').addEventListener('click', () => this.showCollocationsBrowse());
+        document.getElementById('collocationsPracticeBtn').addEventListener('click', () => this.showCollocationsPractice());
+        document.getElementById('collocationsStartBtn').addEventListener('click', () => this.startCollocationsQuiz());
+        document.getElementById('collocationsNextBtn').addEventListener('click', () => this.nextCollocationQuestion());
+        document.getElementById('collocationsSearchInput').addEventListener('input', () => this.searchCollocations());
+        document.getElementById('collocationsClearSearch').addEventListener('click', () => this.clearCollocationsSearch());
+
         // Accent selector
         document.getElementById('accentSelect').addEventListener('change', (e) => {
             this.changeAccent(e.target.value);
@@ -560,6 +599,7 @@ class VocabularyApp {
         document.getElementById('prepositionsArea').classList.add('d-none');
         document.getElementById('phrasalVerbsArea').classList.add('d-none');
         document.getElementById('idiomsArea').classList.add('d-none');
+        document.getElementById('collocationsArea').classList.add('d-none');
 
         // Update button states
         document.querySelectorAll('.btn-group .btn').forEach(btn => {
@@ -614,6 +654,11 @@ class VocabularyApp {
                 document.getElementById('idiomsMode').classList.add('active');
                 document.getElementById('idiomsArea').classList.remove('d-none');
                 this.loadIdioms();
+                break;
+            case 'collocations':
+                document.getElementById('collocationsMode').classList.add('active');
+                document.getElementById('collocationsArea').classList.remove('d-none');
+                this.loadCollocations();
                 break;
         }
     }
@@ -3758,6 +3803,350 @@ class VocabularyApp {
         document.getElementById('idiomsOptions').innerHTML = '';
         document.getElementById('idiomsResult').classList.add('d-none');
         document.getElementById('idiomsNextBtn').classList.add('d-none');
+    }
+
+    // ===== Collocations Methods =====
+    showCollocationsBrowse() {
+        document.getElementById('collocationsBrowseContent').classList.remove('d-none');
+        document.getElementById('collocationsPracticeContent').classList.add('d-none');
+        document.getElementById('collocationsSearchRow').style.display = 'flex';
+        
+        document.getElementById('collocationsBrowseBtn').classList.add('active');
+        document.getElementById('collocationsPracticeBtn').classList.remove('active');
+        
+        this.displayCollocations();
+    }
+
+    showCollocationsPractice() {
+        document.getElementById('collocationsBrowseContent').classList.add('d-none');
+        document.getElementById('collocationsPracticeContent').classList.remove('d-none');
+        document.getElementById('collocationsSearchRow').style.display = 'none';
+        
+        document.getElementById('collocationsBrowseBtn').classList.remove('active');
+        document.getElementById('collocationsPracticeBtn').classList.add('active');
+    }
+
+    displayCollocations() {
+        const content = document.getElementById('collocationsBrowseContent');
+        const collocationsToShow = this.filteredCollocations.length > 0 ? this.filteredCollocations : this.collocations;
+        
+        // Update total count
+        document.getElementById('collocationsTotal').textContent = `${this.collocations.length} từ với collocations`;
+        
+        if (!this.collocations || this.collocations.length === 0) {
+            content.innerHTML = `
+                <div class="alert alert-warning">
+                    <h5><i class="fas fa-exclamation-triangle me-2"></i>Không có dữ liệu</h5>
+                    <p class="mb-2">Hiện tại chưa có collocations nào. Vui lòng kiểm tra:</p>
+                    <ul class="mb-0">
+                        <li>File <code>collocation.json</code> không tồn tại hoặc lỗi</li>
+                        <li>Dữ liệu trong file chưa đúng định dạng</li>
+                    </ul>
+                    <hr>
+                    <small>Hãy đảm bảo file <code>collocation.json</code> nằm cùng thư mục với <code>index.html</code></small>
+                </div>
+            `;
+            return;
+        }
+
+        if (collocationsToShow.length === 0) {
+            content.innerHTML = `
+                <div class="alert alert-info text-center">
+                    <i class="fas fa-search fa-2x mb-3"></i>
+                    <p class="mb-0">Không tìm thấy collocation phù hợp với từ khóa tìm kiếm.</p>
+                </div>
+            `;
+            return;
+        }
+
+        let html = '<div class="row">';
+        
+        collocationsToShow.forEach(item => {
+            html += `
+                <div class="col-md-6 mb-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header bg-warning text-white">
+                            <h5 class="mb-0">
+                                <i class="fas fa-star me-2"></i>${item.word}
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="list-group list-group-flush">
+            `;
+            
+            item.collocations.forEach(coll => {
+                html += `
+                    <div class="list-group-item px-0">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <h6 class="mb-1 text-primary">${coll.phrase}</h6>
+                                <p class="mb-1 text-muted"><em>${coll.meaning}</em></p>
+                                <small class="text-success">
+                                    <i class="fas fa-quote-left me-1"></i>
+                                    ${coll.example}
+                                </small>
+                                <br>
+                                <small class="text-muted">
+                                    <i class="fas fa-language me-1"></i>
+                                    ${coll.exampleTranslation}
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            html += `
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+        
+        html += '</div>';
+        content.innerHTML = html;
+    }
+
+    searchCollocations() {
+        const searchTerm = document.getElementById('collocationsSearchInput').value.toLowerCase().trim();
+        
+        if (!searchTerm) {
+            this.filteredCollocations = [...this.collocations];
+            document.getElementById('collocationsSearchResults').innerHTML = 
+                '<i class="fas fa-list me-1"></i>Hiển thị tất cả';
+        } else {
+            this.filteredCollocations = this.collocations.filter(item => {
+                // Search in word
+                if (item.word.toLowerCase().includes(searchTerm)) return true;
+                
+                // Search in collocations
+                return item.collocations.some(coll => 
+                    coll.phrase.toLowerCase().includes(searchTerm) ||
+                    coll.meaning.toLowerCase().includes(searchTerm) ||
+                    coll.example.toLowerCase().includes(searchTerm) ||
+                    coll.exampleTranslation.toLowerCase().includes(searchTerm)
+                );
+            });
+            
+            document.getElementById('collocationsSearchResults').innerHTML = 
+                `<i class="fas fa-search me-1"></i>Tìm thấy ${this.filteredCollocations.length} kết quả`;
+        }
+        
+        this.displayCollocations();
+    }
+
+    clearCollocationsSearch() {
+        document.getElementById('collocationsSearchInput').value = '';
+        this.searchCollocations();
+    }
+
+    startCollocationsQuiz() {
+        if (!this.collocations || this.collocations.length === 0) {
+            this.showError('Không có dữ liệu collocation để luyện tập!');
+            return;
+        }
+
+        this.collocationsQuizScore = 0;
+        this.collocationsQuizTotal = 10;
+        this.collocationsCurrentQuestion = 0;
+        this.currentCollocationsQuizData = [];
+        this.collocationsPracticeMode = true;
+
+        // Generate quiz questions
+        for (let i = 0; i < this.collocationsQuizTotal; i++) {
+            const question = this.generateCollocationQuestion();
+            if (question) this.currentCollocationsQuizData.push(question);
+        }
+
+        if (this.currentCollocationsQuizData.length === 0) {
+            this.showError('Không thể tạo câu hỏi!');
+            return;
+        }
+
+        document.getElementById('collocationsStartBtn').classList.add('d-none');
+        this.showCollocationQuestion();
+    }
+
+    generateCollocationQuestion() {
+        // Random word with collocations
+        const randomItem = this.collocations[Math.floor(Math.random() * this.collocations.length)];
+        
+        // Random collocation from the word
+        const randomColl = randomItem.collocations[Math.floor(Math.random() * randomItem.collocations.length)];
+        
+        // Split phrase to get the missing part
+        const words = randomColl.phrase.split(' ');
+        const missingIndex = Math.floor(Math.random() * words.length);
+        const correctAnswer = words[missingIndex];
+        
+        // Create question with blank
+        const questionPhrase = words.map((w, i) => i === missingIndex ? '______' : w).join(' ');
+        
+        // Generate wrong answers
+        const wrongAnswers = [];
+        const usedWords = new Set([correctAnswer]);
+        
+        // Get words from other collocations
+        this.collocations.forEach(item => {
+            item.collocations.forEach(coll => {
+                const collWords = coll.phrase.split(' ');
+                collWords.forEach(word => {
+                    if (!usedWords.has(word) && word !== randomItem.word) {
+                        wrongAnswers.push(word);
+                        usedWords.add(word);
+                    }
+                });
+            });
+        });
+        
+        // Shuffle and take 3 wrong answers
+        const shuffledWrong = wrongAnswers.sort(() => Math.random() - 0.5).slice(0, 3);
+        
+        // Combine and shuffle all options
+        const options = [correctAnswer, ...shuffledWrong].sort(() => Math.random() - 0.5);
+        
+        return {
+            question: questionPhrase,
+            meaning: randomColl.meaning,
+            example: randomColl.example,
+            exampleTranslation: randomColl.exampleTranslation,
+            options: options,
+            correctAnswer: options.indexOf(correctAnswer),
+            fullPhrase: randomColl.phrase
+        };
+    }
+
+    showCollocationQuestion() {
+        if (this.collocationsCurrentQuestion >= this.currentCollocationsQuizData.length) {
+            this.showCollocationsResult();
+            return;
+        }
+
+        const questionData = this.currentCollocationsQuizData[this.collocationsCurrentQuestion];
+        
+        // Update progress
+        const progressPercentage = ((this.collocationsCurrentQuestion + 1) / this.currentCollocationsQuizData.length) * 100;
+        document.getElementById('collocationsProgress').style.width = `${progressPercentage}%`;
+        document.getElementById('collocationsCurrentQ').textContent = this.collocationsCurrentQuestion + 1;
+        document.getElementById('collocationsTotalQ').textContent = this.currentCollocationsQuizData.length;
+        document.getElementById('collocationsScore').textContent = this.collocationsQuizScore;
+
+        // Show question
+        const questionDiv = document.getElementById('collocationsQuestion');
+        questionDiv.innerHTML = `
+            <h4 class="mb-3">Chọn từ phù hợp để hoàn thành collocation:</h4>
+            <div class="alert alert-info">
+                <h3 class="text-primary">${questionData.question}</h3>
+                <p class="mb-0"><em>${questionData.meaning}</em></p>
+            </div>
+            <p class="text-muted"><strong>Ví dụ:</strong> ${questionData.example}</p>
+            <p class="text-muted"><em>${questionData.exampleTranslation}</em></p>
+        `;
+
+        // Create options
+        const optionsContainer = document.getElementById('collocationsOptions');
+        optionsContainer.innerHTML = '';
+        
+        questionData.options.forEach((option, index) => {
+            const button = document.createElement('button');
+            button.className = 'btn btn-outline-warning btn-lg d-block w-100 mb-2';
+            button.textContent = option;
+            button.onclick = () => this.selectCollocationAnswer(index);
+            optionsContainer.appendChild(button);
+        });
+
+        // Clear result
+        document.getElementById('collocationsResult').innerHTML = '';
+        document.getElementById('collocationsResult').classList.add('d-none');
+        document.getElementById('collocationsNextBtn').classList.add('d-none');
+    }
+
+    selectCollocationAnswer(selectedIndex) {
+        const questionData = this.currentCollocationsQuizData[this.collocationsCurrentQuestion];
+        const isCorrect = selectedIndex === questionData.correctAnswer;
+        
+        if (isCorrect) {
+            this.collocationsQuizScore++;
+        }
+
+        // Update buttons
+        const buttons = document.querySelectorAll('#collocationsOptions button');
+        buttons.forEach((btn, index) => {
+            btn.disabled = true;
+            if (index === questionData.correctAnswer) {
+                btn.classList.remove('btn-outline-warning');
+                btn.classList.add('btn-success');
+            } else if (index === selectedIndex && !isCorrect) {
+                btn.classList.remove('btn-outline-warning');
+                btn.classList.add('btn-danger');
+            }
+        });
+
+        // Show result
+        const resultDiv = document.getElementById('collocationsResult');
+        resultDiv.classList.remove('d-none');
+        
+        if (isCorrect) {
+            resultDiv.innerHTML = `
+                <div class="alert alert-success">
+                    <h5><i class="fas fa-check-circle me-2"></i>Chính xác!</h5>
+                    <p class="mb-0"><strong>Collocation đầy đủ:</strong> ${questionData.fullPhrase}</p>
+                </div>
+            `;
+        } else {
+            resultDiv.innerHTML = `
+                <div class="alert alert-danger">
+                    <h5><i class="fas fa-times-circle me-2"></i>Sai rồi!</h5>
+                    <p class="mb-0"><strong>Collocation đúng:</strong> ${questionData.fullPhrase}</p>
+                </div>
+            `;
+        }
+
+        // Update score
+        document.getElementById('collocationsScore').textContent = this.collocationsQuizScore;
+        
+        // Show next button
+        document.getElementById('collocationsNextBtn').classList.remove('d-none');
+    }
+
+    nextCollocationQuestion() {
+        this.collocationsCurrentQuestion++;
+        this.showCollocationQuestion();
+    }
+
+    showCollocationsResult() {
+        const percentage = Math.round((this.collocationsQuizScore / this.currentCollocationsQuizData.length) * 100);
+        let message = '';
+        
+        if (percentage >= 80) {
+            message = 'Xuất sắc! Bạn đã nắm vững collocations!';
+        } else if (percentage >= 60) {
+            message = 'Tốt lắm! Hãy tiếp tục luyện tập!';
+        } else {
+            message = 'Cần cố gắng thêm! Hãy ôn lại các collocations!';
+        }
+
+        document.getElementById('collocationsQuestion').innerHTML = `
+            <div class="alert alert-success text-center">
+                <i class="fas fa-trophy fa-3x mb-3"></i>
+                <h3>Quiz hoàn thành!</h3>
+                <h4>Điểm của bạn: ${this.collocationsQuizScore}/${this.currentCollocationsQuizData.length}</h4>
+                <div class="progress mb-3" style="height: 30px;">
+                    <div class="progress-bar bg-warning" style="width: ${percentage}%">
+                        ${percentage}%
+                    </div>
+                </div>
+                <p class="mb-0">${message}</p>
+            </div>
+        `;
+        
+        document.getElementById('collocationsOptions').innerHTML = '';
+        document.getElementById('collocationsResult').classList.add('d-none');
+        document.getElementById('collocationsNextBtn').classList.add('d-none');
+        document.getElementById('collocationsStartBtn').classList.remove('d-none');
+        
+        this.collocationsPracticeMode = false;
     }
 }
 
